@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Geany project
+.geany.ocp8
+
+# Personal development
+issues
