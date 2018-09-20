@@ -7,6 +7,7 @@
 
   {% if user.is_authenticated %}
   <p>Dear <strong>{{ user.get_full_name }}</strong> , here's the <strong>ersatz app index</strong>.</p>
+  <p>Try to <a href="{% url 'search' %}?foo=bar&s=sel" >search something</a></p>
 
   {% else %}
   <p>Hello <strong>world</strong>, here's the <strong>ersatz app index</strong>.</p>
