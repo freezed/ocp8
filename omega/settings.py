@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'account.apps.AccountConfig',
     'ersatz.apps.ErsatzConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -81,8 +82,11 @@ WSGI_APPLICATION = 'omega.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'omega',
+        'PORT': 5432,
+        'HOST': '',
+        'PASSWORD':'',
     }
 }
 

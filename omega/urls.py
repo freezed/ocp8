@@ -9,6 +9,7 @@ import ersatz
 
 urlpatterns = [
     path('', views.index),
+    path('account/', include('account.urls')),
     path('ersatz/', include('ersatz.urls')),
     path('admin/', admin.site.urls),
 ]
