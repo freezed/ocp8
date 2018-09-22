@@ -4,11 +4,10 @@ omega URL Configuration
 from django.contrib import admin
 from django.urls import include, path
 
-from . import views
-import ersatz
+from omega import views as omega_views
 
 urlpatterns = [
-    path('', views.index),
+    path('', omega_views.index, name='home'),
     path('account/', include('account.urls')),
     path('ersatz/', include('ersatz.urls')),
     path('admin/', admin.site.urls),
