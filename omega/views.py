@@ -1,4 +1,8 @@
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello, world. Here's the omega project index.")
+    visitor = 'world'
+    if request.user.is_authenticated:
+        visitor = request.user.username
+
+    return HttpResponse("Hello, {}. Here's the omega project  index.".format(visitor))
