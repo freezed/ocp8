@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %} - {{ context }}{% endblock %}
+{% block title %} - account app index{% endblock %}
 
 {% block content %}
-  <h2>Welcome</h2>
+  <h2>account</h2>
 
   {% if user.is_authenticated %}
   <p>Dear <strong>{{ user.get_full_name }}</strong> ({{ user.username }}), that is your mail :</p>
   <pre>{{ user.email }}</pre>
+
+  {% else %}
+  <p>Hello <strong>world</strong>, here's the <strong>account app index</strong>.</p>
   {% endif %}
 
-  <p>Hello <strong>{{ visitor }}</strong>, here's the <strong>{{ context }}</strong>.</p>
 {% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} - ersatz app index{% endblock %}
+
+{% block content %}
+  <h2>ersatz</h2>
+
+  {% if user.is_authenticated %}
+  <p>Dear <strong>{{ user.get_full_name }}</strong> , here's the <strong>ersatz app index</strong>.</p>
+
+  {% else %}
+  <p>Hello <strong>world</strong>, here's the <strong>ersatz app index</strong>.</p>
+  {% endif %}
+
+{% endblock %}
