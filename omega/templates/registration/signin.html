@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} - signin{% endblock %}
+
+{% block content %}
+
+  <h2>signin</h2>
+  <form method="post">
+    {% csrf_token %}<br />
+    <ul>
+{{ form.as_ul }}
+    </ul>
+    <button type="submit">Sign in</button>
+  </form>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

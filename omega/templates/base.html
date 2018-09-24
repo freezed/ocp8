@@ -29,7 +29,10 @@
       <a href="{% url 'logout' %}?next={{request.path}}">logout</a>
 
       {% else %}
-      <a href="{% url 'login' %}?next={{request.path}}">login</a>
+      <p>
+      <a href="{% url 'login' %}?next={{request.path}}">login</a> or
+      <a href="{% url 'signin' %}?next={{request.path}}">signin</a>
+      </p>
       {% endif %}
 
       {% endblock %}
