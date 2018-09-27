@@ -26,6 +26,7 @@ def get_json(url, payload):
     except Exception as detail:
         return {
             'context': 'get_json() method',
+            'satus': False,
             'error':{'JSONDecodeError': str(detail)}
         }
     else:
@@ -35,6 +36,7 @@ def get_json(url, payload):
         else:
             return {
                 'context': 'get_json() method',
+                'satus': False,
                 'error':{'status_code': response.status_code}
             }
 
@@ -52,6 +54,7 @@ class SearchProduct:
 
         api_response = get_json(API['URL_SEARCH'], self._payload)
         result = api_response
+
         if api_response['status'] and api_response['count'] > 0:
             products = {'products': []}
 
