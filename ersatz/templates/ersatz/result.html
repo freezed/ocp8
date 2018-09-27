@@ -7,5 +7,22 @@
 
   <p>Status : {% if status %}True{% else %}False{% endif %}</p>
   <p>Context : {{ context }}</p>
+  <p>Products :</p>
+  <table style="border: 1px solid gre;border-collapse: collapse;">
+    <thead>
+      <th>Code</th>
+      <th>Nom</th>
+      <th>Catégorie</th>
+      <th>Nutriscore</th>
+    </thead>
+    {% for line in products %}
+    <tr>
+      <td style="border: 1px solid grey">{{ line.code }}</td>
+      <td style="border: 1px solid grey">{{ line.product_name }}</td>
+      <td style="border: 1px solid grey">{{ line.categories_tags }}</td>
+      <td style="border: 1px solid grey">{{ line.nutrition_grades }}</td>
+    </tr>
+    {% endfor %}
+  </table>
 
 {% endblock %}
