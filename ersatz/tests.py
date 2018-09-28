@@ -1,22 +1,23 @@
+import urllib.parse as up
 import pytest
 from . import views
 
 ###########
 ## VIEWS ##
 ###########
-class InvalidRequest:
-    META = {'QUERY_STRING': '?foo=bar&q=foobar'}
+class FakeGetRequest:
+    def __init__(self, QUERY_STRING):
+        parts = up.parse_qsl(up.urlsplit(QUERY_STRING)[3])
+
+        self.META = {'QUERY_STRING': QUERY_STRING}
+        self.GET = {parts[0][0]: parts[0][1]}
 
 def test_invalid_request():
-    request = InvalidRequest()
+    request = FakeGetRequest('?q=foobar')
     response = views.search(request)
     assert b'Status : False' in response.content
 
-class ValidRequest:
-    META = {'QUERY_STRING': '?foo=bar&s=sel'}
-    GET = {'s': 'sel'}
-
 def test_valid_request():
-    request = ValidRequest()
+    request = FakeGetRequest('?s=sel')
     response = views.search(request)
     assert b'Status : True' in response.content
