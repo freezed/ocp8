@@ -17,7 +17,16 @@ def test_invalid_request():
     response = views.search(request)
     assert b'Status : False' in response.content
 
-def test_valid_request():
+class FakeSearchProductValid:
+    """ ersatz.api.SearchPoduct mock class """
+    result = {'status': True}
+
+def mock_search_product_valid(query):
+    """ ersatz.api.SearchPoduct mock function """
+    return FakeSearchProductValid
+
+def test_valid_request(monkeypatch):
+    monkeypatch.setattr('ersatz.api.SearchProduct', mock_search_product_valid)
     request = FakeGetRequest('?s=sel')
     response = views.search(request)
     assert b'Status : True' in response.content
