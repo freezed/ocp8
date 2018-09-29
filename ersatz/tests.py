@@ -35,14 +35,6 @@ def test_valid_request(monkeypatch):
 ###########
 ##  API  ##
 ###########
-# def fake_get_json_unvalid(url, payload):
-    # """ ersatz.api.get_json fake function """
-    # return {
-        # 'context': 'get_json() method',
-        # 'satus': False,
-        # 'error':{'JSONDecodeError': 'stacktrace'}
-    # }
-
 def fake_get_json_valid(url, payload):
     """ ersatz.api.get_json fake function """
     return {
@@ -77,7 +69,6 @@ def test_search_product_valid(monkeypatch):
 
     # Test product quantity
     assert product_count == api_json['count']
-
 
 def fake_get_json_invalid(url, payload):
     """ ersatz.api.get_json fake function """

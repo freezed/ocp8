@@ -80,7 +80,7 @@ class SearchProduct:
 
         else:
             result = {
-                'satus': False,
+                'status': False,
                 'context': 'no result'
             }
 
