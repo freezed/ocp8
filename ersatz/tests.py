@@ -1,6 +1,7 @@
 import urllib.parse as up
 import pytest
-from . import views
+from . import api, views
+from .config import FIELD_KEPT
 
 ###########
 ## VIEWS ##
@@ -30,3 +31,59 @@ def test_valid_request(monkeypatch):
     request = FakeGetRequest('?s=sel')
     response = views.search(request)
     assert b'Status : True' in response.content
+
+###########
+##  API  ##
+###########
+# def fake_get_json_unvalid(url, payload):
+    # """ ersatz.api.get_json fake function """
+    # return {
+        # 'context': 'get_json() method',
+        # 'satus': False,
+        # 'error':{'JSONDecodeError': 'stacktrace'}
+    # }
+
+def fake_get_json_valid(url, payload):
+    """ ersatz.api.get_json fake function """
+    return {
+        'count': 1,
+        'status': True,
+        'page': 1,
+        'skip': 0,
+        'page_size': '1',
+        'products': [
+            {
+                'product_name': 'Foo',
+                'nutrition_grades': 'c',
+                # no 'categories_tags' to test missing field feature
+                'code': 1664,
+            },
+        ]
+    }
+
+def test_search_product_valid(monkeypatch):
+    monkeypatch.setattr('ersatz.api.get_json', fake_get_json_valid)
+    test_search = api.SearchProduct('fake_string')
+    product_count = len(test_search.result['products'])
+    api_json = fake_get_json_valid('url', {'foo': 'bar'})
+
+    # Test JSON response keys
+    for field in ('status','context','products'):
+        assert field in test_search.result
+
+    # Test fields of first product
+    for field in FIELD_KEPT['product']:
+        assert field in test_search.result['products'][0]
+
+    # Test product quantity
+    assert product_count == api_json['count']
+
+
+def fake_get_json_invalid(url, payload):
+    """ ersatz.api.get_json fake function """
+    return {'status': False}
+
+def test_search_product_invalid(monkeypatch):
+    monkeypatch.setattr('ersatz.api.get_json', fake_get_json_invalid)
+    test_search = api.SearchProduct('fake_string')
+    assert not test_search.result['status']
