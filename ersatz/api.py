@@ -26,17 +26,18 @@ def get_json(url, payload):
     except Exception as detail:
         return {
             'context': 'get_json() method',
-            'satus': False,
+            'status': False,
             'error':{'JSONDecodeError': str(detail)}
         }
     else:
         if response.status_code == 200:
             return api_json
 
+        # Hum, how can I have a JSON response with a bad 'status_code'…?
         else:
             return {
                 'context': 'get_json() method',
-                'satus': False,
+                'status': False,
                 'error':{'status_code': response.status_code}
             }
 
