@@ -7,9 +7,11 @@ This file is part of []() project.
 Tools to get data from an API
 """
 from sys import exc_info as sys_exc_info
+from pprint import pformat as pf
 import requests
 
 from .config import API, FIELD_KEPT
+
 
 def get_json(url, payload):
     """
@@ -27,7 +29,7 @@ def get_json(url, payload):
         return {
             'context': 'get_json() method',
             'status': False,
-            'error':{'JSONDecodeError': str(detail)}
+            'error': {'JSONDecodeError': str(detail)}
         }
     else:
         if response.status_code == 200:
@@ -38,7 +40,7 @@ def get_json(url, payload):
             return {
                 'context': 'get_json() method',
                 'status': False,
-                'error':{'status_code': response.status_code}
+                'error': {'status_code': response.status_code}
             }
 
 
@@ -59,22 +61,22 @@ class SearchProduct:
         if api_response['status'] and api_response['count'] > 0:
             products = {'products': []}
 
-            for k, p in enumerate(api_response['products']):
+            for key, prod in enumerate(api_response['products']):
                 products['products'].append({})
 
                 for field in FIELD_KEPT['product']:
                     try:
-                        products['products'][k].update({field: p[field]})
+                        products['products'][key].update({field: prod[field]})
 
                     except (TypeError, KeyError) as except_detail:
                         print("{} : «{}»".format(
                             sys_exc_info()[0].__name__,
                             except_detail,
                         ))
-                        products['products'][k].update({field: False})
+                        products['products'][key].update({field: False})
 
             products.update({
-                'context':'response',
+                'context': 'response',
                 'status': True,
             })
             result = products

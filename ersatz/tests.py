@@ -1,11 +1,11 @@
 import urllib.parse as up
-import pytest
 from . import api, views
 from .config import FIELD_KEPT
 
-###########
-## VIEWS ##
-###########
+
+#########
+# VIEWS #
+#########
 class FakeGetRequest:
     def __init__(self, QUERY_STRING):
         parts = up.parse_qsl(up.urlsplit(QUERY_STRING)[3])
@@ -13,18 +13,22 @@ class FakeGetRequest:
         self.META = {'QUERY_STRING': QUERY_STRING}
         self.GET = {parts[0][0]: parts[0][1]}
 
+
 def test_invalid_request():
     request = FakeGetRequest('?q=foobar')
     response = views.search(request)
     assert b'Status : False' in response.content
 
+
 class FakeSearchProductValid:
     """ ersatz.api.SearchPoduct mock class """
     result = {'status': True}
 
+
 def mock_search_product_valid(query):
     """ ersatz.api.SearchPoduct mock function """
     return FakeSearchProductValid
+
 
 def test_valid_request(monkeypatch):
     monkeypatch.setattr('ersatz.api.SearchProduct', mock_search_product_valid)
@@ -32,9 +36,9 @@ def test_valid_request(monkeypatch):
     response = views.search(request)
     assert b'Status : True' in response.content
 
-###########
-##  API  ##
-###########
+#########
+#  API  #
+#########
 def fake_get_json_valid(url, payload):
     """ ersatz.api.get_json fake function """
     return {
@@ -53,6 +57,7 @@ def fake_get_json_valid(url, payload):
         ]
     }
 
+
 def test_search_product_valid(monkeypatch):
     monkeypatch.setattr('ersatz.api.get_json', fake_get_json_valid)
     test_search = api.SearchProduct('fake_string')
@@ -60,7 +65,7 @@ def test_search_product_valid(monkeypatch):
     api_json = fake_get_json_valid('url', {'foo': 'bar'})
 
     # Test JSON response keys
-    for field in ('status','context','products'):
+    for field in ('status', 'context', 'products'):
         assert field in test_search.result
 
     # Test fields of first product
@@ -70,14 +75,17 @@ def test_search_product_valid(monkeypatch):
     # Test product quantity
     assert product_count == api_json['count']
 
+
 def fake_get_json_invalid(url, payload):
     """ ersatz.api.get_json fake function """
     return {'status': False}
+
 
 def test_search_product_invalid(monkeypatch):
     monkeypatch.setattr('ersatz.api.get_json', fake_get_json_invalid)
     test_search = api.SearchProduct('fake_string')
     assert not test_search.result['status']
+
 
 class FakeRequestsJSONValid:
     """ Requests.reponse mock class """
@@ -86,9 +94,11 @@ class FakeRequestsJSONValid:
     def json():
         return {'foo': 'bar'}
 
+
 def mock_requests_get_valid(url, payload):
     """ Requests.get() mock function """
     return FakeRequestsJSONValid
+
 
 def test_get_json_valid(monkeypatch):
     monkeypatch.setattr('ersatz.api.requests.get', mock_requests_get_valid)
@@ -96,13 +106,16 @@ def test_get_json_valid(monkeypatch):
     assert response['status']
     assert response['foo'] == 'bar'
 
+
 class FakeRequestsJSONInvalid:
     """ Requests.reponse mock class"""
     status_code = 'foobar'
 
+
 def mock_requests_get_json_invalid(url, payload):
     """ Requests.get() mock function """
     return FakeRequestsJSONInvalid
+
 
 def test_get_json_json_invalid(monkeypatch):
     monkeypatch.setattr('ersatz.api.requests.get', mock_requests_get_json_invalid)
@@ -111,6 +124,7 @@ def test_get_json_json_invalid(monkeypatch):
     assert 'JSONDecodeError' in response['error']
     assert not response['status']
 
+
 class FakeRequestsStatusCodeInvalid:
     """ Requests.reponse mock class"""
     status_code = 'foobar'
@@ -118,9 +132,11 @@ class FakeRequestsStatusCodeInvalid:
     def json():
         return {'foo': 'bar'}
 
+
 def mock_requests_get_status_code_invalid(url, payload):
     """ Requests.get() mock function """
     return FakeRequestsStatusCodeInvalid
+
 
 def test_get_json_status_code_invalid(monkeypatch):
     monkeypatch.setattr('ersatz.api.requests.get', mock_requests_get_status_code_invalid)
