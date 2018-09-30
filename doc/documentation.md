@@ -102,6 +102,13 @@ Documentation
     ├── README.md
     └── requirements.txt
 
+## Physical data model
+
+Table `auth_user` is from built-in django authentification model
+
+![PMD image](https://raw.githubusercontent.com/freezed/ocp8/master/doc/pdm.png)
+
+[PUML sources](https://github.com/freezed/ocp8/blob/master/doc/pdm.puml)
 
 
 [heroku]: https://heroku.com

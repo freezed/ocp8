@@ -1,0 +1,78 @@
+@startuml
+title Physical data model\n
+
+/' = = = = = = = STYLE = = = = = = = '/
+hide empty methods
+hide circle
+skinparam linetype ortho
+skinparam class {
+    BackgroundColor<<assoc>> lightblue
+}
+
+/' = = = = = = = MACRO = = = = = = = '/
+!define rel(a,b,c,d,e) a c e
+!define pyk(n,t="INT NOT NULL UNSIGNED") <font color="red">PK:<b>n</b> <size:09>[t]</size></font>
+!define fnk(n,r,t="INT NOT NULL UNSIGNED") <font color="blue">FK:<b>n</b> <size:09>[t]</size></font>
+!define fpk(n,r,t="INT NOT NULL UNSIGNED") <font color="green">PFK:<b>n</b> <size:09>[t]</size></font>
+!define att(n,u,s) {field} <b>n</b> [s]
+
+/' = = = = = = = CLASSE = = = = = = = '/
+class category
+class ersatz <<assoc>>
+class product
+class auth_user
+
+
+/' = = = = = = = RELATION = = = = = = = '/
+rel(product,1..,--,1..*,category)
+rel(auth_user,1..,--,1..*,ersatz)
+rel(product,1..*,--,1..*,ersatz)
+
+
+/' = = = = = = = KEY = = = = = = = '/
+class category {
+    pyk(id)
+    ..
+}
+
+class ersatz {
+    fpk(product_id,product.id)
+    fpk(auth_user_id,auth_user.id)
+}
+
+class product {
+    pyk(id)
+    fnk(category_id,category.id)
+    ..
+}
+
+class auth_user {
+    pyk(id)
+    ..
+}
+
+
+/' = = = = = = = ATTRIBUTE = = = = = = = '/
+class category {
+    att(name,String,VARCHAR(200) NOT NULL)
+}
+
+class product {
+    att(name,String,VARCHAR(200) NOT NULL)
+    att(url,String,VARCHAR(255) NOT NULL)
+    att(nutrition_grades,String,VARCHAR(1) NOT NULL)
+}
+
+class auth_user {
+    att(email,String,VARCHAR(254) NOT NULL)
+    att(username,String,VARCHAR(150) NOT NULL)
+    att(last_name,String,VARCHAR(150) NULL)
+    att(first_name,String,VARCHAR(30) NULL)
+    att(password,String,VARCHAR(128) NOT NULL)
+    att(is_superuser,Bool,BOOLEAN)
+    att(is_staff,Bool,BOOLEAN)
+    att(is_active,Bool,BOOLEAN)
+    att(last_login,Integer,TIMESTAMP NULL)
+    att(date_joined,Integer,TIMESTAMP NOT NULL)
+}
+@enduml
