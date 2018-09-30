@@ -15,7 +15,7 @@ class FakeGetRequest:
 
 
 def test_invalid_request():
-    request = FakeGetRequest('?q=foobar')
+    request = FakeGetRequest('?foos=bar')
     response = views.search(request)
     assert b'Status : False' in response.content
 
