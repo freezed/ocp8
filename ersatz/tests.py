@@ -42,17 +42,52 @@ def test_valid_request(monkeypatch):
 def fake_get_json_valid(url, payload):
     """ ersatz.api.get_json fake function """
     return {
-        'count': 1,
+        'count': 2,
         'status': True,
         'page': 1,
         'skip': 0,
-        'page_size': '1',
+        'page_size': '2',
         'products': [
             {
                 'product_name': 'Foo',
                 'nutrition_grades': 'c',
-                # no 'categories_tags' to test missing field feature
+                'categories_tags': [
+                    'en:fresh-foods',
+                    'en:dairies',
+                    'fr:fromages-blancs',
+                ],
                 'code': 1664,
+                "_keywords": [],
+                "packaging_tags": [
+                    "carton",
+                    "sachet-plastique"
+                ],
+                "ingredients_n_tags": [],
+                "countries_beforescanbot": "France",
+                "languages": {
+                    "en:french": 6
+                },
+            },
+            {
+                'product_name': 'ooF',
+                'nutrition_grades': 'b',
+                'categories_tags': [
+                    'en:fermented-foods',
+                    'en:fermented-milk-products',
+                    'fr:fromage-a-pate-pressee',
+                    'fr:picodon',
+                ],
+                'code': 4661,
+                "_keywords": [],
+                "packaging_tags": [
+                    "PET",
+                    "papier"
+                ],
+                "ingredients_n_tags": [],
+                "countries_beforescanbot": "France",
+                "languages": {
+                    "en:french": 6
+                },
             },
         ]
     }
@@ -60,7 +95,7 @@ def fake_get_json_valid(url, payload):
 
 def test_search_product_valid(monkeypatch):
     monkeypatch.setattr('ersatz.api.get_json', fake_get_json_valid)
-    test_search = api.SearchProduct('fake_string')
+    test_search = api.SearchProduct('valid_query_string')
     product_count = len(test_search.result['products'])
     api_json = fake_get_json_valid('url', {'foo': 'bar'})
 
