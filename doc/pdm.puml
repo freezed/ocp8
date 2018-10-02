@@ -18,14 +18,16 @@ skinparam class {
 
 /' = = = = = = = CLASSE = = = = = = = '/
 class category
+class category_product <<assoc>>
 class ersatz <<assoc>>
 class product
 class auth_user
 
 
 /' = = = = = = = RELATION = = = = = = = '/
-rel(product,1..,--,1..*,category)
-rel(auth_user,1..,--,1..*,ersatz)
+rel(product,1..,--,1..*,category_product)
+rel(category_product,1..*,--,1..,category)
+rel(auth_user,1..,-up-,1..*,ersatz)
 rel(product,1..*,--,1..*,ersatz)
 
 
@@ -33,6 +35,11 @@ rel(product,1..*,--,1..*,ersatz)
 class category {
     pyk(id)
     ..
+}
+
+class category_product {
+    fpk(product_id,product.id)
+    fpk(category_id,category.id)
 }
 
 class ersatz {
@@ -61,6 +68,7 @@ class product {
     att(name,String,VARCHAR(200) NOT NULL)
     att(url,String,VARCHAR(255) NOT NULL)
     att(nutrition_grades,String,VARCHAR(1) NOT NULL)
+    att(nova_group,String,VARCHAR(1) NOT NULL)
 }
 
 class auth_user {

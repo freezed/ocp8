@@ -20,8 +20,10 @@ API = {
 FIELD_KEPT = {
     'product': [
         'product_name',
+        'brands_tags',
         'nutrition_grades',
         'categories_tags',
+        'nova_group',
         'code',
     ],
 }
