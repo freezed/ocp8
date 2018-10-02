@@ -10,14 +10,14 @@ from .config import FIELD_KEPT
 #########
 class FakeGetRequest:
     def __init__(self, QUERY_STRING):
-        parts = up.parse_qsl(up.urlsplit(QUERY_STRING)[3])
+        parts = up.parse_qsl(QUERY_STRING)
 
         self.META = {'QUERY_STRING': QUERY_STRING}
         self.GET = {parts[0][0]: parts[0][1]}
 
 
 def test_invalid_request():
-    request = FakeGetRequest('?foos=bar')
+    request = FakeGetRequest('foos=bar')
     response = views.search(request)
     assert b'Status : False' in response.content
 
@@ -34,7 +34,7 @@ def mock_search_product_valid(query):
 
 def test_valid_request(monkeypatch):
     monkeypatch.setattr('ersatz.api.SearchProduct', mock_search_product_valid)
-    request = FakeGetRequest('?s=sel')
+    request = FakeGetRequest('s=sel')
     response = views.search(request)
     assert b'Status : True' in response.content
 
