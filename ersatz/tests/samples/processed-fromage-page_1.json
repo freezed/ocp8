@@ -1,0 +1,222 @@
+{
+    "products": [
+        {
+            "categories": [
+                "gouter",
+                "dairies",
+                "spreads"
+            ],
+            "code": "3073780258098",
+            "name": "Kiri à la crème de lait (12 Portions) (Kiri)",
+            "nova_group": 4,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "kase",
+                "milchprodukte",
+                "franzosischer-kase",
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3272770003148",
+            "name": "Chavroux (13 % MG) (Chavroux)",
+            "nova_group": 3,
+            "nutrition_grades": "c"
+        },
+        {
+            "categories": [
+                "gouter",
+                "dairies",
+                "spreads"
+            ],
+            "code": "3073786865191",
+            "name": "Kiri à la crème de lait (8 Portions) (Kiri)",
+            "nova_group": "4",
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "dairies",
+                "spreads"
+            ],
+            "code": "7622300685782",
+            "name": "Philadelphia (Kraft)",
+            "nova_group": "4",
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "cordons-bleus",
+                "cordons-bleus-de-dinde",
+                "meals",
+                "fresh-foods"
+            ],
+            "code": "3011250018308",
+            "name": "Escalope Cordon Bleu (Pere-dodu)",
+            "nova_group": 4,
+            "nutrition_grades": "c"
+        },
+        {
+            "categories": [
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3564700014646",
+            "name": "Emmental Français (29 % MG) (Les-croises)",
+            "nova_group": 3,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3176580109826",
+            "name": "Camembert (20 % MG) (Le-rustique)",
+            "nova_group": 3,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3228020190427",
+            "name": "Camembert Auguste Lepetit & fils (21 % MG) (Lepetit)",
+            "nova_group": 3,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "comte",
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3256220288576",
+            "name": "Comté AOP au lait cru 34%MG (U)",
+            "nova_group": 3,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "gouter",
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3073780767897",
+            "name": "Kiri à la crème de lait (Kiri)",
+            "nova_group": 4,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3523230010559",
+            "name": "Fromage de chèvre Sainte maure (format familial) (23% MG) (Soignon)",
+            "nova_group": "3",
+            "nutrition_grades": false
+        },
+        {
+            "categories": [
+                "fromages-double-creme",
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3161712963223",
+            "name": "Caprice des Dieux (30 % MG) (Caprice-des-dieux)",
+            "nova_group": 3,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "meals",
+                "pizzas"
+            ],
+            "code": "4001724818908",
+            "name": "Pizza Ristorante Quattro Formaggi (Dr-oetker)",
+            "nova_group": "4",
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "fromages-blancs",
+                "desserts-lactes-natures",
+                "fromages-blancs-natures",
+                "fromages-blancs-alleges-en-matiere-grasse",
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3329770051133",
+            "name": "Calin nature (0 % MG) (Calin)",
+            "nova_group": 3,
+            "nutrition_grades": false
+        },
+        {
+            "categories": [
+                "dairies",
+                "spreads"
+            ],
+            "code": "3236240070306",
+            "name": "Le Fromage Fouetté Madame Loïk, Nature au sel de Guérande (24 % MG) (Paysan-breton)",
+            "nova_group": 3,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "dairies",
+                "spreads"
+            ],
+            "code": "3073780593083",
+            "name": "La Vache qui rit® 32 Portions (19 % MG) (Bel)",
+            "nova_group": 4,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "faisselles",
+                "fromages-blancs",
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3184670001080",
+            "name": "La Faisselle (Rians)",
+            "nova_group": 3,
+            "nutrition_grades": "c"
+        },
+        {
+            "categories": [
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3073780728959",
+            "name": "Apéricube Tonic (Bel)",
+            "nova_group": 4,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "sandwiches",
+                "hamburgers"
+            ],
+            "code": "2000000002603",
+            "name": "Big Mac (Mcdonald-s)",
+            "nova_group": 1,
+            "nutrition_grades": "c"
+        },
+        {
+            "categories": [
+                "saint-agur",
+                "dairies",
+                "cheeses"
+            ],
+            "code": "3222110023961",
+            "name": "Creme Saint Agur 25% (Saint-agur)",
+            "nova_group": 3,
+            "nutrition_grades": "d"
+        }
+    ],
+    "status": true
+}
