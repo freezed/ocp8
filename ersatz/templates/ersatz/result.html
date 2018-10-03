@@ -4,11 +4,10 @@
 
 {% block content %}
   <h2>ersatz -result</h2>
-
   <p>Status : {% if status %}True{% else %}False{% endif %}</p>
-  <p>Context : {{ context }}</p>
-  <p>Products :</p>
+  {% if status %}
   <table style="border: 1px solid gre;border-collapse: collapse;">
+  <caption>Products</caption>
     <thead>
       <th>Code</th>
       <th>Nom</th>
@@ -25,4 +24,10 @@
     {% endfor %}
   </table>
 
+  {% else %}
+  <p>Context : </p>
+  <pre>{{ context }}</pre>
+  <p>Error : </p>
+  <pre>{{ error }}</pre>
+  {% endif %}
 {% endblock %}

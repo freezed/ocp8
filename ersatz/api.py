@@ -16,31 +16,32 @@ def get_json(url, payload):
     """
     Request API
     """
+    traceback = {'context': __name__+'.get_json() method','status': False}
+
     try:
         response = requests.get(url, payload)
+        traceback['error'] = {'url': response.url,'payload': payload}
+
     except requests.exceptions.ConnectionError as except_detail:
-        return {'ConnectionError': pf(except_detail)}
+        traceback['error'].update({'ConnectionError': pf(except_detail)})
+        return traceback
 
     try:
         api_json = response.json()
         api_json.update({'status': True})
+
     except Exception as detail:
-        return {
-            'context': 'get_json() method',
-            'status': False,
-            'error': {'JSONDecodeError': str(detail)}
-        }
+        traceback['error'].update({'JSONDecodeError': str(detail)})
+        return traceback
+
     else:
         if response.status_code == 200:
             return api_json
 
         # How can I have a JSON response with a bad 'status_code'…?
         else:
-            return {
-                'context': 'get_json() method',
-                'status': False,
-                'error': {'status_code': response.status_code}
-            }
+            traceback['error'].update({'status_code': response.status_code})
+            return traceback
 
 
 class SearchProduct:
