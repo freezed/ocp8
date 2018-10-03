@@ -10,9 +10,7 @@ def index(request):
 
 
 def search(request):
-    parts = up.parse_qsl(
-        up.urlsplit(request.META['QUERY_STRING'])[3]
-    )
+    parts = up.parse_qsl(request.META['QUERY_STRING'])
     url_qs_parsed = {k:v for (k,v) in parts if k == 's'}
 
     if not url_qs_parsed:
