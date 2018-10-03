@@ -1,0 +1,442 @@
+{
+    "products": [
+        {
+            "brands_tags": [
+                "kiri"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:processed-cheese",
+                "en:cheese-spreads",
+                "en:industrial-cheese",
+                "fr:gouter"
+            ],
+            "code": "3073780258098",
+            "nova_group": 4,
+            "nutrition_grades": "d",
+            "product_name": "Kiri à la crème de lait (12 Portions)"
+        },
+        {
+            "brands_tags": [
+                "chavroux"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:pasteurized-cheeses",
+                "en:goat-cheeses",
+                "en:industrial-cheese",
+                "fr:franzosischer-kase",
+                "fr:kase",
+                "fr:milchprodukte"
+            ],
+            "code": "3272770003148",
+            "nova_group": 3,
+            "nutrition_grades": "c",
+            "product_name": "Chavroux (13 % MG)"
+        },
+        {
+            "brands_tags": [
+                "kiri"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:processed-cheese",
+                "en:cheese-spreads",
+                "en:industrial-cheese",
+                "fr:gouter"
+            ],
+            "code": "3073786865191",
+            "nova_group": "4",
+            "nutrition_grades": "d",
+            "product_name": "Kiri à la crème de lait (8 Portions)"
+        },
+        {
+            "brands_tags": [
+                "philadelphia",
+                "kraft",
+                "kraft-foods",
+                "mondelez-international"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:cream-cheeses",
+                "en:pasteurized-cheeses",
+                "en:cheese-spreads"
+            ],
+            "code": "7622300685782",
+            "nova_group": "4",
+            "nutrition_grades": "d",
+            "product_name": "Philadelphia"
+        },
+        {
+            "brands_tags": [
+                "pere-dodu"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:meals",
+                "en:breaded-products",
+                "fr:cordons-bleus",
+                "fr:cordons-bleus-de-dinde"
+            ],
+            "code": "3011250018308",
+            "nova_group": 4,
+            "nutrition_grades": "c",
+            "product_name": "Escalope Cordon Bleu"
+        },
+        {
+            "brands_tags": [
+                "les-croises",
+                "marque-repere",
+                "scamark-filiale-e-leclerc"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cooked-pressed-cheeses",
+                "en:cow-cheeses",
+                "en:emmentaler",
+                "en:french-cheeses",
+                "en:pasteurized-cheeses",
+                "en:french-emmentaler",
+                "en:grated-cheese",
+                "en:grated-emmentaler",
+                "en:industrial-cheese"
+            ],
+            "code": "3564700014646",
+            "nova_group": 3,
+            "nutrition_grades": "d",
+            "product_name": "Emmental Français (29 % MG)"
+        },
+        {
+            "brands_tags": [
+                "le-rustique"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:soft-cheeses-with-bloomy-rind",
+                "en:camemberts",
+                "en:french-cheeses",
+                "en:pasteurized-cheeses",
+                "en:industrial-cheese",
+                "en:pasteurized-camembert"
+            ],
+            "code": "3176580109826",
+            "nova_group": 3,
+            "nutrition_grades": "d",
+            "product_name": "Camembert (20 % MG)"
+        },
+        {
+            "brands_tags": [
+                "lepetit"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:soft-cheeses-with-bloomy-rind",
+                "en:camemberts",
+                "en:french-cheeses",
+                "en:pasteurized-cheeses",
+                "en:industrial-cheese",
+                "en:pasteurized-camembert"
+            ],
+            "code": "3228020190427",
+            "nova_group": 3,
+            "nutrition_grades": "d",
+            "product_name": "Camembert Auguste Lepetit & fils (21 % MG)"
+        },
+        {
+            "brands_tags": [
+                "u"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "",
+                "en:cooked-pressed-cheeses",
+                "en:cow-cheeses",
+                "en:labeled-products",
+                "en:french-cheeses",
+                "en:labeled-cheeses",
+                "en:pasteurized-cheeses",
+                "en:aoc-cheeses",
+                "fr:comte",
+                "en:aoc-products"
+            ],
+            "code": "3256220288576",
+            "nova_group": 3,
+            "nutrition_grades": "d",
+            "product_name": "Comté AOP au lait cru 34%MG"
+        },
+        {
+            "brands_tags": [
+                "kiri"
+            ],
+            "categories_tags": [
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:processed-cheese",
+                "fr:gouter"
+            ],
+            "code": "3073780767897",
+            "nova_group": 4,
+            "nutrition_grades": "d",
+            "product_name": "Kiri à la crème de lait"
+        },
+        {
+            "brands_tags": [
+                "soignon"
+            ],
+            "categories_tags": [
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:pasteurized-cheeses",
+                "en:goat-cheeses"
+            ],
+            "code": "3523230010559",
+            "nova_group": "3",
+            "nutrition_grades": false,
+            "product_name": "Fromage de chèvre Sainte maure (format familial) (23% MG)"
+        },
+        {
+            "brands_tags": [
+                "caprice-des-dieux"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:soft-cheeses-with-bloomy-rind",
+                "en:french-cheeses",
+                "en:pasteurized-cheeses",
+                "en:industrial-cheese",
+                "fr:fromages-double-creme"
+            ],
+            "code": "3161712963223",
+            "nova_group": 3,
+            "nutrition_grades": "d",
+            "product_name": "Caprice des Dieux (30 % MG)"
+        },
+        {
+            "brands_tags": [
+                "dr-oetker"
+            ],
+            "categories_tags": [
+                "en:frozen-foods",
+                "en:meals",
+                "en:pizzas-pies-and-quiches",
+                "en:pizzas",
+                "en:cheese-pizzas",
+                "en:frozen-ready-made-meals",
+                "en:four-cheese-pizza",
+                "en:frozen-pizzas",
+                "en:frozen-pizzas-and-pies",
+                "en:pizzas-tartes-salees-et-quiches"
+            ],
+            "code": "4001724818908",
+            "nova_group": "4",
+            "nutrition_grades": "d",
+            "product_name": "Pizza Ristorante Quattro Formaggi"
+        },
+        {
+            "brands_tags": [
+                "yoplait",
+                "calin"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:desserts",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:dairy-desserts",
+                "en:cream-cheeses",
+                "fr:fromages-blancs",
+                "fr:desserts-lactes-natures",
+                "fr:fromages-blancs-alleges-en-matiere-grasse",
+                "fr:fromages-blancs-natures"
+            ],
+            "code": "3329770051133",
+            "nova_group": 3,
+            "nutrition_grades": false,
+            "product_name": "Calin nature (0 % MG)"
+        },
+        {
+            "brands_tags": [
+                "paysan-breton"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:cream-cheeses",
+                "en:french-cheeses",
+                "en:pasteurized-cheeses",
+                "en:cheese-spreads",
+                "en:industrial-cheese"
+            ],
+            "code": "3236240070306",
+            "nova_group": 3,
+            "nutrition_grades": "d",
+            "product_name": "Le Fromage Fouetté Madame Loïk, Nature au sel de Guérande (24 % MG)"
+        },
+        {
+            "brands_tags": [
+                "la-vache-qui-rit",
+                "bel"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:processed-cheese",
+                "en:cheese-spreads",
+                "en:industrial-cheese"
+            ],
+            "code": "3073780593083",
+            "nova_group": 4,
+            "nutrition_grades": "d",
+            "product_name": "La Vache qui rit® 32 Portions (19 % MG)"
+        },
+        {
+            "brands_tags": [
+                "rians",
+                "foobar"
+            ],
+            "categories_tags": [
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cream-cheeses",
+                "fr:faisselles",
+                "fr:fromages-blancs"
+            ],
+            "code": "3184670001080",
+            "nova_group": 3,
+            "nutrition_grades": "c",
+            "product_name": "La Faisselle"
+        },
+        {
+            "brands_tags": [
+                "apericube",
+                "bel"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:salty-snacks",
+                "en:appetizers",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:processed-cheese",
+                "en:industrial-cheese"
+            ],
+            "code": "3073780728959",
+            "nova_group": 4,
+            "nutrition_grades": "d",
+            "product_name": "Apéricube Tonic"
+        },
+        {
+            "brands_tags": [
+                "mcdonald-s"
+            ],
+            "categories_tags": [
+                "en:sandwiches",
+                "en:hamburgers"
+            ],
+            "code": "2000000002603",
+            "nova_group": 1,
+            "nutrition_grades": "c",
+            "product_name": "Big Mac"
+        },
+        {
+            "brands_tags": [
+                "saint-agur"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:blue-veined-cheeses",
+                "en:french-cheeses",
+                "en:pasteurized-cheeses",
+                "en:french-blue-veined-cheeses",
+                "en:industrial-cheese",
+                "fr:saint-agur"
+            ],
+            "code": "3222110023961",
+            "nova_group": 3,
+            "nutrition_grades": "d",
+            "product_name": "Creme Saint Agur 25%"
+        }
+    ],
+    "status": true
+}

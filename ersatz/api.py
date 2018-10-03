@@ -79,10 +79,10 @@ class SearchProduct:
 
         # API response is valid & non-empty
         if api_response['status'] and api_response['count'] > 0:
-            purged_prod = {}
 
             # Iterate on each prod (max 20) and keep only desired fields
             for product in api_response['products']:
+                purged_prod = {}
                 purged_prod.update(
                     {field: product[field] for field in FIELD_KEPT['product']
                      if field in product}

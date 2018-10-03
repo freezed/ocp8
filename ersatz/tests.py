@@ -186,3 +186,34 @@ def test_get_json_status_code_invalid(monkeypatch):
     assert 'get_json()' in response['context']
     assert response['error']['status_code'] == 'foobar'
     assert not response['status']
+
+
+################################################################################
+#   ersatz.api.SearchProduct._get_products_from_api()
+################################################################################
+
+# For products returned by API :
+# - Only KEPT_FIELDS are kept after processing
+# - Products are not all the same after processing (non-regression issue #19)
+class FakeGetJsonFromApiValid:
+    """ get_json() mock class """
+    def get_json(url, payload):
+        with open("ersatz/tests/samples/search-fromage-page_1.json", "r") as json_file:
+            json_response_from_api = json.load(json_file)
+        return json_response_from_api
+
+def fake_get_json_from_api_valid(url, payload):
+    """ get_json() mock function """
+    return FakeGetJsonFromApiValid.get_json('url', 'payload')
+
+def test_search_product_valid(monkeypatch):
+    with open("ersatz/tests/samples/kept_field-fromage-page_1.json", "r") as json_file:
+        output_sample = json.load(json_file)
+
+    monkeypatch.setattr('ersatz.api.get_json', fake_get_json_from_api_valid)
+    output_processed = api.SearchProduct('string')
+    assert output_processed._products_from_api['products'] == output_sample['products']
+
+
+# - TODO #14 : test `name` & `categories` fields generation
+################################################################################
