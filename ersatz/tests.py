@@ -5,10 +5,12 @@ from . import api, views
 from .config import FIELD_KEPT
 
 
-#########
-# VIEWS #
-#########
-class FakeGetRequest:
+################################################################################
+#   ersatz.views._get_search_context()
+################################################################################
+
+# For a invalid user request, app returns a JSON standardised error
+class FakeUserRequestGet:
     def __init__(self, QUERY_STRING):
         parts = up.parse_qsl(QUERY_STRING)
 
@@ -16,27 +18,33 @@ class FakeGetRequest:
         self.GET = {parts[0][0]: parts[0][1]}
 
 
-def test_invalid_request():
-    request = FakeGetRequest('foos=bar')
-    response = views.search(request)
-    assert b'Status : False' in response.content
+def test_user_request_invalid():
+    request = FakeUserRequestGet("foobars=This string doesn't matter test is about unvalid request key (here : 'foobars')")
+    response = views._get_search_context(request)
+    assert response == {
+        'context': 'ersatz.views.search()',
+        'error': {'user_query': "foobars=This string doesn't matter test is about unvalid request key (here : 'foobars')"},
+        'status': False
+    }
 
-
+# For an valid user request, app returns a JSON standardised response
 class FakeSearchProductValid:
     """ ersatz.api.SearchPoduct mock class """
-    result = {'status': True}
+    result = {'status': True, 'foo': 'bar'}
 
 
-def mock_search_product_valid(query):
+def mock_user_request_valid(query):
     """ ersatz.api.SearchPoduct mock function """
     return FakeSearchProductValid
 
 
-def test_valid_request(monkeypatch):
-    monkeypatch.setattr('ersatz.api.SearchProduct', mock_search_product_valid)
-    request = FakeGetRequest('s=sel')
-    response = views.search(request)
-    assert b'Status : True' in response.content
+def test_user_request_valid(monkeypatch):
+    monkeypatch.setattr('ersatz.api.SearchProduct', mock_user_request_valid)
+    request = FakeUserRequestGet('s=ValidUserInput')
+    output_witness = FakeSearchProductValid.result
+    output_processed = views._get_search_context(request)
+    assert output_processed == output_witness
+################################################################################
 
 #########
 #  API  #
