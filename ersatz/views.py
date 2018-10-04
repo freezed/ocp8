@@ -5,11 +5,7 @@ from django.shortcuts import render
 from . import api
 
 
-def index(request):
-    return render(request, 'ersatz/home.html')
-
-
-def search(request):
+def _get_search_context(request):
     """
     Receives the user request to search a product over OpenFF API
 
@@ -18,14 +14,14 @@ def search(request):
 
     Unvalid :
     {
-      'satus': False,
+      'status': False,
       'context': method path,
       'error': {details/message},
     }
 
     Valid :
     {
-      'satus': True,
+      'status': True,
       'products': { product dict() },
     }
     """
@@ -35,7 +31,7 @@ def search(request):
 
     if not url_qs_parsed:
         data = {
-            'satus': False,
+            'status': False,
             'context': __name__+'.search()',
             'error': {
                 'user_query': request.META['QUERY_STRING'],
@@ -46,4 +42,13 @@ def search(request):
         search = api.SearchProduct(request.GET['s'])
         data = search.result
 
+    return data
+
+
+def index(request):
+    return render(request, 'ersatz/home.html')
+
+
+def search(request):
+    data = _get_search_context(request)
     return render(request, 'ersatz/result.html', data)

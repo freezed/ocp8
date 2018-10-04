@@ -24,14 +24,14 @@ def get_json(url, payload):
 
     Unvalid :
     {
-      'satus': False,
+      'status': False,
       'context': method path,
       'error': {details/message},
     }
 
     Valid :
     {
-      'satus': True,
+      'status': True,
       'products': { product dict() },
     }
     """
