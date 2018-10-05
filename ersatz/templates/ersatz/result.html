@@ -3,23 +3,25 @@
 {% block title %} - ersatz result{% endblock %}
 
 {% block content %}
-  <h2>ersatz -result</h2>
-  <p>Status : {% if status %}True{% else %}False{% endif %}</p>
+  <h2>ersatz - result</h2>
+  {% if status %}{% else %}<p>Status : False{% endif %}</p>
   {% if status %}
   <table style="border: 1px solid gre;border-collapse: collapse;">
   <caption>Products</caption>
     <thead>
       <th>Code</th>
       <th>Nom</th>
-      <th>Catégorie</th>
+      <th>Catégories</th>
       <th>Nutriscore</th>
+      <th>Nova group</th>
     </thead>
     {% for line in products %}
     <tr>
       <td style="border: 1px solid grey">{{ line.code }}</td>
-      <td style="border: 1px solid grey">{{ line.product_name }}</td>
-      <td style="border: 1px solid grey">{{ line.categories_tags }}</td>
+      <td style="border: 1px solid grey">{{ line.name }}</td>
+      <td style="border: 1px solid grey">{{ line.categories }}</td>
       <td style="border: 1px solid grey">{{ line.nutrition_grades }}</td>
+      <td style="border: 1px solid grey">{{ line.nova_group }}</td>
     </tr>
     {% endfor %}
   </table>

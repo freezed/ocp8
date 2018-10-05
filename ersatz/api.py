@@ -91,6 +91,10 @@ class SearchProduct:
                     {field: False for field in FIELD_KEPT['product']
                      if field not in product}
                 )
+
+                purged_prod = self.set_categories(purged_prod)
+                purged_prod = self.set_name(purged_prod)
+
                 self._products.append(purged_prod)
 
             # Parsing is done correctly, add check-fields
@@ -105,3 +109,37 @@ class SearchProduct:
         return self._products_from_api
 
     result = property(_get_result)
+
+    @staticmethod
+    def set_categories(product_fields):
+        """
+        Change a `categories_tags` into `categories` list
+
+        Keep all `fr:` tags
+        Keep the 2 shortest `en:` tags
+        """
+        categories_tags = product_fields.pop('categories_tags')
+        categories_tags.sort(key=len)
+
+        cat = [tag[3:] for tag in categories_tags if "fr:" in tag]
+        cat.extend([tag[3:] for tag in categories_tags if "en:" in tag][:2])
+
+        product_fields.update({"categories": cat})
+
+        return product_fields
+
+    @staticmethod
+    def set_name(product_fields):
+        """ Concat the `product_name` and the shortest `brands_tags` """
+        product_name = product_fields.pop('product_name')
+        brands_tags = product_fields.pop('brands_tags')
+        brands_tags.sort(key=len)
+
+        name = "{} ({})".format(
+            product_name,
+            brands_tags[:1][0].capitalize(),
+        )
+
+        product_fields.update({"name": name})
+
+        return product_fields
