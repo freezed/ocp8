@@ -197,7 +197,7 @@ def test_get_json_status_code_invalid(monkeypatch):
 
 
 ################################################################################
-#   ersatz.api.SearchProduct._get_products_from_api()
+#   ersatz.api.SearchProduct.result
 ################################################################################
 
 # For products returned by API :
@@ -220,5 +220,5 @@ def test_search_product_valid(monkeypatch):
 
     monkeypatch.setattr('ersatz.api.get_json', fake_get_json_from_api_valid)
     output_processed = api.SearchProduct('string')
-    assert output_processed._products_from_api['products'] == output_sample['products']
+    assert output_processed.result['products'] == output_sample['products']
 ################################################################################

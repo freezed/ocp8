@@ -35,11 +35,11 @@ def get_json(url, payload):
       'products': { product dict() },
     }
     """
-    traceback = {'context': __name__+'.get_json() method','status': False}
+    traceback = {'context': __name__+'.get_json() method', 'status': False}
 
     try:
         response = requests.get(url, payload)
-        traceback['error'] = {'url': response.url,'payload': payload}
+        traceback['error'] = {'url': response.url, 'payload': payload}
 
     except requests.exceptions.ConnectionError as except_detail:
         traceback['error'].update({'ConnectionError': pf(except_detail)})
@@ -69,46 +69,42 @@ class SearchProduct:
     def __init__(self, string):
         self._payload = API['PARAM_SEARCH']
         self._payload.update({'search_terms': string})
-        self._products = []
-        self._products_from_api = self._get_products_from_api()
 
     def _get_products_from_api(self):
 
         api_response = get_json(API['URL_SEARCH'], self._payload)
-        self._products_from_api = api_response
+        json_return = api_response
 
         # API response is valid & non-empty
         if api_response['status'] and api_response['count'] > 0:
+            products = []
 
-            # Iterate on each prod (max 20) and keep only desired fields
+            # Iterate on each prod and keep only desired fields
             for product in api_response['products']:
-                purged_prod = {}
-                purged_prod.update(
+                product_stash = {}
+                product_stash.update(
                     {field: product[field] for field in FIELD_KEPT['product']
                      if field in product}
                 )
-                purged_prod.update(
+                product_stash.update(
                     {field: False for field in FIELD_KEPT['product']
                      if field not in product}
                 )
 
-                purged_prod = self.set_categories(purged_prod)
-                purged_prod = self.set_name(purged_prod)
+                product_stash = self.set_categories(product_stash)
+                product_stash = self.set_name(product_stash)
 
-                self._products.append(purged_prod)
+                products.append(product_stash)
 
             # Parsing is done correctly, add check-fields
-            self._products_from_api = {
-                'products': self._products,
+            json_return = {
+                'products': products,
                 'status': True,
             }
 
-        return self._products_from_api
+        return json_return
 
-    def _get_result(self):
-        return self._products_from_api
-
-    result = property(_get_result)
+    result = property(_get_products_from_api)
 
     @staticmethod
     def set_categories(product_fields):
