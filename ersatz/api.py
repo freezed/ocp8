@@ -115,12 +115,15 @@ class SearchProduct:
         Keep the 2 shortest `en:` tags
         """
         categories_tags = product_fields.pop('categories_tags')
-        categories_tags.sort(key=len)
+        product_fields.update({"categories": False})
 
-        cat = [tag[3:] for tag in categories_tags if "fr:" in tag]
-        cat.extend([tag[3:] for tag in categories_tags if "en:" in tag][:2])
+        if categories_tags:
+            categories_tags.sort(key=len)
+            cat = [tag[3:] for tag in categories_tags if "fr:" in tag]
+            cat.extend([tag[3:] for tag in categories_tags if "en:" in tag][:2])
 
-        product_fields.update({"categories": cat})
+            if len(cat) > 0:
+                product_fields.update({"categories": cat})
 
         return product_fields
 
@@ -129,12 +132,17 @@ class SearchProduct:
         """ Concat the `product_name` and the shortest `brands_tags` """
         product_name = product_fields.pop('product_name')
         brands_tags = product_fields.pop('brands_tags')
-        brands_tags.sort(key=len)
 
-        name = "{} ({})".format(
-            product_name,
-            brands_tags[:1][0].capitalize(),
-        )
+        if brands_tags:
+            brands_tags.sort(key=len)
+
+            name = "{} ({})".format(
+                product_name,
+                brands_tags[:1][0].capitalize(),
+            )
+
+        else:
+            name = product_name
 
         product_fields.update({"name": name})
 
