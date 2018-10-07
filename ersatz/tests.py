@@ -4,7 +4,6 @@ import urllib.parse as up
 from . import api, views
 from .config import FIELD_KEPT
 
-
 ################################################################################
 #   ersatz.views._get_search_context()
 ################################################################################
@@ -16,7 +15,6 @@ class FakeUserRequestGet:
 
         self.META = {'QUERY_STRING': QUERY_STRING}
         self.GET = {parts[0][0]: parts[0][1]}
-
 
 def test_user_request_invalid():
     request = FakeUserRequestGet("foobars=This string doesn't matter test is about unvalid request key (here : 'foobars')")
@@ -32,11 +30,9 @@ class FakeSearchProductValid:
     """ ersatz.api.SearchPoduct mock class """
     result = {'status': True, 'foo': 'bar'}
 
-
 def mock_user_request_valid(query):
     """ ersatz.api.SearchPoduct mock function """
     return FakeSearchProductValid
-
 
 def test_user_request_valid(monkeypatch):
     monkeypatch.setattr('ersatz.api.SearchProduct', mock_user_request_valid)
@@ -49,103 +45,17 @@ def test_user_request_valid(monkeypatch):
 #########
 #  API  #
 #########
-def fake_get_json_valid(url, payload):
-    """ ersatz.api.get_json fake function """
-    return {
-        'count': 2,
-        'status': True,
-        'page': 1,
-        'skip': 0,
-        'page_size': '2',
-        'products': [
-            {
-                'product_name': 'Foo',
-                'nutrition_grades': 'c',
-                'categories_tags': [
-                    'en:fresh-foods',
-                    'en:dairies',
-                    'fr:fromages-blancs',
-                ],
-                'code': 1664,
-                "_keywords": [],
-                "packaging_tags": [
-                    "carton",
-                    "sachet-plastique"
-                ],
-                "ingredients_n_tags": [],
-                "countries_beforescanbot": "France",
-                "languages": {
-                    "en:french": 6
-                },
-            },
-            {
-                'product_name': 'ooF',
-                'nutrition_grades': 'b',
-                'categories_tags': [
-                    'en:fermented-foods',
-                    'en:fermented-milk-products',
-                    'fr:fromage-a-pate-pressee',
-                    'fr:picodon',
-                ],
-                'code': 4661,
-                "_keywords": [],
-                "packaging_tags": [
-                    "PET",
-                    "papier"
-                ],
-                "ingredients_n_tags": [],
-                "countries_beforescanbot": "France",
-                "languages": {
-                    "en:french": 6
-                },
-            },
-        ]
-    }
-
-
-def test_search_product_valid(monkeypatch):
-    monkeypatch.setattr('ersatz.api.get_json', fake_get_json_valid)
-    test_search = api.SearchProduct('valid_query_string')
-    product_count = len(test_search.result['products'])
-    api_json = fake_get_json_valid('url', {'foo': 'bar'})
-
-    # Test JSON response keys
-    for field in ('status', 'context', 'products'):
-        assert field in test_search.result
-
-    # Test fields of first product
-    for field in FIELD_KEPT['product']:
-        assert field in test_search.result['products'][0]
-
-    # Test product quantity
-    assert product_count == api_json['count']
-
-
-def fake_get_json_invalid(url, payload):
-    """ ersatz.api.get_json fake function """
-    return {'status': False}
-
-
-def test_search_product_invalid(monkeypatch):
-    monkeypatch.setattr('ersatz.api.get_json', fake_get_json_invalid)
-    test_search = api.SearchProduct('fake_string')
-    assert not test_search.result['status']
-
-
 class FakeRequestsJSONValid:
     """ Requests.reponse mock class """
     status_code = 200
     url = 'test_url'
 
-
     def json():
         return {'foo': 'bar'}
-
 
 def mock_requests_get_valid(url, payload):
     """ Requests.get() mock function """
     return FakeRequestsJSONValid
-
 
 def test_get_json_valid(monkeypatch):
     monkeypatch.setattr('ersatz.api.requests.get', mock_requests_get_valid)
@@ -159,11 +69,9 @@ class FakeRequestsJSONInvalid:
     status_code = 'foobar'
     url = 'test_url'
 
-
 def mock_requests_get_json_invalid(url, payload):
     """ Requests.get() mock function """
     return FakeRequestsJSONInvalid
-
 
 def test_get_json_json_invalid(monkeypatch):
     monkeypatch.setattr('ersatz.api.requests.get', mock_requests_get_json_invalid)
@@ -182,11 +90,9 @@ class FakeRequestsStatusCodeInvalid:
     def json():
         return {'foo': 'bar'}
 
-
 def mock_requests_get_status_code_invalid(url, payload):
     """ Requests.get() mock function """
     return FakeRequestsStatusCodeInvalid
-
 
 def test_get_json_status_code_invalid(monkeypatch):
     monkeypatch.setattr('ersatz.api.requests.get', mock_requests_get_status_code_invalid)
@@ -221,4 +127,14 @@ def test_search_product_valid(monkeypatch):
     monkeypatch.setattr('ersatz.api.get_json', fake_get_json_from_api_valid)
     output_processed = api.SearchProduct('string')
     assert output_processed.result['products'] == output_sample['products']
+
+# API response is not valid, and return a `satus` == False
+def fake_get_json_from_api_invalid(url, payload):
+    """ ersatz.api.get_json fake function """
+    return {'status': False}
+
+def test_search_product_invalid(monkeypatch):
+    monkeypatch.setattr('ersatz.api.get_json', fake_get_json_from_api_invalid)
+    output_processed = api.SearchProduct('fake_string')
+    assert not output_processed.result['status']
 ################################################################################
