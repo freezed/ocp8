@@ -1,0 +1,28 @@
+{
+    "status": false,
+    "page": 1,
+    "products": [
+        {
+            "nova_group": 3,
+            "product_name": "La Faisselle",
+            "categories_tags": [
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cream-cheeses",
+                "fr:faisselles",
+                "fr:fromages-blancs"
+            ],
+            "brands_tags": [
+                "rians",
+                "foobar"
+            ],
+            "nutrition_grades": "c",
+            "code": "3184670001080"
+        }
+     ],
+    "count": 9450,
+    "skip": 0,
+    "page_size": "1"
+}

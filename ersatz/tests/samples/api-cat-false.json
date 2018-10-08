@@ -1,0 +1,166 @@
+{
+    "products": [
+        {
+            "categories": [
+                "fruits",
+                "apples"
+            ],
+            "code": "4020992004714",
+            "name": "Granny Smith",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": [
+                "apfel",
+                "fruchte"
+            ],
+            "code": "20245726",
+            "name": "Red apples (Oaklands)",
+            "nova_group": 1,
+            "nutrition_grades": "b"
+        },
+        {
+            "categories": [
+                "beverages",
+                "fruit-juices"
+            ],
+            "code": "4002160045026",
+            "name": "Apfel (Granini)",
+            "nova_group": false,
+            "nutrition_grades": "c"
+        },
+        {
+            "categories": [
+                "fresh-foods",
+                "red-cabbage"
+            ],
+            "code": "40804781",
+            "name": "Rotkohl, Der Schnelle, extra saftig mit Apfel (Kuhne)",
+            "nova_group": "3",
+            "nutrition_grades": "a"
+        },
+        {
+            "categories": [],
+            "code": "4104420071841",
+            "name": "Jus de pomme et de mangue (Alnatura)",
+            "nova_group": false,
+            "nutrition_grades": "b"
+        },
+        {
+            "categories": [
+                "desserts",
+                "compotes"
+            ],
+            "code": "4311501391808",
+            "name": "Apfelmark (Edeka-bio)",
+            "nova_group": 1,
+            "nutrition_grades": "a"
+        },
+        {
+            "categories": false,
+            "code": "20149192",
+            "name": "Milder Apfel",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": [
+                "beverages",
+                "sugared-beverages"
+            ],
+            "code": "20162122",
+            "name": "Teegetränk Apfel (Cornwall)",
+            "nova_group": 4,
+            "nutrition_grades": "e"
+        },
+        {
+            "categories": false,
+            "code": "20183356",
+            "name": "Bio Sonne Bio apfel ingwer riegel",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": false,
+            "code": "20193447",
+            "name": "Confiserie Firenze Apfel Streuselkuchen Tiefgefror (Confiserie-firenze)",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": false,
+            "code": "20224462",
+            "name": "Paradiso Apfel Naturtrüb",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": false,
+            "code": "20267322",
+            "name": "Sirius Fruchtbiscuits Apfel (Sondey)",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": false,
+            "code": "20363765",
+            "name": "Nektar, Apfel Kirsche",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": false,
+            "code": "20415716",
+            "name": "Fröhliche Früchtchen, Apfel Himbeer Aronia Maracuja",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": false,
+            "code": "20424060",
+            "name": "Streichzwerge, feine Leberwurst Apfel und Zwiebel (Linessa)",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": false,
+            "code": "20755232",
+            "name": "Fruchtriegel Apfel Od. Kirsche (Alesto)",
+            "nova_group": false,
+            "nutrition_grades": "d"
+        },
+        {
+            "categories": [
+                "beverages",
+                "non-alcoholic-beverages"
+            ],
+            "code": "20803902",
+            "name": "Smoothie, Apfel, Traube, Erdbeere, . .. (Solevita)",
+            "nova_group": false,
+            "nutrition_grades": "e"
+        },
+        {
+            "categories": false,
+            "code": "20803940",
+            "name": "Solevita Super Smoothie Defence, Apfel, Mango, Ora. ..",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": false,
+            "code": "20803988",
+            "name": "Solevita Apfel Tropic",
+            "nova_group": false,
+            "nutrition_grades": false
+        },
+        {
+            "categories": false,
+            "code": "20884314",
+            "name": "Freshona Bio Organic Frucht Mus Apfel, Erdbeere Und Banane",
+            "nova_group": false,
+            "nutrition_grades": false
+        }
+    ],
+    "status": true
+}

@@ -1,0 +1,21 @@
+{
+    "status": true,
+    "page": 1,
+    "products": [
+        {
+            "nova_group": 3,
+            "name": "La Faisselle (Rians)",
+            "categories": [
+                "dairies",
+                "cheeses",
+                "faisselles",
+                "fromages-blancs"
+            ],
+            "nutrition_grades": "c",
+            "code": "3184670001080"
+        }
+    ],
+    "count": 9450,
+    "skip": 0,
+    "page_size": "1"
+}

@@ -1,0 +1,557 @@
+{
+    "status_verbose": "product found",
+    "status": 1,
+    "code": "3166296203444",
+    "product": {
+        "ingredients_text_with_allergens": "poivre noir grains",
+        "additives_tags": [],
+        "image_thumb_url": "https://static.openfoodfacts.org/images/products/316/629/620/3444/front_fr.4.100.jpg",
+        "emb_codes_orig": "",
+        "countries_tags": [
+            "en:france"
+        ],
+        "_id": "3166296203444",
+        "pnns_groups_2_tags": [
+            "unknown"
+        ],
+        "ingredients_n": "1",
+        "additives_original_tags": [],
+        "nova_groups": 1,
+        "ingredients_text": "poivre noir grains",
+        "quantity": "90g",
+        "nutrition_grades_tags": [
+            "b"
+        ],
+        "lc": "fr",
+        "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+        "codes_tags": [
+            "code-13",
+            "3166296203444",
+            "316629620344x",
+            "31662962034xx",
+            "3166296203xxx",
+            "316629620xxxx",
+            "31662962xxxxx",
+            "3166296xxxxxx",
+            "316629xxxxxxx",
+            "31662xxxxxxxx",
+            "3166xxxxxxxxx",
+            "316xxxxxxxxxx",
+            "31xxxxxxxxxxx",
+            "3xxxxxxxxxxxx"
+        ],
+        "nutriments": {
+            "saturated-fat_unit": "g",
+            "saturated-fat": "0",
+            "salt_value": "0",
+            "proteins_100g": 0.1,
+            "salt_unit": "g",
+            "nova-group_serving": 1,
+            "energy_value": "1",
+            "fiber": 0.1,
+            "energy": "4",
+            "saturated-fat_100g": "0",
+            "salt": "0",
+            "fat": 0.1,
+            "proteins_unit": "g",
+            "sugars": "0",
+            "energy_serving": "",
+            "sugars_value": "0",
+            "fat_value": "0.1",
+            "nutrition-score-fr_100g": "0",
+            "nova-group_100g": 1,
+            "sugars_unit": "g",
+            "salt_serving": "",
+            "fat_serving": "",
+            "carbohydrates": "0",
+            "sodium_value": "0",
+            "sugars_serving": "",
+            "fiber_unit": "g",
+            "nutrition-score-fr": "0",
+            "fiber_value": "0.1",
+            "proteins": 0.1,
+            "salt_100g": "0",
+            "carbohydrates_value": "0",
+            "sodium_serving": "",
+            "nutrition-score-uk": "0",
+            "saturated-fat_serving": "",
+            "fiber_serving": "",
+            "sugars_100g": "0",
+            "nutrition-score-uk_100g": "0",
+            "sodium_unit": "g",
+            "energy_unit": "kcal",
+            "carbohydrates_unit": "g",
+            "energy_100g": "4",
+            "proteins_serving": "",
+            "sodium": "0",
+            "carbohydrates_serving": "",
+            "fiber_100g": 0.1,
+            "fat_unit": "g",
+            "carbohydrates_100g": "0",
+            "proteins_value": "0.1",
+            "fat_100g": 0.1,
+            "sodium_100g": "0",
+            "nova-group": 1,
+            "saturated-fat_value": "0"
+        },
+        "traces_debug_tags": [],
+        "last_image_t": 1483445343,
+        "checkers_tags": [],
+        "image_ingredients_url": "https://static.openfoodfacts.org/images/products/316/629/620/3444/ingredients_fr.7.400.jpg",
+        "packaging_debug_tags": [],
+        "additives_n": 0,
+        "allergens_hierarchy": [],
+        "categories": "Kruidenierswaren,Peperkorrels,Pepers,Plantaardige levensmiddelen,Plantaardige levensmiddelen en dranken,Smaakmakers,Specerijen,Zwarte peperkorrels,Zwarte pepers",
+        "last_modified_by": "magasins-u",
+        "ingredients_from_palm_oil_tags": [],
+        "unknown_nutrients_tags": [],
+        "categories_tags": [
+            "fr:kruidenierswaren",
+            "fr:peperkorrels",
+            "fr:pepers",
+            "fr:plantaardige-levensmiddelen",
+            "fr:plantaardige-levensmiddelen-en-dranken",
+            "fr:smaakmakers",
+            "fr:specerijen",
+            "fr:zwarte-peperkorrels",
+            "fr:zwarte-pepers"
+        ],
+        "categories_debug_tags": [],
+        "allergens_from_ingredients": "",
+        "origins_debug_tags": [],
+        "ingredients_text_debug": "poivre noir grains",
+        "images": {
+            "1": {
+                "uploaded_t": "1475326452",
+                "sizes": {
+                    "100": {
+                        "h": 100,
+                        "w": 75
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 300
+                    },
+                    "full": {
+                        "h": 3264,
+                        "w": 2448
+                    }
+                },
+                "uploader": "damienb"
+            },
+            "2": {
+                "uploader": "aleene",
+                "sizes": {
+                    "100": {
+                        "w": 100,
+                        "h": 75
+                    },
+                    "400": {
+                        "w": 400,
+                        "h": 300
+                    },
+                    "full": {
+                        "h": 2448,
+                        "w": 3264
+                    }
+                },
+                "uploaded_t": "1483445342"
+            },
+            "ingredients_fr": {
+                "sizes": {
+                    "100": {
+                        "h": 75,
+                        "w": 100
+                    },
+                    "200": {
+                        "h": 150,
+                        "w": 200
+                    },
+                    "400": {
+                        "w": 400,
+                        "h": 300
+                    },
+                    "full": {
+                        "h": 2448,
+                        "w": 3264
+                    }
+                },
+                "normalize": null,
+                "x1": -1,
+                "angle": 0,
+                "x2": -1,
+                "y1": -1,
+                "rev": "7",
+                "y2": -1,
+                "imgid": "2",
+                "geometry": "0x0--8--8",
+                "white_magic": null
+            },
+            "front_fr": {
+                "y1": "0",
+                "rev": "4",
+                "x2": "255.65625",
+                "angle": "0",
+                "sizes": {
+                    "100": {
+                        "h": 100,
+                        "w": 54
+                    },
+                    "200": {
+                        "h": 200,
+                        "w": 107
+                    },
+                    "400": {
+                        "w": 215,
+                        "h": 400
+                    },
+                    "full": {
+                        "h": 3255,
+                        "w": 1747
+                    }
+                },
+                "x1": "41.65625",
+                "normalize": "false",
+                "white_magic": "false",
+                "geometry": "1747x3255-339-0",
+                "imgid": "1",
+                "y2": "399"
+            }
+        },
+        "minerals_tags": [],
+        "image_front_small_url": "https://static.openfoodfacts.org/images/products/316/629/620/3444/front_fr.4.200.jpg",
+        "labels_tags": [],
+        "states": "en:to-be-completed, en:nutrition-facts-completed, en:ingredients-completed, en:expiration-date-completed, en:packaging-code-to-be-completed, en:characteristics-completed, en:categories-completed, en:brands-completed, en:packaging-completed, en:quantity-completed, en:product-name-completed, en:photos-to-be-validated, en:photos-uploaded",
+        "emb_codes": "",
+        "sortkey": 535663522,
+        "labels_hierarchy": [],
+        "amino_acids_tags": [],
+        "complete": 0,
+        "amino_acids_prev_tags": [],
+        "generic_name_fr_debug_tags": [],
+        "_keywords": [
+            "ducro",
+            "format",
+            "poivre",
+            "kruidenierswaren",
+            "grain",
+            "noir",
+            "mccormick",
+            "smaakmaker",
+            "levensmiddelen",
+            "peperkorrel",
+            "specerijen",
+            "en",
+            "plantaardige",
+            "maxi",
+            "dranken",
+            "peper",
+            "zwarte",
+            "classique"
+        ],
+        "last_editor": "magasins-u",
+        "ingredients_debug": [
+            "poivre noir grains"
+        ],
+        "manufacturing_places": "",
+        "states_tags": [
+            "en:to-be-completed",
+            "en:nutrition-facts-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:photos-uploaded"
+        ],
+        "pnns_groups_1_tags": [
+            "unknown"
+        ],
+        "image_ingredients_small_url": "https://static.openfoodfacts.org/images/products/316/629/620/3444/ingredients_fr.7.200.jpg",
+        "labels_prev_hierarchy": [],
+        "traces_from_ingredients": "",
+        "expiration_date": "08/02/18",
+        "origins_tags": [],
+        "traces": "",
+        "stores": "Magasins U",
+        "ingredients_that_may_be_from_palm_oil_tags": [],
+        "ingredients_original_tags": [
+            "fr:poivre noir grains"
+        ],
+        "interface_version_modified": "20120622",
+        "unique_scans_n": 3,
+        "last_edit_dates_tags": [
+            "2018-08-30",
+            "2018-08",
+            "2018"
+        ],
+        "link": "",
+        "ingredients_from_palm_oil_n": 0,
+        "unknown_ingredients_n": 1,
+        "categories_hierarchy": [
+            "fr:Kruidenierswaren",
+            "fr:Peperkorrels",
+            "fr:Pepers",
+            "fr:Plantaardige levensmiddelen",
+            "fr:Plantaardige levensmiddelen en dranken",
+            "fr:Smaakmakers",
+            "fr:Specerijen",
+            "fr:Zwarte peperkorrels",
+            "fr:Zwarte pepers"
+        ],
+        "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/316/629/620/3444/front_fr.4.100.jpg",
+        "vitamins_tags": [],
+        "interface_version_created": "20150316.jqm2",
+        "update_key": "nova20180918",
+        "stores_debug_tags": [],
+        "serving_quantity": 0,
+        "nutrition_data_per": "100g",
+        "correctors_tags": [
+            "damienb",
+            "aleene",
+            "kiliweb",
+            "sebleouf"
+        ],
+        "purchase_places_debug_tags": [],
+        "countries_debug_tags": [],
+        "additives_prev": " [ poivre-noir-grains -> fr:poivre-noir-grains  ]  [ poivre-noir -> fr:poivre-noir  ]  [ poivre -> fr:poivre  ] ",
+        "manufacturing_places_debug_tags": [],
+        "languages": {
+            "en:french": 5
+        },
+        "product_name_fr": "Poivre noir grains - maxi format classique",
+        "rev": 11,
+        "debug_param_sorted_langs": [
+            "fr"
+        ],
+        "additives_prev_original_tags": [],
+        "states_hierarchy": [
+            "en:to-be-completed",
+            "en:nutrition-facts-completed",
+            "en:ingredients-completed",
+            "en:expiration-date-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:photos-uploaded"
+        ],
+        "brands_debug_tags": [],
+        "last_image_dates_tags": [
+            "2017-01-03",
+            "2017-01",
+            "2017"
+        ],
+        "additives": " [ poivre-noir-grains -> fr:poivre-noir-grains  ]  [ poivre-noir -> fr:poivre-noir  ]  [ poivre -> fr:poivre  ] ",
+        "traces_tags": [],
+        "labels_prev_tags": [],
+        "origins": "",
+        "ingredients_text_fr": "poivre noir grains",
+        "nutrition_grades": "b",
+        "nutrient_levels": {
+            "saturated-fat": "low",
+            "fat": "low",
+            "salt": "low",
+            "sugars": "low"
+        },
+        "product_name_fr_debug_tags": [],
+        "categories_prev_tags": [
+            "fr:kruidenierswaren",
+            "fr:peperkorrels",
+            "fr:pepers",
+            "fr:plantaardige-levensmiddelen",
+            "fr:plantaardige-levensmiddelen-en-dranken",
+            "fr:smaakmakers",
+            "fr:specerijen",
+            "fr:zwarte-peperkorrels",
+            "fr:zwarte-pepers"
+        ],
+        "allergens": "",
+        "generic_name": "poivre noir en grains",
+        "editors_tags": [
+            "aleene",
+            "kiliweb",
+            "damienb",
+            "magasins-u",
+            "sebleouf"
+        ],
+        "additives_debug_tags": [],
+        "additives_old_tags": [],
+        "ingredients_that_may_be_from_palm_oil_n": 0,
+        "emb_codes_tags": [],
+        "quality_tags": [
+            "ingredients-unknown-score-above-0",
+            "ingredients-100-percent-unknown",
+            "quantity-not-recognized"
+        ],
+        "countries_hierarchy": [
+            "en:france"
+        ],
+        "selected_images": {
+            "ingredients": {
+                "thumb": {
+                    "fr": "https://static.openfoodfacts.org/images/products/316/629/620/3444/ingredients_fr.7.100.jpg"
+                },
+                "display": {
+                    "fr": "https://static.openfoodfacts.org/images/products/316/629/620/3444/ingredients_fr.7.400.jpg"
+                },
+                "small": {
+                    "fr": "https://static.openfoodfacts.org/images/products/316/629/620/3444/ingredients_fr.7.200.jpg"
+                }
+            },
+            "front": {
+                "small": {
+                    "fr": "https://static.openfoodfacts.org/images/products/316/629/620/3444/front_fr.4.200.jpg"
+                },
+                "display": {
+                    "fr": "https://static.openfoodfacts.org/images/products/316/629/620/3444/front_fr.4.400.jpg"
+                },
+                "thumb": {
+                    "fr": "https://static.openfoodfacts.org/images/products/316/629/620/3444/front_fr.4.100.jpg"
+                }
+            }
+        },
+        "additives_prev_n": 0,
+        "ingredients": [
+            {
+                "text": "poivre noir grains",
+                "rank": 1,
+                "id": "fr:poivre noir grains"
+            }
+        ],
+        "creator": "damienb",
+        "lang_debug_tags": [],
+        "allergens_tags": [],
+        "id": "3166296203444",
+        "pnns_groups_1": "unknown",
+        "purchase_places_tags": [],
+        "ingredients_tags": [
+            "fr:poivre-noir-grains"
+        ],
+        "scans_n": 3,
+        "last_modified_t": 1535663522,
+        "vitamins_prev_tags": [],
+        "image_small_url": "https://static.openfoodfacts.org/images/products/316/629/620/3444/front_fr.4.200.jpg",
+        "pnns_groups_2": "unknown",
+        "brands": "Ducros,McCormick",
+        "labels": "",
+        "image_ingredients_thumb_url": "https://static.openfoodfacts.org/images/products/316/629/620/3444/ingredients_fr.7.100.jpg",
+        "packaging": "boite,plastique,Point vert",
+        "labels_debug_tags": [],
+        "misc_tags": [
+            "en:nutrition-no-fruits-vegetables-nuts",
+            "en:nutrition-no-fiber-or-fruits-vegetables-nuts",
+            "en:nutriscore-computed"
+        ],
+        "cities_tags": [],
+        "nutrient_levels_tags": [
+            "en:fat-in-low-quantity",
+            "en:saturated-fat-in-low-quantity",
+            "en:sugars-in-low-quantity",
+            "en:salt-in-low-quantity"
+        ],
+        "entry_dates_tags": [
+            "2016-10-01",
+            "2016-10",
+            "2016"
+        ],
+        "code": "3166296203444",
+        "packaging_tags": [
+            "boite",
+            "plastique",
+            "point-vert"
+        ],
+        "max_imgid": "2",
+        "ingredients_hierarchy": [
+            "fr:poivre noir grains"
+        ],
+        "categories_prev_hierarchy": [
+            "fr:Kruidenierswaren",
+            "fr:Peperkorrels",
+            "fr:Pepers",
+            "fr:Plantaardige levensmiddelen",
+            "fr:Plantaardige levensmiddelen en dranken",
+            "fr:Smaakmakers",
+            "fr:Specerijen",
+            "fr:Zwarte peperkorrels",
+            "fr:Zwarte pepers"
+        ],
+        "informers_tags": [
+            "damienb",
+            "aleene",
+            "kiliweb",
+            "magasins-u"
+        ],
+        "nova_group_debug": "",
+        "countries": "France",
+        "nutrition_data_per_debug_tags": [],
+        "serving_size_debug_tags": [],
+        "lang": "fr",
+        "languages_tags": [
+            "en:french",
+            "en:1"
+        ],
+        "additives_prev_tags": [],
+        "traces_hierarchy": [],
+        "emb_codes_debug_tags": [],
+        "image_front_url": "https://static.openfoodfacts.org/images/products/316/629/620/3444/front_fr.4.400.jpg",
+        "manufacturing_places_tags": [],
+        "product_name": "Poivre noir grains - maxi format classique",
+        "nucleotides_prev_tags": [],
+        "additives_old_n": 0,
+        "ingredients_n_tags": [
+            "1",
+            "1-10"
+        ],
+        "created_t": 1475326321,
+        "purchase_places": "",
+        "nutrition_score_debug": " -- energy 0 + sat-fat 0 + fr-sat-fat-for-fats 0 + sugars 0 + sodium 0 - fruits 0% 0 - fiber 0 - proteins 0 -- fsa 0 -- fr 0",
+        "languages_hierarchy": [
+            "en:french"
+        ],
+        "quantity_debug_tags": [],
+        "image_url": "https://static.openfoodfacts.org/images/products/316/629/620/3444/front_fr.4.400.jpg",
+        "ingredients_text_with_allergens_fr": "poivre noir grains",
+        "expiration_date_debug_tags": [],
+        "nucleotides_tags": [],
+        "no_nutrition_data": "",
+        "ingredients_ids_debug": [
+            "poivre-noir-grains"
+        ],
+        "languages_codes": {
+            "fr": 5
+        },
+        "product_name_debug_tags": [],
+        "ingredients_text_fr_debug_tags": [],
+        "nutrition_grade_fr": "b",
+        "serving_size": "",
+        "nutrition_score_warning_no_fruits_vegetables_nuts": 1,
+        "generic_name_fr": "poivre noir en grains",
+        "photographers_tags": [
+            "damienb",
+            "aleene"
+        ],
+        "stores_tags": [
+            "magasins-u"
+        ],
+        "brands_tags": [
+            "ducros",
+            "mccormick"
+        ],
+        "minerals_prev_tags": [],
+        "nova_groups_tags": [
+            "en:1-unprocessed-or-minimally-processed-foods"
+        ],
+        "nova_group": 1,
+        "link_debug_tags": []
+    }
+}

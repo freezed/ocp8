@@ -1,0 +1,704 @@
+{
+    "product": {
+        "id": "4104420071841",
+        "allergens_tags": [],
+        "scans_n": 1,
+        "ingredients_tags": [],
+        "purchase_places_tags": [],
+        "pnns_groups_1": "unknown",
+        "creator": "date-limite-app",
+        "ingredients": [],
+        "selected_images": {
+            "ingredients": {
+                "thumb": {
+                    "en": "https://static.openfoodfacts.org/images/products/410/442/007/1841/ingredients_en.18.100.jpg",
+                    "fr": "https://static.openfoodfacts.org/images/products/410/442/007/1841/ingredients_fr.19.100.jpg"
+                },
+                "display": {
+                    "en": "https://static.openfoodfacts.org/images/products/410/442/007/1841/ingredients_en.18.400.jpg",
+                    "fr": "https://static.openfoodfacts.org/images/products/410/442/007/1841/ingredients_fr.19.400.jpg"
+                },
+                "small": {
+                    "fr": "https://static.openfoodfacts.org/images/products/410/442/007/1841/ingredients_fr.19.200.jpg",
+                    "en": "https://static.openfoodfacts.org/images/products/410/442/007/1841/ingredients_en.18.200.jpg"
+                }
+            },
+            "front": {
+                "thumb": {
+                    "en": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_en.3.100.jpg",
+                    "fr": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_fr.16.100.jpg"
+                },
+                "display": {
+                    "en": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_en.3.400.jpg",
+                    "fr": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_fr.16.400.jpg"
+                },
+                "small": {
+                    "fr": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_fr.16.200.jpg",
+                    "en": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_en.3.200.jpg"
+                }
+            }
+        },
+        "nova_group_tags": [
+            "not-applicable"
+        ],
+        "packaging": "tetrapack",
+        "editors": [
+            "date-limite-app",
+            "teolemon"
+        ],
+        "image_ingredients_thumb_url": "https://static.openfoodfacts.org/images/products/410/442/007/1841/ingredients_fr.19.100.jpg",
+        "labels": "",
+        "misc_tags": [
+            "en:nutrition-no-fruits-vegetables-nuts",
+            "en:nutrition-no-fiber-or-fruits-vegetables-nuts",
+            "en:nutriscore-computed"
+        ],
+        "labels_debug_tags": [],
+        "ingredients_text_with_allergens_de": "Apfelsaft* 75%, Mangomark* 25%",
+        "vitamins_prev_tags": [],
+        "last_modified_t": 1532880553,
+        "brands": "Alnatura",
+        "pnns_groups_2": "unknown",
+        "image_small_url": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_fr.16.200.jpg",
+        "labels_prev_tags": [],
+        "origins": "",
+        "ingredients_text_fr": "Jus de pomme* 75%, pulpe de mangue* 25%",
+        "traces_tags": [],
+        "nutrition_grades": "b",
+        "nutrient_levels": {
+            "sugars": "moderate",
+            "salt": "low",
+            "fat": "low",
+            "saturated-fat": "low"
+        },
+        "last_image_dates_tags": [
+            "2018-07-29",
+            "2018-07",
+            "2018"
+        ],
+        "additives_prev_original_tags": [],
+        "states_hierarchy": [
+            "en:to-be-completed",
+            "en:nutrition-facts-completed",
+            "en:ingredients-to-be-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:photos-uploaded"
+        ],
+        "emb_codes_tags": [],
+        "countries_hierarchy": [
+            "en:france",
+            "en:switzerland"
+        ],
+        "quality_tags": [],
+        "allergens": "",
+        "categories_prev_tags": [
+            "de:apfel-und-mango-saft"
+        ],
+        "additives_debug_tags": [],
+        "additives_old_tags": [],
+        "editors_tags": [
+            "date-limite-app",
+            "kiliweb",
+            "openfoodfacts-contributors",
+            "tacite-mass-editor",
+            "teolemon",
+            "openfood-ch-import"
+        ],
+        "generic_name": "",
+        "nutrition_grade_fr": "b",
+        "nutrition_score_warning_no_fruits_vegetables_nuts": 1,
+        "serving_size": "",
+        "image_url": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_fr.16.400.jpg",
+        "ingredients_text_with_allergens_fr": "Jus de pomme* 75%, pulpe de mangue* 25%",
+        "sources": [
+            {
+                "images": [
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "fields": [
+                    "product_name_fr",
+                    "ingredients_text_fr",
+                    "ingredients_text_de",
+                    "nutrients.energy",
+                    "nutrients.fat",
+                    "nutrients.saturated-fat",
+                    "nutrients.carbohydrates",
+                    "nutrients.sugars",
+                    "nutrients.fiber",
+                    "nutrients.proteins",
+                    "nutrients.salt"
+                ],
+                "id": "openfood-ch",
+                "import_t": 1486504522,
+                "url": "https://www.openfood.ch/en/products/10261"
+            }
+        ],
+        "product_name_debug_tags": [],
+        "languages_codes": {
+            "en": 3,
+            "de": 2,
+            "fr": 4
+        },
+        "ingredients_ids_debug": [],
+        "nucleotides_tags": [],
+        "no_nutrition_data": "",
+        "minerals_prev_tags": [],
+        "stores_tags": [],
+        "photographers_tags": [
+            "date-limite-app",
+            "openfoodfacts-contributors",
+            "openfood-ch-import",
+            "kiliweb"
+        ],
+        "brands_tags": [
+            "alnatura"
+        ],
+        "lang": "en",
+        "languages_tags": [
+            "en:german",
+            "en:french",
+            "en:english",
+            "en:3",
+            "en:multilingual"
+        ],
+        "ingredients_text_en": "",
+        "ingredients_text_with_allergens_en": "",
+        "countries": "Switzerland, en:france",
+        "nutrition_data_per_debug_tags": [],
+        "nova_group_debug": "no nova group when the product does not have ingredients",
+        "traces_hierarchy": [],
+        "additives_prev_tags": [],
+        "additives_tags_n": null,
+        "code": "4104420071841",
+        "entry_dates_tags": [
+            "2015-07-25",
+            "2015-07",
+            "2015"
+        ],
+        "cities_tags": [],
+        "nutrient_levels_tags": [
+            "en:fat-in-low-quantity",
+            "en:saturated-fat-in-low-quantity",
+            "en:sugars-in-moderate-quantity",
+            "en:salt-in-low-quantity"
+        ],
+        "informers_tags": [
+            "date-limite-app",
+            "teolemon",
+            "tacite-mass-editor",
+            "openfoodfacts-contributors",
+            "openfood-ch-import",
+            "kiliweb"
+        ],
+        "categories_prev_hierarchy": [
+            "de:Apfel und Mango Saft"
+        ],
+        "ingredients_hierarchy": [],
+        "max_imgid": "8",
+        "packaging_tags": [
+            "tetrapack"
+        ],
+        "created_t": 1437815119,
+        "languages_hierarchy": [
+            "en:german",
+            "en:french",
+            "en:english"
+        ],
+        "purchase_places": "",
+        "nutrition_score_debug": " -- energy 0 + sat-fat 0 + fr-sat-fat-for-fats 2 + sugars 2 + sodium 0 - fruits 0% 0 - fiber 0 - proteins 0 -- fsa 2 -- fr 2",
+        "nucleotides_prev_tags": [],
+        "product_name": "Jus de pomme et de mangue",
+        "image_front_url": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_fr.16.400.jpg",
+        "manufacturing_places_tags": [],
+        "unknown_nutrients_tags": [],
+        "ingredients_from_palm_oil_tags": [],
+        "allergens_hierarchy": [],
+        "last_modified_by": null,
+        "categories": "de:Apfel und Mango Saft",
+        "product_quantity": 750,
+        "allergens_from_ingredients": "",
+        "categories_debug_tags": [],
+        "categories_tags": [
+            "de:apfel-und-mango-saft"
+        ],
+        "generic_name_en": "",
+        "checkers_tags": [],
+        "last_image_t": 1532880553,
+        "image_ingredients_url": "https://static.openfoodfacts.org/images/products/410/442/007/1841/ingredients_fr.19.400.jpg",
+        "image_front_small_url": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_fr.16.200.jpg",
+        "labels_hierarchy": [],
+        "amino_acids_tags": [],
+        "sortkey": 532880553,
+        "emb_codes": "",
+        "states": "en:to-be-completed, en:nutrition-facts-completed, en:ingredients-to-be-completed, en:expiration-date-to-be-completed, en:packaging-code-to-be-completed, en:characteristics-completed, en:categories-completed, en:brands-completed, en:packaging-completed, en:quantity-completed, en:product-name-completed, en:photos-to-be-validated, en:photos-uploaded",
+        "labels_tags": [],
+        "ingredients_text_debug": "",
+        "minerals_tags": [],
+        "images": {
+            "1": {
+                "sizes": {
+                    "100": {
+                        "w": 75,
+                        "h": 100
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 300
+                    },
+                    "full": {
+                        "h": 1333,
+                        "w": 1000
+                    }
+                },
+                "uploaded_t": 1437815122,
+                "uploader": "date-limite-app"
+            },
+            "2": {
+                "sizes": {
+                    "100": {
+                        "w": 56,
+                        "h": 100
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 225
+                    },
+                    "full": {
+                        "h": 2000,
+                        "w": 1125
+                    }
+                },
+                "uploaded_t": "1474788534",
+                "uploader": "openfoodfacts-contributors"
+            },
+            "3": {
+                "uploaded_t": 1486504520,
+                "sizes": {
+                    "100": {
+                        "h": 100,
+                        "w": 56
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 225
+                    },
+                    "full": {
+                        "h": 1000,
+                        "w": 563
+                    }
+                },
+                "uploader": "openfood-ch-import"
+            },
+            "4": {
+                "uploader": "openfood-ch-import",
+                "uploaded_t": 1486504520,
+                "sizes": {
+                    "100": {
+                        "w": 56,
+                        "h": 100
+                    },
+                    "400": {
+                        "w": 225,
+                        "h": 400
+                    },
+                    "full": {
+                        "w": 563,
+                        "h": 1000
+                    }
+                }
+            },
+            "5": {
+                "sizes": {
+                    "100": {
+                        "w": 56,
+                        "h": 100
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 225
+                    },
+                    "full": {
+                        "h": 1000,
+                        "w": 563
+                    }
+                },
+                "uploaded_t": 1486504521,
+                "uploader": "openfood-ch-import"
+            },
+            "6": {
+                "uploader": "openfood-ch-import",
+                "uploaded_t": 1486504522,
+                "sizes": {
+                    "100": {
+                        "w": 56,
+                        "h": 100
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 225
+                    },
+                    "full": {
+                        "h": 1000,
+                        "w": 563
+                    }
+                }
+            },
+            "7": {
+                "uploaded_t": 1532880552,
+                "sizes": {
+                    "100": {
+                        "h": 100,
+                        "w": 44
+                    },
+                    "400": {
+                        "w": 177,
+                        "h": 400
+                    },
+                    "full": {
+                        "h": 1200,
+                        "w": 531
+                    }
+                },
+                "uploader": "kiliweb"
+            },
+            "8": {
+                "uploaded_t": 1532880553,
+                "sizes": {
+                    "100": {
+                        "h": 12,
+                        "w": 100
+                    },
+                    "400": {
+                        "w": 400,
+                        "h": 50
+                    },
+                    "full": {
+                        "h": 389,
+                        "w": 3120
+                    }
+                },
+                "uploader": "kiliweb"
+            },
+            "front_fr": {
+                "x2": null,
+                "angle": null,
+                "sizes": {
+                    "100": {
+                        "w": 44,
+                        "h": 100
+                    },
+                    "200": {
+                        "h": 200,
+                        "w": 89
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 177
+                    },
+                    "full": {
+                        "w": 531,
+                        "h": 1200
+                    }
+                },
+                "normalize": "0",
+                "x1": null,
+                "y1": null,
+                "rev": "16",
+                "imgid": "7",
+                "y2": null,
+                "white_magic": "0",
+                "geometry": "0x0-0-0"
+            },
+            "front_en": {
+                "normalize": null,
+                "sizes": {
+                    "100": {
+                        "h": 100,
+                        "w": 75
+                    },
+                    "200": {
+                        "w": 150,
+                        "h": 200
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 300
+                    },
+                    "full": {
+                        "w": 1000,
+                        "h": 1333
+                    }
+                },
+                "imgid": "1",
+                "white_magic": null,
+                "rev": "3",
+                "geometry": "0x0--3--3"
+            },
+            "front": {
+                "normalize": null,
+                "sizes": {
+                    "100": {
+                        "h": 100,
+                        "w": 75
+                    },
+                    "200": {
+                        "w": 150,
+                        "h": 200
+                    },
+                    "400": {
+                        "h": 400,
+                        "w": 300
+                    },
+                    "full": {
+                        "w": 1000,
+                        "h": 1333
+                    }
+                },
+                "imgid": "1",
+                "white_magic": null,
+                "rev": "3",
+                "geometry": "0x0--3--3"
+            },
+            "ingredients_fr": {
+                "y1": null,
+                "rev": "19",
+                "angle": null,
+                "sizes": {
+                    "100": {
+                        "h": 12,
+                        "w": 100
+                    },
+                    "200": {
+                        "h": 25,
+                        "w": 200
+                    },
+                    "400": {
+                        "h": 50,
+                        "w": 400
+                    },
+                    "full": {
+                        "w": 3120,
+                        "h": 389
+                    }
+                },
+                "x1": null,
+                "normalize": "0",
+                "x2": null,
+                "white_magic": "0",
+                "geometry": "0x0-0-0",
+                "y2": null,
+                "imgid": "8"
+            },
+            "ingredients_en": {
+                "geometry": "0x0--7--7",
+                "white_magic": null,
+                "y2": "-1",
+                "imgid": "8",
+                "rev": "18",
+                "y1": "-1",
+                "x1": "-1",
+                "sizes": {
+                    "100": {
+                        "w": 100,
+                        "h": 12
+                    },
+                    "200": {
+                        "h": 25,
+                        "w": 200
+                    },
+                    "400": {
+                        "w": 400,
+                        "h": 50
+                    },
+                    "full": {
+                        "w": 3120,
+                        "h": 389
+                    }
+                },
+                "normalize": null,
+                "angle": 0,
+                "x2": "-1"
+            }
+        },
+        "fruits-vegetables-nuts_100g_estimate": 0,
+        "pnns_groups_2_tags": [
+            "unknown"
+        ],
+        "_id": "4104420071841",
+        "product_name_de": "Apfel Mango",
+        "additives_original_tags": [],
+        "product_name_en": "Jus de pomme et de mangue",
+        "image_thumb_url": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_fr.16.100.jpg",
+        "additives_tags": [],
+        "ingredients_text_with_allergens": "",
+        "emb_codes_orig": "",
+        "countries_tags": [
+            "en:france",
+            "en:switzerland"
+        ],
+        "lc": "en",
+        "nutriments": {
+            "salt_unit": "",
+            "energy_value": "49",
+            "fiber": 0.6,
+            "energy": "205",
+            "salt": 0.01,
+            "saturated-fat_100g": 0.1,
+            "fat": 0.5,
+            "saturated-fat_unit": "",
+            "saturated-fat": 0.1,
+            "proteins_100g": 0.5,
+            "salt_value": "0.01",
+            "fat_value": "0.5",
+            "nutrition-score-fr_100g": "2",
+            "sugars_unit": "",
+            "salt_serving": "",
+            "carbohydrates": "12",
+            "fat_serving": "",
+            "sugars": "11",
+            "proteins_unit": "",
+            "energy_serving": "",
+            "sugars_value": "11",
+            "nutrition-score-uk": "2",
+            "sodium_serving": "",
+            "saturated-fat_serving": "",
+            "fiber_serving": "",
+            "nutrition-score-uk_100g": "2",
+            "sugars_100g": "11",
+            "sugars_serving": "",
+            "fiber_unit": "g",
+            "nutrition-score-fr": "2",
+            "fiber_value": "0.6",
+            "proteins": 0.5,
+            "carbohydrates_value": "12",
+            "salt_100g": 0.01,
+            "sodium": 0.00393700787401575,
+            "fiber_100g": 0.6,
+            "carbohydrates_serving": "",
+            "fat_unit": "",
+            "carbohydrates_100g": "12",
+            "proteins_value": "0.5",
+            "fat_100g": 0.5,
+            "sodium_100g": 0.00393700787401575,
+            "saturated-fat_value": "0.1",
+            "energy_unit": "kcal",
+            "carbohydrates_unit": "",
+            "energy_100g": "205",
+            "proteins_serving": ""
+        },
+        "codes_tags": [
+            "code-13",
+            "4104420071841",
+            "410442007184x",
+            "41044200718xx",
+            "4104420071xxx",
+            "410442007xxxx",
+            "41044200xxxxx",
+            "4104420xxxxxx",
+            "410442xxxxxxx",
+            "41044xxxxxxxx",
+            "4104xxxxxxxxx",
+            "410xxxxxxxxxx",
+            "41xxxxxxxxxxx",
+            "4xxxxxxxxxxxx"
+        ],
+        "nutrition_data_prepared_per": "100g",
+        "quantity": "0.75 l.",
+        "ingredients_text": "",
+        "emb_codes_20141016": "",
+        "nutrition_grades_tags": [
+            "b"
+        ],
+        "categories_hierarchy": [
+            "de:Apfel und Mango Saft"
+        ],
+        "unknown_ingredients_n": 0,
+        "link": "",
+        "update_key": "additives20180816d",
+        "interface_version_created": "20130323.jqm",
+        "vitamins_tags": [],
+        "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/410/442/007/1841/front_fr.16.100.jpg",
+        "interface_version_modified": "20150316.jqm2",
+        "ingredients_original_tags": [],
+        "last_edit_dates_tags": [
+            "2018-07-29",
+            "2018-07",
+            "2018"
+        ],
+        "unique_scans_n": 1,
+        "countries_debug_tags": [],
+        "product_name_fr": "Jus de pomme et de mangue",
+        "languages": {
+            "en:german": 2,
+            "en:english": 3,
+            "en:french": 4
+        },
+        "rev": 19,
+        "serving_quantity": 0,
+        "ingredients_text_de": "Apfelsaft* 75%, Mangomark* 25%",
+        "correctors_tags": [
+            "teolemon",
+            "openfood-ch-import",
+            "kiliweb",
+            "openfoodfacts-contributors"
+        ],
+        "nutrition_data_per": "100g",
+        "ingredients_debug": [],
+        "last_editor": null,
+        "manufacturing_places": "",
+        "complete": 0,
+        "_keywords": [
+            "pomme",
+            "und",
+            "de",
+            "alnatura",
+            "et",
+            "saft",
+            "ju",
+            "mangue",
+            "mango",
+            "apfel"
+        ],
+        "amino_acids_prev_tags": [],
+        "expiration_date": "",
+        "ingredients_that_may_be_from_palm_oil_tags": [],
+        "stores": "",
+        "traces": "",
+        "origins_tags": [],
+        "labels_prev_hierarchy": [],
+        "image_ingredients_small_url": "https://static.openfoodfacts.org/images/products/410/442/007/1841/ingredients_fr.19.200.jpg",
+        "pnns_groups_1_tags": [
+            "unknown"
+        ],
+        "states_tags": [
+            "en:to-be-completed",
+            "en:nutrition-facts-completed",
+            "en:ingredients-to-be-completed",
+            "en:expiration-date-to-be-completed",
+            "en:packaging-code-to-be-completed",
+            "en:characteristics-completed",
+            "en:categories-completed",
+            "en:brands-completed",
+            "en:packaging-completed",
+            "en:quantity-completed",
+            "en:product-name-completed",
+            "en:photos-to-be-validated",
+            "en:photos-uploaded"
+        ],
+        "traces_from_ingredients": ""
+    },
+    "code": "4104420071841",
+    "status_verbose": "product found",
+    "status": 1
+}

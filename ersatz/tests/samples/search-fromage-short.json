@@ -1,0 +1,4130 @@
+{
+    "page": 1,
+    "products": [
+        {
+            "product_name_debug_tags": [],
+            "update_key": "nova20180918",
+            "origins": "Sel de Guérande,44350 Guérande,Loire-Atlantique,Pays de la Loire,France",
+            "serving_quantity": 0,
+            "last_modified_t": 1535660808,
+            "nucleotides_tags": [],
+            "image_nutrition_small_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/nutrition_fr.16.200.jpg",
+            "stores_debug_tags": [],
+            "allergens_tags": [],
+            "traces_hierarchy": [
+                "en:nuts"
+            ],
+            "countries_hierarchy": [
+                "en:france"
+            ],
+            "labels_prev_tags": [
+                "fr:concours-general-agricole",
+                "fr:medaille-d-argent-du-concours-general-agricole",
+                "fr:medaille-d-argent-du-concours-general-agricole-2013",
+                "fr:produit-en-bretagne",
+                "fr:info-tri-point-vert"
+            ],
+            "ingredients_hierarchy": [
+                "fr:fromage-frais",
+                "en:salt-from-guerande",
+                "en:sea-salt",
+                "en:salt",
+                "fr:Ingrédients laitiers issus de lait pasteurisé"
+            ],
+            "languages_tags": [
+                "en:french",
+                "en:1"
+            ],
+            "states_hierarchy": [
+                "en:to-be-checked",
+                "en:complete",
+                "en:nutrition-facts-completed",
+                "en:ingredients-completed",
+                "en:expiration-date-completed",
+                "en:packaging-code-completed",
+                "en:characteristics-completed",
+                "en:categories-completed",
+                "en:brands-completed",
+                "en:packaging-completed",
+                "en:quantity-completed",
+                "en:product-name-completed",
+                "en:photos-validated",
+                "en:photos-uploaded"
+            ],
+            "selected_images": {
+                "front": {
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.100.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.400.jpg"
+                    },
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.200.jpg"
+                    }
+                },
+                "nutrition": {
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/nutrition_fr.16.200.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/nutrition_fr.16.400.jpg"
+                    },
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/nutrition_fr.16.100.jpg"
+                    }
+                },
+                "ingredients": {
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/ingredients_fr.20.200.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/ingredients_fr.20.400.jpg"
+                    },
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/ingredients_fr.20.100.jpg"
+                    }
+                }
+            },
+            "purchase_places_tags": [
+                "33170-gradignan",
+                "france"
+            ],
+            "languages": {
+                "en:french": 6
+            },
+            "url": "https://fr.openfoodfacts.org/produit/3236240070306/le-fromage-fouette-madame-loik-nature-au-sel-de-guerande-24-mg-paysan-breton",
+            "entry_dates_tags": [
+                "2012-06-28",
+                "2012-06",
+                "2012"
+            ],
+            "informers_tags": [
+                "nounours",
+                "manu1400",
+                "naudinsylvain",
+                "jacob80"
+            ],
+            "amino_acids_prev_tags": [],
+            "ingredients_ids_debug": [
+                "fromage-frais",
+                "sel-de-guerande",
+                "1",
+                "1",
+                "ingredients-laitiers-issus-de-lait-pasteurise"
+            ],
+            "nutrition_score_debug": " -- in cheeses category -- energy 3 + sat-fat 10 + fr-sat-fat-for-fats 10 + sugars 0 + sodium 4 - fruits 0% 0 - fiber 0 - proteins 3 -- fsa 17 -- fr 14",
+            "editors": [
+                "nounours",
+                "twoflower",
+                "remilk",
+                "phoenix",
+                "manu1400",
+                "jacob80",
+                "naudinsylvain"
+            ],
+            "complete": 1,
+            "nutrition_data_per": "100g",
+            "ingredients_from_palm_oil_n": 0,
+            "labels_debug_tags": [
+                "added-en-produced-in-bretagne",
+                "removed-fr-produit-en-bretagne"
+            ],
+            "nutrition_score_warning_no_fruits_vegetables_nuts": 1,
+            "image_ingredients_small_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/ingredients_fr.20.200.jpg",
+            "creator": "nounours",
+            "serving_size": "",
+            "lc": "fr",
+            "informers": [
+                "manu1400"
+            ],
+            "photographers_tags": [
+                "nounours",
+                "naudinsylvain",
+                "openfoodfacts-contributors"
+            ],
+            "link": "http://www.paysanbreton.fr/fr/produits/les-fromages-fouettes",
+            "correctors_tags": [
+                "nounours",
+                "manu1400",
+                "naudinsylvain",
+                "jacob80",
+                "remilk",
+                "twoflower",
+                "phoenix",
+                "date-limite-app",
+                "magasins-u"
+            ],
+            "nutrition_grade_fr": "d",
+            "traces": "Fruits à coque",
+            "nutrition_grades": "d",
+            "last_modified_by": "magasins-u",
+            "labels_hierarchy": [
+                "fr:concours-general-agricole",
+                "fr:medaille-d-argent-du-concours-general-agricole",
+                "en:produced-in-bretagne",
+                "fr:medaille-d-argent-du-concours-general-agricole-2013",
+                "fr:Info-Tri Point Vert"
+            ],
+            "additives_n": 0,
+            "labels_tags": [
+                "fr:concours-general-agricole",
+                "fr:medaille-d-argent-du-concours-general-agricole",
+                "en:produced-in-bretagne",
+                "fr:medaille-d-argent-du-concours-general-agricole-2013",
+                "fr:info-tri-point-vert"
+            ],
+            "additives_prev_tags": [],
+            "labels": "Concours général agricole,Médaille d'argent du Concours général agricole,Médaille d'argent du concours general agricole 2013,Info-Tri Point Vert,Produit en Bretagne",
+            "manufacturing_places_tags": [
+                "laiterie-nouvelle-de-l-arguenon-lna-filiale-laita-groupe-even-za-bellevue-22130-crehen",
+                "cotes-d-armor",
+                "bretagne",
+                "france"
+            ],
+            "allergens_hierarchy": [],
+            "image_thumb_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.100.jpg",
+            "additives_debug_tags": [],
+            "allergens_from_ingredients": "",
+            "stores_tags": [
+                "simply",
+                "magasins-u"
+            ],
+            "interface_version_created": "20120622",
+            "emb_codes_tags": [
+                "fr-22-049-001-ec"
+            ],
+            "correctors": [],
+            "last_image_dates_tags": [
+                "2016-08-03",
+                "2016-08",
+                "2016"
+            ],
+            "code": "3236240070306",
+            "last_image_t": 1470217088,
+            "generic_name_fr": "Fromage industriel de France, à pâte fraîche, au lait pasteurisé de vache, à tartiner",
+            "states_tags": [
+                "en:to-be-checked",
+                "en:complete",
+                "en:nutrition-facts-completed",
+                "en:ingredients-completed",
+                "en:expiration-date-completed",
+                "en:packaging-code-completed",
+                "en:characteristics-completed",
+                "en:categories-completed",
+                "en:brands-completed",
+                "en:packaging-completed",
+                "en:quantity-completed",
+                "en:product-name-completed",
+                "en:photos-validated",
+                "en:photos-uploaded"
+            ],
+            "nucleotides_prev_tags": [],
+            "ingredients_n": 3,
+            "additives_prev_n": 0,
+            "countries": "France",
+            "pnns_groups_1_tags": [
+                "milk-and-dairy-products"
+            ],
+            "nutrient_levels_tags": [
+                "en:fat-in-high-quantity",
+                "en:saturated-fat-in-high-quantity",
+                "en:sugars-in-low-quantity",
+                "en:salt-in-moderate-quantity"
+            ],
+            "ingredients_that_may_be_from_palm_oil_tags": [],
+            "image_nutrition_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/nutrition_fr.16.400.jpg",
+            "rev": 41,
+            "pnns_groups_2": "Cheese",
+            "image_front_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.400.jpg",
+            "unknown_nutrients_tags": [],
+            "additives_original_tags": [],
+            "unknown_ingredients_n": 1,
+            "nutriments": {
+                "salt_100g": 1.1,
+                "sodium_unit": "g",
+                "fat_unit": "g",
+                "carbohydrates_value": "3",
+                "fat_100g": "24",
+                "saturated-fat_value": "17.3",
+                "nutrition-score-fr_100g": "14",
+                "sugars_value": "3",
+                "energy_value": "252",
+                "nutrition-score-uk_100g": "17",
+                "salt_value": "1.1",
+                "salt_serving": "",
+                "sugars_100g": "3",
+                "proteins_100g": 5.9,
+                "sodium_serving": "",
+                "nova-group": 3,
+                "saturated-fat_100g": 17.3,
+                "proteins_serving": "",
+                "sugars": "3",
+                "salt_unit": "g",
+                "fat_value": "24",
+                "nutrition-score-uk": "17",
+                "salt": 1.1,
+                "proteins_value": "5.9",
+                "carbohydrates_serving": "",
+                "sodium": "0.433070866141732",
+                "nova-group_serving": 3,
+                "carbohydrates_100g": "3",
+                "fat_serving": "",
+                "sodium_100g": 0.433070866141732,
+                "energy": "1054",
+                "energy_serving": "",
+                "energy_100g": "1054",
+                "sugars_serving": "",
+                "saturated-fat_serving": "",
+                "nutrition-score-fr": "14",
+                "nova-group_100g": 3,
+                "sodium_value": "0.4330708661417323",
+                "carbohydrates_unit": "g",
+                "energy_unit": "kcal",
+                "fat": "24",
+                "proteins_unit": "g",
+                "saturated-fat": "17.3",
+                "sugars_unit": "g",
+                "carbohydrates": "3",
+                "saturated-fat_unit": "g",
+                "proteins": "5.9"
+            },
+            "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.100.jpg",
+            "vitamins_prev_tags": [],
+            "categories_hierarchy": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:cream-cheeses",
+                "en:french-cheeses",
+                "en:pasteurized-cheeses",
+                "en:cheese-spreads",
+                "en:industrial-cheese"
+            ],
+            "ingredients": [
+                {
+                    "text": "Fromage frais",
+                    "id": "fr:fromage-frais",
+                    "rank": 1
+                },
+                {
+                    "text": "sel de Guérande",
+                    "id": "en:salt-from-guerande",
+                    "percent": "1.1",
+                    "rank": 2
+                },
+                {
+                    "rank": 3,
+                    "id": "fr:Ingrédients laitiers issus de lait pasteurisé",
+                    "text": "Ingrédients laitiers issus de lait pasteurisé"
+                }
+            ],
+            "states": "en:to-be-checked, en:complete, en:nutrition-facts-completed, en:ingredients-completed, en:expiration-date-completed, en:packaging-code-completed, en:characteristics-completed, en:categories-completed, en:brands-completed, en:packaging-completed, en:quantity-completed, en:product-name-completed, en:photos-validated, en:photos-uploaded",
+            "debug_tags": [
+                "43"
+            ],
+            "emb_codes_orig": "FR 22.049.001 EC",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.200.jpg",
+            "pnns_groups_2_tags": [
+                "cheese"
+            ],
+            "nutrition_score_warning_no_fiber": 1,
+            "max_imgid": "5",
+            "sortkey": 1535660808,
+            "languages_codes": {
+                "fr": 6
+            },
+            "countries_tags": [
+                "en:france"
+            ],
+            "minerals_tags": [],
+            "photographers": [
+                "manu1400"
+            ],
+            "ingredients_tags": [
+                "fr:fromage-frais",
+                "en:salt-from-guerande",
+                "en:sea-salt",
+                "en:salt",
+                "fr:ingredients-laitiers-issus-de-lait-pasteurise"
+            ],
+            "unique_scans_n": 99,
+            "ingredients_that_may_be_from_palm_oil_n": 0,
+            "allergens": "",
+            "nutrient_levels": {
+                "saturated-fat": "high",
+                "sugars": "low",
+                "fat": "high",
+                "salt": "moderate"
+            },
+            "ingredients_text_with_allergens": "Fromage frais, sel de Guérande (1,1 %).\r\n\r\nIngrédients laitiers issus de lait pasteurisé.",
+            "misc_tags": [
+                "en:nutrition-no-fiber",
+                "en:nutrition-no-fruits-vegetables-nuts",
+                "en:nutrition-no-fiber-or-fruits-vegetables-nuts",
+                "en:nutriscore-computed"
+            ],
+            "codes_tags": [
+                "code-13",
+                "3236240070306",
+                "323624007030x",
+                "32362400703xx",
+                "3236240070xxx",
+                "323624007xxxx",
+                "32362400xxxxx",
+                "3236240xxxxxx",
+                "323624xxxxxxx",
+                "32362xxxxxxxx",
+                "3236xxxxxxxxx",
+                "323xxxxxxxxxx",
+                "32xxxxxxxxxxx",
+                "3xxxxxxxxxxxx"
+            ],
+            "emb_codes_20141016": "FR 22.049.001 CE",
+            "no_nutrition_data": "",
+            "product_name_fr": "Le Fromage Fouetté Madame Loïk, Nature au sel de Guérande (24 % MG)",
+            "categories": "Frais,Produits à tartiner,Produits laitiers,Produits à tartiner salés,Fromages,Fromages de vache,Fromages de France,Fromages à pâte fraîche,Fromages pasteurisés,Fromages à tartiner,Fromages industriels",
+            "ingredients_text_debug": "Fromage frais, sel de Guérande (1,1 %).\r\n\r\nIngrédients laitiers issus de lait pasteurisé.",
+            "minerals_prev_tags": [],
+            "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+            "interface_version_modified": "20150316.jqm2",
+            "nova_groups_tags": [
+                "en:3-processed-foods"
+            ],
+            "expiration_date": "23/06/14",
+            "traces_tags": [
+                "en:nuts"
+            ],
+            "ingredients_n_tags": [
+                "3",
+                "1-10"
+            ],
+            "quality_tags": [
+                "quantity-not-recognized"
+            ],
+            "additives_tags": [],
+            "lang": "fr",
+            "labels_prev_hierarchy": [
+                "fr:concours-general-agricole",
+                "fr:medaille-d-argent-du-concours-general-agricole",
+                "fr:medaille-d-argent-du-concours-general-agricole-2013",
+                "fr:produit-en-bretagne",
+                "fr:Info-Tri Point Vert"
+            ],
+            "ingredients_original_tags": [
+                "fr:fromage-frais",
+                "en:salt-from-guerande",
+                "fr:Ingrédients laitiers issus de lait pasteurisé"
+            ],
+            "additives_old_tags": [],
+            "quantity": "150 g",
+            "amino_acids_tags": [],
+            "completed_t": 1400939565,
+            "id": "3236240070306",
+            "_keywords": [
+                "tartiner",
+                "fouette",
+                "loik",
+                "guerande",
+                "bretagne",
+                "la",
+                "le",
+                "argent",
+                "medaille",
+                "en",
+                "breton",
+                "info-tri",
+                "nature",
+                "pate",
+                "sale",
+                "concour",
+                "general",
+                "agricole",
+                "lait",
+                "du",
+                "frai",
+                "au",
+                "sel",
+                "loire-atlantique",
+                "24",
+                "produit",
+                "vert",
+                "paysan",
+                "fraiche",
+                "madame",
+                "laitier",
+                "france",
+                "vache",
+                "44350",
+                "fromage",
+                "pasteurise",
+                "point",
+                "de",
+                "2013",
+                "mg",
+                "industriel",
+                "pay",
+                "loire"
+            ],
+            "categories_prev_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:cream-cheeses",
+                "en:french-cheeses",
+                "en:cheese-spreads",
+                "en:industrial-cheese",
+                "en:pasteurized-cheeses"
+            ],
+            "last_edit_dates_tags": [
+                "2018-08-30",
+                "2018-08",
+                "2018"
+            ],
+            "pnns_groups_1": "Milk and dairy products",
+            "lang_debug_tags": [],
+            "manufacturing_places": "Laiterie Nouvelle de l'Arguenon - LNA [Filiale Laïta (Groupe Even)] - ZA Bellevue - 22130 Créhen,Côtes-d'Armor,Bretagne,France",
+            "editors_tags": [
+                "manu1400",
+                "twoflower",
+                "jacob80",
+                "nounours",
+                "naudinsylvain",
+                "magasins-u",
+                "remilk",
+                "openfoodfacts-contributors",
+                "date-limite-app",
+                "phoenix"
+            ],
+            "packaging_debug_tags": [],
+            "image_nutrition_thumb_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/nutrition_fr.16.100.jpg",
+            "new_additives_n": 0,
+            "nova_group": 3,
+            "nutrition_grades_tags": [
+                "d"
+            ],
+            "generic_name": "Fromage industriel de France, à pâte fraîche, au lait pasteurisé de vache, à tartiner",
+            "nova_groups": 3,
+            "image_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.400.jpg",
+            "ingredients_text_with_allergens_fr": "Fromage frais, sel de Guérande (1,1 %).\r\n\r\nIngrédients laitiers issus de lait pasteurisé.",
+            "ingredients_from_palm_oil_tags": [],
+            "additives_old_n": 0,
+            "categories_prev_hierarchy": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:cream-cheeses",
+                "en:french-cheeses",
+                "en:cheese-spreads",
+                "en:industrial-cheese",
+                "en:pasteurized-cheeses"
+            ],
+            "stores": "Simply, Magasins U",
+            "categories_debug_tags": [],
+            "ingredients_text_fr": "Fromage frais, sel de Guérande (1,1 %).\r\n\r\nIngrédients laitiers issus de lait pasteurisé.",
+            "image_ingredients_thumb_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/ingredients_fr.20.100.jpg",
+            "packaging_tags": [
+                "frais",
+                "opercule-metal-etui-pot-et-son-couvercle-carton-a-recycler",
+                "frais"
+            ],
+            "additives_prev_original_tags": [],
+            "scans_n": 105,
+            "traces_from_ingredients": "",
+            "created_t": 1340862747,
+            "ingredients_debug": [
+                "Fromage frais",
+                ",",
+                null,
+                null,
+                null,
+                " sel de Guérande ",
+                "(",
+                "(",
+                null,
+                null,
+                "1",
+                ",",
+                null,
+                null,
+                null,
+                "1 %)",
+                ".\r",
+                null,
+                null,
+                null,
+                "\n\r\nIngrédients laitiers issus de lait pasteurisé."
+            ],
+            "fruits-vegetables-nuts_100g_estimate": 0,
+            "cities_tags": [
+                "crehen-cotes-d-armor-france"
+            ],
+            "nova_group_debug": " -- ingredients/en:salt : 3",
+            "emb_codes": "FR 22.049.001 EC",
+            "checkers": [],
+            "languages_hierarchy": [
+                "en:french"
+            ],
+            "product_name": "Le Fromage Fouetté Madame Loïk, Nature au sel de Guérande (24 % MG)",
+            "last_editor": "magasins-u",
+            "ingredients_text": "Fromage frais, sel de Guérande (1,1 %).\r\n\r\nIngrédients laitiers issus de lait pasteurisé.",
+            "image_small_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.200.jpg",
+            "_id": "3236240070306",
+            "images": {
+                "1": {
+                    "uploaded_t": 1340862772,
+                    "uploader": "nounours",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 67
+                        },
+                        "400": {
+                            "h": 267,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 2000,
+                            "h": 1333
+                        }
+                    }
+                },
+                "2": {
+                    "uploader": "nounours",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 67
+                        },
+                        "400": {
+                            "h": 267,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 2000,
+                            "h": 1333
+                        }
+                    },
+                    "uploaded_t": 1340863228
+                },
+                "3": {
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 67
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 267
+                        },
+                        "full": {
+                            "h": 1333,
+                            "w": 2000
+                        }
+                    },
+                    "uploader": "nounours",
+                    "uploaded_t": 1340899494
+                },
+                "4": {
+                    "uploaded_t": 1399317592,
+                    "uploader": "naudinsylvain",
+                    "sizes": {
+                        "100": {
+                            "w": 75,
+                            "h": 100
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 300
+                        },
+                        "full": {
+                            "h": 3264,
+                            "w": 2448
+                        }
+                    }
+                },
+                "5": {
+                    "uploaded_t": "1470217087",
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 56
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 225
+                        },
+                        "full": {
+                            "w": 1125,
+                            "h": 2000
+                        }
+                    },
+                    "uploader": "openfoodfacts-contributors"
+                },
+                "nutrition_fr": {
+                    "normalize": null,
+                    "rev": "16",
+                    "imgid": "4",
+                    "geometry": "800x498-489-2480",
+                    "sizes": {
+                        "100": {
+                            "h": 62,
+                            "w": 100
+                        },
+                        "200": {
+                            "h": 125,
+                            "w": 200
+                        },
+                        "400": {
+                            "h": 249,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 800,
+                            "h": 498
+                        }
+                    },
+                    "white_magic": null
+                },
+                "ingredients": {
+                    "geometry": "1534x188-440-2219",
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "h": 12,
+                            "w": 100
+                        },
+                        "200": {
+                            "w": 200,
+                            "h": 25
+                        },
+                        "400": {
+                            "h": 49,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 1534,
+                            "h": 188
+                        }
+                    },
+                    "normalize": null,
+                    "rev": "20",
+                    "imgid": "4"
+                },
+                "nutrition": {
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 62
+                        },
+                        "200": {
+                            "h": 125,
+                            "w": 200
+                        },
+                        "400": {
+                            "h": 249,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 800,
+                            "h": 498
+                        }
+                    },
+                    "geometry": "800x498-489-2480",
+                    "rev": "16",
+                    "imgid": "4",
+                    "normalize": null
+                },
+                "front": {
+                    "imgid": "1",
+                    "rev": "27",
+                    "normalize": null,
+                    "white_magic": "checked",
+                    "sizes": {
+                        "100": {
+                            "h": 96,
+                            "w": 100
+                        },
+                        "200": {
+                            "h": 191,
+                            "w": 200
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 382
+                        },
+                        "full": {
+                            "h": 999,
+                            "w": 1045
+                        }
+                    },
+                    "geometry": "1045x999-505-219"
+                },
+                "front_fr": {
+                    "imgid": "1",
+                    "rev": "27",
+                    "normalize": null,
+                    "sizes": {
+                        "100": {
+                            "w": "100",
+                            "h": "96"
+                        },
+                        "200": {
+                            "h": 191,
+                            "w": 200
+                        },
+                        "400": {
+                            "h": 382,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 1045,
+                            "h": 999
+                        }
+                    },
+                    "white_magic": "checked",
+                    "geometry": "1045x999-505-219"
+                },
+                "ingredients_fr": {
+                    "rev": "20",
+                    "imgid": "4",
+                    "normalize": null,
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "h": 12,
+                            "w": 100
+                        },
+                        "200": {
+                            "w": 200,
+                            "h": 25
+                        },
+                        "400": {
+                            "h": 49,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 1534,
+                            "h": 188
+                        }
+                    },
+                    "geometry": "1534x188-440-2219"
+                }
+            },
+            "brands": "Paysan Breton",
+            "packaging": "Frais,Opercule métal - étui - pot et son couvercle carton à recycler,frais",
+            "vitamins_tags": [],
+            "brands_tags": [
+                "paysan-breton"
+            ],
+            "image_ingredients_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/ingredients_fr.20.400.jpg",
+            "origins_tags": [
+                "sel-de-guerande",
+                "44350-guerande",
+                "loire-atlantique",
+                "pays-de-la-loire",
+                "france"
+            ],
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:cream-cheeses",
+                "en:french-cheeses",
+                "en:pasteurized-cheeses",
+                "en:cheese-spreads",
+                "en:industrial-cheese"
+            ],
+            "checkers_tags": [],
+            "purchase_places": "33170 Gradignan,France"
+        },
+        {
+            "traces_from_ingredients": "",
+            "quantity_debug_tags": [],
+            "created_t": 1397504661,
+            "additives_prev_original_tags": [
+                "en:e452",
+                "en:e341",
+                "en:e330",
+                "en:e450"
+            ],
+            "scans_n": 101,
+            "ingredients_text_fr": "Lait écrémé réhydraté, fromages, beurre, protéines de lait, sels de fonte : polyphosphates, phosphates de calcium, acide citrique, diphosphates, sel.",
+            "stores": "Carrefour",
+            "categories_debug_tags": [],
+            "categories_prev_hierarchy": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:cheese-spreads",
+                "en:industrial-cheese",
+                "en:processed-cheese"
+            ],
+            "additives_old_n": 4,
+            "packaging_tags": [
+                "frais",
+                "boite",
+                "papier-aluminium",
+                "paquet",
+                "boite",
+                "frais"
+            ],
+            "image_ingredients_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/ingredients_fr.32.100.jpg",
+            "ingredients_text_with_allergens_fr": "Lait écrémé réhydraté, <span class=\"allergen\">fromages</span>, <span class=\"allergen\">beurre</span>, <span class=\"allergen\">protéines de lait</span>, sels de fonte : polyphosphates, phosphates de calcium, acide citrique, diphosphates, sel.",
+            "generic_name_fr_debug_tags": [],
+            "ingredients_from_palm_oil_tags": [],
+            "nova_groups": 4,
+            "image_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.400.jpg",
+            "generic_name": "Fromage industriel de France, à pâte fondue, au lait de vache, à tartiner",
+            "expiration_date_debug_tags": [],
+            "brands_debug_tags": [],
+            "nutrition_data_per_debug_tags": [],
+            "nutrition_grades_tags": [
+                "d"
+            ],
+            "nova_group": 4,
+            "packaging_debug_tags": [],
+            "image_nutrition_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.100.jpg",
+            "new_additives_n": 4,
+            "origins_tags": [],
+            "purchase_places": "Roanne,France",
+            "product_quantity": 535,
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:processed-cheese",
+                "en:cheese-spreads",
+                "en:industrial-cheese"
+            ],
+            "checkers_tags": [],
+            "brands_tags": [
+                "la-vache-qui-rit",
+                "bel"
+            ],
+            "vitamins_tags": [],
+            "packaging": "Frais,Boîte,Papier aluminium,paquet,boîte,frais",
+            "image_ingredients_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/ingredients_fr.32.400.jpg",
+            "brands": "La Vache qui rit,Bel",
+            "image_small_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.200.jpg",
+            "_id": "3073780593083",
+            "images": {
+                "1": {
+                    "uploaded_t": 1397505240,
+                    "uploader": "jitrixis",
+                    "sizes": {
+                        "100": {
+                            "w": 56,
+                            "h": 100
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 225
+                        },
+                        "full": {
+                            "h": 4128,
+                            "w": 2322
+                        }
+                    }
+                },
+                "2": {
+                    "uploaded_t": 1397505264,
+                    "sizes": {
+                        "100": {
+                            "w": 56,
+                            "h": 100
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 225
+                        },
+                        "full": {
+                            "w": 2322,
+                            "h": 4128
+                        }
+                    },
+                    "uploader": "jitrixis"
+                },
+                "3": {
+                    "uploaded_t": 1397505277,
+                    "uploader": "jitrixis",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 56
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 225
+                        },
+                        "full": {
+                            "w": 4128,
+                            "h": 2322
+                        }
+                    }
+                },
+                "4": {
+                    "uploader": "openfoodfacts-contributors",
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 75
+                        },
+                        "400": {
+                            "w": 300,
+                            "h": 400
+                        },
+                        "full": {
+                            "w": 2448,
+                            "h": 3264
+                        }
+                    },
+                    "uploaded_t": "1455981201"
+                },
+                "5": {
+                    "uploaded_t": "1479255385",
+                    "sizes": {
+                        "100": {
+                            "w": 75,
+                            "h": 100
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 300
+                        },
+                        "full": {
+                            "h": 1333,
+                            "w": 1000
+                        }
+                    },
+                    "uploader": "date-limite-app"
+                },
+                "6": {
+                    "uploaded_t": "1498046699",
+                    "uploader": "kiliweb",
+                    "sizes": {
+                        "100": {
+                            "h": 27,
+                            "w": 100
+                        },
+                        "400": {
+                            "h": 107,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 1533,
+                            "h": 411
+                        }
+                    }
+                },
+                "7": {
+                    "uploaded_t": "1520100877",
+                    "uploader": "kiliweb",
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 75
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 300
+                        },
+                        "full": {
+                            "w": 901,
+                            "h": 1200
+                        }
+                    }
+                },
+                "8": {
+                    "sizes": {
+                        "100": {
+                            "h": 75,
+                            "w": 100
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 300
+                        },
+                        "full": {
+                            "w": 1599,
+                            "h": 1200
+                        }
+                    },
+                    "uploader": "kiliweb",
+                    "uploaded_t": "1520100879"
+                },
+                "front_fr": {
+                    "imgid": "1",
+                    "rev": "8",
+                    "normalize": null,
+                    "sizes": {
+                        "100": {
+                            "h": "100",
+                            "w": "95"
+                        },
+                        "200": {
+                            "w": 190,
+                            "h": 200
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 379
+                        },
+                        "full": {
+                            "w": 2261,
+                            "h": 2384
+                        }
+                    },
+                    "white_magic": null,
+                    "geometry": "2261x2384-61-887"
+                },
+                "ingredients_fr": {
+                    "rev": "32",
+                    "x1": null,
+                    "imgid": "6",
+                    "normalize": "0",
+                    "y1": null,
+                    "y2": null,
+                    "angle": null,
+                    "x2": null,
+                    "white_magic": "0",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 27
+                        },
+                        "200": {
+                            "w": 200,
+                            "h": 54
+                        },
+                        "400": {
+                            "h": 107,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 1533,
+                            "h": 411
+                        }
+                    },
+                    "geometry": "0x0-0-0"
+                },
+                "ingredients": {
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "h": 9,
+                            "w": 100
+                        },
+                        "200": {
+                            "w": 200,
+                            "h": 18
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 36
+                        },
+                        "full": {
+                            "w": 4118,
+                            "h": 372
+                        }
+                    },
+                    "geometry": "4118x372-10-918",
+                    "rev": "9",
+                    "imgid": "3",
+                    "normalize": null
+                },
+                "nutrition_fr": {
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "h": 45,
+                            "w": 100
+                        },
+                        "200": {
+                            "h": 91,
+                            "w": 200
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 182
+                        },
+                        "full": {
+                            "w": 2973,
+                            "h": 1352
+                        }
+                    },
+                    "geometry": "2973x1352-866-392",
+                    "imgid": "2",
+                    "rev": "10",
+                    "normalize": null
+                },
+                "front": {
+                    "geometry": "2261x2384-61-887",
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 95
+                        },
+                        "200": {
+                            "w": 190,
+                            "h": 200
+                        },
+                        "400": {
+                            "w": 379,
+                            "h": 400
+                        },
+                        "full": {
+                            "w": 2261,
+                            "h": 2384
+                        }
+                    },
+                    "normalize": null,
+                    "imgid": "1",
+                    "rev": "8"
+                },
+                "nutrition": {
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "h": 45,
+                            "w": 100
+                        },
+                        "200": {
+                            "w": 200,
+                            "h": 91
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 182
+                        },
+                        "full": {
+                            "h": 1352,
+                            "w": 2973
+                        }
+                    },
+                    "geometry": "2973x1352-866-392",
+                    "rev": "10",
+                    "imgid": "2",
+                    "normalize": null
+                }
+            },
+            "last_editor": "tacite",
+            "product_name": "La Vache qui rit® 32 Portions (19 % MG)",
+            "ingredients_text": "Lait écrémé réhydraté, fromages, beurre, protéines de lait, sels de fonte : polyphosphates, phosphates de calcium, acide citrique, diphosphates, sel.",
+            "languages_hierarchy": [
+                "en:french"
+            ],
+            "allergens_debug_tags": [],
+            "nova_group_debug": " -- ingredients/en:salt : 3 -- additives/en:e450 : 4",
+            "emb_codes": "FR 39.198.001 EC",
+            "ingredients_debug": [
+                "Lait écrémé réhydraté",
+                ",",
+                null,
+                null,
+                null,
+                " fromages",
+                ",",
+                null,
+                null,
+                null,
+                " beurre",
+                ",",
+                null,
+                null,
+                null,
+                " protéines de lait",
+                ",",
+                null,
+                null,
+                null,
+                " sels de fonte ",
+                ":",
+                ":",
+                null,
+                null,
+                "  polyphosphates",
+                ",",
+                null,
+                null,
+                null,
+                " phosphates de calcium",
+                ",",
+                null,
+                null,
+                null,
+                " acide citrique",
+                ",",
+                null,
+                null,
+                null,
+                " diphosphates",
+                ",",
+                null,
+                null,
+                null,
+                " sel."
+            ],
+            "cities_tags": [
+                "dole-jura-france"
+            ],
+            "fruits-vegetables-nuts_100g_estimate": 0,
+            "traces_tags": [],
+            "ingredients_n_tags": [
+                "10",
+                "1-10"
+            ],
+            "countries_debug_tags": [],
+            "nova_groups_tags": [
+                "en:4-ultra-processed-food-and-drink-products"
+            ],
+            "expiration_date": "07/04/2014",
+            "minerals_prev_tags": [],
+            "ingredients_text_debug": "Lait écrémé réhydraté, fromages, beurre, protéines de lait, sels de fonte :  polyphosphates, phosphates de calcium, acide citrique, diphosphates, sel.",
+            "categories": "Frais,Produits laitiers,Produits fermentés,Produits à tartiner,Produits laitiers fermentés,Produits à tartiner salés,Fromages,Fromages de vache,Fromages de France,Fromages à pâte fondue,Fromages à tartiner,Fromages industriels",
+            "product_name_fr": "La Vache qui rit® 32 Portions (19 % MG)",
+            "interface_version_modified": "20120622",
+            "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+            "emb_codes_20141016": "FR 39.198.001 CE",
+            "no_nutrition_data": "",
+            "traces_debug_tags": [],
+            "misc_tags": [
+                "en:nutrition-no-fruits-vegetables-nuts",
+                "en:nutrition-no-fiber-or-fruits-vegetables-nuts",
+                "en:nutriscore-computed"
+            ],
+            "codes_tags": [
+                "code-13",
+                "3073780593083",
+                "307378059308x",
+                "30737805930xx",
+                "3073780593xxx",
+                "307378059xxxx",
+                "30737805xxxxx",
+                "3073780xxxxxx",
+                "307378xxxxxxx",
+                "30737xxxxxxxx",
+                "3073xxxxxxxxx",
+                "307xxxxxxxxxx",
+                "30xxxxxxxxxxx",
+                "3xxxxxxxxxxxx"
+            ],
+            "ingredients_text_with_allergens": "Lait écrémé réhydraté, <span class=\"allergen\">fromages</span>, <span class=\"allergen\">beurre</span>, <span class=\"allergen\">protéines de lait</span>, sels de fonte : polyphosphates, phosphates de calcium, acide citrique, diphosphates, sel.",
+            "nutrient_levels": {
+                "salt": "high",
+                "fat": "moderate",
+                "sugars": "moderate",
+                "saturated-fat": "high"
+            },
+            "ingredients_that_may_be_from_palm_oil_n": 0,
+            "origins_debug_tags": [],
+            "debug_param_sorted_langs": [
+                "fr"
+            ],
+            "allergens": "",
+            "ingredients_tags": [
+                "en:reconstituted-skimmed-milk",
+                "en:milk",
+                "fr:fromage",
+                "en:butter",
+                "en:milk-protein",
+                "",
+                "en:emulsifying-salt",
+                "fr:polyphosphate",
+                "fr:phosphate-de-calcium",
+                "en:citric-acid",
+                "fr:diphosphate",
+                "en:salt"
+            ],
+            "unique_scans_n": 96,
+            "editors_tags": [
+                "tacite",
+                "tacite-mass-editor",
+                "date-limite-app",
+                "jacob80",
+                "jitrixis",
+                "kiliweb",
+                "openfoodfacts-contributors"
+            ],
+            "manufacturing_places": "Fromageries Bel Production France (Filiale Groupe Bel) - 74 Rue du Mont Roland - 39100 Dôle,Jura,Franche-Comté,France",
+            "serving_size_debug_tags": [],
+            "lang_debug_tags": [],
+            "pnns_groups_1": "Milk and dairy products",
+            "manufacturing_places_debug_tags": [],
+            "last_edit_dates_tags": [
+                "2018-08-02",
+                "2018-08",
+                "2018"
+            ],
+            "purchase_places_debug_tags": [],
+            "_keywords": [
+                "qui",
+                "france",
+                "de",
+                "sale",
+                "tartiner",
+                "portion",
+                "lait",
+                "fromage",
+                "pate",
+                "rit",
+                "industriel",
+                "bel",
+                "fondue",
+                "la",
+                "frai",
+                "fermente",
+                "produit",
+                "32",
+                "vache",
+                "mg",
+                "au",
+                "19",
+                "laitier"
+            ],
+            "categories_prev_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:cheese-spreads",
+                "en:industrial-cheese",
+                "en:processed-cheese"
+            ],
+            "completed_t": 1397505749,
+            "id": "3073780593083",
+            "amino_acids_tags": [],
+            "link_debug_tags": [],
+            "ingredients_original_tags": [
+                "en:reconstituted-skimmed-milk",
+                "fr:fromage",
+                "en:butter",
+                "en:milk-protein",
+                "en:emulsifying-salt",
+                "fr:polyphosphate",
+                "fr:phosphate-de-calcium",
+                "en:citric-acid",
+                "fr:diphosphate",
+                "en:salt"
+            ],
+            "labels_prev_hierarchy": [],
+            "nutrition_data": "on",
+            "lang": "fr",
+            "additives_old_tags": [
+                "en:e452",
+                "en:e341",
+                "en:e330",
+                "en:e450"
+            ],
+            "quantity": "535 g",
+            "additives_tags": [
+                "en:e330",
+                "en:e450",
+                "en:e452"
+            ],
+            "quality_tags": [],
+            "pnns_groups_2": "Cheese",
+            "nutrition_data_prepared": "",
+            "unknown_nutrients_tags": [],
+            "nutrition_data_prepared_per_debug_tags": [],
+            "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.400.jpg",
+            "rev": 41,
+            "ingredients_that_may_be_from_palm_oil_tags": [],
+            "image_nutrition_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.400.jpg",
+            "ingredients_text_fr_debug_tags": [],
+            "additives_prev_n": 4,
+            "ingredients_n": 10,
+            "states_tags": [
+                "en:to-be-checked",
+                "en:complete",
+                "en:nutrition-facts-completed",
+                "en:ingredients-completed",
+                "en:expiration-date-completed",
+                "en:packaging-code-completed",
+                "en:characteristics-completed",
+                "en:categories-completed",
+                "en:brands-completed",
+                "en:packaging-completed",
+                "en:quantity-completed",
+                "en:product-name-completed",
+                "en:photos-validated",
+                "en:photos-uploaded"
+            ],
+            "nucleotides_prev_tags": [],
+            "countries": "France",
+            "nutrient_levels_tags": [
+                "en:fat-in-moderate-quantity",
+                "en:saturated-fat-in-high-quantity",
+                "en:sugars-in-moderate-quantity",
+                "en:salt-in-high-quantity"
+            ],
+            "pnns_groups_1_tags": [
+                "milk-and-dairy-products"
+            ],
+            "last_image_dates_tags": [
+                "2018-04-16",
+                "2018-04",
+                "2018"
+            ],
+            "last_image_t": 1523898625,
+            "generic_name_fr": "Fromage industriel de France, à pâte fondue, au lait de vache, à tartiner",
+            "code": "3073780593083",
+            "emb_codes_tags": [
+                "fr-39-198-001-ec"
+            ],
+            "minerals_tags": [
+                "en:calcium-phosphate"
+            ],
+            "sortkey": 1533213653,
+            "countries_tags": [
+                "en:france"
+            ],
+            "product_name_fr_debug_tags": [],
+            "languages_codes": {
+                "fr": 6
+            },
+            "max_imgid": "8",
+            "emb_codes_orig": "FR 39.198.001 EC",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.200.jpg",
+            "pnns_groups_2_tags": [
+                "cheese"
+            ],
+            "ingredients": [
+                {
+                    "rank": 1,
+                    "text": "Lait écrémé réhydraté",
+                    "id": "en:reconstituted-skimmed-milk"
+                },
+                {
+                    "id": "fr:fromage",
+                    "text": "fromages",
+                    "rank": 2
+                },
+                {
+                    "text": "beurre",
+                    "id": "en:butter",
+                    "rank": 3
+                },
+                {
+                    "id": "en:milk-protein",
+                    "text": "protéines de lait",
+                    "rank": 4
+                },
+                {
+                    "id": "en:emulsifying-salt",
+                    "text": "sels de fonte",
+                    "rank": 5
+                },
+                {
+                    "rank": 6,
+                    "text": "polyphosphates",
+                    "id": "fr:polyphosphate"
+                },
+                {
+                    "rank": 7,
+                    "id": "fr:phosphate-de-calcium",
+                    "text": "phosphates de calcium"
+                },
+                {
+                    "rank": 8,
+                    "text": "acide citrique",
+                    "id": "en:citric-acid"
+                },
+                {
+                    "rank": 9,
+                    "id": "fr:diphosphate",
+                    "text": "diphosphates"
+                },
+                {
+                    "rank": 10,
+                    "id": "en:salt",
+                    "text": "sel"
+                }
+            ],
+            "states": "en:to-be-checked, en:complete, en:nutrition-facts-completed, en:ingredients-completed, en:expiration-date-completed, en:packaging-code-completed, en:characteristics-completed, en:categories-completed, en:brands-completed, en:packaging-completed, en:quantity-completed, en:product-name-completed, en:photos-validated, en:photos-uploaded",
+            "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.100.jpg",
+            "categories_hierarchy": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:spreads",
+                "en:fermented-milk-products",
+                "en:salted-spreads",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:processed-cheese",
+                "en:cheese-spreads",
+                "en:industrial-cheese"
+            ],
+            "vitamins_prev_tags": [],
+            "unknown_ingredients_n": 1,
+            "additives_original_tags": [
+                "en:e452",
+                "en:e330",
+                "en:e450"
+            ],
+            "nutriments": {
+                "energy": "1000",
+                "energy_serving": "167",
+                "calcium": 0.61,
+                "nova-group_100g": 4,
+                "sodium_value": "0.708661417322835",
+                "vitamin-b2_label": "Vitamine B2 (riboflavine)",
+                "proteins_unit": "g",
+                "carbohydrates": 6.5,
+                "vitamin-b2_value": "0.25",
+                "calcium_serving": 0.102,
+                "vitamin-a_unit": "µg",
+                "vitamin-a_100g": 0.00015,
+                "salt_100g": 1.8,
+                "sodium_unit": "g",
+                "nutrition-score-fr_100g": "15",
+                "fat_100g": 18.5,
+                "saturated-fat_value": "12.5",
+                "nutrition-score-uk_100g": "20",
+                "vitamin-a_label": "Vitamine A (rétinol)",
+                "vitamin-a_value": "150",
+                "fiber_serving": "0",
+                "salt_serving": 0.301,
+                "proteins_100g": 11.5,
+                "sodium_serving": 0.118,
+                "vitamin-b2": 0.00025,
+                "fiber_100g": "0",
+                "fat_value": "18.5",
+                "salt_unit": "g",
+                "salt": 1.8,
+                "nutrition-score-uk": "20",
+                "vitamin-b2_100g": 0.00025,
+                "carbohydrates_serving": 1.09,
+                "nova-group_serving": 4,
+                "sodium": 0.708661417322835,
+                "carbohydrates_100g": 6.5,
+                "calcium_100g": 0.61,
+                "calcium_label": "Calcium",
+                "fiber": "0",
+                "sodium_100g": 0.708661417322835,
+                "energy_100g": "1000",
+                "fiber_unit": "g",
+                "saturated-fat_serving": 2.09,
+                "sugars_serving": 1.09,
+                "nutrition-score-fr": "15",
+                "fiber_value": "0",
+                "carbohydrates_unit": "g",
+                "energy_unit": "kcal",
+                "vitamin-b2_unit": "mg",
+                "fat": 18.5,
+                "vitamin-a": 0.00015,
+                "sugars_unit": "g",
+                "saturated-fat": 12.5,
+                "saturated-fat_unit": "g",
+                "proteins": 11.5,
+                "vitamin-b2_serving": 0.0000417,
+                "fat_unit": "g",
+                "calcium_unit": "mg",
+                "carbohydrates_value": "6.5",
+                "energy_value": "239",
+                "sugars_value": "6.5",
+                "sugars_100g": 6.5,
+                "salt_value": "1.8",
+                "nova-group": 4,
+                "proteins_serving": 1.92,
+                "saturated-fat_100g": 12.5,
+                "sugars": 6.5,
+                "proteins_value": "11.5",
+                "calcium_value": "610",
+                "vitamin-a_serving": 0.000025,
+                "fat_serving": 3.09
+            },
+            "image_ingredients_small_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/ingredients_fr.32.200.jpg",
+            "creator": "openfoodfacts-contributors",
+            "nutrition_score_warning_no_fruits_vegetables_nuts": 1,
+            "labels_debug_tags": [],
+            "ingredients_from_palm_oil_n": 0,
+            "complete": 1,
+            "editors": [
+                "",
+                "jacob80",
+                "jitrixis"
+            ],
+            "ingredients_ids_debug": [
+                "lait-ecreme-rehydrate",
+                "fromages",
+                "beurre",
+                "proteines-de-lait",
+                "sels-de-fonte",
+                "polyphosphates",
+                "phosphates-de-calcium",
+                "acide-citrique",
+                "diphosphates",
+                "sel"
+            ],
+            "nutrition_score_debug": " -- in cheeses category -- energy 2 + sat-fat 10 + fr-sat-fat-for-fats 10 + sugars 1 + sodium 7 - fruits 0% 0 - fiber 0 - proteins 5 -- fsa 20 -- fr 15",
+            "nutrition_data_per": "100g",
+            "url": "https://fr.openfoodfacts.org/produit/3073780593083/la-vache-qui-rit-32-portions-19-mg",
+            "entry_dates_tags": [
+                "2014-04-14",
+                "2014-04",
+                "2014"
+            ],
+            "languages": {
+                "en:french": 6
+            },
+            "informers_tags": [
+                "openfoodfacts-contributors",
+                "jitrixis",
+                "jacob80"
+            ],
+            "amino_acids_prev_tags": [],
+            "languages_tags": [
+                "en:french",
+                "en:1"
+            ],
+            "countries_hierarchy": [
+                "en:france"
+            ],
+            "labels_prev_tags": [],
+            "ingredients_hierarchy": [
+                "en:reconstituted-skimmed-milk",
+                "en:milk",
+                "fr:fromage",
+                "en:butter",
+                "en:milk-protein",
+                "",
+                "en:emulsifying-salt",
+                "fr:polyphosphate",
+                "fr:phosphate-de-calcium",
+                "en:citric-acid",
+                "fr:diphosphate",
+                "en:salt"
+            ],
+            "purchase_places_tags": [
+                "roanne",
+                "france"
+            ],
+            "states_hierarchy": [
+                "en:to-be-checked",
+                "en:complete",
+                "en:nutrition-facts-completed",
+                "en:ingredients-completed",
+                "en:expiration-date-completed",
+                "en:packaging-code-completed",
+                "en:characteristics-completed",
+                "en:categories-completed",
+                "en:brands-completed",
+                "en:packaging-completed",
+                "en:quantity-completed",
+                "en:product-name-completed",
+                "en:photos-validated",
+                "en:photos-uploaded"
+            ],
+            "selected_images": {
+                "nutrition": {
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.100.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.400.jpg"
+                    },
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.200.jpg"
+                    }
+                },
+                "front": {
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.100.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.400.jpg"
+                    },
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.200.jpg"
+                    }
+                },
+                "ingredients": {
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/ingredients_fr.32.200.jpg"
+                    },
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/ingredients_fr.32.100.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/ingredients_fr.32.400.jpg"
+                    }
+                }
+            },
+            "nucleotides_tags": [],
+            "last_modified_t": 1533213653,
+            "allergens_tags": [
+                "en:milk"
+            ],
+            "traces_hierarchy": [],
+            "image_nutrition_small_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.200.jpg",
+            "stores_debug_tags": [],
+            "origins": "",
+            "product_name_debug_tags": [],
+            "update_key": "nova20180918",
+            "serving_quantity": 16.7,
+            "allergens_from_ingredients": "fromages, beurre, protéines de lait",
+            "stores_tags": [
+                "carrefour"
+            ],
+            "interface_version_created": "20120622",
+            "image_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.100.jpg",
+            "allergens_hierarchy": [
+                "en:milk"
+            ],
+            "additives_debug_tags": [
+                "en-e341-removed"
+            ],
+            "labels": "",
+            "manufacturing_places_tags": [
+                "fromageries-bel-production-france-filiale-groupe-bel-74-rue-du-mont-roland-39100-dole",
+                "jura",
+                "franche-comte",
+                "france"
+            ],
+            "additives_n": 3,
+            "labels_tags": [],
+            "additives_prev_tags": [
+                "en:e330",
+                "en:e341",
+                "en:e450",
+                "en:e452"
+            ],
+            "last_modified_by": "tacite",
+            "labels_hierarchy": [],
+            "nutrition_grades": "d",
+            "traces": "",
+            "correctors_tags": [
+                "jitrixis",
+                "jacob80",
+                "date-limite-app",
+                "tacite-mass-editor",
+                "kiliweb",
+                "openfoodfacts-contributors",
+                "tacite"
+            ],
+            "link": "http://www.lavachequirit.com/gamme-de-produits/boite-ronde-24-portions.html",
+            "nutrition_grade_fr": "d",
+            "photographers_tags": [
+                "jitrixis",
+                "openfoodfacts-contributors",
+                "date-limite-app",
+                "kiliweb"
+            ],
+            "lc": "fr",
+            "emb_codes_debug_tags": [],
+            "serving_size": "16,7 g",
+            "nutrition_data_prepared_per": "100g"
+        },
+        {
+            "ingredients_tags": [
+                "en:cow-s-milk",
+                "en:milk",
+                "en:cream",
+                "en:milk",
+                "fr:pasteurises",
+                "fr:origine",
+                "fr:france",
+                "fr:origine",
+                "fr:france"
+            ],
+            "unique_scans_n": 96,
+            "ingredients_text_with_allergens": "<span class=\"allergen\">Lait</span> de vache (origine : France) et <span class=\"allergen\">crème</span> (origine : France) pasteurisés.",
+            "nutrient_levels": {
+                "sugars": "low",
+                "saturated-fat": "moderate",
+                "salt": "low",
+                "fat": "moderate"
+            },
+            "origins_debug_tags": [],
+            "ingredients_that_may_be_from_palm_oil_n": 0,
+            "allergens": "Lait, crème",
+            "debug_param_sorted_langs": [
+                "fr"
+            ],
+            "minerals_prev_tags": [],
+            "ingredients_text_debug": "_Lait_ de vache (origine : France) et _crème_ (origine : France) pasteurisés.",
+            "categories": "en:dairies, en:cheeses, fr:fromages-blancs, fr:Faisselles",
+            "product_name_fr": "La Faisselle",
+            "interface_version_modified": "20150316.jqm2",
+            "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+            "emb_codes_20141016": "FR 18.194.050 CE,FR 88.321.001 CE,EMB 88321",
+            "no_nutrition_data": "",
+            "misc_tags": [
+                "en:nutrition-no-fruits-vegetables-nuts",
+                "en:nutrition-no-fiber-or-fruits-vegetables-nuts",
+                "en:nutriscore-computed"
+            ],
+            "traces_debug_tags": [],
+            "codes_tags": [
+                "code-13",
+                "3184670001080",
+                "318467000108x",
+                "31846700010xx",
+                "3184670001xxx",
+                "318467000xxxx",
+                "31846700xxxxx",
+                "3184670xxxxxx",
+                "318467xxxxxxx",
+                "31846xxxxxxxx",
+                "3184xxxxxxxxx",
+                "318xxxxxxxxxx",
+                "31xxxxxxxxxxx",
+                "3xxxxxxxxxxxx"
+            ],
+            "traces_tags": [],
+            "ingredients_n_tags": [
+                "7",
+                "1-10"
+            ],
+            "countries_debug_tags": [],
+            "nova_groups_tags": [
+                "en:3-processed-foods"
+            ],
+            "expiration_date": "",
+            "ingredients_original_tags": [
+                "en:cow-s-milk",
+                "en:cream",
+                "fr:pasteurisés",
+                "fr:origine",
+                "fr:France",
+                "fr:origine",
+                "fr:France"
+            ],
+            "labels_prev_hierarchy": [
+                "fr:Moulé à la louche"
+            ],
+            "lang": "fr",
+            "quantity": "1 kg",
+            "additives_old_tags": [],
+            "additives_tags": [],
+            "quality_tags": [
+                "ingredients-unknown-score-above-0",
+                "ingredients-70-percent-unknown"
+            ],
+            "completed_t": 1506925913,
+            "id": "3184670001080",
+            "amino_acids_tags": [],
+            "link_debug_tags": [],
+            "last_edit_dates_tags": [
+                "2018-09-05",
+                "2018-09",
+                "2018"
+            ],
+            "purchase_places_debug_tags": [],
+            "_keywords": [
+                "dairie",
+                "en",
+                "frai",
+                "louche",
+                "fromage",
+                "france",
+                "rian",
+                "cheese",
+                "nature",
+                "moule",
+                "fromages-blanc",
+                "faisselle",
+                "la"
+            ],
+            "categories_prev_tags": [
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cream-cheeses",
+                "fr:faisselles",
+                "fr:fromages-blancs"
+            ],
+            "editors_tags": [
+                "kiliweb",
+                "sebleouf",
+                "magasins-u",
+                "pamputt",
+                "openfoodfacts-contributors",
+                "delicesnovice",
+                "milady",
+                "date-limite-app"
+            ],
+            "manufacturing_places": "France",
+            "serving_size_debug_tags": [],
+            "pnns_groups_1": "Milk and dairy products",
+            "lang_debug_tags": [],
+            "manufacturing_places_debug_tags": [],
+            "nutrition_grades_tags": [
+                "c"
+            ],
+            "nova_group": 3,
+            "packaging_debug_tags": [],
+            "image_nutrition_thumb_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/nutrition_fr.13.100.jpg",
+            "new_additives_n": 0,
+            "nova_groups": 3,
+            "image_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.400.jpg",
+            "expiration_date_debug_tags": [],
+            "generic_name": "Fromage frais nature en faisselle",
+            "brands_debug_tags": [],
+            "nutrition_data_per_debug_tags": [],
+            "ingredients_text_fr": "_Lait_ de vache (origine : France) et _crème_ (origine : France) pasteurisés.",
+            "categories_debug_tags": [],
+            "stores": "Super U, Magasins U",
+            "additives_old_n": 0,
+            "categories_prev_hierarchy": [
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cream-cheeses",
+                "fr:faisselles",
+                "fr:fromages-blancs"
+            ],
+            "packaging_tags": [
+                "pot",
+                "plastique",
+                "frais"
+            ],
+            "image_ingredients_thumb_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/ingredients_fr.22.100.jpg",
+            "ingredients_text_with_allergens_fr": "<span class=\"allergen\">Lait</span> de vache (origine : France) et <span class=\"allergen\">crème</span> (origine : France) pasteurisés.",
+            "generic_name_fr_debug_tags": [],
+            "ingredients_from_palm_oil_tags": [],
+            "traces_from_ingredients": "",
+            "quantity_debug_tags": [],
+            "created_t": 1406528450,
+            "additives_prev_original_tags": [],
+            "scans_n": 110,
+            "nova_group_debug": " -- categories/en:cheeses : 3",
+            "emb_codes": "FR 18.194.050 EC,FR 88.321.001 EC,EMB 88321",
+            "ingredients_debug": [
+                "_Lait_ de vache ",
+                "(",
+                "(",
+                null,
+                null,
+                "origine ",
+                ":",
+                ":",
+                null,
+                null,
+                " France) et _crème_ ",
+                "(",
+                "(",
+                null,
+                null,
+                "origine ",
+                ":",
+                ":",
+                null,
+                null,
+                " France) pasteurisés."
+            ],
+            "cities_tags": [
+                "rians-cher-france",
+                "neufchateau-vosges-france",
+                "neufchateau-vosges-france"
+            ],
+            "fruits-vegetables-nuts_100g_estimate": 0,
+            "last_editor": "kiliweb",
+            "product_name": "La Faisselle",
+            "ingredients_text": "_Lait_ de vache (origine : France) et _crème_ (origine : France) pasteurisés.",
+            "languages_hierarchy": [
+                "en:french"
+            ],
+            "brands": "Rians",
+            "image_small_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.200.jpg",
+            "images": {
+                "1": {
+                    "uploaded_t": 1406528451,
+                    "sizes": {
+                        "100": {
+                            "w": 75,
+                            "h": 100
+                        },
+                        "400": {
+                            "w": 300,
+                            "h": 400
+                        },
+                        "full": {
+                            "w": 2448,
+                            "h": 3264
+                        }
+                    },
+                    "uploader": "delicesnovice"
+                },
+                "2": {
+                    "uploaded_t": "1493311652",
+                    "uploader": "openfoodfacts-contributors",
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 75
+                        },
+                        "400": {
+                            "w": 300,
+                            "h": 400
+                        },
+                        "full": {
+                            "h": 2000,
+                            "w": 1500
+                        }
+                    }
+                },
+                "3": {
+                    "uploader": "kiliweb",
+                    "sizes": {
+                        "100": {
+                            "w": 65,
+                            "h": 100
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 259
+                        },
+                        "full": {
+                            "w": 882,
+                            "h": 1360
+                        }
+                    },
+                    "uploaded_t": "1506920940"
+                },
+                "4": {
+                    "uploader": "kiliweb",
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 75
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 300
+                        },
+                        "full": {
+                            "h": 1360,
+                            "w": 1021
+                        }
+                    },
+                    "uploaded_t": "1506920941"
+                },
+                "5": {
+                    "uploaded_t": "1506920943",
+                    "uploader": "kiliweb",
+                    "sizes": {
+                        "100": {
+                            "w": 84,
+                            "h": 100
+                        },
+                        "400": {
+                            "w": 337,
+                            "h": 400
+                        },
+                        "full": {
+                            "h": 1801,
+                            "w": 1517
+                        }
+                    }
+                },
+                "6": {
+                    "uploaded_t": "1463574328",
+                    "uploader": "openfoodfacts-contributors",
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 75
+                        },
+                        "400": {
+                            "w": 300,
+                            "h": 400
+                        },
+                        "full": {
+                            "w": 2000,
+                            "h": 2666
+                        }
+                    }
+                },
+                "7": {
+                    "uploader": "openfoodfacts-contributors",
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 75
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 300
+                        },
+                        "full": {
+                            "h": 2666,
+                            "w": 2000
+                        }
+                    },
+                    "uploaded_t": "1463574378"
+                },
+                "8": {
+                    "uploaded_t": "1512287643",
+                    "uploader": "milady",
+                    "sizes": {
+                        "100": {
+                            "w": 75,
+                            "h": 100
+                        },
+                        "400": {
+                            "w": 300,
+                            "h": 400
+                        },
+                        "full": {
+                            "w": 1500,
+                            "h": 2000
+                        }
+                    }
+                },
+                "9": {
+                    "uploader": "kiliweb",
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 99
+                        },
+                        "400": {
+                            "w": 395,
+                            "h": 400
+                        },
+                        "full": {
+                            "w": 1185,
+                            "h": 1200
+                        }
+                    },
+                    "uploaded_t": "1523715404"
+                },
+                "ingredients_fr": {
+                    "white_magic": "0",
+                    "sizes": {
+                        "100": {
+                            "w": 99,
+                            "h": 100
+                        },
+                        "200": {
+                            "h": 200,
+                            "w": 198
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 395
+                        },
+                        "full": {
+                            "w": 1185,
+                            "h": 1200
+                        }
+                    },
+                    "x2": null,
+                    "geometry": "0x0-0-0",
+                    "rev": "22",
+                    "imgid": "9",
+                    "x1": null,
+                    "normalize": "0",
+                    "y1": null,
+                    "angle": null,
+                    "y2": null
+                },
+                "front_fr": {
+                    "normalize": null,
+                    "imgid": "1",
+                    "rev": "3",
+                    "geometry": "0x0--8--8",
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "h": "100",
+                            "w": "75"
+                        },
+                        "200": {
+                            "h": 200,
+                            "w": 150
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 300
+                        },
+                        "full": {
+                            "h": 3264,
+                            "w": 2448
+                        }
+                    }
+                },
+                "nutrition_fr": {
+                    "normalize": "false",
+                    "x1": "59.75",
+                    "rev": "13",
+                    "imgid": "4",
+                    "angle": "0",
+                    "y2": "271.8125",
+                    "y1": "131.8125",
+                    "geometry": "452x476-203-448",
+                    "sizes": {
+                        "100": {
+                            "w": 95,
+                            "h": 100
+                        },
+                        "200": {
+                            "w": 190,
+                            "h": 200
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 380
+                        },
+                        "full": {
+                            "w": 452,
+                            "h": 476
+                        }
+                    },
+                    "x2": "192.75",
+                    "white_magic": "false"
+                },
+                "front": {
+                    "normalize": null,
+                    "rev": "3",
+                    "imgid": "1",
+                    "geometry": "0x0--8--8",
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "w": 75,
+                            "h": 100
+                        },
+                        "200": {
+                            "w": 150,
+                            "h": 200
+                        },
+                        "400": {
+                            "h": 400,
+                            "w": 300
+                        },
+                        "full": {
+                            "h": 3264,
+                            "w": 2448
+                        }
+                    }
+                }
+            },
+            "_id": "3184670001080",
+            "origins_tags": [
+                "france"
+            ],
+            "purchase_places": "Saint Etienne de Montluc,France",
+            "categories_tags": [
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cream-cheeses",
+                "fr:faisselles",
+                "fr:fromages-blancs"
+            ],
+            "checkers_tags": [],
+            "product_quantity": 1000,
+            "brands_tags": [
+                "rians",
+                "foobar"
+            ],
+            "vitamins_tags": [],
+            "packaging": "Pot,Plastique,Frais",
+            "image_ingredients_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/ingredients_fr.22.400.jpg",
+            "nucleotides_tags": [],
+            "last_modified_t": 1536172726,
+            "allergens_tags": [
+                "en:milk"
+            ],
+            "traces_hierarchy": [],
+            "stores_debug_tags": [],
+            "image_nutrition_small_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/nutrition_fr.13.200.jpg",
+            "update_key": "nova20180918",
+            "origins": "France",
+            "product_name_debug_tags": [],
+            "serving_quantity": 0,
+            "languages": {
+                "en:french": 6
+            },
+            "url": "https://fr.openfoodfacts.org/produit/3184670001080/la-faisselle-rians",
+            "entry_dates_tags": [
+                "2014-07-28",
+                "2014-07",
+                "2014"
+            ],
+            "informers_tags": [
+                "delicesnovice",
+                "kiliweb",
+                "sebleouf"
+            ],
+            "amino_acids_prev_tags": [],
+            "languages_tags": [
+                "en:french",
+                "en:1"
+            ],
+            "labels_prev_tags": [
+                "fr:moule-a-la-louche"
+            ],
+            "ingredients_hierarchy": [
+                "en:cow-s-milk",
+                "en:milk",
+                "en:cream",
+                "en:milk",
+                "fr:pasteurisés",
+                "fr:origine",
+                "fr:France",
+                "fr:origine",
+                "fr:France"
+            ],
+            "countries_hierarchy": [
+                "en:france"
+            ],
+            "purchase_places_tags": [
+                "saint-etienne-de-montluc",
+                "france"
+            ],
+            "states_hierarchy": [
+                "en:to-be-checked",
+                "en:complete",
+                "en:nutrition-facts-completed",
+                "en:ingredients-completed",
+                "en:expiration-date-to-be-completed",
+                "en:packaging-code-completed",
+                "en:characteristics-completed",
+                "en:categories-completed",
+                "en:brands-completed",
+                "en:packaging-completed",
+                "en:quantity-completed",
+                "en:product-name-completed",
+                "en:photos-validated",
+                "en:photos-uploaded"
+            ],
+            "selected_images": {
+                "ingredients": {
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/ingredients_fr.22.400.jpg"
+                    },
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/ingredients_fr.22.100.jpg"
+                    },
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/ingredients_fr.22.200.jpg"
+                    }
+                },
+                "nutrition": {
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/nutrition_fr.13.200.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/nutrition_fr.13.400.jpg"
+                    },
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/nutrition_fr.13.100.jpg"
+                    }
+                },
+                "front": {
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.200.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.400.jpg"
+                    },
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.100.jpg"
+                    }
+                }
+            },
+            "ingredients_from_palm_oil_n": 0,
+            "editors": [
+                "pamputt",
+                "delicesnovice"
+            ],
+            "complete": 1,
+            "ingredients_ids_debug": [
+                "lait-de-vache",
+                "origine",
+                "france-et-creme",
+                "origine",
+                "france-pasteurises"
+            ],
+            "nutrition_score_debug": " -- energy 1 + sat-fat 4 + fr-sat-fat-for-fats 10 + sugars 0 + sodium 0 - fruits 0% 0 - fiber 0 - proteins 2 -- fsa 3 -- fr 3",
+            "nutrition_data_per": "100g",
+            "image_ingredients_small_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/ingredients_fr.22.200.jpg",
+            "creator": "delicesnovice",
+            "nutrition_score_warning_no_fruits_vegetables_nuts": 1,
+            "labels_debug_tags": [],
+            "photographers_tags": [
+                "delicesnovice",
+                "openfoodfacts-contributors",
+                "kiliweb",
+                "milady"
+            ],
+            "lc": "fr",
+            "emb_codes_debug_tags": [],
+            "serving_size": "",
+            "nutrition_data_prepared_per": "100g",
+            "nutrition_grades": "c",
+            "traces": "",
+            "correctors_tags": [
+                "delicesnovice",
+                "pamputt",
+                "kiliweb",
+                "sebleouf",
+                "openfoodfacts-contributors",
+                "magasins-u"
+            ],
+            "link": "",
+            "nutrition_grade_fr": "c",
+            "labels": "fr:Moulé à la louche",
+            "manufacturing_places_tags": [
+                "france"
+            ],
+            "additives_prev_tags": [],
+            "additives_n": 0,
+            "labels_tags": [
+                "fr:moule-a-la-louche"
+            ],
+            "last_modified_by": "kiliweb",
+            "labels_hierarchy": [
+                "fr:Moulé à la louche"
+            ],
+            "stores_tags": [
+                "super-u",
+                "magasins-u"
+            ],
+            "allergens_from_ingredients": "Lait, crème",
+            "interface_version_created": "20120622",
+            "image_thumb_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.100.jpg",
+            "allergens_hierarchy": [
+                "en:milk"
+            ],
+            "additives_debug_tags": [],
+            "emb_codes_tags": [
+                "fr-18-194-050-ec",
+                "fr-88-321-001-ec",
+                "emb-88321"
+            ],
+            "last_image_dates_tags": [
+                "2018-04-14",
+                "2018-04",
+                "2018"
+            ],
+            "last_image_t": 1523715405,
+            "generic_name_fr": "Fromage frais nature en faisselle",
+            "code": "3184670001080",
+            "ingredients_that_may_be_from_palm_oil_tags": [],
+            "image_nutrition_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/nutrition_fr.13.400.jpg",
+            "additives_prev_n": 0,
+            "ingredients_text_fr_debug_tags": [],
+            "ingredients_n": 7,
+            "nucleotides_prev_tags": [],
+            "states_tags": [
+                "en:to-be-checked",
+                "en:complete",
+                "en:nutrition-facts-completed",
+                "en:ingredients-completed",
+                "en:expiration-date-to-be-completed",
+                "en:packaging-code-completed",
+                "en:characteristics-completed",
+                "en:categories-completed",
+                "en:brands-completed",
+                "en:packaging-completed",
+                "en:quantity-completed",
+                "en:product-name-completed",
+                "en:photos-validated",
+                "en:photos-uploaded"
+            ],
+            "countries": "en:france",
+            "nutrient_levels_tags": [
+                "en:fat-in-moderate-quantity",
+                "en:saturated-fat-in-moderate-quantity",
+                "en:sugars-in-low-quantity",
+                "en:salt-in-low-quantity"
+            ],
+            "pnns_groups_1_tags": [
+                "milk-and-dairy-products"
+            ],
+            "pnns_groups_2": "Cheese",
+            "unknown_nutrients_tags": [],
+            "image_front_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.400.jpg",
+            "rev": 26,
+            "unknown_ingredients_n": 5,
+            "additives_original_tags": [],
+            "nutriments": {
+                "saturated-fat_unit": "",
+                "proteins": "4",
+                "saturated-fat": 4.5,
+                "sugars_unit": "",
+                "carbohydrates": 3.5,
+                "fat": "6",
+                "proteins_unit": "",
+                "carbohydrates_unit": "",
+                "energy_unit": "kcal",
+                "nova-group_100g": 3,
+                "fiber_value": "0",
+                "nutrition-score-fr": "3",
+                "fiber_unit": "",
+                "energy_100g": "351",
+                "sugars_serving": "",
+                "saturated-fat_serving": "",
+                "sodium_100g": 0.0393700787401575,
+                "energy": "351",
+                "energy_serving": "",
+                "carbohydrates_100g": 3.5,
+                "fiber": "0",
+                "fat_serving": "",
+                "carbohydrates_serving": "",
+                "sodium": 0.0393700787401575,
+                "nova-group_serving": 3,
+                "salt_unit": "",
+                "fat_value": "6",
+                "nutrition-score-uk": "3",
+                "salt": 0.1,
+                "proteins_value": "4",
+                "proteins_serving": "",
+                "saturated-fat_100g": 4.5,
+                "fiber_100g": "0",
+                "sugars": 3.5,
+                "salt_value": "0.1",
+                "salt_serving": "",
+                "sugars_100g": 3.5,
+                "proteins_100g": "4",
+                "nova-group": 3,
+                "sodium_serving": "",
+                "fiber_serving": "",
+                "sugars_value": "3.5",
+                "energy_value": "84",
+                "nutrition-score-uk_100g": "3",
+                "fat_unit": "",
+                "carbohydrates_value": "3.5",
+                "fat_100g": "6",
+                "nutrition-score-fr_100g": "3",
+                "saturated-fat_value": "4.5",
+                "salt_100g": 0.1
+            },
+            "states": "en:to-be-checked, en:complete, en:nutrition-facts-completed, en:ingredients-completed, en:expiration-date-to-be-completed, en:packaging-code-completed, en:characteristics-completed, en:categories-completed, en:brands-completed, en:packaging-completed, en:quantity-completed, en:product-name-completed, en:photos-validated, en:photos-uploaded",
+            "ingredients": [
+                {
+                    "text": "_Lait_ de vache",
+                    "id": "en:cow-s-milk",
+                    "rank": 1
+                },
+                {
+                    "rank": 2,
+                    "text": "et _crème_",
+                    "id": "en:cream"
+                },
+                {
+                    "rank": 3,
+                    "text": "pasteurisés",
+                    "id": "fr:pasteurisés"
+                },
+                {
+                    "id": "fr:origine",
+                    "text": "origine"
+                },
+                {
+                    "text": "France",
+                    "id": "fr:France"
+                },
+                {
+                    "id": "fr:origine",
+                    "text": "origine"
+                },
+                {
+                    "id": "fr:France",
+                    "text": "France"
+                }
+            ],
+            "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.100.jpg",
+            "categories_hierarchy": [
+                "en:dairies",
+                "en:fermented-foods",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cream-cheeses",
+                "fr:faisselles",
+                "fr:fromages-blancs"
+            ],
+            "vitamins_prev_tags": [],
+            "max_imgid": "9",
+            "emb_codes_orig": "FR 18.194.050 EC,FR 88.321.001 EC,EMB 88321",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.200.jpg",
+            "pnns_groups_2_tags": [
+                "cheese"
+            ],
+            "minerals_tags": [],
+            "sortkey": 1536172726,
+            "countries_tags": [
+                "en:france"
+            ],
+            "product_name_fr_debug_tags": [],
+            "languages_codes": {
+                "fr": 6
+            }
+        },
+        {
+            "manufacturing_places_tags": [
+                "fromageries-bel-production-france-filiale-groupe-bel-74-rue-du-mont-roland-39100-dole",
+                "jura",
+                "franche-comte",
+                "france"
+            ],
+            "labels": "",
+            "labels_hierarchy": [],
+            "last_modified_by": "date-limite-app",
+            "additives_prev_tags": [
+                "en:e202",
+                "en:e234",
+                "en:e330",
+                "en:e331",
+                "en:e339",
+                "en:e407",
+                "en:e410",
+                "en:e450",
+                "en:e452",
+                "en:e621"
+            ],
+            "labels_tags": [],
+            "additives_n": 9,
+            "not_names_tags": [
+                "",
+                "l"
+            ],
+            "stores_tags": [
+                "super-u",
+                "leclerc",
+                "magasins-u"
+            ],
+            "allergens_from_ingredients": "Lait, fromages, beurre, lait, poissons, fromage",
+            "additives_debug_tags": [
+                "en-e450i-added",
+                "en-e339-removed"
+            ],
+            "sources": [
+                {
+                    "images": [
+                        "6",
+                        "7",
+                        "8"
+                    ],
+                    "fields": [
+                        "countries"
+                    ],
+                    "url": "https://www.openfood.ch/en/products/7975",
+                    "import_t": 1486502512,
+                    "id": "openfood-ch"
+                }
+            ],
+            "allergens_hierarchy": [
+                "en:fish",
+                "en:milk"
+            ],
+            "image_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.100.jpg",
+            "emb_codes_debug_tags": [],
+            "informers": [
+                "thierrym",
+                "manu1400"
+            ],
+            "lc": "fr",
+            "photographers_tags": [
+                "andre",
+                "aleene",
+                "openfood-ch-import",
+                "julie-yuka",
+                "asmoth",
+                "kiliweb"
+            ],
+            "nutrition_data_prepared_per": "100g",
+            "serving_size": "",
+            "nutrition_grades": "d",
+            "traces": "",
+            "nutrition_grade_fr": "d",
+            "link": "http://www.apericube.fr/",
+            "correctors_tags": [
+                "thierrym",
+                "manu1400",
+                "jacob80",
+                "oc84",
+                "date-limite-app",
+                "aleene",
+                "openfood-ch-import",
+                "beniben",
+                "julie-yuka",
+                "asmoth",
+                "kiliweb",
+                "openfoodfacts-contributors",
+                "yukafix",
+                "magasins-u"
+            ],
+            "ingredients_from_palm_oil_n": 0,
+            "nutrition_data_per": "100g",
+            "ingredients_ids_debug": [
+                "lait-ecreme-rehydrate",
+                "origine",
+                "france",
+                "fromages",
+                "chevre-13-dans-la-variete-chevre",
+                "beurre",
+                "proteines-de-lait",
+                "sels-de-fonte",
+                "polyphosphates",
+                "citrate-de-sodium",
+                "acide-citrique",
+                "diphosphates-de-sodium",
+                "phosphates-de-sodium",
+                "aromes",
+                "poissons",
+                "aromes-de-fumee",
+                "exhausteur-de-gout",
+                "glutamate-monosodique",
+                "arome-naturel-ail-avec-autres-aromes-naturels",
+                "sel",
+                "arome-naturel-de-fromage",
+                "epaississants",
+                "carraghenane",
+                "farine-de-graine-de-caroube",
+                "conservateurs",
+                "sorbate-de-potassium",
+                "nisine"
+            ],
+            "nutrition_score_debug": " -- in cheeses category -- energy 3 + sat-fat 10 + fr-sat-fat-for-fats 10 + sugars 0 + sodium 7 - fruits 0% 0 - fiber 0 - proteins 5 -- fsa 20 -- fr 15",
+            "editors": [
+                "thierrym",
+                "oc84",
+                "manu1400",
+                "andre",
+                "jacob80"
+            ],
+            "complete": 1,
+            "creator": "andre",
+            "image_ingredients_small_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/ingredients_fr.50.200.jpg",
+            "labels_debug_tags": [],
+            "nutrition_score_warning_no_fruits_vegetables_nuts": 1,
+            "image_nutrition_small_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/nutrition_fr.43.200.jpg",
+            "stores_debug_tags": [],
+            "allergens_tags": [
+                "en:fish",
+                "en:milk"
+            ],
+            "traces_hierarchy": [],
+            "last_modified_t": 1537550051,
+            "nucleotides_tags": [],
+            "serving_quantity": 0,
+            "update_key": "nova20180918",
+            "product_name_debug_tags": [],
+            "origins": "",
+            "informers_tags": [
+                "andre",
+                "manu1400",
+                "jacob80",
+                "aleene",
+                "asmoth"
+            ],
+            "amino_acids_prev_tags": [],
+            "url": "https://fr.openfoodfacts.org/produit/3073780728959/apericube-tonic",
+            "entry_dates_tags": [
+                "2012-03-23",
+                "2012-03",
+                "2012"
+            ],
+            "languages": {
+                "en:french": 6
+            },
+            "selected_images": {
+                "ingredients": {
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/072/8959/ingredients_fr.50.200.jpg"
+                    },
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/072/8959/ingredients_fr.50.100.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/072/8959/ingredients_fr.50.400.jpg"
+                    }
+                },
+                "front": {
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.200.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.400.jpg"
+                    },
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.100.jpg"
+                    }
+                },
+                "nutrition": {
+                    "small": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/072/8959/nutrition_fr.43.200.jpg"
+                    },
+                    "display": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/072/8959/nutrition_fr.43.400.jpg"
+                    },
+                    "thumb": {
+                        "fr": "https://static.openfoodfacts.org/images/products/307/378/072/8959/nutrition_fr.43.100.jpg"
+                    }
+                }
+            },
+            "states_hierarchy": [
+                "en:to-be-checked",
+                "en:complete",
+                "en:nutrition-facts-completed",
+                "en:ingredients-completed",
+                "en:expiration-date-completed",
+                "en:packaging-code-completed",
+                "en:characteristics-completed",
+                "en:categories-completed",
+                "en:brands-completed",
+                "en:packaging-completed",
+                "en:quantity-completed",
+                "en:product-name-completed",
+                "en:photos-validated",
+                "en:photos-uploaded"
+            ],
+            "purchase_places_tags": [
+                "france",
+                "veynes",
+                "05400",
+                "blois"
+            ],
+            "labels_prev_tags": [],
+            "ingredients_hierarchy": [
+                "en:reconstituted-skimmed-milk",
+                "en:milk",
+                "fr:fromage",
+                "fr:chèvre 13 % dans la variété Chèvre",
+                "en:butter",
+                "en:milk-protein",
+                "",
+                "en:emulsifying-salt",
+                "fr:polyphosphate",
+                "fr:citrate-de-sodium",
+                "en:citric-acid",
+                "fr:diphosphates et phosphates de sodium",
+                "en:flavouring",
+                "en:fish",
+                "en:smoke-flavouring",
+                "en:flavouring",
+                "en:flavour-enhancer",
+                "fr:glutamate-monosodique",
+                "fr:arôme naturel ail avec autres arômes naturels",
+                "en:salt",
+                "fr:arôme naturel de _fromage_",
+                "en:thickener",
+                "fr:carraghénane et farine de graine de caroube",
+                "en:preservative",
+                "fr:sorbate de potassium et nisine",
+                "fr:origine",
+                "fr:France"
+            ],
+            "countries_hierarchy": [
+                "en:france",
+                "en:switzerland"
+            ],
+            "languages_tags": [
+                "en:french",
+                "en:1"
+            ],
+            "max_imgid": "16",
+            "nutrition_score_warning_no_fiber": 1,
+            "pnns_groups_2_tags": [
+                "cheese"
+            ],
+            "emb_codes_orig": "FR 39.198.001 EC,FR 39.300.001 CE",
+            "image_front_small_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.200.jpg",
+            "photographers": [
+                "thierrym"
+            ],
+            "minerals_tags": [
+                "en:sodium-phosphate"
+            ],
+            "countries_tags": [
+                "en:france",
+                "en:switzerland"
+            ],
+            "product_name_fr_debug_tags": [],
+            "languages_codes": {
+                "fr": 6
+            },
+            "sortkey": 1537550051,
+            "nutriments": {
+                "carbohydrates_value": "4.5",
+                "calcium_unit": "mg",
+                "saturated-fat_value": "14.5",
+                "fat_100g": 21.5,
+                "nutrition-score-fr_100g": 15,
+                "fat_unit": "",
+                "salt_100g": 1.8,
+                "proteins_100g": 11.5,
+                "nova-group": 4,
+                "sodium_serving": "",
+                "salt_value": "1.8",
+                "salt_serving": "",
+                "sugars_100g": 4.5,
+                "energy_value": "258",
+                "sugars_value": "4.5",
+                "nutrition-score-uk_100g": 20,
+                "calcium_value": "220",
+                "nutrition-score-uk": 20,
+                "salt": 1.8,
+                "proteins_value": "11.5",
+                "salt_unit": "",
+                "fat_value": "21.5",
+                "sugars": 4.5,
+                "proteins_serving": "",
+                "saturated-fat_100g": 14.5,
+                "fat_serving": "",
+                "calcium_label": "Calcium",
+                "carbohydrates_100g": 4.5,
+                "calcium_100g": 0.22,
+                "sodium": 0.708661417322835,
+                "nova-group_serving": 4,
+                "carbohydrates_serving": "",
+                "sugars_serving": "",
+                "saturated-fat_serving": "",
+                "energy_100g": 1079,
+                "energy_serving": "",
+                "sodium_100g": 0.708661417322835,
+                "energy": "1079",
+                "nova-group_100g": 4,
+                "nutrition-score-fr": 15,
+                "calcium": 0.22,
+                "fat": 21.5,
+                "proteins_unit": "",
+                "carbohydrates_unit": "",
+                "energy_unit": "kcal",
+                "proteins": 11.5,
+                "saturated-fat_unit": "",
+                "carbohydrates": 4.5,
+                "calcium_serving": "",
+                "saturated-fat": 14.5,
+                "sugars_unit": ""
+            },
+            "additives_original_tags": [
+                "en:e452",
+                "en:e331",
+                "en:e330",
+                "en:e450i",
+                "en:e621",
+                "en:e407",
+                "en:e410",
+                "en:e202",
+                "en:e234"
+            ],
+            "unknown_ingredients_n": 9,
+            "ingredients": [
+                {
+                    "text": "_Lait_ écrémé réhydraté",
+                    "id": "en:reconstituted-skimmed-milk",
+                    "rank": 1
+                },
+                {
+                    "rank": 2,
+                    "text": "_fromages_",
+                    "id": "fr:fromage"
+                },
+                {
+                    "id": "fr:chèvre 13 % dans la variété Chèvre",
+                    "text": "chèvre 13% dans la variété Chèvre",
+                    "rank": 3
+                },
+                {
+                    "rank": 4,
+                    "id": "en:butter",
+                    "text": "_beurre_"
+                },
+                {
+                    "rank": 5,
+                    "id": "en:milk-protein",
+                    "text": "protéines de _lait_"
+                },
+                {
+                    "rank": 6,
+                    "text": "sels de fonte",
+                    "id": "en:emulsifying-salt"
+                },
+                {
+                    "rank": 7,
+                    "text": "polyphosphates",
+                    "id": "fr:polyphosphate"
+                },
+                {
+                    "id": "fr:citrate-de-sodium",
+                    "text": "citrate de sodium",
+                    "rank": 8
+                },
+                {
+                    "rank": 9,
+                    "id": "en:citric-acid",
+                    "text": "acide citrique"
+                },
+                {
+                    "id": "fr:diphosphates et phosphates de sodium",
+                    "text": "diphosphates et phosphates de sodium",
+                    "rank": 10
+                },
+                {
+                    "rank": 11,
+                    "id": "en:flavouring",
+                    "text": "arômes"
+                },
+                {
+                    "rank": 12,
+                    "id": "en:fish",
+                    "text": "_poissons_"
+                },
+                {
+                    "id": "en:smoke-flavouring",
+                    "text": "arômes de fumée",
+                    "rank": 13
+                },
+                {
+                    "rank": 14,
+                    "text": "exhausteur de goût",
+                    "id": "en:flavour-enhancer"
+                },
+                {
+                    "rank": 15,
+                    "text": "glutamate monosodique",
+                    "id": "fr:glutamate-monosodique"
+                },
+                {
+                    "text": "arôme naturel ail avec autres arômes naturels",
+                    "id": "fr:arôme naturel ail avec autres arômes naturels",
+                    "rank": 16
+                },
+                {
+                    "id": "en:salt",
+                    "text": "sel",
+                    "rank": 17
+                },
+                {
+                    "rank": 18,
+                    "text": "arôme naturel de _fromage_",
+                    "id": "fr:arôme naturel de _fromage_"
+                },
+                {
+                    "rank": 19,
+                    "id": "en:thickener",
+                    "text": "épaississants"
+                },
+                {
+                    "text": "carraghénane et farine de graine de caroube",
+                    "id": "fr:carraghénane et farine de graine de caroube",
+                    "rank": 20
+                },
+                {
+                    "rank": 21,
+                    "text": "conservateurs",
+                    "id": "en:preservative"
+                },
+                {
+                    "text": "sorbate de potassium et nisine",
+                    "id": "fr:sorbate de potassium et nisine",
+                    "rank": 22
+                },
+                {
+                    "text": "origine",
+                    "id": "fr:origine"
+                },
+                {
+                    "id": "fr:France",
+                    "text": "France"
+                }
+            ],
+            "states": "en:to-be-checked, en:complete, en:nutrition-facts-completed, en:ingredients-completed, en:expiration-date-completed, en:packaging-code-completed, en:characteristics-completed, en:categories-completed, en:brands-completed, en:packaging-completed, en:quantity-completed, en:product-name-completed, en:photos-validated, en:photos-uploaded",
+            "vitamins_prev_tags": [],
+            "categories_hierarchy": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:salty-snacks",
+                "en:appetizers",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:processed-cheese",
+                "en:industrial-cheese"
+            ],
+            "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.100.jpg",
+            "image_nutrition_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/nutrition_fr.43.400.jpg",
+            "ingredients_that_may_be_from_palm_oil_tags": [],
+            "nutrient_levels_tags": [
+                "en:fat-in-high-quantity",
+                "en:saturated-fat-in-high-quantity",
+                "en:sugars-in-low-quantity",
+                "en:salt-in-high-quantity"
+            ],
+            "countries": "en:france, en:switzerland",
+            "pnns_groups_1_tags": [
+                "milk-and-dairy-products"
+            ],
+            "nucleotides_prev_tags": [],
+            "states_tags": [
+                "en:to-be-checked",
+                "en:complete",
+                "en:nutrition-facts-completed",
+                "en:ingredients-completed",
+                "en:expiration-date-completed",
+                "en:packaging-code-completed",
+                "en:characteristics-completed",
+                "en:categories-completed",
+                "en:brands-completed",
+                "en:packaging-completed",
+                "en:quantity-completed",
+                "en:product-name-completed",
+                "en:photos-validated",
+                "en:photos-uploaded"
+            ],
+            "additives_prev_n": 10,
+            "ingredients_n": 24,
+            "ingredients_text_fr_debug_tags": [],
+            "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.400.jpg",
+            "unknown_nutrients_tags": [],
+            "pnns_groups_2": "Cheese",
+            "rev": 59,
+            "correctors": [
+                "manu1400"
+            ],
+            "emb_codes_tags": [
+                "fr-39-198-001-ec",
+                "fr-39-300-001-ec"
+            ],
+            "code": "3073780728959",
+            "generic_name_fr": "Spécialité fromagère fondue",
+            "last_image_t": 1525102980,
+            "last_image_dates_tags": [
+                "2018-04-30",
+                "2018-04",
+                "2018"
+            ],
+            "purchase_places_debug_tags": [],
+            "last_edit_dates_tags": [
+                "2018-09-21",
+                "2018-09",
+                "2018"
+            ],
+            "categories_prev_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:salty-snacks",
+                "en:appetizers",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:industrial-cheese",
+                "en:processed-cheese"
+            ],
+            "_keywords": [
+                "aperitif",
+                "snack",
+                "sale",
+                "pate",
+                "fromagere",
+                "de",
+                "france",
+                "vache",
+                "laitier",
+                "specialite",
+                "fromage",
+                "tonic",
+                "industriel",
+                "fondue",
+                "product",
+                "produit",
+                "apericube",
+                "milk",
+                "frai",
+                "bel",
+                "fermente",
+                "fermented"
+            ],
+            "serving_size_debug_tags": [],
+            "manufacturing_places": "Fromageries Bel Production France (Filiale Groupe Bel) - 74 Rue du Mont Roland - 39100 Dôle,Jura,Franche-Comté,France",
+            "editors_tags": [
+                "openfood-ch-import",
+                "julie-yuka",
+                "magasins-u",
+                "manu1400",
+                "oc84",
+                "yukafix",
+                "beniben",
+                "asmoth",
+                "kiliweb",
+                "jacob80",
+                "aleene",
+                "thierrym",
+                "andre",
+                "openfoodfacts-contributors",
+                "date-limite-app"
+            ],
+            "manufacturing_places_debug_tags": [],
+            "lang_debug_tags": [],
+            "pnns_groups_1": "Milk and dairy products",
+            "additives_old_tags": [
+                "en:e452",
+                "en:e331",
+                "en:e330",
+                "en:e450",
+                "en:e621",
+                "en:e407",
+                "en:e410",
+                "en:e202",
+                "en:e234"
+            ],
+            "quantity": "250 g, 48 cubes",
+            "lang": "fr",
+            "labels_prev_hierarchy": [],
+            "ingredients_original_tags": [
+                "en:reconstituted-skimmed-milk",
+                "fr:fromage",
+                "fr:chèvre 13 % dans la variété Chèvre",
+                "en:butter",
+                "en:milk-protein",
+                "en:emulsifying-salt",
+                "fr:polyphosphate",
+                "fr:citrate-de-sodium",
+                "en:citric-acid",
+                "fr:diphosphates et phosphates de sodium",
+                "en:flavouring",
+                "en:fish",
+                "en:smoke-flavouring",
+                "en:flavour-enhancer",
+                "fr:glutamate-monosodique",
+                "fr:arôme naturel ail avec autres arômes naturels",
+                "en:salt",
+                "fr:arôme naturel de _fromage_",
+                "en:thickener",
+                "fr:carraghénane et farine de graine de caroube",
+                "en:preservative",
+                "fr:sorbate de potassium et nisine",
+                "fr:origine",
+                "fr:France"
+            ],
+            "quality_tags": [],
+            "additives_tags": [
+                "en:e202",
+                "en:e234",
+                "en:e330",
+                "en:e331",
+                "en:e407",
+                "en:e410",
+                "en:e450",
+                "en:e450i",
+                "en:e452",
+                "en:e621"
+            ],
+            "completed_t": 1413134078,
+            "link_debug_tags": [],
+            "amino_acids_tags": [],
+            "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+            "interface_version_modified": "20150316.jqm2",
+            "product_name_fr": "Apéricube Tonic",
+            "categories": "Frais,Produits laitiers,Produits fermentés,Fermented milk products,Snacks salés,Apéritif,Fromages,Fromages de vache,Fromages de France,Fromages industriels,Fromages à pâte fondue",
+            "ingredients_text_debug": "_Lait_ écrémé réhydraté (origine : France), _fromages_ (chèvre 13% dans la variété Chèvre), _beurre_, protéines de _lait_, sels de fonte :  polyphosphates, citrate de sodium, acide citrique, diphosphates et phosphates de sodium, arômes (_poissons_), arômes de fumée, exhausteur de goût :  glutamate monosodique, arôme naturel ail avec autres arômes naturels, sel, arôme naturel de _fromage_, épaississants :  carraghénane et farine de graine de caroube, conservateurs :  sorbate de potassium et nisine.",
+            "minerals_prev_tags": [],
+            "misc_tags": [
+                "en:nutrition-no-fiber",
+                "en:nutrition-no-fruits-vegetables-nuts",
+                "en:nutrition-no-fiber-or-fruits-vegetables-nuts",
+                "en:nutriscore-computed"
+            ],
+            "codes_tags": [
+                "code-13",
+                "3073780728959",
+                "307378072895x",
+                "30737807289xx",
+                "3073780728xxx",
+                "307378072xxxx",
+                "30737807xxxxx",
+                "3073780xxxxxx",
+                "307378xxxxxxx",
+                "30737xxxxxxxx",
+                "3073xxxxxxxxx",
+                "307xxxxxxxxxx",
+                "30xxxxxxxxxxx",
+                "3xxxxxxxxxxxx"
+            ],
+            "traces_debug_tags": [],
+            "no_nutrition_data": "",
+            "emb_codes_20141016": "FR 39.198.001 CE",
+            "ingredients_n_tags": [
+                "24",
+                "21-30"
+            ],
+            "traces_tags": [],
+            "expiration_date": "12/02/2018",
+            "nova_groups_tags": [
+                "en:4-ultra-processed-food-and-drink-products"
+            ],
+            "countries_debug_tags": [],
+            "unique_scans_n": 93,
+            "ingredients_tags": [
+                "en:reconstituted-skimmed-milk",
+                "en:milk",
+                "fr:fromage",
+                "fr:chevre-13-dans-la-variete-chevre",
+                "en:butter",
+                "en:milk-protein",
+                "",
+                "en:emulsifying-salt",
+                "fr:polyphosphate",
+                "fr:citrate-de-sodium",
+                "en:citric-acid",
+                "fr:diphosphates-et-phosphates-de-sodium",
+                "en:flavouring",
+                "en:fish",
+                "en:smoke-flavouring",
+                "en:flavouring",
+                "en:flavour-enhancer",
+                "fr:glutamate-monosodique",
+                "fr:arome-naturel-ail-avec-autres-aromes-naturels",
+                "en:salt",
+                "fr:arome-naturel-de-fromage",
+                "en:thickener",
+                "fr:carraghenane-et-farine-de-graine-de-caroube",
+                "en:preservative",
+                "fr:sorbate-de-potassium-et-nisine",
+                "fr:origine",
+                "fr:france"
+            ],
+            "nutrient_levels": {
+                "fat": "high",
+                "salt": "high",
+                "saturated-fat": "high",
+                "sugars": "low"
+            },
+            "ingredients_text_with_allergens": "<span class=\"allergen\">Lait</span> écrémé réhydraté (origine : France), <span class=\"allergen\">fromages</span> (chèvre 13% dans la variété Chèvre), <span class=\"allergen\">beurre</span>, protéines de <span class=\"allergen\">lait</span>, sels de fonte : polyphosphates, citrate de sodium, acide citrique, diphosphates et phosphates de sodium, arômes (<span class=\"allergen\">poissons</span>), arômes de fumée, exhausteur de goût : glutamate monosodique, arôme naturel ail avec autres arômes naturels, sel, arôme naturel de <span class=\"allergen\">fromage</span>, épaississants : carraghénane et farine de graine de caroube, conservateurs : sorbate de potassium et nisine.",
+            "debug_param_sorted_langs": [
+                "fr"
+            ],
+            "allergens": "Lait, fromages, beurre, lait, poissons, fromage, Lait, fromages, beurre, lait, poissons, fromage",
+            "ingredients_that_may_be_from_palm_oil_n": 0,
+            "origins_debug_tags": [],
+            "brands": "Apéricube,Bel",
+            "_id": "3073780728959",
+            "images": {
+                "1": {
+                    "sizes": {
+                        "100": {
+                            "h": 51,
+                            "w": 100
+                        },
+                        "400": {
+                            "h": 202,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 664,
+                            "h": 336
+                        }
+                    },
+                    "uploader": "andre",
+                    "uploaded_t": 1332518836
+                },
+                "2": {
+                    "uploader": "andre",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 80
+                        },
+                        "400": {
+                            "h": 322,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 3269,
+                            "h": 2629
+                        }
+                    },
+                    "uploaded_t": 1332518900
+                },
+                "3": {
+                    "uploaded_t": 1332518961,
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 51
+                        },
+                        "400": {
+                            "h": 204,
+                            "w": 400
+                        },
+                        "full": {
+                            "h": 1584,
+                            "w": 3104
+                        }
+                    },
+                    "uploader": "andre"
+                },
+                "4": {
+                    "uploader": "andre",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 65
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 259
+                        },
+                        "full": {
+                            "w": 612,
+                            "h": 396
+                        }
+                    },
+                    "uploaded_t": 1332519156
+                },
+                "5": {
+                    "uploaded_t": "1468420697",
+                    "uploader": "aleene",
+                    "sizes": {
+                        "100": {
+                            "h": 75,
+                            "w": 100
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 300
+                        },
+                        "full": {
+                            "h": 2448,
+                            "w": 3264
+                        }
+                    }
+                },
+                "6": {
+                    "uploaded_t": 1486502511,
+                    "sizes": {
+                        "100": {
+                            "h": 56,
+                            "w": 100
+                        },
+                        "400": {
+                            "h": 225,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 1000,
+                            "h": 563
+                        }
+                    },
+                    "uploader": "openfood-ch-import"
+                },
+                "7": {
+                    "sizes": {
+                        "100": {
+                            "h": 56,
+                            "w": 100
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 225
+                        },
+                        "full": {
+                            "h": 563,
+                            "w": 1000
+                        }
+                    },
+                    "uploader": "openfood-ch-import",
+                    "uploaded_t": 1486502512
+                },
+                "8": {
+                    "uploader": "openfood-ch-import",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 56
+                        },
+                        "400": {
+                            "h": 225,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 1000,
+                            "h": 563
+                        }
+                    },
+                    "uploaded_t": 1486502512
+                },
+                "9": {
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 28
+                        },
+                        "400": {
+                            "w": 114,
+                            "h": 400
+                        },
+                        "full": {
+                            "w": 569,
+                            "h": 2000
+                        }
+                    },
+                    "uploader": "julie-yuka",
+                    "uploaded_t": "1504599769"
+                },
+                "10": {
+                    "uploaded_t": "1513969077",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 75
+                        },
+                        "400": {
+                            "h": 300,
+                            "w": 400
+                        },
+                        "full": {
+                            "h": 1500,
+                            "w": 2000
+                        }
+                    },
+                    "uploader": "asmoth"
+                },
+                "11": {
+                    "uploaded_t": "1513969122",
+                    "uploader": "asmoth",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 75
+                        },
+                        "400": {
+                            "h": 300,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 2000,
+                            "h": 1500
+                        }
+                    }
+                },
+                "12": {
+                    "uploaded_t": "1513969135",
+                    "uploader": "asmoth",
+                    "sizes": {
+                        "100": {
+                            "h": 75,
+                            "w": 100
+                        },
+                        "400": {
+                            "h": 300,
+                            "w": 400
+                        },
+                        "full": {
+                            "h": 1500,
+                            "w": 2000
+                        }
+                    }
+                },
+                "13": {
+                    "uploaded_t": "1513969155",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 75
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 300
+                        },
+                        "full": {
+                            "h": 1500,
+                            "w": 2000
+                        }
+                    },
+                    "uploader": "asmoth"
+                },
+                "14": {
+                    "uploaded_t": "1513969175",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 75
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 300
+                        },
+                        "full": {
+                            "w": 2000,
+                            "h": 1500
+                        }
+                    },
+                    "uploader": "asmoth"
+                },
+                "15": {
+                    "uploader": "kiliweb",
+                    "sizes": {
+                        "100": {
+                            "h": 100,
+                            "w": 75
+                        },
+                        "400": {
+                            "w": 300,
+                            "h": 400
+                        },
+                        "full": {
+                            "w": 900,
+                            "h": 1200
+                        }
+                    },
+                    "uploaded_t": "1525102976"
+                },
+                "16": {
+                    "uploader": "kiliweb",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 16
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 65
+                        },
+                        "full": {
+                            "h": 529,
+                            "w": 3264
+                        }
+                    },
+                    "uploaded_t": "1525102979"
+                },
+                "nutrition_fr": {
+                    "y1": "90.9666748046875",
+                    "y2": "224.9666748046875",
+                    "angle": "0",
+                    "rev": "43",
+                    "imgid": "14",
+                    "x1": "135.16668701171875",
+                    "normalize": "false",
+                    "white_magic": "false",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 85
+                        },
+                        "200": {
+                            "h": 170,
+                            "w": 200
+                        },
+                        "400": {
+                            "h": 339,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 790,
+                            "h": 670
+                        }
+                    },
+                    "x2": "293.16668701171875",
+                    "geometry": "790x670-675-454"
+                },
+                "nutrition": {
+                    "normalize": "checked",
+                    "rev": "7",
+                    "imgid": "4",
+                    "geometry": "0x0--1--1",
+                    "white_magic": null,
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 65
+                        },
+                        "200": {
+                            "w": 200,
+                            "h": 129
+                        },
+                        "400": {
+                            "h": 259,
+                            "w": 400
+                        },
+                        "full": {
+                            "w": 612,
+                            "h": 396
+                        }
+                    }
+                },
+                "front": {
+                    "sizes": {
+                        "100": {
+                            "h": 51,
+                            "w": 100
+                        },
+                        "200": {
+                            "h": 102,
+                            "w": 200
+                        },
+                        "400": {
+                            "h": 204,
+                            "w": 400
+                        },
+                        "full": {
+                            "h": 1584,
+                            "w": 3104
+                        }
+                    },
+                    "white_magic": null,
+                    "geometry": "0x0--7--7",
+                    "imgid": "3",
+                    "rev": "5",
+                    "normalize": null
+                },
+                "ingredients_fr": {
+                    "geometry": "0x0-0-0",
+                    "x2": null,
+                    "white_magic": "0",
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 16
+                        },
+                        "200": {
+                            "h": 32,
+                            "w": 200
+                        },
+                        "400": {
+                            "h": 65,
+                            "w": 400
+                        },
+                        "full": {
+                            "h": 529,
+                            "w": 3264
+                        }
+                    },
+                    "y2": null,
+                    "angle": null,
+                    "y1": null,
+                    "normalize": "0",
+                    "rev": "50",
+                    "x1": null,
+                    "imgid": "16"
+                },
+                "ingredients": {
+                    "sizes": {
+                        "100": {
+                            "w": 100,
+                            "h": 37
+                        },
+                        "200": {
+                            "w": 200,
+                            "h": 74
+                        },
+                        "400": {
+                            "w": 400,
+                            "h": 148
+                        },
+                        "full": {
+                            "w": 1634,
+                            "h": 604
+                        }
+                    },
+                    "white_magic": null,
+                    "geometry": "1634x604-16-73",
+                    "rev": "10",
+                    "imgid": "2",
+                    "normalize": null
+                },
+                "front_fr": {
+                    "sizes": {
+                        "100": {
+                            "h": "100",
+                            "w": "75"
+                        },
+                        "200": {
+                            "w": 150,
+                            "h": 200
+                        },
+                        "400": {
+                            "w": 300,
+                            "h": 400
+                        },
+                        "full": {
+                            "h": 1200,
+                            "w": 900
+                        }
+                    },
+                    "x2": null,
+                    "white_magic": "0",
+                    "geometry": "0x0-0-0",
+                    "y1": null,
+                    "angle": null,
+                    "y2": null,
+                    "rev": "48",
+                    "imgid": "15",
+                    "x1": null,
+                    "normalize": "0"
+                }
+            },
+            "image_small_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.200.jpg",
+            "product_quantity": 250,
+            "categories_tags": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:salty-snacks",
+                "en:appetizers",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:processed-cheese",
+                "en:industrial-cheese"
+            ],
+            "checkers_tags": [],
+            "purchase_places": "France,Veynes,05400,Blois",
+            "origins_tags": [],
+            "image_ingredients_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/ingredients_fr.50.400.jpg",
+            "packaging": "fr:Film plastique à jeter,fr:Barquette carton et feuilles métal des cubes à recycler,fr:Frais,fr:Point vert,fr:Pensez au tri!,fr:Film plastique à jeter,fr:Barquette carton et feuilles métal des cubes à recycler, Film plastique à jeter",
+            "brands_tags": [
+                "apericube",
+                "bel"
+            ],
+            "vitamins_tags": [],
+            "emb_codes": "FR 39.198.001 EC,FR 39.300.001 EC",
+            "nova_group_debug": " -- categories/en:cheeses : 3 -- additives/en:e330 : 4",
+            "fruits-vegetables-nuts_100g_estimate": 0,
+            "cities_tags": [
+                "dole-jura-france",
+                "lons-le-saunier-jura-france"
+            ],
+            "ingredients_debug": [
+                "_Lait_ écrémé réhydraté ",
+                "(",
+                "(",
+                null,
+                null,
+                "origine ",
+                ":",
+                ":",
+                null,
+                null,
+                " France)",
+                ",",
+                null,
+                null,
+                null,
+                " _fromages_ ",
+                "(",
+                "(",
+                null,
+                null,
+                "chèvre 13% dans la variété Chèvre)",
+                ",",
+                null,
+                null,
+                null,
+                " _beurre_",
+                ",",
+                null,
+                null,
+                null,
+                " protéines de _lait_",
+                ",",
+                null,
+                null,
+                null,
+                " sels de fonte ",
+                ":",
+                ":",
+                null,
+                null,
+                "  polyphosphates",
+                ",",
+                null,
+                null,
+                null,
+                " citrate de sodium",
+                ",",
+                null,
+                null,
+                null,
+                " acide citrique",
+                ",",
+                null,
+                null,
+                null,
+                " diphosphates de sodium",
+                ",",
+                null,
+                null,
+                null,
+                "phosphates de sodium",
+                ",",
+                null,
+                null,
+                null,
+                " arômes ",
+                "(",
+                "(",
+                null,
+                null,
+                "_poissons_)",
+                ",",
+                null,
+                null,
+                null,
+                " arômes de fumée",
+                ",",
+                null,
+                null,
+                null,
+                " exhausteur de goût ",
+                ":",
+                ":",
+                null,
+                null,
+                "  glutamate monosodique",
+                ",",
+                null,
+                null,
+                null,
+                " arôme naturel ail avec autres arômes naturels",
+                ",",
+                null,
+                null,
+                null,
+                " sel",
+                ",",
+                null,
+                null,
+                null,
+                " arôme naturel de _fromage_",
+                ",",
+                null,
+                null,
+                null,
+                " épaississants ",
+                ":",
+                ":",
+                null,
+                null,
+                "  carraghénane et farine de graine de caroube",
+                ",",
+                null,
+                null,
+                null,
+                " conservateurs ",
+                ":",
+                ":",
+                null,
+                null,
+                "  sorbate de potassium et nisine."
+            ],
+            "ingredients_text": "_Lait_ écrémé réhydraté (origine : France), _fromages_ (chèvre 13% dans la variété Chèvre), _beurre_, protéines de _lait_, sels de fonte : polyphosphates, citrate de sodium, acide citrique, diphosphates et phosphates de sodium, arômes (_poissons_), arômes de fumée, exhausteur de goût : glutamate monosodique, arôme naturel ail avec autres arômes naturels, sel, arôme naturel de _fromage_, épaississants : carraghénane et farine de graine de caroube, conservateurs : sorbate de potassium et nisine.",
+            "product_name": "Apéricube Tonic",
+            "last_editor": "date-limite-app",
+            "emb_code": "",
+            "languages_hierarchy": [
+                "en:french"
+            ],
+            "checkers": [],
+            "image_ingredients_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/ingredients_fr.50.100.jpg",
+            "packaging_tags": [
+                "fr-film-plastique-a-jeter",
+                "fr-barquette-carton-et-feuilles-metal-des-cubes-a-recycler",
+                "fr-frais",
+                "fr-point-vert",
+                "fr-pensez-au-tri",
+                "fr-film-plastique-a-jeter",
+                "fr-barquette-carton-et-feuilles-metal-des-cubes-a-recycler",
+                "film-plastique-a-jeter"
+            ],
+            "additives_old_n": 9,
+            "categories_prev_hierarchy": [
+                "en:fresh-foods",
+                "en:dairies",
+                "en:fermented-foods",
+                "en:salty-snacks",
+                "en:appetizers",
+                "en:fermented-milk-products",
+                "en:cheeses",
+                "en:cow-cheeses",
+                "en:french-cheeses",
+                "en:industrial-cheese",
+                "en:processed-cheese"
+            ],
+            "categories_debug_tags": [],
+            "ingredients_text_fr": "_Lait_ écrémé réhydraté (origine : France), _fromages_ (chèvre 13% dans la variété Chèvre), _beurre_, protéines de _lait_, sels de fonte : polyphosphates, citrate de sodium, acide citrique, diphosphates et phosphates de sodium, arômes (_poissons_), arômes de fumée, exhausteur de goût : glutamate monosodique, arôme naturel ail avec autres arômes naturels, sel, arôme naturel de _fromage_, épaississants : carraghénane et farine de graine de caroube, conservateurs : sorbate de potassium et nisine.",
+            "stores": "Super U,Leclerc, Magasins U",
+            "ingredients_from_palm_oil_tags": [],
+            "generic_name_fr_debug_tags": [],
+            "ingredients_text_with_allergens_fr": "<span class=\"allergen\">Lait</span> écrémé réhydraté (origine : France), <span class=\"allergen\">fromages</span> (chèvre 13% dans la variété Chèvre), <span class=\"allergen\">beurre</span>, protéines de <span class=\"allergen\">lait</span>, sels de fonte : polyphosphates, citrate de sodium, acide citrique, diphosphates et phosphates de sodium, arômes (<span class=\"allergen\">poissons</span>), arômes de fumée, exhausteur de goût : glutamate monosodique, arôme naturel ail avec autres arômes naturels, sel, arôme naturel de <span class=\"allergen\">fromage</span>, épaississants : carraghénane et farine de graine de caroube, conservateurs : sorbate de potassium et nisine.",
+            "created_t": 1332518836,
+            "quantity_debug_tags": [],
+            "traces_from_ingredients": "",
+            "scans_n": 97,
+            "additives_prev_original_tags": [
+                "en:e452",
+                "en:e331",
+                "en:e330",
+                "en:e450",
+                "en:e339",
+                "en:e621",
+                "en:e407",
+                "en:e410",
+                "en:e202",
+                "en:e234"
+            ],
+            "nova_group": 4,
+            "nutrition_grades_tags": [
+                "d"
+            ],
+            "new_additives_n": 6,
+            "image_nutrition_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/nutrition_fr.43.100.jpg",
+            "packaging_debug_tags": [],
+            "image_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.400.jpg",
+            "nova_groups": 4,
+            "nutrition_data_per_debug_tags": [],
+            "brands_debug_tags": [],
+            "generic_name": "Spécialité fromagère fondue",
+            "expiration_date_debug_tags": []
+        }
+     ],
+    "count": 9450,
+    "skip": 0,
+    "page_size": "20"
+}
