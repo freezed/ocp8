@@ -125,7 +125,7 @@ def test_search_product_valid(monkeypatch):
         output_sample = json.load(json_file)
 
     monkeypatch.setattr('ersatz.api.get_json', fake_get_json_from_api_valid)
-    output_processed = api.SearchProduct('string')
+    output_processed = api.SearchProduct({'search_terms': 'string'})
     assert output_processed.result['products'] == output_sample['products']
 
 # API response is not valid, and return a `satus` == False
@@ -135,6 +135,6 @@ def fake_get_json_from_api_invalid(url, payload):
 
 def test_search_product_invalid(monkeypatch):
     monkeypatch.setattr('ersatz.api.get_json', fake_get_json_from_api_invalid)
-    output_processed = api.SearchProduct('fake_string')
+    output_processed = api.SearchProduct({'query': 'string'})
     assert not output_processed.result['status']
 ################################################################################

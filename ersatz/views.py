@@ -27,7 +27,7 @@ def _get_search_context(request):
     """
 
     parts = up.parse_qsl(request.META['QUERY_STRING'])
-    url_qs_parsed = {k:v for (k,v) in parts if k == 's'}
+    url_qs_parsed = {'search_terms':v for (k,v) in parts if k == 's'}
 
     if not url_qs_parsed:
         data = {
@@ -39,7 +39,15 @@ def _get_search_context(request):
         }
 
     else:
-        search = api.SearchProduct(request.GET['s'])
+        try:
+            url_qs_parsed.update({'page': int(v) for (k,v) in parts if k == 'p'})
+        except ValueError as except_detail:
+            print("ValueError in URL : 'p={}' [{}]".format(
+                request.GET['p'],
+                except_detail,
+            ))
+
+        search = api.SearchProduct(url_qs_parsed)
         data = search.result
 
     return data

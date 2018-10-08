@@ -48,7 +48,6 @@ def get_json(url, payload):
     try:
         api_json = response.json()
         api_json.update({'status': True})
-
     except Exception as detail:
         traceback['error'].update({'JSONDecodeError': str(detail)})
         return traceback
@@ -66,9 +65,9 @@ def get_json(url, payload):
 class SearchProduct:
     """ Connects to API, get data, purge unused field and format some """
 
-    def __init__(self, string):
+    def __init__(self, url_qs_parsed):
         self._payload = API['PARAM_SEARCH']
-        self._payload.update({'search_terms': string})
+        self._payload.update(url_qs_parsed)
 
     def _get_products_from_api(self):
 
@@ -78,6 +77,11 @@ class SearchProduct:
         # API response is valid & non-empty
         if api_response['status'] and api_response['count'] > 0:
             products = []
+            pagination = self.get_pagination(
+                api_response['count'],
+                api_response['page'],
+                api_response['page_size'],
+            )
 
             # Iterate on each prod and keep only desired fields
             for product in api_response['products']:
@@ -100,11 +104,52 @@ class SearchProduct:
             json_return = {
                 'products': products,
                 'status': True,
+                'pagination': pagination,
             }
+
+        # Response without products
+        elif api_response['status'] and api_response['count'] == 0:
+            json_return.update({
+                'status': False,
+                'context': __name__+'._get_products_from_api()',
+                'error': API['NO_PROD'].format(
+                    self._payload['search_terms']
+            )})
 
         return json_return
 
     result = property(_get_products_from_api)
+
+    def get_pagination(self, count, page, page_size):
+        # sometime API response gives number in a string :-/
+        count = int(count)
+        page = int(page)
+        page_size = int(page_size)
+        pagination = {
+            'page': page,
+            'url_query': '?s={}'.format(self._payload['search_terms']),
+        }
+
+        # Pages number calculation
+        last = count // page_size
+
+        if count % page_size > 0:
+            last += 1
+
+        pagination.update({'last': last})
+
+        # Contextual framing
+        if page == 0:
+            pagination.update({'following': 2})
+
+        elif page >= last:
+            pagination.update({'previous': last - 1})
+
+        else:
+            pagination.update({'previous': page - 1})
+            pagination.update({'following': page + 1})
+
+        return pagination
 
     @staticmethod
     def set_categories(product_fields):

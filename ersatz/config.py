@@ -10,11 +10,11 @@ APP = {
 API = {
     'URL_SEARCH':'https://fr.openfoodfacts.org/cgi/search.pl',
     'PARAM_SEARCH': {
-        'search_terms': '',
         'search_simple': 1,
         'action': 'process',
         'json': 1,
     },
+    'NO_PROD': 'OpenFoodFacts ne donne pas de produits pour la requête : «{}»',
 }
 
 FIELD_KEPT = {
