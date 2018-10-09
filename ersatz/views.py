@@ -3,7 +3,7 @@ import urllib.parse as up
 
 from django.shortcuts import render
 from . import api
-
+from .models import Category, Product
 
 def _get_search_context(request):
     """
@@ -53,10 +53,71 @@ def _get_search_context(request):
     return data
 
 
+def _update_db(data):
+    # list all distinct categories
+    categories_set = {
+        categories
+        for product in data['products']
+        if product['categories'] is not False
+        for categories in product['categories']
+    }
+
+    # drop existing categories
+    new_categories = (
+        cat
+        for cat in categories_set
+        if not Category.objects.filter(name=cat).exists()
+    )
+
+    # create category
+    for category in new_categories:
+        Category.objects.create(name=category)
+
+    # drop products already in DB
+    new_products = (
+        prod
+        for prod in data['products']
+        if not Product.objects.filter(code=prod['code']).exists()
+    )
+
+    # #### # DEVLOG # #####
+    false_field = dict()
+    # #### # DEVLOG # #####
+
+    # add products in DB
+    for product in new_products:
+        # #### # DEVLOG # #####
+        false_field.update({product['name']: field for field in product if product[field] is False})
+        # #### # DEVLOG # #####
+
+        product.update(
+            {field: '' for field in product if product[field] is False}
+        )
+        product_candidate = Product.objects.create(
+            name=product['name'],
+            nutrition_grades=product['nutrition_grades'],
+            nova_group=product['nova_group'],
+            code=product['code'],
+        )
+
+        product_cat = (
+            (name, Category.objects.get(name=name))
+            for name in product['categories']
+            if product['categories'] is not False
+        )
+
+        for cat in product_cat:
+            product_candidate.category.add(cat[1])
+
+    # #### # DEVLOG # #####
+    print('fields emptied : {}'.format(false_field))
+    # #### # DEVLOG # #####
+
 def index(request):
     return render(request, 'ersatz/home.html')
 
 
 def search(request):
     data = _get_search_context(request)
+    _update_db(data)
     return render(request, 'ersatz/result.html', data)
