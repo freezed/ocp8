@@ -7,6 +7,7 @@ hide circle
 skinparam linetype ortho
 skinparam class {
     BackgroundColor<<assoc>> lightblue
+    BackgroundColor<<django>> lightgreen
 }
 
 /' = = = = = = = MACRO = = = = = = = '/
@@ -17,61 +18,66 @@ skinparam class {
 !define att(n,u,s) {field} <b>n</b> [s]
 
 /' = = = = = = = CLASSE = = = = = = = '/
-class category
-class category_product <<assoc>>
-class ersatz <<assoc>>
-class product
-class auth_user
+class Category
+class CategoryProduct <<assoc>>
+class ProductUser <<assoc>>
+class Product
+class User <<django>>
 
 
 /' = = = = = = = RELATION = = = = = = = '/
-rel(product,1..,--,1..*,category_product)
-rel(category_product,1..*,--,1..,category)
-rel(auth_user,1..,-up-,1..*,ersatz)
-rel(product,1..*,--,1..*,ersatz)
+rel(Product,1..,--,1..*,CategoryProduct)
+rel(CategoryProduct,1..*,--,1..,Category)
+rel(User,1..,-up-,1..*,ProductUser)
+rel(Product,1..*,--,1..*,ProductUser)
 
 
 /' = = = = = = = KEY = = = = = = = '/
-class category {
+class Category {
     pyk(id)
     ..
 }
 
-class category_product {
-    fpk(product_id,product.id)
-    fpk(category_id,category.id)
-}
-
-class ersatz {
-    fpk(product_id,product.id)
-    fpk(auth_user_id,auth_user.id)
-}
-
-class product {
+class CategoryProduct {
     pyk(id)
+    ..
+    fnk(product_id,product.id)
+    fnk(category_id,category.id)
+}
+
+class ProductUser {
+    pyk(id)
+    ..
+    fnk(product_id,product.id)
+    fnk(user_id,user.id)
+}
+
+class Product {
+    pyk(id)
+    ..
     fnk(category_id,category.id)
     ..
 }
 
-class auth_user {
+class User {
     pyk(id)
     ..
 }
 
 
 /' = = = = = = = ATTRIBUTE = = = = = = = '/
-class category {
+class Category {
     att(name,String,VARCHAR(200) NOT NULL)
 }
 
-class product {
+class Product {
     att(name,String,VARCHAR(200) NOT NULL)
-    att(url,String,VARCHAR(255) NOT NULL)
+    att(code,String,VARCHAR(100) NOT NULL)
     att(nutrition_grades,String,VARCHAR(1) NOT NULL)
     att(nova_group,String,VARCHAR(1) NOT NULL)
 }
 
-class auth_user {
+class User {
     att(email,String,VARCHAR(254) NOT NULL)
     att(username,String,VARCHAR(150) NOT NULL)
     att(last_name,String,VARCHAR(150) NULL)

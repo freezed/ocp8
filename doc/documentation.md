@@ -22,7 +22,7 @@ Documentation
 ## Runs
 
 - on [Heroku][heroku]
-    - `heroku CLI v7.16.0 linux-x64 node-v10.10.0`
+    - `heroku/7.16.6 linux-x64 node-v10.11.0`
     - with `gunicorn 19.9.0`
 
 ## Installation
@@ -31,11 +31,11 @@ Documentation
 2. create a dedicated virtualenv : `python3 -m venv .venv`
 3. starts virtualenv  : `source .venv/bin/activate`
 4. adds dependencies : `cd ocp8; pip install -r requirements.txt`
-5. [config DB - TODO #5][05]
-6. Breathe…
+5. creates a `postgresql` DB
+6. Edit [`omega/settings.py`][settings]
 7. run tests : `pytest`
-8. run test coverage : `pytest --cov-config .coveragerc --cov=omega --cov=account --cov=ersatz test_*.py;`
-9. run developement server : `.manage.py runserver`
+8. run test coverage : `pytest --cov=omega --cov=ersatz`
+9. run developement server : `./manage.py runserver`
 
 ## File organisation
 
@@ -112,4 +112,4 @@ Table `auth_user` is from built-in django authentification model
 
 
 [heroku]: https://heroku.com
-[05]: https://github.com/freezed/ocp8/issues/5
+[settings]: https://github.com/freezed/ocp8/blob/3a1bc304537fa1b51b1d98fd9ad95e140efb02e5/omega/settings.py#L84
