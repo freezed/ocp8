@@ -66,8 +66,8 @@ class SearchProduct:
     """ Connects to API, get data, purge unused field and format some """
 
     def __init__(self, url_qs_parsed):
-        self._payload = API['PARAM_SEARCH']
-        self._payload.update(url_qs_parsed)
+        self._payload = url_qs_parsed
+        self._payload.update(**API['PARAM_SEARCH'])
 
     def _get_products_from_api(self):
 
