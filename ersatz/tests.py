@@ -2,7 +2,7 @@ import os
 import json
 import urllib.parse as up
 from . import api, views
-from .config import FIELD_KEPT
+from .config import API, FIELD_KEPT
 
 ################################################################################
 #   ersatz.views._get_search_context()
@@ -137,4 +137,25 @@ def test_search_product_invalid(monkeypatch):
     monkeypatch.setattr('ersatz.api.get_json', fake_get_json_from_api_invalid)
     output_processed = api.SearchProduct({'query': 'string'})
     assert not output_processed.result['status']
+################################################################################
+
+
+################################################################################
+#   ersatz.api.SearchProduct.__init__
+################################################################################
+
+# Non-regresion test for issue #20 :
+# - API params in configuration were overriden after each search
+def test_search_product__init__():
+    query_set_1 = {'search_terms': 'foo','foobar': 1664}
+    query_set_2 = {'search_terms': 'bar'}
+
+    witness = dict()
+    witness.update(**query_set_2)
+    witness.update(**API['PARAM_SEARCH'])
+
+    search_1 = api.SearchProduct(query_set_1)
+    search_2 = api.SearchProduct(query_set_2)
+
+    assert witness == search_2._payload
 ################################################################################
