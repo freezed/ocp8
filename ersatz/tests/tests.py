@@ -42,6 +42,24 @@ def test_user_request_valid(monkeypatch):
     assert output_processed == output_witness
 ################################################################################
 
+################################################################################
+#   ersatz.views.search()
+################################################################################
+
+# Non-regresion test for issue #27 :
+# - No DB storage if a search do not return products
+# TODO : I'd like to test a HTTP response <200>, but `whitenoise` won't let me.
+# TODO : see issue #28 for details.
+# def fake__get_search_context(request):
+    # """ ersatz.views._get_search_context() fake function """
+    # return {'status': False}
+
+# def test_search_return_status_is_false(monkeypatch):
+    # monkeypatch.setattr('ersatz.views._get_search_context', fake__get_search_context)
+    # response = views.search('This request will return `{status: False}`')
+    # assert response.status_code == 200
+################################################################################
+
 #########
 #  API  #
 #########

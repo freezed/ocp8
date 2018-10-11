@@ -119,5 +119,9 @@ def index(request):
 
 def search(request):
     data = _get_search_context(request)
-    _update_db(data)
+
+    # if status == True : there is some stuff to store in DB
+    if data['status']:
+        _update_db(data)
+
     return render(request, 'ersatz/result.html', data)
