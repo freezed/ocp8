@@ -8,9 +8,12 @@ Documentation
 ## Dependencies
 
 - `django 2.1.1`
-- `requests 2.19.1`
+- `dj-database-url 0.5.0`
 - `gunicorn 19.9.0` (only for running on [Heroku][heroku])
+- `psycopg2-binary 2.7.5`
 - `python 3.6.6`
+- `requests 2.19.1`
+- `whitenoise 4.1`
 
 ## Development tools used
 
