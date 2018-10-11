@@ -1,8 +1,8 @@
 import os
 import json
 import urllib.parse as up
-from . import api, views
-from .config import API, FIELD_KEPT
+from ersatz import api, views
+from ersatz.config import API, FIELD_KEPT
 
 ################################################################################
 #   ersatz.views._get_search_context()
