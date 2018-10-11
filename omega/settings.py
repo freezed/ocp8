@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import psycopg2
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,7 +26,10 @@ PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = '3#-w$0tr9(e&o-_!^w9#8a9aw3-xzr0ncs-rfpap8ax)br^53^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ.get('ENV') == 'PRODUCTION':
+    DEBUG = False
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -81,15 +86,22 @@ WSGI_APPLICATION = 'omega.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'omega',
-        'PORT': 5432,
-        'HOST': '',
-        'PASSWORD':'',
+if os.environ.get('ENV') == 'PRODUCTION':
+    DATABASE_URL = os.environ['DATABASE_URL']
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    DATABASES = {
+        'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'omega',
+            'PORT': 5432,
+            'HOST': '',
+            'PASSWORD':'',
+        }
+    }
 
 
 # Password validation
