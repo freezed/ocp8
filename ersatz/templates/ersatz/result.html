@@ -1,30 +1,25 @@
 {% extends 'base.html' %}
 
-{% block title %} - ersatz result{% endblock %}
+{% block title %} - ersatz search{% endblock %}
 
 {% block content %}
-  <h2>ersatz - result</h2>
-  {% if status %}{% else %}<p>Status : False{% endif %}</p>
+  <h2>ersatz - search</h2>
   {% if status %}
-  <table style="border: 1px solid gre;border-collapse: collapse;">
-  <caption>Products</caption>
-    <thead>
-      <th>Code</th>
-      <th>Nom</th>
-      <th>Catégories</th>
-      <th>Nutriscore</th>
-      <th>Nova group</th>
-    </thead>
-    {% for line in products %}
-    <tr>
-      <td style="border: 1px solid grey">{{ line.code }}</td>
-      <td style="border: 1px solid grey">{{ line.name }}</td>
-      <td style="border: 1px solid grey">{{ line.categories }}</td>
-      <td style="border: 1px solid grey">{{ line.nutrition_grades }}</td>
-      <td style="border: 1px solid grey">{{ line.nova_group }}</td>
-    </tr>
-    {% endfor %}
-  </table>
+  <h4>Résultats de la recherche</h4>
+  <ol>
+  {% for line in products %}
+    <li>
+      {% if line.nutrition_grades is False or line.nutrition_grades == '' %}
+      <em>{{ line.name }} - <small>[substituts impossible]</small></em>
+      {% elif line.nutrition_grades == 'a' %}
+      {{ line.name }} - [<em>A</em>]
+      {% else %}
+      <a href="{% url 'ersatz-prod' line.code %}" title="Rechercher un substitut pour le produit {{ line.name }}">
+      {{ line.name }}</a> - [<span style="text-transform: capitalize;">{{ line.nutrition_grades }}</span>]
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ol>
   <p>
     {% if pagination.previous %}
     <a href="{{ pagination.url_query }}&p=1">[ 1 |</a>
@@ -37,9 +32,11 @@
     {% else %}- ]{% endif %}
   </p>
   {% else %}
-  <p>Context : </p>
-  <pre>{{ context }}</pre>
-  <p>Error : </p>
-  <pre>{{ error }}</pre>
+  <h4>Aucun résultat !</h4>
+  <ul>
+    <li>Status : False</p>
+    <li>Context : {{ context }}</li>
+    <li>Error : {{ error }}</li>
+  </ul>
   {% endif %}
 {% endblock %}
