@@ -12,8 +12,7 @@ from pprint import pprint as pp
 import requests
 
 from .config import API, FIELD_KEPT
-from ersatz.models import Product as Product
-from ersatz.models import Category as Category
+from ersatz.models import Product, Category
 
 
 def get_json(url, payload):
@@ -222,17 +221,7 @@ class ErsatzProduct:
         self.code = int(code)
         self.ersatz_code = int()
 
-    def _get_better(self, category, field, value):
-
-        # return {
-            # 'status' ,
-            # 'codes' ,
-        # }
-        pass
-
     def get_ersatz(self):
-        # default return
-        ersatz = {'status':False}
 
         # get product object
         product = Product.objects.get(code=self.code)
@@ -240,6 +229,8 @@ class ErsatzProduct:
 
 
         if product_ng != 'a':
+            ersatz = {'candidates_id':[]}
+
             # data structure for each product_ng
             ng_sequence = {
                 'b': ['a'],
@@ -261,27 +252,38 @@ class ErsatzProduct:
                 summary_nutri[nutri].extend([(product, ersatz_candidates[nutri].count(product)) for product in set(ersatz_candidates[nutri])])
 
                 # Sort candidates_id max occurrences 1st & keep only candidates_id occurences gt 2
-                summary_nutri[nutri] = [(cand_id, occur) for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3]
+                # summary_nutri[nutri] = [(cand_id, occur) for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3]
+                ersatz['candidates_id'].extend([cand_id for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3])
 
+            # Data return
+            candidates_nb = len(ersatz['candidates_id'])
 
-            from pprint import pprint as pp
-            pp(summary_nutri)
+            if candidates_nb > 0:
+                ersatz.update({'status': True})
+                ersatz.update({'candidates': list(
+                    Product.objects.values().filter(
+                        id__in=ersatz['candidates_id']
+                    ).order_by('nutrition_grades')
+                )})
+                ersatz.update({'candidates_nb': candidates_nb})
+
+            else:
+                ersatz = {'status':False,'message': 'no ersatz found'}
 
 
             # ersatz = {
                 # 'status': True,
-                # 'ersatz_cat': [],
-                # 'ersatz_cat_nb': int(),
-                # 'ersatz': [],
+                # 'candidates_id': [],
+                # 'candidates': [],
+                # 'candidates_nb': int(),
             # }
 
         # Product is already good
         if product_ng == 'a':
-            ersatz.update({'message': 'Ce produit est déjà excellent'})
+            ersatz = {'status':False,'message': 'product nutrition_grade = «a»'}
 
 
-        # return ersatz
-
+        return ersatz
 
     def save_ersatz(self):
         pass
