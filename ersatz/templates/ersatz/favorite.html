@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} - ersatz favorite{% endblock %}
+
+{% block content %}
+  <h2>ersatz - favorite</h2>
+  {% if user.is_authenticated %}
+  <p><em>La fonctionnalité de mise en favoris n'est pas encore implémentée.</em></p>
+  {% else %}
+  <p><strong>Vous devez être connecté pour utiliser cette fonctionnalité</strong></p>
+  {% endif %}
+  <p>
+    Contexte :
+    <ul>
+      <li><code>p_code:{{ p_code }}</code></li>
+      <li><code>e_code:{{ e_code }}</code></li>
+    </ul>
+  </p>
+{% endblock %}

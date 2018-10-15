@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} - ersatz search{% endblock %}
+{% block title %} - Recherche produit{% endblock %}
 
 {% block content %}
   <h2>ersatz - search</h2>
@@ -11,8 +11,6 @@
     <li>
       {% if line.nutrition_grades is False or line.nutrition_grades == '' %}
       <em>{{ line.name }} - <small>[substituts impossible]</small></em>
-      {% elif line.nutrition_grades == 'a' %}
-      {{ line.name }} - [<em>A</em>]
       {% else %}
       <a href="{% url 'ersatz-prod' line.code %}" title="Rechercher un substitut pour le produit {{ line.name }}">
       {{ line.name }}</a> - [<span style="text-transform: capitalize;">{{ line.nutrition_grades }}</span>]

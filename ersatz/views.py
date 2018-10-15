@@ -125,3 +125,20 @@ def search(request):
         _update_db(data)
 
     return render(request, 'ersatz/result.html', data)
+
+def product(request, code):
+    ersatz = api.ErsatzProduct(code)
+    candidates = ersatz.get_candidates()
+
+    if candidates['status']:
+        template = 'ersatz/candidates.html'
+
+    else:
+        template = 'ersatz/no-candidates.html'
+
+    return render(request, template, candidates)
+
+def favorite(request, e_code, p_code):
+    return render(request, 'ersatz/favorite.html', {
+        'e_code': e_code, 'p_code': p_code
+    })
