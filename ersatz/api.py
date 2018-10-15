@@ -7,9 +7,13 @@ This file is part of [ocp8](https://github.com/freezed/ocp8) project.
 Tools to get data from an API
 """
 from pprint import pformat as pf
+from pprint import pprint as pp
+
 import requests
 
 from .config import API, FIELD_KEPT
+from ersatz.models import Product as Product
+from ersatz.models import Category as Category
 
 
 def get_json(url, payload):
@@ -208,3 +212,76 @@ class SearchProduct:
         product_fields.update({"name": name})
 
         return product_fields
+
+
+class ErsatzProduct:
+    """ A product chosen by user   """
+
+    def __init__(self, code):
+        """ Class initialiser """
+        self.code = int(code)
+        self.ersatz_code = int()
+
+    def _get_better(self, category, field, value):
+
+        # return {
+            # 'status' ,
+            # 'codes' ,
+        # }
+        pass
+
+    def get_ersatz(self):
+        # default return
+        ersatz = {'status':False}
+
+        # get product object
+        product = Product.objects.get(code=self.code)
+        product_ng = product.nutrition_grades
+
+
+        if product_ng != 'a':
+            # data structure for each product_ng
+            ng_sequence = {
+                'b': ['a'],
+                'c': ['a', 'b'],
+                'd': ['a', 'b', 'c'],
+                'e': ['a', 'b', 'c', 'd'],
+            }
+            ersatz_candidates = {cat: list() for cat in ng_sequence[product_ng]}
+            summary_nutri = {cat: list() for cat in ng_sequence[product_ng]}
+
+            # get product categories
+            product_cat = Category.objects.values_list('id', flat=True).filter(products=product)
+
+            # Collect each candidates_id in same cat w/ better nutrition_grades
+            for nutri in ersatz_candidates:
+                ersatz_candidates[nutri].extend([product_candidate for c in product_cat for product_candidate in Product.objects.values_list('id', flat=True).filter(category=c, nutrition_grades=nutri)])
+
+                # Count candidates_id occurrences across all categories
+                summary_nutri[nutri].extend([(product, ersatz_candidates[nutri].count(product)) for product in set(ersatz_candidates[nutri])])
+
+                # Sort candidates_id max occurrences 1st & keep only candidates_id occurences gt 2
+                summary_nutri[nutri] = [(cand_id, occur) for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3]
+
+
+            from pprint import pprint as pp
+            pp(summary_nutri)
+
+
+            # ersatz = {
+                # 'status': True,
+                # 'ersatz_cat': [],
+                # 'ersatz_cat_nb': int(),
+                # 'ersatz': [],
+            # }
+
+        # Product is already good
+        if product_ng == 'a':
+            ersatz.update({'message': 'Ce produit est déjà excellent'})
+
+
+        # return ersatz
+
+
+    def save_ersatz(self):
+        pass
