@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %} - login{% endblock %}
+{% block title %} - Se connecter{% endblock %}
 
 {% block content %}
 
   {% spaceless %}
 
     {% if form.errors %}
-  <p><strong>Your username and password didn't match.</strong></p>
+  <p><strong>Le nom d'utilisateur et le mot de passe ne correspondent pas</strong></p>
 
     {% endif %}
 
@@ -17,7 +17,6 @@
   <p><strong>Your account doesn't have access to this page.</strong></p>
       {% else %}
 
-  <p>Please login to see this page.</p>
       {% endif %}
 
     {% endif %}
@@ -30,7 +29,7 @@
         <br />
         {{ form.password.label_tag }}
         {{ form.password }}
-        <input type="submit" value="login" />
+        <input type="submit" value="Se connecter" />
         <input type="hidden" name="next" value="{{ next }}" />
       </form>
 {% endblock %}

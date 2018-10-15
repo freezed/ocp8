@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %} - signin{% endblock %}
+{% block title %} - Créer un compte{% endblock %}
 
 {% block content %}
 
-  <h2>signin</h2>
+  <h2>Créer un compte</h2>
   <form method="post">
     {% csrf_token %}<br />
     <ul>
 {{ form.as_ul }}
     </ul>
-    <button type="submit">Sign in</button>
+    <button type="submit">Créer un compte</button>
   </form>
 
 {% endblock %}

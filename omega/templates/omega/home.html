@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %} - project index{% endblock %}
+{% block title %} - Accueil{% endblock %}
 
 {% block content %}
-  <h2>Welcome</h2>
+  <h2>Accueil</h2>
   {% if user.is_authenticated %}
-  <p>Dear <strong>{{ user.get_full_name }}</strong> , here's the <strong>project index</strong>.</p>
+  <p>Hello <strong>{{ user.get_full_name }}</strong>
   {% else %}
-  <p>Hello <strong>world</strong>, here's the <strong>project index</strong>.</p>
-  {% endif %}
+  <p>Hello <strong>world</strong>
+  {% endif %}, vous êtes à l'accueil.</p>
   <form method="get" action="{% url 'ersatz-search' %}">
     <label for="s" >Recherche</label>
         <input type="text" name="s" value="" id="s">
