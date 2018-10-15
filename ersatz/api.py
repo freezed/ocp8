@@ -221,7 +221,7 @@ class ErsatzProduct:
         self.code = int(code)
         self.ersatz_code = int()
 
-    def get_ersatz(self):
+    def get_candidates(self):
 
         # get product object
         product = Product.objects.get(code=self.code)
@@ -229,7 +229,7 @@ class ErsatzProduct:
 
 
         if product_ng != 'a':
-            ersatz = {'candidates_id':[]}
+            candidates = {'id':[]}
 
             # data structure for each product_ng
             ng_sequence = {
@@ -253,37 +253,37 @@ class ErsatzProduct:
 
                 # Sort candidates_id max occurrences 1st & keep only candidates_id occurences gt 2
                 # summary_nutri[nutri] = [(cand_id, occur) for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3]
-                ersatz['candidates_id'].extend([cand_id for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3])
+                candidates['id'].extend([cand_id for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3])
 
             # Data return
-            candidates_nb = len(ersatz['candidates_id'])
+            count = len(candidates['id'])
 
-            if candidates_nb > 0:
-                ersatz.update({'status': True})
-                ersatz.update({'candidates': list(
+            if count > 0:
+                candidates.update({'status': True})
+                candidates.update({'slist': list(
                     Product.objects.values().filter(
-                        id__in=ersatz['candidates_id']
+                        id__in=candidates['id']
                     ).order_by('nutrition_grades')
                 )})
-                ersatz.update({'candidates_nb': candidates_nb})
+                candidates.update({'count': count})
 
             else:
-                ersatz = {'status':False,'message': 'no ersatz found'}
+                candidates = {'status':False,'message': 'no candidates found'}
 
 
-            # ersatz = {
+            # candidates = {
                 # 'status': True,
-                # 'candidates_id': [],
-                # 'candidates': [],
-                # 'candidates_nb': int(),
+                # 'id': [],
+                # 'slist': [],
+                # 'count': int(),
             # }
 
         # Product is already good
         if product_ng == 'a':
-            ersatz = {'status':False,'message': 'product nutrition_grade = «a»'}
+            candidates = {'status':False,'message': 'product nutrition_grade = «a»'}
 
 
-        return ersatz
+        return candidates
 
     def save_ersatz(self):
         pass
