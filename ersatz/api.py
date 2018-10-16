@@ -225,11 +225,12 @@ class ErsatzProduct:
 
         # get product object
         product = Product.objects.get(code=self.code)
+        product_details = Product.objects.values().get(code=self.code)
         product_ng = product.nutrition_grades
 
 
         if product_ng != 'a':
-            candidates = {'id':[]}
+            candidates = {'id':[], 'forproduct': product_details}
 
             # data structure for each product_ng
             ng_sequence = {
@@ -268,11 +269,15 @@ class ErsatzProduct:
                 candidates.update({'count': count})
 
             else:
-                candidates = {'status':False,'message': 'no candidates found'}
-
+                candidates = {
+                    'status':False,
+                    'message': 'Pas de substitut trouvé',
+                    'forproduct': product_details,
+                }
 
             # candidates = {
                 # 'status': True,
+                # 'forproduct': {},
                 # 'id': [],
                 # 'slist': [],
                 # 'count': int(),
@@ -280,7 +285,11 @@ class ErsatzProduct:
 
         # Product is already good
         if product_ng == 'a':
-            candidates = {'status':False,'message': 'product nutrition_grade = «a»'}
+            candidates = {
+                'status':False,
+                'message': 'Le nutriscore est déjà «A»',
+                'forproduct': product_details,
+            }
 
 
         return candidates
