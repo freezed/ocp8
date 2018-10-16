@@ -3,7 +3,7 @@ ersatz app URL Configuration
 """
 from django.urls import path
 
-from . import views
+from ersatz.views import views
 
 urlpatterns = [
     path('code/<int:code>', views.product, name='ersatz-prod'),

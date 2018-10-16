@@ -11,7 +11,7 @@ from pprint import pprint as pp
 
 import requests
 
-from .config import API, FIELD_KEPT
+from ersatz.config import API, FIELD_KEPT
 from ersatz.models import Product, Category
 
 

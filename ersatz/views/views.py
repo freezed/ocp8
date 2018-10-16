@@ -2,8 +2,8 @@ from re import search as re_search
 import urllib.parse as up
 
 from django.shortcuts import render
+from ersatz.models import Category, Product
 from . import api
-from .models import Category, Product
 
 def _get_search_context(request):
     """
