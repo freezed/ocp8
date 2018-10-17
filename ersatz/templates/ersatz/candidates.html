@@ -5,13 +5,13 @@
 {% block content %}
   <h2>Propositions de substitut</h2>
   <p>Voici {{ count }} substitut{{ count|pluralize }} proposé{{ count|pluralize }} pour le produit :
-  <ul><li><em>{{ forproduct.name }}</em></li></ul>
+  <ul><li><em>{{ product.name }}</em></li></ul>
   </p>
   <p>Cliquez sur le lien pour enregistrer un favoris</p>
   <ol>
   {% for line in slist %}
     <li>
-      <a href="{% url 'ersatz-favorite' e_code=line.code p_code=forproduct.code %}" title="Choisir le produit {{ line.name }}">
+      <a href="{% url 'ersatz-favorite' e_code=line.code p_code=product.code %}" title="Choisir le produit {{ line.name }}">
       {{ line.name }}</a> - [<span style="text-transform: capitalize;">{{ line.nutrition_grades }}</span>]
     </li>
   {% endfor %}

@@ -214,96 +214,88 @@ class SearchProduct:
 
 
 class ErsatzProduct:
-    """ A product chosen by user   """
+    """ User choose a product, this object processes substitution """
 
-    def __init__(self, code):
+    def __init__(self, product_code):
         """ Class initialiser """
-        self.code = int(code)
-        self.ersatz_code = int()
+        self.product = Product.objects.get(code=int(product_code))
+        self.product_val = Product.objects.values().get(code=int(product_code))
 
-    def get_candidates(self):
+    def get_substitute_context(self):
+        """
+            Return will be used as a templates context.
+            Return is JSON formated :
 
-        # get product object
-        product = Product.objects.get(code=self.code)
-        product_details = Product.objects.values().get(code=self.code)
-        product_ng = product.nutrition_grades
+                - if a substitutes product candidate list is found
 
+                    context = {
+                        'status': True,
+                        'product': {},
+                        'candidate': [],
+                        'slist': [],
+                        'count': '',
+                    }
 
-        if product_ng != 'a':
-            candidates = {'id':[], 'forproduct': product_details}
+                - if no candidate is found
 
-            # data structure for each product_ng
-            ng_sequence = {
-                'b': ['a'],
-                'c': ['a', 'b'],
-                'd': ['a', 'b', 'c'],
-                'e': ['a', 'b', 'c', 'd'],
-            }
-            ersatz_candidates = {cat: list() for cat in ng_sequence[product_ng]}
-            summary_nutri = {cat: list() for cat in ng_sequence[product_ng]}
+                    context = {
+                        'status': False,
+                        'message': '',
+                    }
+        """
 
-            # get product categories
-            product_cat = Category.objects.values_list('id', flat=True).filter(products=product)
+        context = {
+            'status':False,
+            'message': 'Le nutriscore est déjà «A»',
+        }
 
-            # Collect each candidates_id in same cat w/ better nutrition_grades
-            for nutri in ersatz_candidates:
-                ersatz_candidates[nutri].extend([product_candidate for c in product_cat for product_candidate in Product.objects.values_list('id', flat=True).filter(category=c, nutrition_grades=nutri)])
+        if self.product_val['nutrition_grades'] != 'a':
+            context = self.get_candidate(self.product_val['nutrition_grades'])
 
-                # Count candidates_id occurrences across all categories
-                summary_nutri[nutri].extend([(product, ersatz_candidates[nutri].count(product)) for product in set(ersatz_candidates[nutri])])
+        context.update({'product': self.product_val})
 
-                # Sort candidates_id max occurrences 1st & keep only candidates_id occurences gt 2
-                # summary_nutri[nutri] = [(cand_id, occur) for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3]
-                candidates['id'].extend([cand_id for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3])
+        return context
 
-            # Data return
-            count = len(candidates['id'])
+    def get_candidate(self, png):
+        context = {
+            'candidate':[],
+            'status': False,
+            'message': 'Pas de substitut trouvé',
+        }
 
-            if count > 0:
-                candidates.update({'status': True})
-                candidates.update({'slist': list(
-                    Product.objects.values().filter(
-                        id__in=candidates['id']
-                    ).order_by('nutrition_grades')
-                )})
-                candidates.update({'count': count})
+        # data structure depending on png (aka product['nutrition_grades'])
+        ng_sequence = {
+            'b': ['a'],
+            'c': ['a', 'b'],
+            'd': ['a', 'b', 'c'],
+            'e': ['a', 'b', 'c', 'd'],
+        }
+        ersatz_candidates = {cat: list() for cat in ng_sequence[png]}
+        summary_nutri = {cat: list() for cat in ng_sequence[png]}
 
-            else:
-                candidates = {
-                    'status':False,
-                    'message': 'Pas de substitut trouvé',
-                    'forproduct': product_details,
-                }
+        # get product categories
+        product_cat = Category.objects.values_list('id', flat=True).filter(products=self.product)
 
-            # candidates = {
-                # 'status': True,
-                # 'forproduct': {},
-                # 'id': [],
-                # 'slist': [],
-                # 'count': int(),
-            # }
+        # Collect each candidates_id in same cat w/ better nutrition_grades
+        for nutri in ersatz_candidates:
+            ersatz_candidates[nutri].extend([product_candidate for c in product_cat for product_candidate in Product.objects.values_list('id', flat=True).filter(category=c, nutrition_grades=nutri)])
 
-        # Product is already good
-        if product_ng == 'a':
-            candidates = {
-                'status':False,
-                'message': 'Le nutriscore est déjà «A»',
-                'forproduct': product_details,
-            }
+            # Count candidates_id occurrences across all categories
+            summary_nutri[nutri].extend([(product, ersatz_candidates[nutri].count(product)) for product in set(ersatz_candidates[nutri])])
 
+            # Sort candidates_id max occurrences 1st & keep only candidates_id occurences gt 2
+            context['candidate'].extend([cand_id for cand_id, occur in sorted(summary_nutri[nutri], reverse=True, key=lambda sum_n: sum_n[1]) if occur > 1][:3])
 
-        return candidates
+        # Data return
+        count = len(context['candidate'])
 
-    def save_ersatz(self):
-        # from django.contrib.auth.models import User
-        # from ersatz.models import Favorite, Product, Category
-        # u = User.objects.get(id=1)
-        # p = Product.objects.get(id=44)
-        # s = Product.objects.get(id=1924)
+        if count > 0:
+            context.update({'slist': list(
+                Product.objects.values().filter(
+                    id__in=context['candidate']
+                ).order_by('nutrition_grades')
+            )})
+            context['status'] = True
+            context['count'] = count
 
-        # s.favorites_substitute.add(f)
-        # p.favorites_product.add(f)
-        # u.favorites_user.add(f)
-
-        # Favorite.objects.create(users=u, products=p, substitutes=s)
-        pass
+        return context

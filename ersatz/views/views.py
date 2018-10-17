@@ -127,15 +127,13 @@ def search(request):
 
 def product(request, code):
     ersatz = api.ErsatzProduct(code)
-    candidates = ersatz.get_candidates()
+    context = ersatz.get_substitute_context()
+    template = 'ersatz/no-candidates.html'
 
-    if candidates['status']:
+    if context['status']:
         template = 'ersatz/candidates.html'
 
-    else:
-        template = 'ersatz/no-candidates.html'
-
-    return render(request, template, candidates)
+    return render(request, template, context)
 
 def favorite(request, e_code, p_code):
     return render(request, 'ersatz/favorite.html', {
