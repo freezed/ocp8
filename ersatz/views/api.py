@@ -295,4 +295,15 @@ class ErsatzProduct:
         return candidates
 
     def save_ersatz(self):
+        # from django.contrib.auth.models import User
+        # from ersatz.models import Favorite, Product, Category
+        # u = User.objects.get(id=1)
+        # p = Product.objects.get(id=44)
+        # s = Product.objects.get(id=1924)
+
+        # s.favorites_substitute.add(f)
+        # p.favorites_product.add(f)
+        # u.favorites_user.add(f)
+
+        # Favorite.objects.create(users=u, products=p, substitutes=s)
         pass

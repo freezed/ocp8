@@ -96,7 +96,6 @@ def _update_db(data):
         product_candidate = Product.objects.create(
             name=product['name'],
             nutrition_grades=product['nutrition_grades'],
-            nova_group=product['nova_group'],
             code=product['code'],
         )
 
