@@ -136,6 +136,18 @@ def product(request, code):
     return render(request, template, context)
 
 def favorite(request, e_code, p_code):
-    return render(request, 'ersatz/favorite.html', {
-        'e_code': e_code, 'p_code': p_code
-    })
+    """ Save to favorite if user is authenticated """
+
+    context = {
+        'status': False,
+        'message': 'Vous devez être connecté pour utiliser cette fonctionnalité',
+        'substitute': {
+            'e_code': e_code,
+            'p_code': p_code,
+        }
+    }
+
+    if request.user.is_authenticated:
+        context = api.save_favorite(request.user.id, e_code, p_code)
+
+    return render(request, 'ersatz/favorite.html', context)

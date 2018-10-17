@@ -4,16 +4,22 @@
 
 {% block content %}
   <h2>ersatz - favorite</h2>
-  {% if user.is_authenticated %}
-  <p><em>La fonctionnalité de mise en favoris n'est pas encore implémentée.</em></p>
-  {% else %}
-  <p><strong>Vous devez être connecté pour utiliser cette fonctionnalité</strong></p>
-  {% endif %}
-  <p>
-    Contexte :
-    <ul>
-      <li><code>p_code:{{ p_code }}</code></li>
-      <li><code>e_code:{{ e_code }}</code></li>
-    </ul>
-  </p>
+  <h4>{{ message }}</h4>
+  <h6>Produit initial</h6>
+  <ul>
+  {% for field, value in product.items %}
+    <li><strong>{{ field }}</strong> : <em>{{ value }}</em></li>
+  {% empty %}
+    <li>oups…</li>
+  {% endfor %}
+  </ul>
+  <h6>Substitut associé</h6>
+  <ul>
+  {% for field, value in substitute.items %}
+    <li><strong>{{ field }}</strong> : <em>{{ value }}</em></li>
+  {% empty %}
+    <li>oups…</li>
+  {% endfor %}
+  </ul>
+
 {% endblock %}

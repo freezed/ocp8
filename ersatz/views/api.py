@@ -11,8 +11,9 @@ from pprint import pprint as pp
 
 import requests
 
+from django.contrib.auth.models import User
+from ersatz.models import Favorite, Product, Category
 from ersatz.config import API, FIELD_KEPT
-from ersatz.models import Product, Category
 
 
 def get_json(url, payload):
@@ -63,6 +64,38 @@ def get_json(url, payload):
         else:
             traceback['error'].update({'status_code': response.status_code})
             return traceback
+
+
+def save_favorite(request_user_id, e_code, p_code):
+    """
+    Create a favorite table
+
+    A favorite is a product, a substitute asciated w/ a user
+
+    :param int request_user_id: User id
+    :param int e_code: substitute product code (EAN 13)
+    :param int p_code: product product code (EAN 13)
+    """
+
+    # TODO : request DB once by models
+    context = {
+        'status': True,
+        'product': Product.objects.values().get(code=p_code),
+        'substitute': Product.objects.values().get(code=e_code),
+        'message': 'Ce substitut était déjà associé à ce produit'
+    }
+
+    # Get or Create favorite
+    favorite, created = Favorite.objects.get_or_create(
+        users=User.objects.get(id=request_user_id),
+        products=Product.objects.get(code=e_code),
+        substitutes=Product.objects.get(code=p_code),
+    )
+
+    if created:
+        context.update({'message': 'Substitut enregistré'})
+
+    return context
 
 
 class SearchProduct:
