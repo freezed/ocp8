@@ -1,11 +1,7 @@
 """
 This file is part of [ocp8](https://github.com/freezed/ocp8) project.
 """
-
-APP = {
-    'NAME':'ersatz',
-    'DESC':'Trouver un substitut',
-}
+from ersatz.models import Product
 
 API = {
     'URL_SEARCH':'https://fr.openfoodfacts.org/cgi/search.pl',
@@ -17,13 +13,18 @@ API = {
     'NO_PROD': 'OpenFoodFacts ne donne pas de produits pour la requête : «{}»',
 }
 
-FIELD_KEPT = {
-    'product': [
-        'product_name',
-        'brands_tags',
-        'nutrition_grades',
-        'categories_tags',
-        'nova_group',
-        'code',
-    ],
-}
+# Using ersatz.models.Products attributes to get fields from API.
+PRODUCT_FIELD = [
+    attrib
+    for attrib in vars(Product)
+    if not attrib.startswith(('_', 'favorites_'))
+    if not attrib in ['objects', 'id', 'category']
+    and not callable(getattr(Product, attrib))
+]
+
+# Special field : needed to get API data, but processed/renamed/deleted before
+# storage in DB. Beware choosing news names not used in original API data.
+# See @staticmethod in ersatz.view.api.SearchProduct to process this fields
+SPECIAL_PRODUCT_FIELD = ['categories_tags','product_name','brands_tags']
+
+PRODUCT_FIELD.extend(SPECIAL_PRODUCT_FIELD)

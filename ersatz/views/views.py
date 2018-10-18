@@ -3,6 +3,8 @@ import urllib.parse as up
 
 from django.shortcuts import render
 from django.core.exceptions import ObjectDoesNotExist
+
+from ersatz.config import PRODUCT_FIELD, SPECIAL_PRODUCT_FIELD
 from ersatz.models import Category, Product
 from . import api
 
@@ -81,24 +83,21 @@ def _update_db(data):
         if not Product.objects.filter(code=prod['code']).exists()
     )
 
-    # #### # DEVLOG # #####
-    false_field = dict()
-    # #### # DEVLOG # #####
-
-    # add products in DB
+    # add products & associated cat in DB
     for product in new_products:
-        # #### # DEVLOG # #####
-        false_field.update({product['name']: field for field in product if product[field] is False})
-        # #### # DEVLOG # #####
 
+        # Set False fields w/ an empty string
         product.update(
             {field: '' for field in product if product[field] is False}
         )
-        product_candidate = Product.objects.create(
-            name=product['name'],
-            nutrition_grades=product['nutrition_grades'],
-            code=product['code'],
-        )
+
+        field_dict = {
+            field: product[field][:255]
+            for field in PRODUCT_FIELD
+            if field not in SPECIAL_PRODUCT_FIELD
+        }
+
+        product_candidate = Product.objects.create(**field_dict)
 
         product_cat = (
             (name, Category.objects.get(name=name))
@@ -108,10 +107,6 @@ def _update_db(data):
 
         for cat in product_cat:
             product_candidate.category.add(cat[1])
-
-    # #### # DEVLOG # #####
-    print('fields emptied : {}'.format(false_field))
-    # #### # DEVLOG # #####
 
 def index(request):
     return render(request, 'ersatz/home.html')

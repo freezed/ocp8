@@ -10,9 +10,21 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=200)
+    """
+    Most attributes are original OpenFF API `product field`
+    Other are specific fields processed , see @staticmethod in
+    ersatz.view.api.SearchProduct to process this fields
+    """
+    # Originals
     nutrition_grades = models.CharField(max_length=1)
     code = models.CharField(max_length=13, unique=True)
+    url = models.CharField(max_length=255)
+    ingredients_text = models.CharField(max_length=255)
+    image_front_thumb_url = models.CharField(max_length=255)
+    image_front_url = models.CharField(max_length=255)
+
+    # Specials
+    name = models.CharField(max_length=200)
     category = models.ManyToManyField(Category, related_name='products')
 
     def __str__(self):
@@ -35,3 +47,6 @@ class Favorite(models.Model):
         related_name='favorites_substitute',
         on_delete=models.CASCADE,
     )
+
+    def __str__(self):
+        return "Favorite #{}".format(self.id)

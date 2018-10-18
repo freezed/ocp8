@@ -13,7 +13,7 @@ import requests
 
 from django.contrib.auth.models import User
 from ersatz.models import Favorite, Product, Category
-from ersatz.config import API, FIELD_KEPT
+from ersatz.config import API, PRODUCT_FIELD
 
 
 def get_json(url, payload):
@@ -131,38 +131,22 @@ class SearchProduct:
                 api_response['page_size'],
             )
 
-            # #### # DEVLOG # #####
-            missing_field = dict()
-            # #### # DEVLOG # #####
-
             # Iterate on each prod and keep only desired fields
             for product in api_response['products']:
                 product_stash = {}
                 product_stash.update(
-                    {field: product[field] for field in FIELD_KEPT['product']
+                    {field: product[field] for field in PRODUCT_FIELD
                      if field in product}
                 )
                 product_stash.update(
-                    {field: False for field in FIELD_KEPT['product']
+                    {field: False for field in PRODUCT_FIELD
                      if field not in product}
                 )
-
-                # #### # DEVLOG # #####
-                missing_field.update(
-                    {product['product_name']: field for field in FIELD_KEPT['product']
-                    if field not in product}
-                )
-                # #### # DEVLOG # #####
 
                 product_stash = self.set_categories(product_stash)
                 product_stash = self.set_name(product_stash)
 
                 products.append(product_stash)
-
-            # #### # DEVLOG # #####
-            print('fields set to «False» : {}'.format(missing_field))
-            # #### # DEVLOG # #####
-
 
             # Parsing is done correctly, add check-fields
             json_return = {
