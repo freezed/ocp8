@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} - ersatz favorite{% endblock %}
+
+{% block content %}
+  <h2>Fiche produit</h2>
+  <ul>
+  {% if status %}
+  {% for field, value in product.items %}
+    <li><strong>{{ field }}</strong> : <em>{{ value }}</em></li>
+  {% empty %}
+    <li>oups…</li>
+  {% endfor %}
+  {% else %}
+  <li><code>{{ error }}</code></li>
+  {% endif %}
+  </ul>
+
+{% endblock %}

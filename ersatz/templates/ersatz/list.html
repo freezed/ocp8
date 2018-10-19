@@ -7,10 +7,16 @@
   <h4>{{ message }}</h4>
   <ul>
   {% for fav in favorites %}
-    <li><strong>{{ fav.substitutes.name }}</strong> : <em>{{ fav.products.name }}</em></li>
+    <li>
+      <strong>
+        <a href="{% url 'ersatz-product' fav.products.code %}" title="">{{ fav.substitutes.name }}</a>
+      </strong> :
+      <em>
+        <a href="{% url 'ersatz-product' fav.substitutes.code %}" title="">{{ fav.products.name }}</a>
+      </em>
+    </li>
   {% empty %}
     <li>oups…</li>
   {% endfor %}
   </ul>
-
 {% endblock %}

@@ -2,6 +2,7 @@ from re import search as re_search
 import urllib.parse as up
 
 from django.shortcuts import render
+from django.core.exceptions import ObjectDoesNotExist
 from ersatz.models import Category, Product
 from . import api
 
@@ -125,7 +126,7 @@ def search(request):
 
     return render(request, 'ersatz/result.html', data)
 
-def product(request, code):
+def candidates(request, code):
     ersatz = api.ErsatzProduct(code)
     context = ersatz.get_substitute_context()
     template = 'ersatz/no-candidates.html'
@@ -164,3 +165,24 @@ def list(request):
         context = api.list_favorite(request.user.id)
 
     return render(request, 'ersatz/list.html', context)
+
+def product(request, code):
+    """ Shows product details """
+
+    context = {
+        'status': False,
+    }
+
+    try:
+        context['product'] = Product.objects.values().get(code=code)
+    except (
+        SyntaxError,
+        NameError,
+        ObjectDoesNotExist
+    ) as except_detail:
+        context['error'] = "Oups… «{}»".format(except_detail)
+    else:
+        context['status'] = True
+
+
+    return render(request, 'ersatz/product.html', context)
