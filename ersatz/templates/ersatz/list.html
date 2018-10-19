@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} - ersatz favorite{% endblock %}
+
+{% block content %}
+  <h2>ersatz - favorite</h2>
+  <h4>{{ message }}</h4>
+  <ul>
+  {% for fav in favorites %}
+    <li><strong>{{ fav.substitutes.name }}</strong> : <em>{{ fav.products.name }}</em></li>
+  {% empty %}
+    <li>oups…</li>
+  {% endfor %}
+  </ul>
+
+{% endblock %}

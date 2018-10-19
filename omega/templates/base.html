@@ -13,6 +13,7 @@
           <li><a href="{% url 'home' %}">Accueil</a></li>
           {% if user.is_authenticated %}
           <li><a href="{% url 'account-index' %}">Mon compte</a></li>
+          <li><a href="{% url 'ersatz-list' %}">Mes produits</a></li>
           {% endif %}
         </ul>
       </nav>

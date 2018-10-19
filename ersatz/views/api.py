@@ -66,6 +66,18 @@ def get_json(url, payload):
             return traceback
 
 
+def list_favorite(request_user_id):
+    """
+    Get user's favorites in a dict like this :
+    """
+
+    context = {
+        'status': True,
+        'favorites': Favorite.objects.filter(users_id=request_user_id)
+    }
+
+    return context
+
 def save_favorite(request_user_id, e_code, p_code):
     """
     Create a favorite table

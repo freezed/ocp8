@@ -151,3 +151,16 @@ def favorite(request, e_code, p_code):
         context = api.save_favorite(request.user.id, e_code, p_code)
 
     return render(request, 'ersatz/favorite.html', context)
+
+def list(request):
+    """ List user's favorite """
+
+    context = {
+        'status': False,
+        'message': 'Vous devez être connecté pour utiliser cette fonctionnalité',
+    }
+
+    if request.user.is_authenticated:
+        context = api.list_favorite(request.user.id)
+
+    return render(request, 'ersatz/list.html', context)
