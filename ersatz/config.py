@@ -24,7 +24,10 @@ PRODUCT_FIELD = [
 
 # Special field : needed to get API data, but processed/renamed/deleted before
 # storage in DB. Beware choosing news names not used in original API data.
-# See @staticmethod in ersatz.view.api.SearchProduct to process this fields
+# See @staticmethod in ersatz.view.toolbox.SearchProduct to process this fields
 SPECIAL_PRODUCT_FIELD = ['categories_tags','product_name','brands_tags']
 
 PRODUCT_FIELD.extend(SPECIAL_PRODUCT_FIELD)
+
+VIEWS_MSG_LOGIN = 'Vous devez être connecté pour utiliser cette fonctionnalité'
+VIEWS_ERR = "Oups… «{}»"

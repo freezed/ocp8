@@ -1,12 +1,12 @@
 import os
 import json
 import urllib.parse as up
-from ersatz.views import api as api
+from ersatz.views import toolbox as toolbox
 from ersatz.views import views as views
 from ersatz.config import API, PRODUCT_FIELD
 
 ################################################################################
-#   ersatz.views.views._get_search_context()
+#   ersatz.views.toolbox.get_search_context()
 ################################################################################
 
 # For a invalid user request, app returns a JSON standardised error
@@ -19,27 +19,27 @@ class FakeUserRequestGet:
 
 def test_user_request_invalid():
     request = FakeUserRequestGet("foobars=This string doesn't matter test is about unvalid request key (here : 'foobars')")
-    response = views._get_search_context(request)
+    response = toolbox.get_search_context(request)
     assert response == {
-        'context': 'ersatz.views.views.search()',
+        'context': 'ersatz.views.toolbox.get_search_context()',
         'error': {'user_query': "foobars=This string doesn't matter test is about unvalid request key (here : 'foobars')"},
         'status': False
     }
 
 # For an valid user request, app returns a JSON standardised response
 class FakeSearchProductValid:
-    """ ersatz.views.api.SearchPoduct mock class """
+    """ ersatz.views.toolbox.SearchPoduct mock class """
     result = {'status': True, 'foo': 'bar'}
 
 def mock_user_request_valid(query):
-    """ ersatz.views.api.SearchPoduct mock function """
+    """ ersatz.views.toolbox.SearchPoduct mock function """
     return FakeSearchProductValid
 
 def test_user_request_valid(monkeypatch):
-    monkeypatch.setattr('ersatz.views.api.SearchProduct', mock_user_request_valid)
+    monkeypatch.setattr('ersatz.views.toolbox.SearchProduct', mock_user_request_valid)
     request = FakeUserRequestGet('s=ValidUserInput')
     output_witness = FakeSearchProductValid.result
-    output_processed = views._get_search_context(request)
+    output_processed = toolbox.get_search_context(request)
     assert output_processed == output_witness
 ################################################################################
 
@@ -51,12 +51,12 @@ def test_user_request_valid(monkeypatch):
 # - No DB storage if a search do not return products
 # TODO : I'd like to test a HTTP response <200>, but `whitenoise` won't let me.
 # TODO : see issue #28 for details.
-# def fake__get_search_context(request):
-    # """ ersatz.views.views._get_search_context() fake function """
+# def fake_get_search_context(request):
+    # """ ersatz.views.toolbox.get_search_context() fake function """
     # return {'status': False}
 
 # def test_search_return_status_is_false(monkeypatch):
-    # monkeypatch.setattr('ersatz.views.views._get_search_context', fake__get_search_context)
+    # monkeypatch.setattr('ersatz.views.toolbox.get_search_context', fake_get_search_context)
     # response = views.search('This request will return `{status: False}`')
     # assert response.status_code == 200
 ################################################################################
@@ -77,8 +77,8 @@ def mock_requests_get_valid(url, payload):
     return FakeRequestsJSONValid
 
 def test_get_json_valid(monkeypatch):
-    monkeypatch.setattr('ersatz.views.api.requests.get', mock_requests_get_valid)
-    response = api.get_json('url', 'payload')
+    monkeypatch.setattr('ersatz.views.toolbox.requests.get', mock_requests_get_valid)
+    response = toolbox.get_json('url', 'payload')
     assert response['status']
     assert response['foo'] == 'bar'
 
@@ -93,8 +93,8 @@ def mock_requests_get_json_invalid(url, payload):
     return FakeRequestsJSONInvalid
 
 def test_get_json_json_invalid(monkeypatch):
-    monkeypatch.setattr('ersatz.views.api.requests.get', mock_requests_get_json_invalid)
-    response = api.get_json('url', 'payload')
+    monkeypatch.setattr('ersatz.views.toolbox.requests.get', mock_requests_get_json_invalid)
+    response = toolbox.get_json('url', 'payload')
     assert 'get_json()' in response['context']
     assert 'JSONDecodeError' in response['error']
     assert not response['status']
@@ -114,15 +114,15 @@ def mock_requests_get_status_code_invalid(url, payload):
     return FakeRequestsStatusCodeInvalid
 
 def test_get_json_status_code_invalid(monkeypatch):
-    monkeypatch.setattr('ersatz.views.api.requests.get', mock_requests_get_status_code_invalid)
-    response = api.get_json('url', 'payload')
+    monkeypatch.setattr('ersatz.views.toolbox.requests.get', mock_requests_get_status_code_invalid)
+    response = toolbox.get_json('url', 'payload')
     assert 'get_json()' in response['context']
     assert response['error']['status_code'] == 'foobar'
     assert not response['status']
 
 
 ################################################################################
-#   ersatz.views.api.SearchProduct.result
+#   ersatz.views.toolbox.SearchProduct.result
 ################################################################################
 
 # For products returned by API :
@@ -143,24 +143,24 @@ def test_search_product_valid(monkeypatch):
     with open("ersatz/tests/samples/processed-fromage-page_1.json", "r") as json_file:
         output_sample = json.load(json_file)
 
-    monkeypatch.setattr('ersatz.views.api.get_json', fake_get_json_from_api_valid)
-    output_processed = api.SearchProduct({'search_terms': 'string'})
+    monkeypatch.setattr('ersatz.views.toolbox.get_json', fake_get_json_from_api_valid)
+    output_processed = toolbox.SearchProduct({'search_terms': 'string'})
     assert output_processed.result['products'] == output_sample['products']
 
 # API response is not valid, and return a `satus` == False
 def fake_get_json_from_api_invalid(url, payload):
-    """ ersatz.views.api.get_json fake function """
+    """ ersatz.views.toolbox.get_json fake function """
     return {'status': False}
 
 def test_search_product_invalid(monkeypatch):
-    monkeypatch.setattr('ersatz.views.api.get_json', fake_get_json_from_api_invalid)
-    output_processed = api.SearchProduct({'query': 'string'})
+    monkeypatch.setattr('ersatz.views.toolbox.get_json', fake_get_json_from_api_invalid)
+    output_processed = toolbox.SearchProduct({'query': 'string'})
     assert not output_processed.result['status']
 ################################################################################
 
 
 ################################################################################
-#   ersatz.views.api.SearchProduct.__init__
+#   ersatz.views.toolbox.SearchProduct.__init__
 ################################################################################
 
 # Non-regresion test for issue #20 :
@@ -173,8 +173,8 @@ def test_search_product__init__():
     witness.update(**query_set_2)
     witness.update(**API['PARAM_SEARCH'])
 
-    search_1 = api.SearchProduct(query_set_1)
-    search_2 = api.SearchProduct(query_set_2)
+    search_1 = toolbox.SearchProduct(query_set_1)
+    search_2 = toolbox.SearchProduct(query_set_2)
 
     assert witness == search_2._payload
 ################################################################################

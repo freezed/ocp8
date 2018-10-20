@@ -13,7 +13,7 @@ class Product(models.Model):
     """
     Most attributes are original OpenFF API `product field`
     Other are specific fields processed , see @staticmethod in
-    ersatz.view.api.SearchProduct to process this fields
+    ersatz.view.toolbox.SearchProduct to process this fields
     """
     # Originals
     nutrition_grades = models.CharField(max_length=1)
