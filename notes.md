@@ -4,9 +4,11 @@
 
     from django.contrib.auth.models import User;from ersatz.models import Favorite, Product, Category;uv = User.objects.values().get(id=1)
 
-##  TODO
+## collect JSON
 
-* in `` : `traceback['error'] = {'ConnectionError': pf(except_detail)}`
+    with open("search_product_valid.json", "w") as newfile:
+        string_json = json.dumps(output_processed.result, sort_keys=True, indent=2, ensure_ascii=False)
+        newfile.write(string_json)
 
 ## Mess
 
