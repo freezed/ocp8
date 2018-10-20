@@ -3,7 +3,7 @@ import json
 import urllib.parse as up
 from ersatz.views import api as api
 from ersatz.views import views as views
-from ersatz.config import API, FIELD_KEPT
+from ersatz.config import API, PRODUCT_FIELD
 
 ################################################################################
 #   ersatz.views.views._get_search_context()
