@@ -1,51 +1,112 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
   <head>
+
     <meta charset="utf-8">
-    <title>Le gras c'est la vie!{% block title %} - Accueil{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Recherche de produits de substitution dans les données de la base OpenFoodFacts">
+    <meta name="author" content="Frédéric Zind">
+
+    <title>{% block title %}Accueil{% endblock %} [ Pur Beurre ]</title>
+
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.png' %}"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'sbtstrp-creative-vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'sbtstrp-creative-vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="{% static 'sbtstrp-creative-vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'sbtstrp-creative-css/creative.css' %}" rel="stylesheet">
+
   </head>
-  <body>
-    <header><h1>Le gras c'est la vie!</h1></header>
-    <aside>
-      <nav>
-        <ul>
-          <li><a href="{% url 'home' %}">Accueil</a></li>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">
+          <img src="{% static 'img/logo-header.png' %}" title="Logo Pur Beurre" />
+          Pur Beurre
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              {% include "omega/searchform.html" %}
+            </li>
           {% if user.is_authenticated %}
-          <li><a href="{% url 'account-index' %}">Mon compte</a></li>
-          <li><a href="{% url 'ersatz-list' %}">Mes produits</a></li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'account-index' %}">Mon compte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'ersatz-list' %}">Mes produits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}?next={{request.path}}">Me déconnecter</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'login' %}?next={{request.path}}">Me connecter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'signin' %}?next={{request.path}}">Créer un compte</a>
+            </li>
           {% endif %}
-        </ul>
-      </nav>
-    </aside>
-    <main>
-    {% block content %}{% endblock %}
-    </main>
-    <footer>
-      {% block footer %}
-      {% if user.is_authenticated %}
-      <a href="{% url 'logout' %}?next={{request.path}}">Me déconnecter</a>
-      {% else %}
-      <p>
-      <a href="{% url 'login' %}?next={{request.path}}">Me connecter</a> ou
-      <a href="{% url 'signin' %}?next={{request.path}}">Créer un compte</a>
-      </p>
-      {% endif %}
-      <ul>
-        <li>
-            Données issues du <a href="https://fr.openfoodfacts.org" title="Lien du projet OpenFoodFacts">projet OpenFoodFacts</a>
-        </li>
-        <li>
-          <a href="https://github.com/freezed/ocp8" title="Fork me on GitHub!">Code source</a> du projet
-        </li>
-        <li>
-          <em>Copyleft 2018 <a href="https://github.com/freezed/" title="Freezed sur GitHub">Freezed</a></em>
-        </li>
-        <li>
-          <a href="https://fr.openfoodfacts.org" title="Lien du projet OpenFoodFacts"><img src="{% static 'img/off-logo-footer.png' %}" title="OpenFoodFacts logo">
-        </li>
-      </ul>
-      {% endblock %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block header %}
+    <header class="masthead text-center text-black d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1>Le gras c'est la vie!</h1>
+            <hr>
+            <h2 class="mb-5">{% block subtitle %}{% endblock %}</h2>
+          </div>
+          <div class="col-lg-4 mx-auto">
+            {% block headform %}{% endblock %}
+          </div>
+        </div>
+      </div>
+    </header>
+    {% endblock header %}
+
+    {% block content %}{% endblock content %}
+
+    <footer class="pt-3 pb-3 row fixed-bottom">
+      <div class="col-lg-6">
+        <a href="#about">Mentions légales</a>
+      </div>
+      <div class="col-lg-6">
+        <a href="#contact">Contactez nous</a>
+      </div>
     </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'sbtstrp-creative-vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'sbtstrp-creative-vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'sbtstrp-creative-vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'sbtstrp-creative-vendor/scrollreveal/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'sbtstrp-creative-vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'sbtstrp-creative-js/creative.min.js' %}"></script>
   </body>
 </html>

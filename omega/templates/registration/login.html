@@ -1,37 +1,40 @@
 {% extends "base.html" %}
 
-{% block title %} - Se connecter{% endblock %}
+{% block title %}Me connecter{% endblock %}
+{% block subtitle %}Me connecter{% endblock %}
 
-{% block content %}
-
-  {% spaceless %}
+{% block headform %}
+{% spaceless %}
 
     {% if form.errors %}
-  <p><strong>Le nom d'utilisateur et le mot de passe ne correspondent pas</strong></p>
+  <p class="text-danger bg-warning">Le nom d'utilisateur et le mot de passe ne correspondent pas</p>
 
     {% endif %}
 
     {% if next %}
 
       {% if user.is_authenticated %}
-  <p><strong>Your account doesn't have access to this page.</strong></p>
+  <p class="text-danger bg-warning">Your account doesn't have access to this page.</p>
       {% else %}
 
       {% endif %}
 
     {% endif %}
 
-  {% endspaceless %}
-      <form method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        {{ form.username.label_tag }}
-        {{ form.username }}
-        <br />
-        {{ form.password.label_tag }}
-        {{ form.password }}
-        <input type="submit" value="Se connecter" />
-        <input type="hidden" name="next" value="{{ next }}" />
-      </form>
+{% endspaceless %}
+            <form method="post" action="{% url 'login' %}">
+              {% csrf_token %}
+              <input type="hidden" name="next" value="{{ next }}" />
+              <div class="form-group">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+              </div>
+              <div class="form-group">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+              </div>
+              <div class="form-group">
+                <input class="btn btn-dark" type="submit" value="Me connecter" />
+              </div>
+            </form>
 {% endblock %}
-
-{% block footer %}{% endblock %}

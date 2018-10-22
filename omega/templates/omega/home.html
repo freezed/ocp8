@@ -1,17 +1,71 @@
 {% extends 'base.html' %}
+{% block title %}Accueil{% endblock %}
+{% block subtitle %}Trouvez les produits de substitution pour ceux que vous consommez tous les jours.{% endblock %}
 
-{% block title %} - Accueil{% endblock %}
+{% load static %}
 
-{% block content %}
-  <h2>Accueil</h2>
-  {% if user.is_authenticated %}
-  <p>Hello <strong>{{ user.get_full_name }}</strong>
-  {% else %}
-  <p>Hello <strong>world</strong>
-  {% endif %}, vous êtes à l'accueil.</p>
-  <form method="get" action="{% url 'ersatz-search' %}">
-    <label for="s" >Recherche</label>
-        <input type="text" name="s" value="" id="s">
-    <button type="submit">Chercher</button>
-  </form>
-{% endblock %}
+    {% block headform %}
+            <form method="get" action="{% url 'ersatz-search' %}">
+              <div class="form-group">
+                <label class="sr-only" for="s" >Recherchez un produit</label>
+                <input class="form-control" type="text" name="s" value="" id="s" placeholder="Recherchez un produit">
+                <button class="form-control" type="submit">Chercher</button>
+              </div>
+            </form>
+    {% endblock headform %}
+
+    {% block content %}
+    <section class="bg-primary" id="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">De la ratatouille aux croissants</h2>
+            <hr class="light my-4">
+            <p class="mb-5">Pur Beurre est l'initiative de deux amoureux de la gastronomie française, Colette et Rémy, que vous avez déjà certainement rencontrés dans notre excellent restaurant Ratatouille.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <img src="{% static 'img/colette-190.png' %}" title="Photo portrait de Colette" />
+            <h3 class="mb-3">Colette</h3>
+            <p class="text-faded mb-0">
+              Personnellement, une baguette de son cru, un Saint-Nectaire et un coup de Chinon me suffisent amplement. Comme beaucoup, c'est au supermarché que je me rends afin de mettre les courses mans mon cabas. Mais petit à petit je me suis rendue compte, surtout lorsque nous avons ouvert le restaurant, que je pouvais remplacer les produits aseptisés que j'avais l'habitude d'acheter par de bons produits du terroir Et souvent pour le même prix !
+            </p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <img src="{% static 'img/remy-190.png' %}" title="Photo portrait de Rémy" />
+            <h3 class="mb-3">Rémy</h3>
+            <p class="text-faded mb-0">
+                Pour ma part je me rendais déjà dans bien des magasins car j'aime beaucoup me balader, surtout dans les caves et les cuisines. Je connaissais par coeur le contenu des boutiques bio (dont je raffole) ainsi que les ingrédients de tous les aliments vendus. Lorsque Colette m'a demandé si elle pouvait remplacer sa pâte à tartiner matinale à l'huile de palme par un aliment plus sain, je savais tout de suite où le trouver. L'idée de Pur Beurre était née !
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Contactez nous</h2>
+            <hr class="my-4">
+            <p class="mb-5">Une question? Un commentaire? Des insultes?</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
+            <p>+331 23 45 67 89</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+            <p>
+              <a href="mailto:mail@domain.foo">mail@domain.foo</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endblock content %}

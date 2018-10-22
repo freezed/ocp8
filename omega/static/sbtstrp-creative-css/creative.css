@@ -317,3 +317,28 @@ header.masthead p {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
 }
+
+/*
+My CSS
+*/
+
+.text-dark {
+  color: #345A61 !important;
+}
+
+footer {
+  text-align: center;
+  background-color: #C45525 !important;
+
+}
+
+footer a,
+footer a:hover,
+footer a:visited,
+footer p {
+  font-size: .9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #345A61;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
