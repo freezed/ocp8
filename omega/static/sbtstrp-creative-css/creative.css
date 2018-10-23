@@ -362,3 +362,7 @@ form.form-ctrl input {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+#mainNav form button  {
+  display:none;
+}
