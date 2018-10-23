@@ -22,7 +22,7 @@
     {% endif %}
 
 {% endspaceless %}
-            <form method="post" action="{% url 'login' %}">
+            <form class="form-ctrl" method="post" action="{% url 'login' %}">
               {% csrf_token %}
               <input type="hidden" name="next" value="{{ next }}" />
               <div class="form-group">
@@ -34,7 +34,7 @@
                 {{ form.password }}
               </div>
               <div class="form-group">
-                <input class="btn btn-dark" type="submit" value="Me connecter" />
+                <button class="btn btn-primary" type="submit">Me connecter</button>
               </div>
             </form>
 {% endblock %}
