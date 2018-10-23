@@ -18,26 +18,23 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3#-w$0tr9(e&o-_!^w9#8a9aw3-xzr0ncs-rfpap8ax)br^53^'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-if os.environ.get('ENV') == 'PRODUCTION':
+if os.environ.get('ENV') == 'PRODUCTION' and not os.environ.get('DEBUG'):
     DEBUG = False
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    ALLOWED_HOSTS = ['ocp8-1664.herokuapp.com']
+
 else:
     DEBUG = True
-
-ALLOWED_HOSTS = [
-    'localhost',
-    '0.0.0.0',
-    '127.0.0.1',
-    'ocp8-1664.herokuapp.com',
-]
-
+    SECRET_KEY = '3#-w$0tr9(e&o-_!^w9#8a9aw3-xzr0ncs-rfpap8ax)br^53^'
+    ALLOWED_HOSTS = [
+        'localhost',
+        '0.0.0.0',
+        '127.0.0.1',
+        'ocp8-1664.herokuapp.com',
+    ]
 
 # Application definition
 
@@ -150,7 +147,7 @@ STATICFILES_DIRS = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Authentification URLs
 
