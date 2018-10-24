@@ -1,40 +1,52 @@
 {% extends 'base.html' %}
+{% block title %}Recherche produit{% endblock %}
 
-{% block title %} - Recherche produit{% endblock %}
-
+{% block header %}{% endblock %}
 {% block content %}
-  <h2>ersatz - search</h2>
-  {% if status %}
-  <h4>Résultats de la recherche</h4>
-  <ol>
-  {% for line in products %}
-    <li>
-      {% if line.nutrition_grades is False or line.nutrition_grades == '' %}
-      <em>{{ line.name }} - <small>[substituts impossible]</small></em>
-      {% else %}
-      <a href="{% url 'ersatz-candidates' line.code %}" title="Rechercher un substitut pour le produit {{ line.name }}">
-      {{ line.name }}</a> - [<span style="text-transform: capitalize;">{{ line.nutrition_grades }}</span>]
-      {% endif %}
-    </li>
-  {% endfor %}
-  </ol>
-  <p>
-    {% if pagination.previous %}
-    <a href="{{ pagination.url_query }}&p=1">[ 1 |</a>
-    <a href="{{ pagination.url_query }}&p={{ pagination.previous }}"> &lt; &lt; </a>
-    {% else %}[ -{% endif %}
-    | {{ pagination.page }} |
-    {% if pagination.following %}
-    <a href="{{ pagination.url_query }}&p={{ pagination.following }}"> &gt; &gt; </a>
-    <a href="{{ pagination.url_query }}&p={{ pagination.last }}">| {{ pagination.last}} ]</a>
-    {% else %}- ]{% endif %}
-  </p>
-  {% else %}
-  <h4>Aucun résultat !</h4>
-  <ul>
-    <li>Status : False</p>
-    <li>Context : {{ context }}</li>
-    <li>Error : {{ error }}</li>
-  </ul>
-  {% endif %}
+{% load static %}
+
+    <section class="head" style="background-image: url('../../static/img/header.jpg');">
+      <div class="container my-auto">
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center bg-faded">
+            <h2>Résultats de la recherche</h2>
+            <hr>
+
+              {% if status %}
+              <ul class="list-unstyled">
+              {% for line in products %}
+                <li>
+                  {% if line.nutrition_grades is False or line.nutrition_grades == '' %}
+                  <em>{{ line.name }} - <small>[substituts impossible]</small></em>
+                  {% else %}
+                  <a href="{% url 'ersatz-candidates' line.code %}" title="Rechercher un substitut pour le produit {{ line.name }}">
+                  {{ line.name }}</a> - [<span style="text-transform: capitalize;">{{ line.nutrition_grades }}</span>]
+                  {% endif %}
+                </li>
+              {% endfor %}
+              </ul>
+              <p>
+                {% if pagination.previous %}
+                <a href="{{ pagination.url_query }}&p=1">[ 1 |</a>
+                <a href="{{ pagination.url_query }}&p={{ pagination.previous }}"> &lt; &lt; </a>
+                {% else %}[ -{% endif %}
+                | {{ pagination.page }} |
+                {% if pagination.following %}
+                <a href="{{ pagination.url_query }}&p={{ pagination.following }}"> &gt; &gt; </a>
+                <a href="{{ pagination.url_query }}&p={{ pagination.last }}">| {{ pagination.last}} ]</a>
+                {% else %}- ]{% endif %}
+              </p>
+              {% else %}
+              <h4>Aucun résultat !</h4>
+              <p>
+                Context : {{ context }}
+                Error : {{ error }}
+              </p>
+              {% endif %}
+          </div>
+        </div>
+
+      </div>
+
 {% endblock %}

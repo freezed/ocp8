@@ -366,3 +366,14 @@ form.form-ctrl input {
 #mainNav form button  {
   display:none;
 }
+
+section.head {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-position: center center;
+  background-size: cover;"
+}
+
+.bg-faded {
+  background-color: rgba(200, 200, 200, 0.7);
+}
