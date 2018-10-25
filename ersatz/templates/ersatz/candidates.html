@@ -1,36 +1,22 @@
 {% extends 'base.html' %}
-{% block title %}Propositions de substitut{% endblock %}
+{% block title %}Substituts pour {{ product.name }}{% endblock %}
 
 {% block header %}{% endblock %}
-{% block content %}
-            {% load static %}
 
+{% block bgurl %}{{ product.image_front_url }}{% endblock bgurl %}
 
-    <section class="head" style="background-image: url('{{ product.image_front_url }}');">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center bg-faded">
+{% block chapodetails %}
             <h2>{{ product.name }}</h2>
-          </div>
-        </div>
-      </div>
-    </section>
+{% endblock chapodetails %}
 
-    <section class="mt-5 py-0">
-      <div class="container">
-        <div class="row">
+{% block contentdetails %}
           <div class="col-lg-6 mx-auto text-center">
             <h4>Vous pouvez remplacer cet aliment par {{ count }} substitut{{ count|pluralize }}</h4>
             <hr>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="my-5 py-0">
-      <div class="container">
         <div class="row">
-        {% for line in slist %}
+    {% for line in slist %}
           <div class="col-lg-4 col-sm-6 text-center bg-faded border">
             <div class="item">
               <div>
@@ -43,9 +29,6 @@
               <i class="fas fa-1x floppy-o text-primary"></i> - Choisir
             </a>
           </div>
-        {% endfor %}
+    {% endfor %}
         </div>
-      </div>
-    </section>
-
-{% endblock %}
+{% endblock contentdetails %}

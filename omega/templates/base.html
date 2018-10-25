@@ -79,14 +79,42 @@
             <h2 class="mb-5">{% block subtitle %}{% endblock %}</h2>
           </div>
           <div class="col-lg-4 mx-auto">
-            {% block headform %}{% endblock %}
+            {% block headform %}
+              {% include "omega/searchform.html" %}
+            {% endblock %}
           </div>
         </div>
       </div>
     </header>
     {% endblock header %}
 
-    {% block content %}{% endblock content %}
+    {% block chapo %}
+    <section class="head" style="background-image: url('{% block bgurl %}/static/img/header.jpg{% endblock bgurl %}');">
+      <div class="container my-auto">
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center bg-faded">
+          {% block chapodetails %}{% endblock chapodetails %}
+          </div>
+        </div>
+
+      </div>
+    </section>
+    {% endblock chapo %}
+
+    {% block content %}
+    <section class="bg-primary py-5" id="about">
+      <div class="container">
+
+        <div class="row">
+          {% block contentdetails %}{% endblock contentdetails %}
+        </div>
+
+      </div>
+    </section>
+    {% endblock content %}
+
+    {% block last %}{% endblock last %}
 
     <footer class="row fixed-bottom">
       <div class="col-lg-6">

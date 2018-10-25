@@ -1,22 +1,20 @@
 {% extends 'base.html' %}
-{% block title %}Accueil{% endblock %}
-{% block subtitle %}Trouvez les produits de substitution pour ceux que vous consommez tous les jours.{% endblock %}
+{% block title %}Accueil{% endblock title %}
+{% block subtitle %}Trouvez les produits de substitution pour ceux que vous consommez tous les jours.{% endblock subtitle %}
 
 {% load static %}
 
-    {% block headform %}
-      {% include "omega/searchform.html" %}
-    {% endblock headform %}
+    {% block chapo %}{% endblock chapo %}
 
-    {% block content %}
-    <section class="bg-primary" id="about">
-      <div class="container">
-
-        <div class="row">
+    {% block contentdetails %}
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">De la ratatouille aux croissants</h2>
+            <h2 class="section-heading">
+              De la ratatouille aux croissants
+            </h2>
             <hr class="light my-4">
-            <p class="mb-5">Pur Beurre est l'initiative de deux amoureux de la gastronomie française, Colette et Rémy, que vous avez déjà certainement rencontrés dans notre excellent restaurant Ratatouille.</p>
+            <p class="mb-5">
+              Pur Beurre est l'initiative de deux amoureux de la gastronomie française, Colette et Rémy, que vous avez déjà certainement rencontrés dans notre excellent restaurant Ratatouille.
+            </p>
           </div>
         </div>
 
@@ -32,13 +30,12 @@
             <img src="{% static 'img/remy-190.png' %}" title="Photo portrait de Rémy" />
             <h3 class="mb-3">Rémy</h3>
             <p class="text-faded mb-0">
-                Pour ma part je me rendais déjà dans bien des magasins car j'aime beaucoup me balader, surtout dans les caves et les cuisines. Je connaissais par coeur le contenu des boutiques bio (dont je raffole) ainsi que les ingrédients de tous les aliments vendus. Lorsque Colette m'a demandé si elle pouvait remplacer sa pâte à tartiner matinale à l'huile de palme par un aliment plus sain, je savais tout de suite où le trouver. L'idée de Pur Beurre était née !
+              Pour ma part je me rendais déjà dans bien des magasins car j'aime beaucoup me balader, surtout dans les caves et les cuisines. Je connaissais par coeur le contenu des boutiques bio (dont je raffole) ainsi que les ingrédients de tous les aliments vendus. Lorsque Colette m'a demandé si elle pouvait remplacer sa pâte à tartiner matinale à l'huile de palme par un aliment plus sain, je savais tout de suite où le trouver. L'idée de Pur Beurre était née !
             </p>
           </div>
-        </div>
-      </div>
-    </section>
+    {% endblock contentdetails %}
 
+    {% block last %}
     <section id="contact">
       <div class="container">
         <div class="row">
@@ -62,4 +59,4 @@
         </div>
       </div>
     </section>
-    {% endblock content %}
+    {% endblock last %}

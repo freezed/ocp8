@@ -4,7 +4,7 @@
 {% block subtitle %}Me connecter{% endblock %}
 
 {% block headform %}
-{% spaceless %}
+    {% spaceless %}
 
     {% if form.errors %}
   <p class="text-danger bg-warning">Le nom d'utilisateur et le mot de passe ne correspondent pas</p>
@@ -37,4 +37,8 @@
                 <button class="btn btn-primary" type="submit">Me connecter</button>
               </div>
             </form>
-{% endblock %}
+{% endblock headform %}
+
+{% block chapo %}{% endblock chapo %}
+
+{% block content %}{% endblock content %}

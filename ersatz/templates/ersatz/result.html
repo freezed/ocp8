@@ -1,49 +1,36 @@
 {% extends 'base.html' %}
 {% block title %}Recherche produit{% endblock %}
 
-{% block header %}{% endblock %}
-{% block content %}
+{% block header %}{% endblock header %}
+
 {% load static %}
 
-    <section class="head" style="background-image: url('../../static/img/header.jpg');">
-      <div class="container my-auto">
+{% block chapodetails %}
+            <h2>Recherche produit</h2>
+{% endblock chapodetails %}
 
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center bg-faded">
-            <h2>Résultats de la recherche</h2>
-            <hr>
-
-              {% if status %}
-              <ul class="list-unstyled">
-              {% for line in products %}
-                <li>
-                  {% if line.nutrition_grades is False or line.nutrition_grades == '' %}
-                  <em>{{ line.name }} - <small>[substituts impossible]</small></em>
-                  {% else %}
-                  <a href="{% url 'ersatz-candidates' line.code %}" title="Rechercher un substitut pour le produit {{ line.name }}">
-                  {{ line.name }}</a> - [<span style="text-transform: capitalize;">{{ line.nutrition_grades }}</span>]
-                  {% endif %}
-                </li>
-              {% endfor %}
-              </ul>
-              <p>
-                {% if pagination.previous %}
-                <a href="{{ pagination.url_query }}&p=1">[ 1 |</a>
-                <a href="{{ pagination.url_query }}&p={{ pagination.previous }}"> &lt; &lt; </a>
-                {% else %}[ -{% endif %}
-                | {{ pagination.page }} |
-                {% if pagination.following %}
-                <a href="{{ pagination.url_query }}&p={{ pagination.following }}"> &gt; &gt; </a>
-                <a href="{{ pagination.url_query }}&p={{ pagination.last }}">| {{ pagination.last}} ]</a>
-                {% else %}- ]{% endif %}
-              </p>
+{% block contentdetails %}
+          <div class="col-lg-8 mx-auto text-center">
+              <div class="py-2 bg-faded">
+      {% if status %}
+              {% include "ersatz/pagination.html" %}
+                <ul class="list-unstyled text-primary">
+          {% for line in products %}
+                  <li>
+              {% if line.nutrition_grades is False or line.nutrition_grades == '' %}
+                    <em>{{ line.name }} - <small>[substituts impossible]</small></em>
               {% else %}
-              <h4>Aucun résultat !</h4>
-              <p>{{ error }}</p>
+                    <a href="{% url 'ersatz-candidates' line.code %}" title="Rechercher un substitut pour le produit {{ line.name }}">
+                    {{ line.name }}</a> - [<span style="text-transform: capitalize;">{{ line.nutrition_grades }}</span>]
               {% endif %}
+                  </li>
+          {% endfor %}
+                </ul>
+                {% include "ersatz/pagination.html" %}
+      {% else %}
+                <h4>Aucun résultat !</h4>
+                <p>{{ error }}</p>
+      {% endif %}
+              </div>
           </div>
-        </div>
-
-      </div>
-
-{% endblock %}
+{% endblock contentdetails %}
