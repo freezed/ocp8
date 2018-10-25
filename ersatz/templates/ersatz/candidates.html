@@ -1,19 +1,51 @@
 {% extends 'base.html' %}
+{% block title %}Propositions de substitut{% endblock %}
 
-{% block title %} - Propositions de substitut{% endblock %}
-
+{% block header %}{% endblock %}
 {% block content %}
-  <h2>Propositions de substitut</h2>
-  <p>Voici {{ count }} substitut{{ count|pluralize }} proposé{{ count|pluralize }} pour le produit :
-  <ul><li><em>{{ product.name }}</em></li></ul>
-  </p>
-  <p>Cliquez sur le lien pour enregistrer un favoris</p>
-  <ol>
-  {% for line in slist %}
-    <li>
-      <a href="{% url 'ersatz-favorite' e_code=line.code p_code=product.code %}" title="Choisir le produit {{ line.name }}">
-      {{ line.name }}</a> - [<span style="text-transform: capitalize;">{{ line.nutrition_grades }}</span>]
-    </li>
-  {% endfor %}
-  </ol>
+            {% load static %}
+
+
+    <section class="head" style="background-image: url('{{ product.image_front_url }}');">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center bg-faded">
+            <h2>{{ product.name }}</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-5 py-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto text-center">
+            <h4>Vous pouvez remplacer cet aliment par {{ count }} substitut{{ count|pluralize }}</h4>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-5 py-0">
+      <div class="container">
+        <div class="row">
+        {% for line in slist %}
+          <div class="col-lg-4 col-sm-6 text-center bg-faded border">
+            <div class="item">
+              <div>
+                <img class="img-thumbnail img-fluid" src="{{ line.image_front_thumb_url }}" alt="{{ line.name }} thumbnail">
+                <span class="nutri-badge">{{ line.nutrition_grades }}</span>
+              </div>
+            </div>
+            <p>{{ line.name }}</p>
+            <a href="{% url 'ersatz-favorite' e_code=line.code p_code=product.code %}" title="Choisir le produit {{ line.name }}">
+              <i class="fas fa-1x floppy-o text-primary"></i> - Choisir
+            </a>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </section>
+
 {% endblock %}

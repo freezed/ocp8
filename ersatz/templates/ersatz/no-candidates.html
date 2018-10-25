@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
-{% block title %} - Propositions de substitut{% endblock %}
+{% block title %}Propositions de substitut{% endblock %}
 
-{% block content %}
-  <p>{{ message }} pour le produit : <em>{{ product.name }}</em></p>
+{% block subtitle %}
+  {{ message }} pour le produit :<br /><em>{{ product.name }}</em>
 {% endblock %}
