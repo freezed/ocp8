@@ -42,11 +42,13 @@ def favorite(request, e_code, p_code):
             'p_code': p_code,
         }
     }
+    template = 'ersatz/no-favorite.html'
 
     if request.user.is_authenticated:
         context = toolbox.save_favorite(request.user.id, e_code, p_code)
+        template = 'ersatz/favorite.html'
 
-    return render(request, 'ersatz/favorite.html', context)
+    return render(request, template, context)
 
 
 def favorite_list(request):

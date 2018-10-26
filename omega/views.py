@@ -4,7 +4,7 @@ from django.contrib.auth import login, authenticate
 from omega.forms import SignInForm
 
 def index(request):
-    return render(request, 'omega/home.html', {'context':'project index'})
+    return render(request, 'omega/home.html')
 
 def signin(request):
     if request.method == 'POST':
