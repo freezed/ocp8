@@ -1,25 +1,47 @@
 {% extends 'base.html' %}
 
-{% block title %} - ersatz favorite{% endblock %}
+{% block title %}{{ substitute.name }}{% endblock title %}
 
-{% block content %}
-  <h2>ersatz - favorite</h2>
-  <h4>{{ message }}</h4>
-  <h6>Produit initial</h6>
-  <ul>
-  {% for field, value in product.items %}
-    <li><strong>{{ field }}</strong> : <em>{{ value }}</em></li>
-  {% empty %}
-    <li>oups…</li>
-  {% endfor %}
-  </ul>
-  <h6>Substitut associé</h6>
-  <ul>
-  {% for field, value in substitute.items %}
-    <li><strong>{{ field }}</strong> : <em>{{ value }}</em></li>
-  {% empty %}
-    <li>oups…</li>
-  {% endfor %}
-  </ul>
+{% block header %}{% endblock header %}
 
-{% endblock %}
+{% block bgurl %}{{ substitute.image_front_url }}{% endblock bgurl %}
+
+{% block chapodetails %}
+                <h2>{{ substitute.name }}</h2>
+{% endblock chapodetails %}
+
+{% block contentdetails %}
+    {% if message %}
+          <div class="col-lg-6 mx-auto text-center">
+            <p class="bg-msg">{{ message }}</p>
+          </div>
+        </div>
+        <div class="row">
+    {% endif %}
+
+          <div class="col-lg-4 ml-auto text-center">
+            <h3 class="mb-3">Nutriscore</h3>
+            <img src="https://static.openfoodfacts.org/images/misc/nutriscore-{{ substitute.nutrition_grades }}.svg" title="Logo nutriscore" />
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <h3 class="mb-3">Repères nutritionnels</h3>
+
+    {% if substitute.image_nutrition_url %}
+            <img src="{{ substitute.image_nutrition_url }}" title="Repères nutritionnels" />
+    {% else %}
+            <img src="https://via.placeholder.com/200x100?text=non+disponible" title="Repères nutritionnels" />
+    {% endif %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 py-2 mx-auto text-center">
+            <p>{{ substitute.ingredients_text }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <a href="{{ substitute.url }}" class="btn btn-light btn-xl" title="Lien de la fiche produit {{ substitute.name }} vers le site OpenFoodFacts">
+              Voir la fiche d'OpenFoodFacts
+            </a>
+          </div>
+{% endblock contentdetails %}
