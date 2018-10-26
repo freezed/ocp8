@@ -116,12 +116,24 @@
 
     {% block last %}{% endblock last %}
 
-    <footer class="row fixed-bottom">
-      <div class="col-lg-6">
-        <a href="#about">Mentions légales</a>
-      </div>
-      <div class="col-lg-6">
-        <a href="#contact">Contactez nous</a>
+    <footer class="pt-4 bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-6 ml-auto text-center">
+            <p>
+              <a href="/#about" title="Lien vers la page 'Mentions légales'">
+                <i class="fas fa-pen fa-1x mb-3"></i> Mentions légales
+              </a>
+            </p>
+          </div>
+          <div class="col-sm-6 col-lg-6 mr-auto text-center">
+            <p>
+              <a href="/#contact" title="Lien vers la page 'Contactez nous'">
+                <i class="fas fa-envelope fa-1x mb-3"></i> Contactez nous
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
 
