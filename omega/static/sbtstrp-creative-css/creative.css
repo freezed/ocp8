@@ -379,6 +379,10 @@ section.head {
   background-color: rgba(200, 200, 200, 0.7);
 }
 
+.bg-msg {
+  background-color: #86EBE6 !important;
+}
+
 .floppy-o {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400; }

@@ -1,16 +1,33 @@
 {% extends 'base.html' %}
 
-{% block title %} - account app index{% endblock %}
+{% block title %}Mon compte{% endblock title %}
 
-{% block content %}
-  <h2>account</h2>
+{% block subtitle %}
+          <h2>Mon compte</h2>
+          <hr />
+{% endblock subtitle %}
 
+{% block headform %}
   {% if user.is_authenticated %}
-  <p>Dear <strong>{{ user.get_full_name }}</strong> ({{ user.username }}), that is your mail :</p>
-  <pre>{{ user.email }}</pre>
+  <div class="py-2 bg-faded">
+    <ul class="list-unstyled">
+      <li><strong>Utilisateur</strong> : {{ user.username }}</li>
+      <li><strong>Courriel</strong> : {{ user.email }}</li>
+    </ul>
+    <p>
+      <a href="{% url 'ersatz-list' %}" class="btn btn-primary" title="Lien vers la page 'Mes produits'">
+        Voir mes substituts enregistrés
+      </a>
+    </p>
+  </div>
 
   {% else %}
-  <p>Hello <strong>world</strong>, here's the <strong>account app index</strong>.</p>
+  <p>Vous n'êtes pas connecté</p>
+  {% include "account/anonymous.html" %}
   {% endif %}
 
-{% endblock %}
+{% endblock headform %}
+
+{% block chapo %}{% endblock chapo %}
+
+{% block content %}{% endblock content %}

@@ -1,0 +1,8 @@
+    <p>
+      <a href="{% url 'login' %}?next={{request.path}}" class="btn btn-light" title="Lien vers la page de connection">
+        Me connecter
+      </a> |
+      <a href="{% url 'signin' %}?next={{request.path}}" class="btn btn-light" title="Lien vers la page de création de compte">
+        créer un compte
+      </a>
+    </p>
