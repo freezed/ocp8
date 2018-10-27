@@ -1,22 +1,31 @@
 {% extends 'base.html' %}
+{% block title %}{% endblock %}
 
-{% block title %} - ersatz favorite{% endblock %}
+{% block header %}{% endblock %}
 
-{% block content %}
-  <h2>ersatz - favorite</h2>
-  <h4>{{ message }}</h4>
-  <ul>
-  {% for fav in favorites %}
-    <li>
-      <strong>
-        <a href="{% url 'ersatz-product' fav.products.code %}" title="">{{ fav.substitutes.name }}</a>
-      </strong> :
-      <em>
-        <a href="{% url 'ersatz-product' fav.substitutes.code %}" title="">{{ fav.products.name }}</a>
-      </em>
-    </li>
-  {% empty %}
-    <li>oups…</li>
-  {% endfor %}
-  </ul>
-{% endblock %}
+{% block chapodetails %}
+            <h2>Mes produits</h2>
+{% endblock chapodetails %}
+
+{% block contentdetails %}
+          <div class="col-lg-6 mx-auto text-center">
+            <h4>{{ message }}</h4>
+          </div>
+        </div>
+        <div class="row">
+    {% for line in favorites %}
+          <div class="col-lg-4 col-sm-6 text-center bg-faded border">
+            <div class="item">
+              <div>
+                <img class="img-thumbnail img-fluid" src="{{ line.products.image_front_thumb_url }}" alt="{{ line.products.name }} thumbnail">
+                <span class="nutri-badge">{{ line.products.nutrition_grades }}</span>
+              </div>
+            </div>
+            <p>{{ line.products.name }}</p>
+            <a href="{{ line.products.url }}" title="Choisir le produit {{ line.products.name }}">
+              <i class="fas fa-1x fa-paper-plane text-primary"></i> - Voir sur OpenFoodFacts
+            </a>
+          </div>
+    {% endfor %}
+        </div>
+{% endblock contentdetails %}
