@@ -25,12 +25,12 @@
           <div class="col-lg-4 col-sm-6 text-center bg-faded border">
             <div class="item">
               <div>
-                <img class="img-thumbnail img-fluid" src="{{ line.products.image_front_thumb_url }}" alt="{{ line.products.name }} thumbnail">
-                <span class="nutri-badge">{{ line.products.nutrition_grades }}</span>
+                <img class="img-thumbnail img-fluid" src="{{ line.substitutes.image_front_thumb_url }}" alt="{{ line.substitutes.name }} thumbnail">
+                <span class="nutri-badge">{{ line.substitutes.nutrition_grades }}</span>
               </div>
             </div>
-            <p>{{ line.products.name }}</p>
-            <a href="{{ line.products.url }}" title="Choisir le produit {{ line.products.name }}">
+            <p>{{ line.substitutes.name }}</p>
+            <a href="{{ line.substitutes.url }}" title="Choisir le produit {{ line.substitutes.name }}">
               <i class="fas fa-1x fa-paper-plane text-primary"></i> - Voir sur OpenFoodFacts
             </a>
           </div>
