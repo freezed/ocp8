@@ -9,7 +9,15 @@
 
 {% block contentdetails %}
           <div class="col-lg-6 mx-auto text-center">
-            <h4>{{ message }}</h4>
+            <h4>
+    {% if favorites %}
+                {{ message }}
+            </h4>
+    {% else %}
+                Vous n'avez pas encore enregistré de favoris, il est temps de faire une petite recherche!
+            </h4>
+                {% include 'omega/searchform.html' %}
+    {% endif %}
           </div>
         </div>
         <div class="row">
@@ -26,6 +34,8 @@
               <i class="fas fa-1x fa-paper-plane text-primary"></i> - Voir sur OpenFoodFacts
             </a>
           </div>
+    {% empty %}
+
     {% endfor %}
         </div>
 {% endblock contentdetails %}
