@@ -4,18 +4,10 @@
 import pytest
 import omega.forms
 
-def test_obvious():
-    val = 2+2
-    assert val == 4
-
 def test_omega_forms_create_user_fields():
     test_form = omega.forms.SignInForm()
 
-    for field in (
-        'first_name','last_name','username',
-        'email','password1','password2',
-    ):
-        print(field, test_form.fields)
+    for field in ('username','email','password1','password2'):
         assert field in test_form.fields
 
 ## TESTING USERS & VIEWS
