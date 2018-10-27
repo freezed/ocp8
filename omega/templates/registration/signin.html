@@ -4,9 +4,16 @@
 {% block subtitle %}Créer un compte{% endblock %}
 
 {% block headform %}
-          <form class="form-ctrl" method="post" action="{% url 'login' %}">
+
+
+    {% for label, error_msg in form.errors.items %}
+          <p class="text-danger bg-warning">{{ error_msg.0 }}</p>
+    {% empty %}
+    {% endfor %}
+
+          <form class="form-ctrl" method="post" action="{% url 'signin' %}">
             {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}" />
+            <input type="hidden" name="next" value="{{ request.GET.next }}" />
             <div class="form-group">
               {{ form.username.label_tag }}
               {{ form.username }}
