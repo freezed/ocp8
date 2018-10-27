@@ -203,8 +203,8 @@ def save_favorite(request_user_id, e_code, p_code):
     # Get or Create favorite
     favorite, created = Favorite.objects.get_or_create(
         users=User.objects.get(id=request_user_id),
-        products=Product.objects.get(code=e_code),
-        substitutes=Product.objects.get(code=p_code),
+        products=Product.objects.get(code=p_code),
+        substitutes=Product.objects.get(code=e_code),
     )
 
     if created:
