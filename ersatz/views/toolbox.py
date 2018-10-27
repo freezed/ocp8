@@ -4,7 +4,8 @@
 """
 This file is part of [ocp8](https://github.com/freezed/ocp8) project.
 
-Tools to get data from an API
+A place for Objects & Functions needed in the View of the ersatz module.
+All are serving `ersatz.views.views.py`
 """
 from pprint import pformat as pf
 import urllib.parse as up
@@ -39,6 +40,7 @@ def get_search_context(request):
     """
 
     parts = up.parse_qsl(request.META['QUERY_STRING'])
+    # Get QS from omega/searchform.html, waiting for `s=search_terms`
     url_qs_parsed = {'search_terms':v for (k,v) in parts if k == 's'}
 
     if not url_qs_parsed:
@@ -52,6 +54,7 @@ def get_search_context(request):
 
     else:
         try:
+            # Get QS from ersatz/list.html, waiting for `p=int(page_number)`
             url_qs_parsed.update({'page': int(v) for (k,v) in parts if k == 'p'})
         except ValueError as except_detail:
             print("ValueError in URL : 'p={}' [{}]".format(
@@ -66,6 +69,8 @@ def get_search_context(request):
 
 
 def update_db(data):
+    """ Update DB with products loaded in the search view """
+
     # list all distinct categories
     categories_set = {
         categories
@@ -100,14 +105,16 @@ def update_db(data):
             {field: '' for field in product if product[field] is False}
         )
 
+        # Remove temporary special fields, see config for details
         field_dict = {
-            field: product[field][:255]
+            field: product[field][:255]  # TODO : word based splitting
             for field in PRODUCT_FIELD
             if field not in SPECIAL_PRODUCT_FIELD
         }
 
         product_candidate = Product.objects.create(**field_dict)
 
+        # Associate categories to products
         product_cat = (
             (name, Category.objects.get(name=name))
             for name in product['categories']
@@ -141,6 +148,7 @@ def get_json(url, payload):
       'products': { product dict() },
     }
     """
+    # TODO : Find a way to export try/except statement to improve readability
     traceback = {'context': __name__+'.get_json() method', 'status': False}
 
     try:
