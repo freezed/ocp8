@@ -48,20 +48,22 @@
             </li>
           {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'account-index' %}">Mon compte</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'account-index' %}" title="Mon compte"><i class="fas fa-user fa-2x mb-3" title="Mon compte"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'ersatz-list' %}">Mes produits</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'ersatz-list' %}" title="Mes produits">
+                <img src="{% static 'img/ico-carrot-orange-20.png' %}" title="Icône du lien 'Mes produits'" />
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}?next={% url 'home' %}">Me déconnecter</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}?next={% url 'home' %}" title="Me déconnecter"><i class="fas fa-sign-out-alt fa-2x mb-3"></i></a>
             </li>
           {% else %}
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'login' %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}">Me connecter</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'login' %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}" title="Me connecter"><i class="fas fa-sign-in-alt fa-2x mb-3" title="Me connecter"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'signin' %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}">Créer un compte</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'signin' %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}" title="Créer un compte"><i class="fas fa-user-plus fa-2x mb-3" title="Créer un compte"></i></a>
             </li>
           {% endif %}
           </ul>
