@@ -47,9 +47,7 @@ def get_search_context(request):
         data = {
             'status': False,
             'context': __name__+'.get_search_context()',
-            'error': {
-                'user_query': request.META['QUERY_STRING'],
-            },
+            'error': API['EMPTY'],
         }
 
     else:

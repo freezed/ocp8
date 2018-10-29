@@ -22,7 +22,7 @@ def test_user_request_invalid():
     response = toolbox.get_search_context(request)
     assert response == {
         'context': 'ersatz.views.toolbox.get_search_context()',
-        'error': {'user_query': "foobars=This string doesn't matter test is about unvalid request key (here : 'foobars')"},
+        'error': API['EMPTY'],
         'status': False
     }
 

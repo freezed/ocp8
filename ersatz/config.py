@@ -10,7 +10,8 @@ API = {
         'action': 'process',
         'json': 1,
     },
-    'NO_PROD': 'OpenFoodFacts ne donne pas de produits pour la requête : «{}»',
+    'NO_PROD': 'OpenFoodFacts ne donne pas de produits pour la recherche : «{}»',
+    'EMPTY': 'Bizarrement OpenFoodFacts ne donne pas de produits pour une recherche vide…',
 }
 
 # Using ersatz.models.Products attributes to get fields from API.
