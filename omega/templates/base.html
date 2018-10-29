@@ -54,14 +54,14 @@
               <a class="nav-link js-scroll-trigger" href="{% url 'ersatz-list' %}">Mes produits</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}?next={{request.path}}">Me déconnecter</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}?next={% url 'home' %}">Me déconnecter</a>
             </li>
           {% else %}
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'login' %}?next={{request.path}}">Me connecter</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'login' %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}">Me connecter</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'signin' %}?next={{request.path}}">Créer un compte</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'signin' %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}">Créer un compte</a>
             </li>
           {% endif %}
           </ul>

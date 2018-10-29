@@ -15,8 +15,7 @@ def signin(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-
-            return redirect(request.GET['next'])
+            return redirect(request.POST['next'])
     else:
         form = SignInForm()
     return render(request, 'registration/signin.html', {'form': form})
