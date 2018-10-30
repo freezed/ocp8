@@ -20,7 +20,7 @@ skinparam class {
 /' = = = = = = = CLASSE = = = = = = = '/
 class Category
 class CategoryProduct <<assoc>>
-class ProductUser <<assoc>>
+class Favorite <<assoc>>
 class Product
 class User <<django>>
 
@@ -28,8 +28,9 @@ class User <<django>>
 /' = = = = = = = RELATION = = = = = = = '/
 rel(Product,1..,--,1..*,CategoryProduct)
 rel(CategoryProduct,1..*,--,1..,Category)
-rel(User,1..,-up-,1..*,ProductUser)
-rel(Product,1..*,--,1..*,ProductUser)
+rel(User,1..,-up-,1..*,Favorite)
+rel(Product,1..*,--,1..*,Favorite)
+rel(Product,1..*,-,1..*,Favorite)
 
 
 /' = = = = = = = KEY = = = = = = = '/
@@ -45,11 +46,12 @@ class CategoryProduct {
     fnk(category_id,category.id)
 }
 
-class ProductUser {
+class Favorite {
     pyk(id)
     ..
-    fnk(product_id,product.id)
-    fnk(user_id,user.id)
+    fnk(products,product.id)
+    fnk(substitutes,product.id)
+    fnk(users,user.id)
 }
 
 class Product {
@@ -67,26 +69,22 @@ class User {
 
 /' = = = = = = = ATTRIBUTE = = = = = = = '/
 class Category {
-    att(name,String,VARCHAR(200) NOT NULL)
+    att(name,String,VARCHAR(200) UNIQUE NOT NULL)
 }
 
 class Product {
-    att(name,String,VARCHAR(200) NOT NULL)
-    att(code,String,VARCHAR(100) NOT NULL)
-    att(nutrition_grades,String,VARCHAR(1) NOT NULL)
-    att(nova_group,String,VARCHAR(1) NOT NULL)
+    att(code,String,VARCHAR(13) UNIQUE NOT NULL)
+    att(image_front_thumb_url,String,VARCHAR(255))
+    att(image_front_url,String,VARCHAR(255))
+    att(image_nutrition_url,String,VARCHAR(255))
+    att(name,String,VARCHAR(200))
+    att(nutrition_grades,String,VARCHAR(1))
+    att(url,String,VARCHAR(255))
 }
 
 class User {
     att(email,String,VARCHAR(254) NOT NULL)
     att(username,String,VARCHAR(150) NOT NULL)
-    att(last_name,String,VARCHAR(150) NULL)
-    att(first_name,String,VARCHAR(30) NULL)
     att(password,String,VARCHAR(128) NOT NULL)
-    att(is_superuser,Bool,BOOLEAN)
-    att(is_staff,Bool,BOOLEAN)
-    att(is_active,Bool,BOOLEAN)
-    att(last_login,Integer,TIMESTAMP NULL)
-    att(date_joined,Integer,TIMESTAMP NOT NULL)
 }
 @enduml
