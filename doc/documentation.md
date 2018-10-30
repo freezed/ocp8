@@ -25,7 +25,7 @@ Documentation
 ## Runs
 
 - on [Heroku][heroku]
-    - `heroku/7.16.6 linux-x64 node-v10.11.0`
+    - `heroku/7.18.3 linux-x64 node-v10.12.0`
     - with `gunicorn 19.9.0`
 
 ## Installation
@@ -36,8 +36,8 @@ Documentation
 4. adds dependencies : `cd ocp8; pip install -r requirements.txt`
 5. creates a `postgresql` DB
 6. Edit [`omega/settings.py`][settings]
-7. run tests : `pytest`
-8. run test coverage : `pytest --cov=omega --cov=ersatz`
+7. set DB : `./manage.py migrate`
+8. run tests : `pytest --cov=omega --cov=ersatz`
 9. run developement server : `./manage.py runserver`
 
 ## File organisation
@@ -58,44 +58,63 @@ Documentation
     │   ├── apps.py
     │   ├── migrations
     │   ├── models.py
-    │   ├── templates
-    │   │   └── account
-    │   │       └── home.html
-    │   ├── tests.py
-    │   ├── urls.py
-    │   └── views.py
+    │   ├── templates
+    │   │   └── account
+    │   │       ├── anonymous.html
+    │   │       └── home.html
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
     ├── ersatz
     │   ├── __init__.py
     │   ├── admin.py
-    │   ├── api.py
     │   ├── apps.py
     │   ├── config.py
-    │   ├── migrations
+    │   ├── migrations
+    │   │   └── …
     │   ├── models.py
-    │   ├── templates
-    │   │   └── ersatz
-    │   │       ├── home.html
-    │   │       └── result.html
-    │   ├── tests.py
+    │   ├── templates
+    │   │   └── ersatz
+    │   │       ├── candidates.html
+    │   │       ├── favorite.html
+    │   │       ├── home.html
+    │   │       ├── list.html
+    │   │       ├── no-candidates.html
+    │   │       ├── no-favorite.html
+    │   │       ├── pagination.html
+    │   │       ├── product.html
+    │   │       └── result.html
+    │   ├── tests
+    │   │   ├── samples
+    │   │   │   ├── api-fromage-page_1.json
+    │   │   │   └── processed-fromage-page_1.json
+    │   │   └── tests.py
+    │   │
     │   ├── urls.py
     │   └── views.py
-    ├── issues
+    │        ├── toolbox.py
+    │        └── views.py
     ├── LICENSE
     ├── manage.py
     ├── omega
-    │   ├── __init__.py
     │   ├── forms.py
+    │   ├── __init__.py
     │   ├── settings.py
+    │   ├── static
+    │   │   ├── favicon.ico
+    │   │   ├── img
+    │   │   ├── sbtstrp-creative-css
+    │   │   │   └── …
+    │   │   ├── sbtstrp-creative-js
+    │   │   │   └── …
+    │   │   ├── sbtstrp-creative-scss
+    │   │   │   └── …
+    │   │   └── sbtstrp-creative-vendor
+    │   │       └── …
     │   ├── templates
     │   │   ├── base.html
     │   │   ├── omega
-    │   │   │   └── home.html
     │   │   └── registration
-    │   │       ├── logged_out.html
-    │   │       ├── login.html
-    │   │       ├── password_change_form.html
-    │   │       ├── password_reset_form.html
-    │   │       └── signin.html
     │   ├── test.py
     │   ├── urls.py
     │   ├── views.py
