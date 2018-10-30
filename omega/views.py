@@ -3,6 +3,9 @@ from django.contrib.auth import login, authenticate
 
 from omega.forms import SignInForm
 
+def about(request):
+    return render(request, 'omega/about.html')
+
 def index(request):
     return render(request, 'omega/home.html')
 

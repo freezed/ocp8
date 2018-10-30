@@ -11,6 +11,7 @@ urlpatterns = [
     path('my/signin/', omega_views.signin, name='signin'),
     path('my/', include('django.contrib.auth.urls')),
     path('account/', include('account.urls')),
+    path('about/', omega_views.about, name='about'),
     path('ersatz/', include('ersatz.urls')),
     path('admin/', admin.site.urls),
 ]
