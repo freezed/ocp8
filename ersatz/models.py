@@ -22,6 +22,10 @@ class Product(models.Model):
     ingredients_text = models.CharField(max_length=255)
     image_front_thumb_url = models.CharField(max_length=255)
     image_front_url = models.CharField(max_length=255)
+    image_nutrition_url = models.CharField(
+        default='https://via.placeholder.com/250x100?text=Fiche+OFF+incomplete',
+        max_length=255
+    )
 
     # Specials
     name = models.CharField(max_length=200)
