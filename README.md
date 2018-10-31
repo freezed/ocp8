@@ -24,6 +24,8 @@ Le cahier des charges est disponible [en cliquant sur ce lien][cdc].
 - [Document écrit expliquant votre démarche de création][approach], les difficultés rencontrées et la manière dont vous les avez résolues. Le document doit être en format pdf et ne pas excéder 2 pages A4. Il peut être rédigé en anglais ou en français, au choix, mais prenez bien en considération que les fautes d’orthographe et de grammaire seront évaluées !
 - Votre tableau [_Kanban_][kanban]
 - Lien vers votre [repo GitHub][github]
+- [bonus] _La présentation (en Anglais) du projet est visible via [GitPitch](https://gitpitch.com/freezed/ocp8/master?p=doc)_
+
 
 
 ## Contraintes
