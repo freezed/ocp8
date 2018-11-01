@@ -43,6 +43,7 @@ Documentation
 ## File organisation
 
 **Django project name :**
+
 - omega
 
 **Djano apps :**
@@ -53,7 +54,6 @@ Documentation
 ### Tree
 
     ├── account
-    │   ├── __init__.py
     │   ├── admin.py
     │   ├── apps.py
     │   ├── migrations
@@ -66,7 +66,6 @@ Documentation
     │   ├── urls.py
     │   └── views.py
     ├── ersatz
-    │   ├── __init__.py
     │   ├── admin.py
     │   ├── apps.py
     │   ├── config.py
@@ -98,7 +97,6 @@ Documentation
     ├── manage.py
     ├── omega
     │   ├── forms.py
-    │   ├── __init__.py
     │   ├── settings.py
     │   ├── static
     │   │   ├── favicon.ico
