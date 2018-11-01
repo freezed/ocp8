@@ -134,12 +134,9 @@
 
 +++
 
-###### Learn _Bootstrap_  & template nesting
+###### Template nesting
 
-+++?code =omega/templates/base.html&title=Template [`base.html`]
-
-@[46-48](In navbar)
-@[75-91](In header)
+![template grid image](doc/template-grid.jpg)
 
 ---
 
