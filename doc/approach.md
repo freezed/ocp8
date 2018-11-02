@@ -1,8 +1,9 @@
 -[_Courses Open Classrooms_][oc]-
 
-# [PyDev] Project 7
+# [PyDev] Project 8
 
 _Last version of this document is available on [Github][approach]._
+_kanban table project is avaiable [on GitHub][kanban] _
 
 ## Approach
 
@@ -21,7 +22,7 @@ The whole exercise description is available on [OpenClassrooms site][oc], the pr
 
  - plan : features, scripts, files, functions, tools needed
  - create [features][features], grouped in autonomous packages
- - organize with a [_kanban type_ table][kanban ]
+ - organize with a [_kanban type_ table][kanban]
  - write tests with [`pytest`][pytest]
  - write code
  - integrate a [Bootstrap][bootstrap]
