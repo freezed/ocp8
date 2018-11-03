@@ -23,8 +23,6 @@ PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
 
 if os.environ.get('ENV') == 'PRODUCTION' and not os.environ.get('DEBUG'):
     DEBUG = False
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-    ALLOWED_HOSTS = ['ocp8-1664.herokuapp.com']
 
 else:
     DEBUG = True
@@ -84,20 +82,15 @@ WSGI_APPLICATION = 'omega.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-if os.environ.get('ENV') == 'PRODUCTION':
-    DATABASES = {
-        'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'omega',
+        'PORT': 5432,
+        'HOST': '',
+        'PASSWORD':'',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'omega',
-            'PORT': 5432,
-            'HOST': '',
-            'PASSWORD':'',
-        }
-    }
+}
 
 
 # Password validation
@@ -142,12 +135,11 @@ STATICFILES_DIRS = [
     os.path.join(PROJ_DIR, 'static'),
 ]
 
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-
 # Authentification URLs
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/my/login'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
