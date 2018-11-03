@@ -85,8 +85,6 @@ WSGI_APPLICATION = 'omega.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 if os.environ.get('ENV') == 'PRODUCTION':
-    DATABASE_URL = os.environ['DATABASE_URL']
-    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     DATABASES = {
         'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
