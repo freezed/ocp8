@@ -14,4 +14,5 @@ urlpatterns = [
     path('about/', omega_views.about, name='about'),
     path('ersatz/', include('ersatz.urls')),
     path('admin/', admin.site.urls),
+    path('favicon.ico', omega_views.favicon),
 ]
