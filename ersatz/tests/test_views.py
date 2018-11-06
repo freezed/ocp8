@@ -2,7 +2,7 @@ import pytest
 
 from django.test import Client
 from django.contrib.auth.models import User
-from ersatz.config import API, VIEWS_MSG_LOGIN, VIEWS_MSG_NO_FAV
+from ersatz.config import API, VIEWS_MSG_CANDIDATE_NONE, VIEWS_MSG_LOGIN, VIEWS_MSG_NO_FAV
 
 ################################################################################
 #   ersatz.views.views.index()
@@ -71,9 +71,46 @@ class TestSearch:
         assert self.WITNESS['templates'] == [t.name for t in response.templates]
         assert self.WITNESS['response']['error'] == response.context['error']
 
-    def test_valid_search(self):
+    def test_valid_search(self):    # TODO
         """ Need to add a return in ersatz.views.toolbox.update_db for that """
         pass
+
+################################################################################
+
+
+################################################################################
+#   ersatz.views.views.candidates()
+################################################################################
+class FakeErsatzProduct:
+    """  ersatz.views.toolbox.ErsatzProduct mock Class """
+    def get_substitute_context():
+        return {'status': False, 'message': VIEWS_MSG_CANDIDATE_NONE}
+
+def mock_no_candidate_ersatz_product(code):
+    """ ErsatzProduct mock function """
+    return FakeErsatzProduct
+
+def test_no_candidates(monkeypatch):
+    monkeypatch.setattr(
+        'ersatz.views.toolbox.ErsatzProduct',
+        mock_no_candidate_ersatz_product
+    )
+    TEMPLATES = [
+        'ersatz/no-candidates.html',
+        'base.html',
+        'omega/searchform.html',
+        'omega/searchform.html',
+    ]
+    CLIENT = Client()
+    response = CLIENT.get('/ersatz/candidates/1234567890')
+
+    assert response.status_code == 200
+    assert TEMPLATES == [t.name for t in response.templates]
+    assert VIEWS_MSG_CANDIDATE_NONE == response.context['message']
+
+def test_best_candidate():
+    """ Need to populate DB to test this """
+    pass
 
 ################################################################################
 

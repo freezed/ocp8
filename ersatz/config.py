@@ -32,4 +32,6 @@ PRODUCT_FIELD.extend(SPECIAL_PRODUCT_FIELD)
 
 VIEWS_MSG_NO_FAV = "Vous n'avez pas encore enregistré de favoris, il est temps de faire une petite recherche!"
 VIEWS_MSG_LOGIN = 'Vous devez être connecté pour utiliser cette fonctionnalité'
+VIEWS_MSG_CANDIDATE_BEST = "Le nutriscore est déjà «A»"
+VIEWS_MSG_CANDIDATE_NONE = "Pas de substitut trouvé"
 VIEWS_ERR = "Oups… «{}»"
