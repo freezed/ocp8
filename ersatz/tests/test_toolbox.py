@@ -43,27 +43,12 @@ def test_user_request_valid(monkeypatch):
     assert output_processed == output_witness
 ################################################################################
 
-################################################################################
-#   ersatz.views.views.search()
-################################################################################
 
-# Non-regresion test for issue #27 :
-# - No DB storage if a search do not return products
-# TODO : I'd like to test a HTTP response <200>, but `whitenoise` won't let me.
-# TODO : see issue #28 for details.
-# def fake_get_search_context(request):
-    # """ ersatz.views.toolbox.get_search_context() fake function """
-    # return {'status': False}
-
-# def test_search_return_status_is_false(monkeypatch):
-    # monkeypatch.setattr('ersatz.views.toolbox.get_search_context', fake_get_search_context)
-    # response = views.search('This request will return `{status: False}`')
-    # assert response.status_code == 200
+################################################################################
+#   ersatz.views.toolbox.requests()
 ################################################################################
 
-#########
-#  API  #
-#########
+# Test API data processing
 class FakeRequestsJSONValid:
     """ Requests.reponse mock class """
     status_code = 200
@@ -119,6 +104,7 @@ def test_get_json_status_code_invalid(monkeypatch):
     assert 'get_json()' in response['context']
     assert response['error']['status_code'] == 'foobar'
     assert not response['status']
+################################################################################
 
 
 ################################################################################
