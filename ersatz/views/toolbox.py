@@ -15,7 +15,7 @@ import requests
 from django.contrib.auth.models import User
 
 from ersatz.models import Favorite, Product, Category
-from ersatz.config import API, PRODUCT_FIELD, SPECIAL_PRODUCT_FIELD
+from ersatz.config import API, PRODUCT_FIELD, SPECIAL_PRODUCT_FIELD,VIEWS_MSG_NO_FAV
 
 
 def get_search_context(request):
@@ -183,6 +183,9 @@ def list_favorite(request_user_id):
         'status': True,
         'favorites': Favorite.objects.filter(users_id=request_user_id)
     }
+
+    if context['favorites'].count() == 0:
+        context.update({'message': VIEWS_MSG_NO_FAV})
 
     return context
 
