@@ -5,9 +5,25 @@ from django.contrib.auth.models import User
 from ersatz.config import VIEWS_MSG_LOGIN, VIEWS_MSG_NO_FAV
 
 ################################################################################
-#   ersatz.views.views.favorite_list()
+#   ersatz.views.views.index()
+################################################################################
+def test_index():
+    TEMPLATES = [
+        'omega/home.html',
+        'base.html',
+        'omega/searchform.html',
+        'omega/searchform.html',
+    ]
+    CLIENT = Client()
+    response = CLIENT.get('/')
+
+    assert TEMPLATES == [t.name for t in response.templates]
 ################################################################################
 
+
+################################################################################
+#   ersatz.views.views.favorite_list()
+################################################################################
 class TestFavoriteList:
     CLIENT = Client()
     USER = {
