@@ -9,11 +9,8 @@
 
 {% block contentdetails %}
           <div class="col-lg-6 mx-auto text-center">
-            <h4>
-    {% if favorites %}
-                {{ message }}
-            </h4>
-    {% else %}
+            <h4>{{ message }}</h4>
+    {% if not favorites %}
                 Vous n'avez pas encore enregistré de favoris, il est temps de faire une petite recherche!
             </h4>
                 {% include 'omega/searchform.html' %}

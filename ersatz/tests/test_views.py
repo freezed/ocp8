@@ -156,6 +156,7 @@ class TestFavoriteList:
         'omega/searchform.html',
     ]
 
+    @pytest.mark.django_db
     def test_anonymous_user_favorite_list(self):
         response = self.CLIENT.get('/ersatz/list/')
 
