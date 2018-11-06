@@ -116,6 +116,30 @@ def test_best_candidate():
 
 
 ################################################################################
+#   ersatz.views.views.favorite()
+################################################################################
+def test_no_favorite():
+    TEMPLATES = [
+        'ersatz/no-favorite.html',
+        'base.html',
+        'omega/searchform.html',
+        'account/anonymous.html',
+    ]
+    CLIENT = Client()
+    response = CLIENT.get('/ersatz/favorite/1234567890/9876543210/')
+
+    assert response.status_code == 200
+    assert TEMPLATES == [t.name for t in response.templates]
+    assert VIEWS_MSG_LOGIN == response.context['message']
+
+def test_saved_favorite():  # TODO
+    """ DB populating is nedded to test this """
+    pass
+
+################################################################################
+
+
+################################################################################
 #   ersatz.views.views.favorite_list()
 ################################################################################
 class TestFavoriteList:
