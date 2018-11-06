@@ -6,10 +6,6 @@ from ersatz.views import toolbox
 from ersatz.config import VIEWS_ERR, VIEWS_MSG_LOGIN
 
 
-def index(request):
-    return render(request, 'ersatz/home.html')
-
-
 def search(request):
     data = toolbox.get_search_context(request)
 
