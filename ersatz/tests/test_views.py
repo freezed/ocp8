@@ -5,14 +5,14 @@ from django.contrib.auth.models import User
 from ersatz.config import API, VIEWS_MSG_CANDIDATE_NONE, VIEWS_MSG_LOGIN, VIEWS_MSG_NO_FAV
 
 ################################################################################
-#   ersatz.views.views.index()
+#   ersatz.views.views.home()
 ################################################################################
-def test_index():
+def test_home():
     TEMPLATES = [
-        'omega/home.html',
+        'home.html',
         'base.html',
-        'omega/searchform.html',
-        'omega/searchform.html',
+        'ersatz/searchform.html',
+        'ersatz/searchform.html',
     ]
     CLIENT = Client()
     response = CLIENT.get('/')
@@ -34,7 +34,7 @@ class TestSearch:
         'templates': [
             'ersatz/result.html',
             'base.html',
-            'omega/searchform.html',
+            'ersatz/searchform.html',
         ]
     }
     RESPONSE_EMPTY =  {'error': API['EMPTY'],'status': False}
@@ -98,8 +98,8 @@ def test_no_candidates(monkeypatch):
     TEMPLATES = [
         'ersatz/no-candidates.html',
         'base.html',
-        'omega/searchform.html',
-        'omega/searchform.html',
+        'ersatz/searchform.html',
+        'ersatz/searchform.html',
     ]
     CLIENT = Client()
     response = CLIENT.get('/ersatz/candidates/1234567890')
@@ -122,7 +122,7 @@ def test_no_favorite():
     TEMPLATES = [
         'ersatz/no-favorite.html',
         'base.html',
-        'omega/searchform.html',
+        'ersatz/searchform.html',
         'account/anonymous.html',
     ]
     CLIENT = Client()
@@ -152,8 +152,8 @@ class TestFavoriteList:
     TEMPLATES = [
         'ersatz/list.html',
         'base.html',
-        'omega/searchform.html',
-        'omega/searchform.html',
+        'ersatz/searchform.html',
+        'ersatz/searchform.html',
     ]
 
     @pytest.mark.django_db
