@@ -1,7 +1,7 @@
 Documentation
 =============
 
-**Note** : _Check latest version of this doc on [github](https://github.com/freezed/ocp8/blob/master/doc/documentation.md)._
+**Note** : _Check latest version of this doc on [github][doc]._
 
 ---
 
@@ -12,7 +12,7 @@ Documentation
 - `gunicorn 19.9.0` (only for running on [Heroku][heroku])
 - `psycopg2-binary 2.7.5`
 - `python 3.6.6`
-- `requests 2.19.1`
+- `requests 2.20.0`
 - `whitenoise 4.1`
 
 ## Development tools used
@@ -25,7 +25,7 @@ Documentation
 ## Runs
 
 - on [Heroku][heroku]
-    - `heroku/7.18.3 linux-x64 node-v10.12.0`
+    - `heroku/7.18.5 linux-x64 node-v11.0.0`
     - with `gunicorn 19.9.0`
 
 ## Installation
@@ -46,77 +46,103 @@ Documentation
 
 - omega
 
-**Djano apps :**
+**Django apps :**
 
-- account
-- ersatz
+- account (user account, login, signup, etc.)
+- ersatz (all about products, substitutes, favorites, etc.)
 
 ### Tree
 
     ├── account
     │   ├── admin.py
     │   ├── apps.py
-    │   ├── migrations
-    │   ├── models.py
-    │   ├── templates
-    │   │   └── account
-    │   │       ├── anonymous.html
-    │   │       └── home.html
-    │   ├── tests.py
-    │   ├── urls.py
-    │   └── views.py
+    │   ├── forms.py
+    │   ├── templates
+    │   │   ├── about.html
+    │   │   ├── account
+    │   │   │   ├── account.html
+    │   │   │   └── anonymous.html
+    │   │   ├── home.html
+    │   │   └── registration
+    │   │       ├── logged_out.html
+    │   │       ├── login.html
+    │   │       ├── password_change_form.html
+    │   │       ├── password_reset_form.html
+    │   │       └── signin.html
+    │   ├── tests.py
+    │   └── views.py
+    ├── doc
+    │   ├── approach.md
+    │   ├── documentation.md
+    │   ├── pdm.png
+    │   ├── pdm.puml
+    │   ├── PITCHME.md
+    │   └── template-grid.jpg
     ├── ersatz
     │   ├── admin.py
     │   ├── apps.py
     │   ├── config.py
-    │   ├── migrations
-    │   │   └── …
+    │   ├── migrations
+    │   │   └── …
     │   ├── models.py
-    │   ├── templates
-    │   │   └── ersatz
-    │   │       ├── candidates.html
-    │   │       ├── favorite.html
-    │   │       ├── home.html
-    │   │       ├── list.html
-    │   │       ├── no-candidates.html
-    │   │       ├── no-favorite.html
-    │   │       ├── pagination.html
-    │   │       ├── product.html
-    │   │       └── result.html
-    │   ├── tests
-    │   │   ├── samples
-    │   │   │   ├── api-fromage-page_1.json
-    │   │   │   └── processed-fromage-page_1.json
-    │   │   └── tests.py
-    │   │
+    │   ├── templates
+    │   │   └── ersatz
+    │   │       ├── candidates.html
+    │   │       ├── favorite.html
+    │   │       ├── list.html
+    │   │       ├── no-candidates.html
+    │   │       ├── no-result.html
+    │   │       ├── pagination.html
+    │   │       ├── product.html
+    │   │       ├── result.html
+    │   │       └── searchform.html
+    │   ├── tests
+    │   │   ├── samples
+    │   │   │   ├── api-fromage-page_1.json
+    │   │   │   └── processed-fromage-page_1.json
+    │   │   ├── test_toolbox.py
+    │   │   └── test_views.py
     │   ├── urls.py
-    │   └── views.py
-    │        ├── toolbox.py
-    │        └── views.py
-    ├── LICENSE
-    ├── manage.py
+    │   └── views
+    │       ├── toolbox.py
+    │       └── views.py
     ├── omega
-    │   ├── forms.py
     │   ├── settings.py
     │   ├── static
     │   │   ├── favicon.ico
     │   │   ├── img
+    │   │   │   └── …
     │   │   ├── sbtstrp-creative-css
-    │   │   │   └── …
+    │   │   │   └── …
     │   │   ├── sbtstrp-creative-js
-    │   │   │   └── …
+    │   │   │   └── …
     │   │   ├── sbtstrp-creative-scss
-    │   │   │   └── …
+    │   │   │   └── …
     │   │   └── sbtstrp-creative-vendor
-    │   │       └── …
+    │   │       └── …
     │   ├── templates
-    │   │   ├── base.html
-    │   │   ├── omega
-    │   │   └── registration
-    │   ├── test.py
+    │   │   ├── 404.html
+    │   │   ├── 500.html
+    │   │   └── base.html
     │   ├── urls.py
-    │   ├── views.py
     │   └── wsgi.py
+    ├── staticfiles
+    │   ├── admin
+    │   │   └── …
+    │   ├── favicon.ico
+    │   ├── img
+    │   │   └── …
+    │   ├── sbtstrp-creative-css
+    │   │   └── …
+    │   ├── sbtstrp-creative-js
+    │   │   └── …
+    │   ├── sbtstrp-creative-scss
+    │   │   └── …
+    │   ├── sbtstrp-creative-vendor
+    │   │   └── …
+    │   └── staticfiles.json
+    ├── LICENSE
+    ├── manage.py
     ├── Procfile
     ├── pytest.ini
     ├── README.md
@@ -126,10 +152,11 @@ Documentation
 
 Table `auth_user` is from built-in django authentification model
 
-![PMD image](https://raw.githubusercontent.com/freezed/ocp8/master/doc/pdm.png)
+![PMD image](https://raw.githubusercontent.com/freezed/ocp8/v0.3/doc/pdm.png)
 
-[PUML sources](https://github.com/freezed/ocp8/blob/master/doc/pdm.puml)
+[PUML sources](https://github.com/freezed/ocp8/blob/v0.3/doc/pdm.puml)
 
 
+[doc]: https://github.com/freezed/ocp8/blob/v0.3/doc/documentation.md
 [heroku]: https://heroku.com
-[settings]: https://github.com/freezed/ocp8/blob/3a1bc304537fa1b51b1d98fd9ad95e140efb02e5/omega/settings.py#L84
+[settings]: https://github.com/freezed/ocp8/blob/v0.3/omega/settings.py#L84

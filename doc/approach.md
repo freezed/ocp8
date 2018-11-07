@@ -1,19 +1,21 @@
 -[_Courses Open Classrooms_][oc]-
 
-# [PyDev] Project 8
+# [PyDev] Project 11
 
 _Last version of this document is available on [Github][approach]._
-_kanban table project is avaiable [on GitHub][kanban] _
+
+_Kanban table project is available [on GitHub][kanban]_
+
+---
 
 ## Approach
 
 ### Introduction
 
-Propose a service using [OpenFoodFacts][OFF] data to find a products and it's better substitutes with these characteristics :
+Improve an old project you have made using tests (unit & functional)
 
-- use [Django][django]
-- use [PostgreSQL][postgres]
-- deploy on a [Heroku][heroku] account connected to [Github][gither]
+- use [github][kanban]
+- fake [conversation with client][mail]
 
 The whole exercise description is available on [OpenClassrooms site][oc], the project is hosted on [Github][kanban] and it is deployed [here][herokuapp].
 
@@ -25,21 +27,6 @@ The whole exercise description is available on [OpenClassrooms site][oc], the pr
  - organize with a [_kanban type_ table][kanban]
  - write tests with [`pytest`][pytest]
  - write code
- - integrate a [Bootstrap][bootstrap]
-
-
-### Code construction
-
-To build the script, I followed this approach :
-
-1. take in hand the tools & play with it : [OpenFoodFacts][OFF] `API`, [Django][django], [`pytest`][pytest] & [Heroku][heroku]
-2. build a minimalist [Django][django] app, and add feature only step by step
-3. use built-in authentication & user model
-4. build 1st tests on API response & data processing
-5. set minimalist templating
-6. add DB storage
-7. connecting models auth_user/ersatz
-8. learn [Bootstrap][bootstrap] to integrate template
 
 
 ### Code organization
@@ -48,31 +35,50 @@ To build the script, I followed this approach :
 - omega
 
 **_Django_ apps :**
-- account
-- ersatz
+- account (user account, login, sign-up, etc.)
+- ersatz (all about products, substitutes, favorites, etc.)
 
-### Difficulties encountered
 
-#### 1. Testing in _Django_ context
+### Overview
 
-_Django_ organization is a bit more complex than flask (!), it provides dedicated tools and some specific packages are avaiable. I decided to use `django-pytest`, in a minimal way (only units tests). Next step is going further to complete testing tools for _Django_.
+I known the code well, I work on it for a month, but as I am learning _Django_ on the way, I had to deal with odd choices & stranges implementations when I meet old code…
 
-#### 2. Discovering [Bootstrap][bootstrap]
+#### the _Django_ tree
 
-I never used it before, so it took me a few days to get an overview of the possibilities offered by this tool (grid, fontawesome, etc.). Finally it was not so hard after a few days, but the template usage simplifies the discovering.
+At start it took some time to understand the logic of the bricks position/role, and now I have a more accurate view on what must be where. Then the first improvement was to reorganize the file tree, here is the job :
 
-#### 3. Organizing _Django_ tree
+Project `omega` :
 
-App, project, views, template, built-ins, etc. It took some time to understand the logic of the bricks position/role. Next step is to migrates code from `account` to `ersatz` app, at start I though that a separation was a good idea, actually it is not the case.
+* keep errors & base templates, move all others
+* keep all statics
+* exports all tests & views
+* disabling admin interface
+* rename `/my/*` routes
 
-#### 4. Stay in the scope
+App `account` :
+
+* rename some routes
+* host most of ex-`omegega` templates
+* no `urls.py` : no need to prefix URL with `account`
+
+App `ersatz` :
+
+* host `searchform.html`
+* remove unused `home.html`
+
+
+#### Testing in _Django_ context
+
+_Django_ provides dedicated tools and some specific packages are available. I decided to use `django-pytest`, in a minimal way. Here it is to use some database features with tests. The subject is wide, even if there are still some to discover, I have learned a lot.
+
+
+#### Stay in the scope
 
 As always working on light specifications is delicate. Do the job asked for, add requested feature even if they are sometime implicit. Do not over estimate the client needs.
 
 
 ### Possible [developments][issues]
 
-* [Export code from `account` to `ersatz` app][39]
 * [Full tests implementation][40]
 * [Local & distant DB conflict][36]
 * [Product matching query does not exist][33]
@@ -87,7 +93,6 @@ As always working on light specifications is delicate. Do the job asked for, add
 [32]: https://github.com/freezed/ocp8/issues/32
 [33]: https://github.com/freezed/ocp8/issues/33
 [36]: https://github.com/freezed/ocp8/issues/36
-[39]: https://github.com/freezed/ocp8/issues/39
 [40]: https://github.com/freezed/ocp8/issues/40
 [approach]: https://github.com/freezed/ocp8/blob/master/doc/approach.md
 [bootstrap]: https://github.com/twbs/bootstrap
@@ -97,9 +102,10 @@ As always working on light specifications is delicate. Do the job asked for, add
 [herokuapp]: https://ocp8-1664.herokuapp.com/
 [heroku]: https://devcenter.heroku.com/articles/getting-started-with-python
 [issues]: https://github.com/freezed/ocp8/issues
-[kanban]: https://github.com/freezed/ocp8/projects/1
+[kanban]: https://github.com/freezed/ocp8/projects/2
 [log]: http://flask.pocoo.org/docs/1.0/logging/#logging
-[oc]: https://openclassrooms.com/fr/projects/creez-grandpy-bot-le-papy-robot "Créez une plateforme pour amateur de pâte à tartiner"
+[mail]: https://github.com/freezed/ocp8/blob/v0.3/doc/chat-history.md
+[oc]: https://openclassrooms.com/fr/projects/ameliorez-un-projet-existant-en-python "Créez une plateforme pour amateur de pâte à tartiner"
 [OFF]: http://fr.openfoodfacts.org/
 [postgres]: https://www.postgresql.org/
 [pytest]: https://pytest.org "Helps you write better programs"
