@@ -159,7 +159,7 @@ def test_best_candidate():
 ################################################################################
 def test_no_favorite():
     TEMPLATES = [
-        'ersatz/no-favorite.html',
+        'ersatz/no-result.html',
         'base.html',
         'ersatz/searchform.html',
         'account/anonymous.html',
@@ -169,7 +169,7 @@ def test_no_favorite():
 
     assert response.status_code == 200
     assert TEMPLATES == [t.name for t in response.templates]
-    assert VIEWS_MSG_LOGIN == response.context['message']
+    assert VIEWS_MSG_LOGIN == response.context['error']
 
 def test_saved_favorite():  # TODO
     """ DB populating is nedded to test this """

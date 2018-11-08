@@ -35,13 +35,10 @@ def favorite(request, e_code, p_code):
 
     context = {
         'status': False,
-        'message': VIEWS_MSG_LOGIN,
-        'substitute': {
-            'e_code': e_code,
-            'p_code': p_code,
-        }
+        'error': VIEWS_MSG_LOGIN,
+        'form': 'account/anonymous.html',
     }
-    template = 'ersatz/no-favorite.html'
+    template = 'ersatz/no-result.html'
 
     if request.user.is_authenticated:
         context = toolbox.save_favorite(request.user.id, e_code, p_code)
