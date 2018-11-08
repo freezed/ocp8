@@ -1,36 +1,37 @@
 {% extends 'base.html' %}
-{% block title %}Recherche produit{% endblock %}
+{% block title %}Recherche [{{ request.GET.s }}]{% endblock %}
 
-{% block header %}{% endblock header %}
-
-{% load static %}
+{% block header %}{% endblock %}
 
 {% block chapodetails %}
-            <h2>Recherche produit</h2>
+            <h2>Résultats pour [{{ request.GET.s }}]</h2>
 {% endblock chapodetails %}
 
 {% block contentdetails %}
-          <div class="col-lg-8 mx-auto text-center">
-              <div class="py-2 bg-faded">
-      {% if status %}
-              {% include "ersatz/pagination.html" %}
-                <ul class="list-unstyled text-primary">
-          {% for line in products %}
-                  <li>
-              {% if line.nutrition_grades is False or line.nutrition_grades == '' %}
-                    <em>{{ line.name }} - <small>[substituts impossible]</small></em>
-              {% else %}
-                    <a href="{% url 'ersatz-candidates' line.code %}" title="Rechercher un substitut pour le produit {{ line.name }}">
-                    {{ line.name }}</a> - [<span class="text-capitalize">{{ line.nutrition_grades }}</span>]
-              {% endif %}
-                  </li>
-          {% endfor %}
-                </ul>
-                {% include "ersatz/pagination.html" %}
-      {% else %}
-                <h4>Aucun résultat !</h4>
-                <p>{{ error }}</p>
-      {% endif %}
-              </div>
+        <div class="row">
+    {% for prod in products %}
+      {% if prod.nutrition_grades != False and prod.nutrition_grades != '' %}
+          <div class="col-lg-4 col-sm-6 text-center bg-faded border">
+            <div class="item">
+              <a href="{% url 'ersatz-product' code=prod.code %}" title="Afficher la fiche pour {{ prod.name }}">
+                <img class="img-thumbnail img-fluid" src="{% spaceless %}
+
+                {% if prod.image_front_thumb_url == False %}
+                  https://via.placeholder.com/100x50?text=Oups!
+                {% else %}
+                  {{ prod.image_front_thumb_url }}
+                {% endif %}
+
+                {% endspaceless %}" alt="{{ prod.name }} thumbnail">
+                <span class="nutri-badge">{{ prod.nutrition_grades }}</span>
+              </a>
+            </div>
+            <p>{{ prod.name }}</p>
+            <a href="{% url 'ersatz-candidates' code=prod.code %}" title="Chercher un substitut pour {{ prod.name }}">
+              <i class="fas fa-1x fa-paper-plane text-primary"></i> - Chercher un substitut pour ce produit
+            </a>
           </div>
+      {% endif %}
+    {% endfor %}
+        </div>
 {% endblock contentdetails %}
