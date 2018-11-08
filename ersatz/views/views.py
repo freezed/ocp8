@@ -7,13 +7,16 @@ from ersatz.config import VIEWS_ERR, VIEWS_MSG_LOGIN
 
 
 def search(request):
-    data = toolbox.get_search_context(request)
+    context = toolbox.get_search_context(request)
+    context.update({'form':'ersatz/searchform.html'})
+    template = 'ersatz/no-result.html'
 
     # if status == True : there is some stuff to store in DB
-    if data['status']:
-        toolbox.update_db(data)
+    if context['status']:
+        toolbox.update_db(context)
+        template  = 'ersatz/result.html'
 
-    return render(request, 'ersatz/result.html', data)
+    return render(request, template, context)
 
 
 def candidates(request, code):
