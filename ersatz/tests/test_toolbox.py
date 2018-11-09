@@ -1,9 +1,16 @@
 import os
 import json
 import urllib.parse as up
+
+import pytest
+
+from django.db.models import Count
+
+from ersatz.config import API, PRODUCT_FIELD
+from ersatz.models import Product, Category
 from ersatz.views import toolbox as toolbox
 from ersatz.views import views as views
-from ersatz.config import API, PRODUCT_FIELD
+
 
 ################################################################################
 #   ersatz.views.toolbox.get_search_context()
@@ -41,6 +48,32 @@ def test_user_request_valid(monkeypatch):
     output_witness = FakeSearchProductValid.result
     output_processed = toolbox.get_search_context(request)
     assert output_processed == output_witness
+################################################################################
+
+
+################################################################################
+#   ersatz.views.toolbox.update_db()
+################################################################################
+
+@pytest.mark.django_db
+def test_update_db():
+    with open("ersatz/tests/samples/processed-fromage-page_1.json", "r") as json_file:
+        input_sample = json.load(json_file)
+
+    CAT_WITNESS = [
+        ('dairies', 17), ('cheeses', 12), ('spreads', 5), ('gouter', 3)
+    ]
+
+    toolbox.update_db(input_sample)
+    cat_resume = Category.objects.annotate(
+        prod_count=Count('products')
+    ).values('name', 'prod_count').order_by('-prod_count')[:4]
+
+    cat_processed = [(cat['name'],cat['prod_count']) for cat in cat_resume]
+
+    assert Product.objects.count() == 20
+    assert Category.objects.count() == 22
+    assert cat_processed == CAT_WITNESS
 ################################################################################
 
 

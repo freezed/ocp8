@@ -1,3 +1,5 @@
+import json
+
 import pytest
 
 from django.test import Client
@@ -32,8 +34,9 @@ class TestSearch:
 
     WITNESS = {
         'templates': [
-            'ersatz/result.html',
+            'ersatz/no-result.html',
             'base.html',
+            'ersatz/searchform.html',
             'ersatz/searchform.html',
         ]
     }
@@ -52,9 +55,12 @@ class TestSearch:
         return self.RESPONSE_NO_PROD
 
     def test_empty_search(self, monkeypatch):
-        self.WITNESS['response'] = self.RESPONSE_EMPTY
+        self.WITNESS.update({'response': self.RESPONSE_EMPTY})
 
-        monkeypatch.setattr('ersatz.views.toolbox.get_search_context', self.fake_get_search_empty_context)
+        monkeypatch.setattr(
+            'ersatz.views.toolbox.get_search_context',
+            self.fake_get_search_empty_context
+        )
         response = self.CLIENT.get('/ersatz/search/')
 
         assert response.status_code == 200
@@ -71,10 +77,43 @@ class TestSearch:
         assert self.WITNESS['templates'] == [t.name for t in response.templates]
         assert self.WITNESS['response']['error'] == response.context['error']
 
-    def test_valid_search(self):    # TODO
-        """ Need to add a return in ersatz.views.toolbox.update_db for that """
+    def fake_update_db(self, context):
         pass
 
+    def fake_get_search_fromage_context(self, request):
+        """ ersatz.views.toolbox.get_search_context() fake function """
+        with open("ersatz/tests/samples/processed-fromage-page_1.json", "r") as json_file:
+            context = json.load(json_file)
+
+        return context
+
+    @pytest.mark.django_db
+    def test_valid_search(self, monkeypatch):
+        TEMPLATES = [
+            'ersatz/result.html',
+            'base.html',
+            'ersatz/searchform.html',
+        ]
+        FALSE_FIELDS = [
+            "<span class=\"nutri-badge\">False</span>",
+            "src=\"False\"",
+        ]
+        monkeypatch.setattr(
+            'ersatz.views.toolbox.get_search_context',
+            self.fake_get_search_fromage_context
+        )
+        monkeypatch.setattr(
+            'ersatz.views.toolbox.update_db',
+            self.fake_update_db
+        )
+
+        response = self.CLIENT.get('/ersatz/search/', {'s':'fromage'})
+
+        assert response.status_code == 200
+        assert TEMPLATES == [t.name for t in response.templates]
+
+        for false_string in FALSE_FIELDS:
+            assert false_string.encode() not in  response.content
 ################################################################################
 
 
@@ -120,7 +159,7 @@ def test_best_candidate():
 ################################################################################
 def test_no_favorite():
     TEMPLATES = [
-        'ersatz/no-favorite.html',
+        'ersatz/no-result.html',
         'base.html',
         'ersatz/searchform.html',
         'account/anonymous.html',
@@ -130,7 +169,7 @@ def test_no_favorite():
 
     assert response.status_code == 200
     assert TEMPLATES == [t.name for t in response.templates]
-    assert VIEWS_MSG_LOGIN == response.context['message']
+    assert VIEWS_MSG_LOGIN == response.context['error']
 
 def test_saved_favorite():  # TODO
     """ DB populating is nedded to test this """
