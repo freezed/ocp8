@@ -17,12 +17,12 @@
         </div>
         <div class="row">
     {% for line in slist %}
-          <div class="col-lg-4 col-sm-6 text-center bg-faded border">
+          <div class="col-lg-4 col-sm-6 text-center bg-faded border" id="{{ forloop.counter }}">
             <div class="item">
-              <div>
+              <a href="{% url 'ersatz-product' code=line.code %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}&anchor={{ forloop.counter }}" title="Afficher la fiche pour {{ prod.name }}">
                 <img class="img-thumbnail img-fluid" src="{{ line.image_front_thumb_url }}" alt="{{ line.name }} thumbnail">
                 <span class="nutri-badge">{{ line.nutrition_grades }}</span>
-              </div>
+              </a>
             </div>
             <p>{{ line.name }}</p>
             <a href="{% url 'ersatz-favorite' e_code=line.code p_code=product.code %}" title="Choisir le produit {{ line.name }}">

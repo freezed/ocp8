@@ -19,12 +19,12 @@
         </div>
         <div class="row">
     {% for line in favorites %}
-          <div class="col-lg-4 col-sm-6 text-center bg-faded border">
+          <div class="col-lg-4 col-sm-6 text-center bg-faded border" id="{{ forloop.counter }}">
             <div class="item">
-              <div>
+              <a href="{% url 'ersatz-product' code=line.substitutes.code %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}&anchor={{ forloop.counter }}" title="Afficher la fiche pour {{ prod.name }}">
                 <img class="img-thumbnail img-fluid" src="{{ line.substitutes.image_front_thumb_url }}" alt="{{ line.substitutes.name }} thumbnail">
                 <span class="nutri-badge">{{ line.substitutes.nutrition_grades }}</span>
-              </div>
+              </a>
             </div>
             <p>{{ line.substitutes.name }}</p>
             <a href="{{ line.substitutes.url }}" title="Choisir le produit {{ line.substitutes.name }}">
