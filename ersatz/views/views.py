@@ -63,20 +63,17 @@ def favorite_list(request):
 
 def product(request, code):
     """ Shows product details """
-
-    context = {
-        'status': False,
-    }
+    context = {'status': False, 'form': 'ersatz/searchform.html'}
+    template = 'ersatz/no-result.html'
 
     try:
         context['product'] = Product.objects.values().get(code=code)
-    except (
-            SyntaxError,
-            NameError,
-            ObjectDoesNotExist
-    ) as except_detail:
+
+    except (SyntaxError, NameError, ObjectDoesNotExist) as except_detail:
         context['error'] = VIEWS_ERR.format(except_detail)
+
     else:
         context['status'] = True
+        template = 'ersatz/product.html'
 
-    return render(request, 'ersatz/product.html', context)
+    return render(request, template, context)

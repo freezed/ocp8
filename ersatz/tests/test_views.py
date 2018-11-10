@@ -2,9 +2,12 @@ import json
 
 import pytest
 
+from django.core.exceptions import ObjectDoesNotExist
 from django.test import Client
 from django.contrib.auth.models import User
-from ersatz.config import API, VIEWS_MSG_CANDIDATE_NONE, VIEWS_MSG_LOGIN, VIEWS_MSG_NO_FAV
+from ersatz.config import (API, VIEWS_ERR, VIEWS_MSG_CANDIDATE_NONE,
+    VIEWS_MSG_LOGIN, VIEWS_MSG_NO_FAV)
+from ersatz.models import Product
 
 ################################################################################
 #   ersatz.views.views.home()
@@ -213,4 +216,54 @@ class TestFavoriteList:
 
         assert self.TEMPLATES == [t.name for t in response.templates]
         assert VIEWS_MSG_NO_FAV in response.context['message']
+################################################################################
+
+
+################################################################################
+#   ersatz.views.views.product()
+################################################################################
+class TestProduct:
+    CLIENT = Client()
+    base_tplt = [
+        'base.html',
+        'ersatz/searchform.html',
+    ]
+    PRODUCT = {
+        'code': '1664',
+        'image_front_thumb_url': 'https://via.placeholder.com/100x50?text=thumb_url',
+        'image_front_url': 'https://via.placeholder.com/100x50?text=front_url',
+        'image_nutrition_url': 'https://via.placeholder.com/100x50?text=nutrition_url',
+        'ingredients_text': 'Wotch a kofee avec ton bibalaekaess et ta wurscht?',
+        'name': 'Foo (Bar)',
+        'nutrition_grades': 'c',
+        'url': 'of url',
+    }
+
+    @pytest.mark.django_db
+    def test_not_found_product(self):
+        template_witness = ['ersatz/no-result.html']
+        template_witness.extend(self.base_tplt)
+        template_witness.append('ersatz/searchform.html')
+
+        response = self.CLIENT.get('/ersatz/product/1234567890')
+
+        assert response.status_code == 200
+        assert template_witness == [t.name for t in response.templates]
+        assert VIEWS_ERR.format(
+            "Product matching query does not exist."
+        ) in response.context['error']
+
+    @pytest.mark.django_db
+    def test_found_product(self):
+        template_witness = ['ersatz/product.html']
+        template_witness.extend(self.base_tplt)
+
+        Product.objects.create(**self.PRODUCT)
+        response = self.CLIENT.get('/ersatz/product/1664')
+
+        assert response.status_code == 200
+        assert template_witness == [t.name for t in response.templates]
+
+        for field, value in self.PRODUCT.items():
+            assert value in  response.context['product'][field]
 ################################################################################
