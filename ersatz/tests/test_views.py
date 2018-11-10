@@ -93,6 +93,8 @@ class TestSearch:
             'ersatz/result.html',
             'base.html',
             'ersatz/searchform.html',
+            'ersatz/pagination.html',
+            'ersatz/pagination.html',
         ]
         FALSE_FIELDS = [
             "<span class=\"nutri-badge\">False</span>",

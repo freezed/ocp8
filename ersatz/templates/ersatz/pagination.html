@@ -1,11 +1,11 @@
-                <p>
-          {% if pagination.previous %}
-                  [<a href="{{ pagination.url_query }}&p=1"> 1 </a>|
-                  <a href="{{ pagination.url_query }}&p={{ pagination.previous }}"> &lt; &lt; </a>
-          {% else %}[ -{% endif %}
-                  | {{ pagination.page }} |
-          {% if pagination.following %}
-                  <a href="{{ pagination.url_query }}&p={{ pagination.following }}"> &gt; &gt; </a>
-                  |<a href="{{ pagination.url_query }}&p={{ pagination.last }}"> {{ pagination.last}} </a>]
-          {% else %}- ]{% endif %}
-                </p>
+                  <div class="col-sm-12 text-center bg-faded border">
+            {% if pagination.previous %}
+                    [<a href="{{ pagination.url_query }}&p=1"> 1 </a>|
+                    <a href="{{ pagination.url_query }}&p={{ pagination.previous }}"> &lt; &lt; </a>
+            {% else %}[ -{% endif %}
+                    | {{ pagination.page }} |
+            {% if pagination.following %}
+                    <a href="{{ pagination.url_query }}&p={{ pagination.following }}"> &gt; &gt; </a>
+                    |<a href="{{ pagination.url_query }}&p={{ pagination.last }}"> {{ pagination.last}} </a>]
+            {% else %}- ]{% endif %}
+                  </div>

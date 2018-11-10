@@ -8,12 +8,13 @@
 {% endblock chapodetails %}
 
 {% block contentdetails %}
+       {% include "ersatz/pagination.html" %}
         <div class="row">
     {% for prod in products %}
       {% if prod.nutrition_grades != False and prod.nutrition_grades != '' %}
-          <div class="col-lg-4 col-sm-6 text-center bg-faded border">
+          <div class="col-lg-4 col-sm-6 text-center bg-faded border" id="{{ forloop.counter }}">
             <div class="item">
-              <a href="{% url 'ersatz-product' code=prod.code %}" title="Afficher la fiche pour {{ prod.name }}">
+              <a href="{% url 'ersatz-product' code=prod.code %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}&anchor={{ forloop.counter }}" title="Afficher la fiche pour {{ prod.name }}">
                 <img class="img-thumbnail img-fluid" src="{% spaceless %}
 
                 {% if prod.image_front_thumb_url == False %}
@@ -34,4 +35,5 @@
       {% endif %}
     {% endfor %}
         </div>
+        {% include "ersatz/pagination.html" %}
 {% endblock contentdetails %}
