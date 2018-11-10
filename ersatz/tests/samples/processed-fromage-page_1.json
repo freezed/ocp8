@@ -46,7 +46,7 @@
         "spreads"
       ],
       "code": "3073786865191",
-      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/686/5191/front_fr.62.100.jpg",
+      "image_front_thumb_url": false,
       "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/686/5191/front_fr.62.400.jpg",
       "image_nutrition_url": "https://static.openfoodfacts.org/images/products/307/378/686/5191/nutrition_fr.59.400.jpg",
       "ingredients_text": "Ingrédients : fromage blanc (50 %, dont lait 33 % - Origine : France), crème (27 % - Origine : France), eau, protéines de lait, sels de fonte : phosphates de calcium, polyphosphates, phosphates de sodium et citrates de sodium, sel, concentré des minéraux du lait, gélifiant : carraghénanes.",
@@ -178,7 +178,7 @@
       ],
       "code": "3161712963223",
       "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/316/171/296/3223/front_fr.10.100.jpg",
-      "image_front_url": "https://static.openfoodfacts.org/images/products/316/171/296/3223/front_fr.10.400.jpg",
+      "image_front_url": "",
       "image_nutrition_url": "https://static.openfoodfacts.org/images/products/316/171/296/3223/nutrition_fr.12.400.jpg",
       "ingredients_text": "Lait de vache pasteurisé de France, crème, sel, ferments lactiques.",
       "name": "Caprice des Dieux (30 % MG) (Caprice-des-dieux)",
@@ -191,7 +191,7 @@
         "pizzas"
       ],
       "code": "4001724818908",
-      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/400/172/481/8908/front_fr.62.100.jpg",
+      "image_front_thumb_url": "",
       "image_front_url": "https://static.openfoodfacts.org/images/products/400/172/481/8908/front_fr.62.400.jpg",
       "image_nutrition_url": "https://static.openfoodfacts.org/images/products/400/172/481/8908/nutrition_fr.71.400.jpg",
       "ingredients_text": "Farine de _blé_ 24 %, purée de tomate 11 %, fromage _mozzarella_ 11 %, fromage _edam_, eau, _crème_ fleurette, huile de colza 4,2 %, fromage _emmental_, eau, levure de boulangerie 0,7%, _fromage_ bleu, sucre, sel, basilic, sauce _soja_ (eau, graines de _soja_, sel, farine de _blé_), amidon modifié, huile d'olive vierge extra, épices, origan, protéines végétales hydrolysées, maltodextrine, ail, caramel.",
@@ -223,7 +223,7 @@
         "spreads"
       ],
       "code": "3236240070306",
-      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.100.jpg",
+      "image_front_thumb_url": false,
       "image_front_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.400.jpg",
       "image_nutrition_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/nutrition_fr.16.400.jpg",
       "ingredients_text": "Fromage frais, sel de Guérande (1,1 %).\r\n\r\nIngrédients laitiers issus de lait pasteurisé.",
@@ -239,7 +239,7 @@
       "code": "3073780593083",
       "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.100.jpg",
       "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.400.jpg",
-      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.400.jpg",
+      "image_nutrition_url": "",
       "ingredients_text": "Lait écrémé réhydraté, fromages, beurre, protéines de lait, sels de fonte : polyphosphates, phosphates de calcium, acide citrique, diphosphates, sel.",
       "name": "La Vache qui rit® 32 Portions (19 % MG) (Bel)",
       "nutrition_grades": "d",
@@ -253,7 +253,7 @@
         "cheeses"
       ],
       "code": "3184670001080",
-      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.100.jpg",
+      "image_front_thumb_url": "",
       "image_front_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.400.jpg",
       "image_nutrition_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/nutrition_fr.13.400.jpg",
       "ingredients_text": "_Lait_ de vache (origine : France) et _crème_ (origine : France) pasteurisés.",

@@ -2793,7 +2793,7 @@
                 "en:industrial-cheese",
                 "fr:gouter"
             ],
-            "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/686/5191/front_fr.62.100.jpg",
+            "image_front_thumb_url":  false,
             "nutriments": {
                 "salt_100g": 1.4,
                 "carbohydrates_value": "2",
@@ -2982,7 +2982,7 @@
             "allergens_hierarchy": [
                 "en:milk"
             ],
-            "image_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/686/5191/front_fr.62.100.jpg",
+            "image_thumb_url":  false,
             "manufacturing_places_tags": [
                 "fromageries-bel-production-france-filiale-groupe-bel-route-du-mans-la-tournerie-72300-sable-sur-sarthe",
                 "sarthe",
@@ -3069,7 +3069,7 @@
                         "fr": "https://static.openfoodfacts.org/images/products/307/378/686/5191/front_fr.62.400.jpg"
                     },
                     "thumb": {
-                        "fr": "https://static.openfoodfacts.org/images/products/307/378/686/5191/front_fr.62.100.jpg"
+                        "fr":  false
                     }
                 }
             },
@@ -12381,7 +12381,7 @@
             "nova_group": 3,
             "new_additives_n": 0,
             "image_nutrition_thumb_url": "https://static.openfoodfacts.org/images/products/316/171/296/3223/nutrition_fr.12.100.jpg",
-            "image_url": "https://static.openfoodfacts.org/images/products/316/171/296/3223/front_fr.10.400.jpg",
+            "image_url": "",
             "nova_groups": 3,
             "generic_name": "Fromage industriel de France, à pâte molle à croûte fleurie, double crème, au lait pasteurisé de vache",
             "brands": "Caprice des Dieux",
@@ -12860,7 +12860,7 @@
                         "fr": "https://static.openfoodfacts.org/images/products/316/171/296/3223/front_fr.10.100.jpg"
                     },
                     "display": {
-                        "fr": "https://static.openfoodfacts.org/images/products/316/171/296/3223/front_fr.10.400.jpg"
+                        "fr": ""
                     }
                 },
                 "nutrition": {
@@ -12987,7 +12987,7 @@
             ],
             "nucleotides_prev_tags": [],
             "unknown_nutrients_tags": [],
-            "image_front_url": "https://static.openfoodfacts.org/images/products/316/171/296/3223/front_fr.10.400.jpg",
+            "image_front_url": "",
             "pnns_groups_2": "Cheese",
             "rev": 41,
             "emb_codes_tags": [
@@ -13307,7 +13307,7 @@
                     "id": "en:wheat-flour"
                 }
             ],
-            "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/400/172/481/8908/front_fr.62.100.jpg",
+            "image_front_thumb_url": "",
             "vitamins_prev_tags": [],
             "categories_hierarchy": [
                 "en:frozen-foods",
@@ -13504,7 +13504,7 @@
                     "thumb": {
                         "de": "https://static.openfoodfacts.org/images/products/400/172/481/8908/front_de.69.100.jpg",
                         "en": "https://static.openfoodfacts.org/images/products/400/172/481/8908/front_en.41.100.jpg",
-                        "fr": "https://static.openfoodfacts.org/images/products/400/172/481/8908/front_fr.62.100.jpg"
+                        "fr": ""
                     },
                     "display": {
                         "en": "https://static.openfoodfacts.org/images/products/400/172/481/8908/front_en.41.400.jpg",
@@ -13665,7 +13665,7 @@
                 "en:milk",
                 "en:soybeans"
             ],
-            "image_thumb_url": "https://static.openfoodfacts.org/images/products/400/172/481/8908/front_fr.62.100.jpg",
+            "image_thumb_url": "",
             "additives_debug_tags": [],
             "sources": [
                 {
@@ -15909,7 +15909,7 @@
             "selected_images": {
                 "front": {
                     "thumb": {
-                        "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.100.jpg"
+                        "fr": false
                     },
                     "display": {
                         "fr": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.400.jpg"
@@ -16038,7 +16038,7 @@
                 "france"
             ],
             "allergens_hierarchy": [],
-            "image_thumb_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.100.jpg",
+            "image_thumb_url": false,
             "additives_debug_tags": [],
             "allergens_from_ingredients": "",
             "stores_tags": [
@@ -16144,7 +16144,7 @@
                 "saturated-fat_unit": "g",
                 "proteins": "5.9"
             },
-            "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.100.jpg",
+            "image_front_thumb_url": false,
             "vitamins_prev_tags": [],
             "categories_hierarchy": [
                 "en:fresh-foods",
@@ -17324,7 +17324,7 @@
             "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.400.jpg",
             "rev": 41,
             "ingredients_that_may_be_from_palm_oil_tags": [],
-            "image_nutrition_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.400.jpg",
+            "image_nutrition_url": "",
             "ingredients_text_fr_debug_tags": [],
             "additives_prev_n": 4,
             "ingredients_n": 10,
@@ -17618,7 +17618,7 @@
                         "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.100.jpg"
                     },
                     "display": {
-                        "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.400.jpg"
+                        "fr": ""
                     },
                     "small": {
                         "fr": "https://static.openfoodfacts.org/images/products/307/378/059/3083/nutrition_fr.10.200.jpg"
@@ -18322,7 +18322,7 @@
                         "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.400.jpg"
                     },
                     "thumb": {
-                        "fr": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.100.jpg"
+                        "fr": ""
                     }
                 }
             },
@@ -18386,7 +18386,7 @@
             ],
             "allergens_from_ingredients": "Lait, crème",
             "interface_version_created": "20120622",
-            "image_thumb_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.100.jpg",
+            "image_thumb_url": "",
             "allergens_hierarchy": [
                 "en:milk"
             ],
@@ -18528,7 +18528,7 @@
                     "text": "France"
                 }
             ],
-            "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.100.jpg",
+            "image_front_thumb_url": "",
             "categories_hierarchy": [
                 "en:dairies",
                 "en:fermented-foods",
