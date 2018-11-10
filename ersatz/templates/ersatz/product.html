@@ -1,19 +1,51 @@
 {% extends 'base.html' %}
 
-{% block title %} - ersatz favorite{% endblock %}
+{% block title %}{{ product.name }}{% endblock title %}
 
-{% block content %}
-  <h2>Fiche produit</h2>
-  <ul>
-  {% if status %}
-  {% for field, value in product.items %}
-    <li><strong>{{ field }}</strong> : <em>{{ value }}</em></li>
-  {% empty %}
-    <li>oups…</li>
-  {% endfor %}
-  {% else %}
-  <li><code>{{ error }}</code></li>
-  {% endif %}
-  </ul>
+{% block header %}{% endblock header %}
 
-{% endblock %}
+{% if status %}
+    {% block bgurl %}{{ product.image_front_url }}{% endblock bgurl %}
+{% endif %}
+
+{% block chapodetails %}
+    {% if status %}
+                <h2>{{ product.name }}</h2>
+    {% else %}
+                <h2>Produit introuvable…</h2>
+    {% endif %}
+{% endblock chapodetails %}
+
+{% block contentdetails %}
+    {% if status %}
+          <div class="col-lg-4 ml-auto text-center">
+            <h3 class="mb-3">Nutriscore</h3>
+            <img src="https://static.openfoodfacts.org/images/misc/nutriscore-{{ product.nutrition_grades }}.svg" title="Logo nutriscore" />
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <h3 class="mb-3">Repères nutritionnels</h3>
+        {% if product.image_nutrition_url %}{{ spaceless }}
+            <div class="size-250-100"><img src="{{ product.image_nutrition_url }}" title="Repères nutritionnels" /></div>
+        {% else %}
+            <img src="https://via.placeholder.com/250x100?text=Fiche+OFF+incomplete" title="Repères nutritionnels" />
+        {% endif %}{{ endspaceless }}
+          </div>
+        </div>
+        <div class="row m-5">
+          <div class="col-lg-8 mx-auto text-center bg-faded">
+            <p>{{ product.ingredients_text }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mx-auto text-center">
+            <a href="{{ request.GET.next }}&p={{ request.GET.p }}#{{ request.GET.anchor }}" class="btn btn-dark btn-xl" title="Retour à la page précédente">Retour</a>
+          </div>
+          <div class="col-lg-6 mx-auto text-center">
+            <a href="{{ product.url }}" class="btn btn-light btn-xl" title="Lien de la fiche produit {{ product.name }} vers le site OpenFoodFacts">
+              Voir la fiche d'OpenFoodFacts
+            </a>
+          </div>
+    {% else %}
+            <p>{{ error }}</p>
+    {% endif %}
+{% endblock contentdetails %}
