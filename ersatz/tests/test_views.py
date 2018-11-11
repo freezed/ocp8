@@ -7,7 +7,7 @@ from django.test import Client
 from django.contrib.auth.models import User
 from ersatz.config import (API, VIEWS_ERR, VIEWS_MSG_CANDIDATE_NONE,
     VIEWS_MSG_LOGIN, VIEWS_MSG_NO_FAV)
-from ersatz.models import Product
+from ersatz.models import Product, Favorite
 
 ################################################################################
 #   ersatz.views.views.home()
@@ -216,6 +216,66 @@ class TestFavoriteList:
 
         assert self.TEMPLATES == [t.name for t in response.templates]
         assert VIEWS_MSG_NO_FAV in response.context['message']
+
+    @pytest.mark.django_db
+    def test_user_favorite_list_filled(self):
+        TEMPLATE_WITNESS = [
+            'ersatz/list.html',
+            'base.html',
+            'ersatz/searchform.html',
+        ]
+
+        with open("ersatz/tests/samples/processed-fromage-page_1.json", "r") as json_file:
+            PRODUCTS = json.load(json_file)
+
+        BAD_FIELDS = [
+            "<span class=\"nutri-badge\">False</span>",
+            "src=\"False\"",
+            "src=\"\"",
+        ]
+
+        self.CLIENT.force_login(
+            User.objects.create(**self.USER)
+        )
+
+        for product in PRODUCTS['products']:
+            del(product['categories'])
+            product['ingredients_text'] = product['ingredients_text'][:255]
+            product['nutrition_grades'] = "z"
+
+            if not product['image_front_thumb_url']:
+                product['image_front_thumb_url'] = ''
+
+            p = Product.objects.create(**product)
+
+        FAVORITES = [
+            {
+                'products_id': Product.objects.get(code='3272770003148').id,
+                'substitutes_id': Product.objects.get(code='3073786865191').id,
+                'users_id': User.objects.get(username='jean').id,
+            },
+            {
+                'products_id': Product.objects.get(code="3329770051133").id,
+                'substitutes_id': Product.objects.get(code="4001724818908").id,
+                'users_id': User.objects.get(username='jean').id,
+            },
+            {
+                'products_id': Product.objects.get(code="3011250018308").id,
+                'substitutes_id': Product.objects.get(code="7622300685782").id,
+                'users_id': User.objects.get(username='jean').id,
+            }
+        ]
+
+        for favorite in FAVORITES:
+            Favorite.objects.create(**favorite)
+
+        response = self.CLIENT.get('/ersatz/list/')
+
+        assert TEMPLATE_WITNESS == [t.name for t in response.templates]
+
+        for bad_string in BAD_FIELDS:
+            assert bad_string.encode() not in response.content
+
 ################################################################################
 
 
