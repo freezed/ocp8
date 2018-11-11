@@ -22,7 +22,15 @@
           <div class="col-lg-4 col-sm-6 text-center bg-faded border" id="{{ forloop.counter }}">
             <div class="item">
               <a href="{% url 'ersatz-product' code=line.substitutes.code %}?next={{ request.path }}?{{ request.META.QUERY_STRING }}&anchor={{ forloop.counter }}" title="Afficher la fiche pour {{ prod.name }}">
-                <img class="img-thumbnail img-fluid" src="{{ line.substitutes.image_front_thumb_url }}" alt="{{ line.substitutes.name }} thumbnail">
+                <img class="img-thumbnail img-fluid" src="{% spaceless %}
+
+                {% if not line.substitutes.image_front_thumb_url or line.substitutes.image_front_thumb_url == '' %}
+                  https://via.placeholder.com/100x50?text=Oups!
+                {% else %}
+                  {{ line.substitutes.image_front_thumb_url }}
+                {% endif %}
+
+                {% endspaceless %}" alt="{{ line.substitutes.name }} thumbnail">
                 <span class="nutri-badge">{{ line.substitutes.nutrition_grades }}</span>
               </a>
             </div>
