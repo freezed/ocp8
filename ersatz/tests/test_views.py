@@ -99,9 +99,10 @@ class TestSearch:
             'ersatz/pagination.html',
             'ersatz/pagination.html',
         ]
-        FALSE_FIELDS = [
+        BAD_FIELDS = [
             "<span class=\"nutri-badge\">False</span>",
             "src=\"False\"",
+            "src=\"\"",
         ]
         monkeypatch.setattr(
             'ersatz.views.toolbox.get_search_context',
@@ -117,8 +118,8 @@ class TestSearch:
         assert response.status_code == 200
         assert TEMPLATES == [t.name for t in response.templates]
 
-        for false_string in FALSE_FIELDS:
-            assert false_string.encode() not in  response.content
+        for bad_string in BAD_FIELDS:
+            assert bad_string.encode() not in response.content
 ################################################################################
 
 
@@ -193,28 +194,37 @@ class TestFavoriteList:
         'password': 'jean',
         'email': 'jean@b.on',
     }
-    TEMPLATES = [
-        'ersatz/list.html',
-        'base.html',
-        'ersatz/searchform.html',
-        'ersatz/searchform.html',
-    ]
 
     @pytest.mark.django_db
     def test_anonymous_user_favorite_list(self):
+        TEMPLATE_WITNESS = [
+            'ersatz/list.html',
+            'base.html',
+            'ersatz/searchform.html',
+            'ersatz/searchform.html',
+        ]
+
         response = self.CLIENT.get('/ersatz/list/')
 
-        assert self.TEMPLATES == [t.name for t in response.templates]
+        assert TEMPLATE_WITNESS == [t.name for t in response.templates]
         assert VIEWS_MSG_LOGIN in response.context['message']
 
     @pytest.mark.django_db
     def test_user_favorite_list_empty(self):
+        TEMPLATE_WITNESS = [
+            'ersatz/list.html',
+            'base.html',
+            'ersatz/searchform.html',
+            'ersatz/searchform.html',
+        ]
+
         self.CLIENT.force_login(
             User.objects.create(**self.USER)
         )
+
         response = self.CLIENT.get('/ersatz/list/')
 
-        assert self.TEMPLATES == [t.name for t in response.templates]
+        assert TEMPLATE_WITNESS == [t.name for t in response.templates]
         assert VIEWS_MSG_NO_FAV in response.context['message']
 
     @pytest.mark.django_db
@@ -301,28 +311,28 @@ class TestProduct:
 
     @pytest.mark.django_db
     def test_not_found_product(self):
-        template_witness = ['ersatz/no-result.html']
-        template_witness.extend(self.base_tplt)
-        template_witness.append('ersatz/searchform.html')
+        TEMPLATE_WITNESS = ['ersatz/no-result.html']
+        TEMPLATE_WITNESS.extend(self.base_tplt)
+        TEMPLATE_WITNESS.append('ersatz/searchform.html')
 
         response = self.CLIENT.get('/ersatz/product/1234567890')
 
         assert response.status_code == 200
-        assert template_witness == [t.name for t in response.templates]
+        assert TEMPLATE_WITNESS == [t.name for t in response.templates]
         assert VIEWS_ERR.format(
             "Product matching query does not exist."
         ) in response.context['error']
 
     @pytest.mark.django_db
     def test_found_product(self):
-        template_witness = ['ersatz/product.html']
-        template_witness.extend(self.base_tplt)
+        TEMPLATE_WITNESS = ['ersatz/product.html']
+        TEMPLATE_WITNESS.extend(self.base_tplt)
 
         Product.objects.create(**self.PRODUCT)
         response = self.CLIENT.get('/ersatz/product/1664')
 
         assert response.status_code == 200
-        assert template_witness == [t.name for t in response.templates]
+        assert TEMPLATE_WITNESS == [t.name for t in response.templates]
 
         for field, value in self.PRODUCT.items():
             assert value in  response.context['product'][field]
