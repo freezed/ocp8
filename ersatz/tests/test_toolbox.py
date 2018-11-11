@@ -197,3 +197,29 @@ def test_search_product__init__():
 
     assert witness == search_2._payload
 ################################################################################
+
+
+################################################################################
+#   ersatz.views.toolbox.ErsatzProduct
+################################################################################
+@pytest.mark.django_db
+class TestErsatzProduct:
+    with open("ersatz/tests/samples/processed-fromage-page_1.json", "r") as json_file:
+        input_sample = json.load(json_file)
+
+    toolbox.update_db(input_sample)
+
+    def test_ersatz_product__init__(self):
+        # test_ep = toolbox.ErsatzProduct(3073780258098)
+        # assert test_ep.product.id == 3073780258098
+        pass
+
+    def test_ersatz_product_get_substitute_context(self):
+        pass
+
+    def test_ersatz_product_get_candidate(self):
+        pass
+
+    # def test_ersatz_product_():
+
+################################################################################
