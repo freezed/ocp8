@@ -1,9 +1,17 @@
+services:
+  - postgres
+
+variables:
+  POSTGRES_DB: custom_db
+  POSTGRES_USER: custom_user
+  POSTGRES_PASSWORD: custom_pass
+
 test:
-  services:
-  - postgres:"9.6"
+  image: postgres
   script:
-  - export DJANGO_SETTINGS_MODULE="omega.settings.gitlabci"
-  - export DATABASE_URL=postgres://postgres:postgres@postgres:5432/postgres
+  - export PGPASSWORD=$POSTGRES_PASSWORD
+  - export DATABASE_URL=postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@postgres:5432/$POSTGRES_DB
+  - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
   - apt-get update -qy
   - apt-get install -y python3-dev python3-pip
   - pip3 install -r requirements.txt
