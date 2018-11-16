@@ -9,6 +9,10 @@ Splitted into specific files by environment after v0.3
 import os
 import dj_database_url
 
+import raven
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
 from . import *
 
 DEBUG = False
@@ -35,3 +39,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Simplified static file serving.
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+sentry_sdk.init(
+    dsn="https://15d7d9c46f094fd2ba6758bb7d3ca197@sentry.io/1324333",
+    integrations=[DjangoIntegration()]
+)
