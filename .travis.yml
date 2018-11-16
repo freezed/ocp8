@@ -19,3 +19,12 @@ env: DJANGO_SETTINGS_MODULE="omega.settings.travis"
 
 script:
   - pytest
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: ETYlyOyu8M6i5/LsCwzHjkrVLuTpmrC6m5F+b05v7h6Ym15W2n1eXBOhtqT8GnamcrEPz9HXubZITrYsgdRLi3y4mqtkYbmryIJkI9TzsqCZ07Ud8ZBBmb+U01gP/3Ap6jtKC7MZk7EkzclhI6Uba6yaNGIOL5LZmJ91UMfAlDiaGN+CawGvKfkT3+Irr3dRI2lgdeQwDxhUC/8+Qw7CBQDaKhI6LBZty6TgoQxnEDYDIOSAtA2t0RMHYoTx4MiUbw8RGUgqkRzMHnkgSf9LKoNj9C62IHzH7ONWT317HW3PHUZYz7bnmqA5EuIxXhJjeyKNz4IEEyqZFkbKfPb7daMG88y98s5kauFJRuMZOcGEnuoQtsbN85EDRHbHYjgTEcq8Ly/zNUeEdhBoO4SYe6vJynPDRr2clqrHODQ2m6PPR+B/OBNCh6NSpvY3J7oulkN1EFCVRbhT5D6HOVYj4tnc788OoLMDpvqa92bYwluNMfBvYixffR6VOaN4TM8rLp7DGUHkVSObAVW84KTYqBp5kSe+9HtXpiAWzs3JSzpk/F67C34favgbmcPDK2RHVOh/C4UubuuuzBtJ0Q4syh3R6GZU8w/nZm6migVhq5hwSkThMcL4BQQvQ1wVw1uwKpdLSNhsL8jz8mD/JqClJiwzzq8Ex2YkcGNz8GlLKDs=
+  app: ocp8-1664
+  on:
+    repo: freezed/ocp8
+    branch: staging
