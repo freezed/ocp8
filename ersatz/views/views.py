@@ -1,3 +1,4 @@
+import logging
 from django.shortcuts import render
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -5,6 +6,8 @@ from ersatz.models import Product
 from ersatz.views import toolbox
 from ersatz.config import VIEWS_ERR, VIEWS_MSG_LOGIN
 
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 def search(request):
     context = toolbox.get_search_context(request)
@@ -15,6 +18,11 @@ def search(request):
     if context['status']:
         toolbox.update_db(context)
         template  = 'ersatz/result.html'
+
+    logger.info('product_search', exc_info=True, extra={
+         # Optionally pass a request and we'll grab any information we can
+        'qs_search': request.GET,
+    })
 
     return render(request, template, context)
 
@@ -71,6 +79,10 @@ def product(request, code):
 
     except (SyntaxError, NameError, ObjectDoesNotExist) as except_detail:
         context['error'] = VIEWS_ERR.format(except_detail)
+
+        logger.error('product_error', exc_info=True, extra={
+            'error': context['error'],
+        })
 
     else:
         context['status'] = True
