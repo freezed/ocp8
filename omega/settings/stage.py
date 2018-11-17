@@ -9,7 +9,6 @@ Splitted into specific files by environment after v0.3
 import os
 import dj_database_url
 
-import raven
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
