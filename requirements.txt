@@ -15,7 +15,9 @@ pytest==3.8.1
 pytest-cov==2.6.0
 pytest-django==3.4.3
 pytz==2018.5
+raven==6.9.0
 requests==2.20.0
+sentry-sdk==0.5.5
 six==1.11.0
-urllib3==1.23
+urllib3==1.24
 whitenoise==4.1
