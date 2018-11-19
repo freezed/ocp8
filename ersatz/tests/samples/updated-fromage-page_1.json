@@ -1,0 +1,309 @@
+{
+  "pagination": {
+    "following": 2,
+    "last": 473,
+    "page": 1,
+    "previous": 0,
+    "url_query": "?s=string"
+  },
+  "products": [
+    {
+      "categories": [
+        "gouter",
+        "dairies",
+        "spreads"
+      ],
+      "code": "3073780258098",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/025/8098/front_fr.150.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/025/8098/front_fr.150.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/307/378/025/8098/nutrition_fr.138.400.jpg",
+      "ingredients_text": "Ingrédients : fromage blanc (50%, dont lait 33% - Origine : France), crème (27% - Origine : France), eau, protéines de lait, sels de fonte : phosphates de calcium, polyphosphates, phosphates de sodium et citrates de sodium, sel, concentré des minéraux du lait, gélifiant : carraghénanes.",
+      "name": "Kiri à la crème de lait (12 Portions) (Kiri)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3073780258098/kiri-a-la-creme-de-lait-12-portions"
+    },
+    {
+      "categories": [
+        "kase",
+        "milchprodukte",
+        "franzosischer-kase",
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3272770003148",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/327/277/000/3148/front_fr.23.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/327/277/000/3148/front_fr.23.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/327/277/000/3148/nutrition_fr.6.400.jpg",
+      "ingredients_text": "Lait de chèvre et crème de chèvre pasteurisés - sel fin (1,2 %)- arôme naturel de chèvre.",
+      "name": "Chavroux (13 % MG) (Chavroux)",
+      "nutrition_grades": "c",
+      "url": "https://fr.openfoodfacts.org/produit/3272770003148/chavroux-13-mg"
+    },
+    {
+      "categories": [
+        "gouter",
+        "dairies",
+        "spreads"
+      ],
+      "code": "3073786865191",
+      "image_front_thumb_url": false,
+      "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/686/5191/front_fr.62.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/307/378/686/5191/nutrition_fr.59.400.jpg",
+      "ingredients_text": "Ingrédients : fromage blanc (50 %, dont lait 33 % - Origine : France), crème (27 % - Origine : France), eau, protéines de lait, sels de fonte : phosphates de calcium, polyphosphates, phosphates de sodium et citrates de sodium, sel, concentré des minéraux du lait, gélifiant : carraghénanes.",
+      "name": "Kiri à la crème de lait (8 Portions) (Kiri)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3073786865191/kiri-a-la-creme-de-lait-8-portions"
+    },
+    {
+      "categories": [
+        "dairies",
+        "spreads"
+      ],
+      "code": "7622300685782",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/762/230/068/5782/front_fr.19.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/762/230/068/5782/front_fr.19.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/762/230/068/5782/nutrition_fr.35.400.jpg",
+      "ingredients_text": "Lait entier, crème, préparation de protéines de lait, perméat de lactosérum concentré, sel, stabilisants (farine de graines de caroube), acidifiant (acide citrique). Au lait pasteurisé.",
+      "name": "Philadelphia (Kraft)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/7622300685782/philadelphia"
+    },
+    {
+      "categories": [
+        "cordons-bleus",
+        "cordons-bleus-de-dinde",
+        "meals",
+        "fresh-foods"
+      ],
+      "code": "3011250018308",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/301/125/001/8308/front_fr.8.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/301/125/001/8308/front_fr.8.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/301/125/001/8308/nutrition_fr.10.400.jpg",
+      "ingredients_text": "Filets de dinde, eau, farine de _blé_, rouge de dinde, huile de tournesol, fromage, sel, antioxydants : E331, E316, _beurre_, poudre de blanc d'_œuf_, protéines de _blé_ et de _lait_, amidon modifié, dextrose, arômes, lactosérum, levure, sel de fonte : E331, gélifiant : E407, épices, stabilisants : E450, E451, E452, conservateurs : E250, E202, amidon de _blé_.\r\nContient : _céleri_.",
+      "name": "Escalope Cordon Bleu (Pere-dodu)",
+      "nutrition_grades": "c",
+      "url": "https://fr.openfoodfacts.org/produit/3011250018308/escalope-cordon-bleu-pere-dodu"
+    },
+    {
+      "categories": [
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3564700014646",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/356/470/001/4646/front_fr.61.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/356/470/001/4646/front_fr.61.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/356/470/001/4646/nutrition_fr.59.400.jpg",
+      "ingredients_text": "_Lait_ de vache pasteurisé, sel , ferments (dont _lait_).",
+      "name": "Emmental Français (29 % MG) (Les-croises)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3564700014646/emmental-francais-29-mg-les-croises"
+    },
+    {
+      "categories": [
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3176580109826",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/317/658/010/9826/front_fr.11.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/317/658/010/9826/front_fr.11.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/317/658/010/9826/nutrition_fr.8.400.jpg",
+      "ingredients_text": "Camembert au lait pasteurisé.",
+      "name": "Camembert (20 % MG) (Le-rustique)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3176580109826/camembert-20-mg-le-rustique"
+    },
+    {
+      "categories": [
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3228020190427",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/322/802/019/0427/front_fr.45.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/322/802/019/0427/front_fr.45.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/322/802/019/0427/nutrition_fr.47.400.jpg",
+      "ingredients_text": "Lait pasteurisé de vache.",
+      "name": "Camembert Auguste Lepetit & fils (21 % MG) (Lepetit)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3228020190427/camembert-auguste-lepetit-fils-21-mg"
+    },
+    {
+      "categories": [
+        "comte",
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3256220288576",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/325/622/028/8576/front_fr.35.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/325/622/028/8576/front_fr.35.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/325/622/028/8576/nutrition_fr.28.400.jpg",
+      "ingredients_text": "Lait cru de vache, ferments lactiques, présure, sel",
+      "name": "Comté AOP au lait cru 34%MG (U)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3256220288576/comte-aop-au-lait-cru-34-mg-u"
+    },
+    {
+      "categories": [
+        "gouter",
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3073780767897",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/076/7897/front_fr.58.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/076/7897/front_fr.58.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/307/378/076/7897/nutrition_fr.66.400.jpg",
+      "ingredients_text": "Ingrédients : Fromage blanc (50%, dont lait 33% - Origine : France), crème (27% - Origine : France), eau, protéines de lait, sels de fonte : phosphates de calcium, polyphosphates, phosphates de sodium et citrates de sodium, sel, concentré des minéraux du lait, gélifiant : carraghénanes.",
+      "name": "Kiri à la crème de lait (Kiri)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3073780767897/kiri-a-la-creme-de-lait"
+    },
+    {
+      "categories": [
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3523230010559",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/352/323/001/0559/front_fr.3.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/352/323/001/0559/front_fr.3.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/352/323/001/0559/nutrition_fr.11.400.jpg",
+      "ingredients_text": "_Lait_ de chèvre, ferments lactiques, sel",
+      "name": "Fromage de chèvre Sainte maure (format familial) (23% MG) (Soignon)",
+      "nutrition_grades": false,
+      "url": "https://fr.openfoodfacts.org/produit/3523230010559/fromage-de-chevre-sainte-maure-format-familial-23-mg-soignon"
+    },
+    {
+      "categories": [
+        "fromages-double-creme",
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3161712963223",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/316/171/296/3223/front_fr.10.100.jpg",
+      "image_front_url": "",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/316/171/296/3223/nutrition_fr.12.400.jpg",
+      "ingredients_text": "Lait de vache pasteurisé de France, crème, sel, ferments lactiques.",
+      "name": "Caprice des Dieux (30 % MG) (Caprice-des-dieux)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3161712963223/caprice-des-dieux-30-mg"
+    },
+    {
+      "categories": [
+        "meals",
+        "pizzas"
+      ],
+      "code": "4001724818908",
+      "image_front_thumb_url": "",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/400/172/481/8908/front_fr.62.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/400/172/481/8908/nutrition_fr.71.400.jpg",
+      "ingredients_text": "Farine de _blé_ 24 %, purée de tomate 11 %, fromage _mozzarella_ 11 %, fromage _edam_, eau, _crème_ fleurette, huile de colza 4,2 %, fromage _emmental_, eau, levure de boulangerie 0,7%, _fromage_ bleu, sucre, sel, basilic, sauce _soja_ (eau, graines de _soja_, sel, farine de _blé_), amidon modifié, huile d'olive vierge extra, épices, origan, protéines végétales hydrolysées, maltodextrine, ail, caramel.",
+      "name": "Pizza Ristorante Quattro Formaggi (Dr-oetker)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/4001724818908/pizza-ristorante-quattro-formaggi-dr-oetker"
+    },
+    {
+      "categories": [
+        "fromages-blancs",
+        "desserts-lactes-natures",
+        "fromages-blancs-natures",
+        "fromages-blancs-alleges-en-matiere-grasse",
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3329770051133",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/332/977/005/1133/front_fr.5.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/332/977/005/1133/front_fr.5.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/332/977/005/1133/nutrition_fr.24.400.jpg",
+      "ingredients_text": "_Lait_ écrémé pasteurisé, concentré des minéraux de lait et protéines de lait, ferments lactiques, vitamine D.\r\n",
+      "name": "Calin nature (0 % MG) (Calin)",
+      "nutrition_grades": false,
+      "url": "https://fr.openfoodfacts.org/produit/3329770051133/calin-nature-0-mg-yoplait"
+    },
+    {
+      "categories": [
+        "dairies",
+        "spreads"
+      ],
+      "code": "3236240070306",
+      "image_front_thumb_url": false,
+      "image_front_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/front_fr.27.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/323/624/007/0306/nutrition_fr.16.400.jpg",
+      "ingredients_text": "Fromage frais, sel de Guérande (1,1 %).\r\n\r\nIngrédients laitiers issus de lait pasteurisé.",
+      "name": "Le Fromage Fouetté Madame Loïk, Nature au sel de Guérande (24 % MG) (Paysan-breton)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3236240070306/le-fromage-fouette-madame-loik-nature-au-sel-de-guerande-24-mg-paysan-breton"
+    },
+    {
+      "categories": [
+        "dairies",
+        "spreads"
+      ],
+      "code": "3073780593083",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/059/3083/front_fr.8.400.jpg",
+      "image_nutrition_url": "",
+      "ingredients_text": "Lait écrémé réhydraté, fromages, beurre, protéines de lait, sels de fonte : polyphosphates, phosphates de calcium, acide citrique, diphosphates, sel.",
+      "name": "La Vache qui rit® 32 Portions (19 % MG) (Bel)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3073780593083/la-vache-qui-rit-32-portions-19-mg"
+    },
+    {
+      "categories": [
+        "faisselles",
+        "fromages-blancs",
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3184670001080",
+      "image_front_thumb_url": "",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/nutrition_fr.13.400.jpg",
+      "ingredients_text": "_Lait_ de vache (origine : France) et _crème_ (origine : France) pasteurisés.",
+      "name": "La Faisselle (Rians)",
+      "nutrition_grades": "c",
+      "url": "https://fr.openfoodfacts.org/produit/3184670001080/la-faisselle-rians"
+    },
+    {
+      "categories": [
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3073780728959",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/front_fr.48.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/307/378/072/8959/nutrition_fr.43.400.jpg",
+      "ingredients_text": "_Lait_ écrémé réhydraté (origine : France), _fromages_ (chèvre 13% dans la variété Chèvre), _beurre_, protéines de _lait_, sels de fonte : polyphosphates, citrate de sodium, acide citrique, diphosphates et phosphates de sodium, arômes (_poissons_), arômes de fumée, exhausteur de goût : glutamate monosodique, arôme naturel ail avec autres arômes naturels, sel, arôme naturel de _fromage_, épaississants : carraghénane et farine de graine de caroube, conservateurs : sorbate de potassium et nisine.",
+      "name": "Apéricube Tonic (Bel)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3073780728959/apericube-tonic"
+    },
+    {
+      "categories": [
+        "sandwiches",
+        "hamburgers"
+      ],
+      "code": "2000000002603",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/200/000/000/2603/front_fr.27.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/200/000/000/2603/front_fr.27.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/200/000/000/2603/nutrition_fr.28.400.jpg",
+      "ingredients_text": "Pain spécial, steaks hachés, salade, oignon, cornichon, fromage fondu, sauce, (selon le site) En quantités inconnues : _Anhydride sulfureux et sulfites_, _Gluten_ (_blé_), _Graine de sésame_, _Lait_, _Oeufs_, _Moutarde_.",
+      "name": "Big Mac (Mcdonald-s)",
+      "nutrition_grades": "c",
+      "url": "https://fr.openfoodfacts.org/produit/2000000002603/big-mac-mcdonald-s"
+    },
+    {
+      "categories": [
+        "saint-agur",
+        "dairies",
+        "cheeses"
+      ],
+      "code": "3222110023961",
+      "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/322/211/002/3961/front_fr.19.100.jpg",
+      "image_front_url": "https://static.openfoodfacts.org/images/products/322/211/002/3961/front_fr.19.400.jpg",
+      "image_nutrition_url": "https://static.openfoodfacts.org/images/products/322/211/002/3961/nutrition_fr.7.400.jpg",
+      "ingredients_text": "lait pasteurisé",
+      "name": "Creme Saint Agur 25% (Saint-agur)",
+      "nutrition_grades": "d",
+      "url": "https://fr.openfoodfacts.org/produit/3222110023961/creme-saint-agur-25"
+    }
+  ],
+  "status": true
+}
