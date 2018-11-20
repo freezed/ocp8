@@ -6,7 +6,7 @@ from ersatz.models import Product
 from ersatz.config import BASE_PRODUCT_FIELD
 
 @fixture
-def fill_20():
+def db20prod():
     """ get 20 products to populate DB """
 
     with open("ersatz/tests/samples/processed-fromage-page_1.json", "r") as json_file:
@@ -24,6 +24,9 @@ def fill_20():
 
         Product.objects.create(**prod)
 
+    return Command()
+
+
 @mark.parametrize("idx,label,value",[
     (0,'code','3073780258098'),
     (19,'code','3222110023961'),
@@ -31,11 +34,10 @@ def fill_20():
     (19,'nutrition_grades','d'),
 ])
 @mark.django_db
-def test_get_db_products(fill_20, idx, label, value):
+def test_get_db_products(db20prod, idx, label, value):
     """ test a DB request to get products  """
 
-    cmd_instance = Command()
-    prods = cmd_instance.dbproducts()
+    prods = db20prod.products
 
     assert prods[idx][label] == value
 
