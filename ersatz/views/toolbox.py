@@ -123,7 +123,7 @@ def update_db(data):
             product_candidate.category.add(cat[1])
 
 
-def get_json(url, payload):
+def get_json(url, payload=''):
     """
     A wrap over `Requests` & `json` library, to centralize API calls
 
