@@ -1,10 +1,10 @@
-import pytest
+from pytest import fixture, mark
 import json
 
 from ersatz.management.commands.prodsync import Command
 from ersatz.models import Product
 
-@pytest.fixture
+@fixture
 def fill_20():
     """ get 20 products to populate DB """
 
@@ -23,18 +23,20 @@ def fill_20():
 
         Product.objects.create(**prod)
 
-
-@pytest.mark.django_db
-def test_get_db_products(fill_20):
+@mark.parametrize("idx,label,value",[
+    (0,'code','3073780258098'),
+    (19,'code','3222110023961'),
+    (0,'nutrition_grades','d'),
+    (19,'nutrition_grades','d'),
+])
+@mark.django_db
+def test_get_db_products(fill_20, idx, label, value):
     """ test a DB request to get products  """
 
     cmd_instance = Command()
     prods = cmd_instance.dbproducts()
 
-    assert prods[0]['code'] == '3073780258098'
-    assert prods[19]['code'] == '3222110023961'
-    assert prods[0]['nutrition_grades'] == 'd'
-    assert prods[19]['nutrition_grades'] == 'd'
+    assert prods[idx][label] == value
 
 
 """ for a product request api """
