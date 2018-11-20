@@ -4,10 +4,7 @@ from ersatz.models import Product
 
 class Command(BaseCommand):
 
-    def dbproducts(self):
-        products = Product.objects.values().all()
-
-        return products
+    products = Product.objects.values().all()
 
 
     def handle(self):
