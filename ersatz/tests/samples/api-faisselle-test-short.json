@@ -1,0 +1,28 @@
+{
+  "products": {
+    "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.4.100.jpg",
+    "image_front_url": "https://static.openfoodfacts.org/images/products/318/467/000/1080/front_fr.3.400.jpg",
+    "ingredients_text": "_Lait_ de vache (origine: France) et _crème_ (origine: France) pasteurisés.",
+    "product_name": "La Faisselle",
+    "url": "https://fr.openfoodfacts.org/produit/3184670001080/la-faisselle-rians",
+    "categories_tags": [
+        "en:dairies",
+        "en:fermented-foods",
+        "en:fermented-milk-products",
+        "en:cheeses",
+        "en:cream-cheeses",
+        "fr:faisselles",
+        "fr:fromages-blancs"
+    ],
+    "brands_tags": [
+        "rians",
+        "rians sarl",
+        "rians et compagnie",
+    ],
+    "nutrition_grades": "c",
+    "code": "3184670001080"
+  },
+  "code": "3184670001080",
+  "status_verbose": "product found",
+  "status": 1
+}
