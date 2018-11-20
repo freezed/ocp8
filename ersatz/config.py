@@ -15,7 +15,8 @@ API = {
 }
 
 # Using ersatz.models.Product attributes to get fields from API.
-PRODUCT_FIELD = [
+# Using ersatz.tests.test_comands.test_get_db_products
+BASE_PRODUCT_FIELD = [
     attrib
     for attrib in vars(Product)
     if not attrib.startswith(('_', 'favorites_'))
@@ -28,6 +29,7 @@ PRODUCT_FIELD = [
 # See @staticmethod in ersatz.view.toolbox.SearchProduct to process this fields
 SPECIAL_PRODUCT_FIELD = ['categories_tags','product_name','brands_tags']
 
+PRODUCT_FIELD = list(BASE_PRODUCT_FIELD)
 PRODUCT_FIELD.extend(SPECIAL_PRODUCT_FIELD)
 
 VIEWS_MSG_NO_FAV = "Vous n'avez pas encore enregistré de favoris, il est temps de faire une petite recherche!"

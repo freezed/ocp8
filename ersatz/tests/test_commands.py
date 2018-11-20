@@ -3,6 +3,7 @@ import json
 
 from ersatz.management.commands.prodsync import Command
 from ersatz.models import Product
+from ersatz.config import BASE_PRODUCT_FIELD
 
 @fixture
 def fill_20():
@@ -37,6 +38,9 @@ def test_get_db_products(fill_20, idx, label, value):
     prods = cmd_instance.dbproducts()
 
     assert prods[idx][label] == value
+
+    for p in prods:
+        assert set(BASE_PRODUCT_FIELD).issubset(p.keys())
 
 
 """ for a product request api """
