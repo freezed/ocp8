@@ -5,6 +5,7 @@ from ersatz.models import Product
 
 API = {
     'URL_SEARCH':'https://fr.openfoodfacts.org/cgi/search.pl',
+    'URL_PRODUCT':'https://fr.openfoodfacts.org/api/v0/product/{}.json',
     'PARAM_SEARCH': {
         'search_simple': 1,
         'action': 'process',
