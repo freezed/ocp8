@@ -10,12 +10,29 @@ from ersatz.config import BASE_PRODUCT_FIELD
 # ##############################################################################
 #   ersatz.management.commands.prodsync
 # ##############################################################################
+
+class FakeRequestsProduct:
+    """ get_json() mock class """
+
+    samples = {
+        "changed": "ersatz/tests/samples/api-faisselle-short-changed.json",
+        "populate": "ersatz/tests/samples/processed-fromage-page_1.json",
+    }
+
+    def __init__(self, context):
+        self.sample = self.samples[context]
+
+    def get_json(self, url):
+        with open(self.sample, "r") as json_file:
+            json_response_from_api = json.load(json_file)
+        return json_response_from_api
+
+
 @fixture
 def db20prod():
     """ get 20 products to populate DB """
 
-    with open("ersatz/tests/samples/processed-fromage-page_1.json", "r") as json_file:
-        PRODUCTS = json.load(json_file)['products']
+    PRODUCTS = FakeRequestsProduct('populate').get_json('url')['products']
 
     for prod in PRODUCTS:
         del prod['categories']
@@ -35,9 +52,8 @@ def db20prod():
 @fixture
 def api_faisselle_changed():
     """ Mock API response for changed product Faisselle (code=3184670001080) """
+    return FakeRequestsProduct('changed').get_json('url')['products']
 
-    with open("ersatz/tests/samples/api-faisselle-test-short.json", "r") as json_file:
-        return json.load(json_file)['products']
 
 
 # ##############################################################################
@@ -60,30 +76,23 @@ def test_get_db_products(db20prod, idx, label, value):
 
 
 # ##############################################################################
-class FakeRequestsChangedProduct:
-    """ get_json() mock class """
-    def get_json(url):
-        with open("ersatz/tests/samples/api-faisselle-test-short.json", "r") as json_file:
-            json_response_from_api = json.load(json_file)
-        return json_response_from_api
-
-
-def mock_get_json_from_api_valid(url):
+def mock_get_json_from_api_valid_changed(url):
     """ get_json() mock function """
-    return FakeRequestsChangedProduct.get_json('url')
+    return FakeRequestsProduct('changed').get_json('url')
 
 
 @mark.parametrize("label", [
     ("image_front_thumb_url"),
     ("image_front_url"),
     ("image_nutrition_url"),
+    ("ingredients_text"),
 ])
 @mark.django_db
 def test_compare_changed_product(db20prod, api_faisselle_changed, label, monkeypatch):
     """ test when a products is changed on OFF """
     monkeypatch.setattr(
         'ersatz.management.commands.prodsync.get_json',
-        mock_get_json_from_api_valid
+        mock_get_json_from_api_valid_changed
     )
     changes = db20prod.changes(api_faisselle_changed['code'])
 
@@ -92,6 +101,7 @@ def test_compare_changed_product(db20prod, api_faisselle_changed, label, monkeyp
     assert changes[label] == api_faisselle_changed[label]
 
 
+@mark.django_db
 def test_compare_unchanged_product(db20prod):
     """ test when a products is unchanged on OFF """
     pass
