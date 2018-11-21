@@ -29,5 +29,10 @@ class Command(BaseCommand):
 
         return common_fields
 
+
+    def dbupdate(self, changes):
+        """ Updates DB products changes """
+        Product.objects.filter(code=changes['code']).update(**changes)
+
     def handle(self):
         pass
