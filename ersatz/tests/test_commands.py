@@ -15,6 +15,7 @@ class FakeRequestsProduct:
     """ get_json() mock class """
 
     samples = {
+        "unchanged": "ersatz/tests/samples/api-faisselle-short-unchanged.json",
         "changed": "ersatz/tests/samples/api-faisselle-short-changed.json",
         "populate": "ersatz/tests/samples/processed-fromage-page_1.json",
     }
@@ -53,6 +54,12 @@ def db20prod():
 def api_faisselle_changed():
     """ Mock API response for changed product Faisselle (code=3184670001080) """
     return FakeRequestsProduct('changed').get_json('url')['products']
+
+
+@fixture
+def api_faisselle_unchanged():
+    """ Mock API response for unchanged product Faisselle (code=3184670001080) """
+    return FakeRequestsProduct('unchanged').get_json('url')['products']
 
 
 
@@ -101,10 +108,23 @@ def test_compare_changed_product(db20prod, api_faisselle_changed, label, monkeyp
     assert changes[label] == api_faisselle_changed[label]
 
 
+# ##############################################################################
+def mock_get_json_from_api_valid_unchanged(url):
+    """ get_json() mock function """
+    return FakeRequestsProduct('unchanged').get_json('url')
+
+
 @mark.django_db
-def test_compare_unchanged_product(db20prod):
+def test_compare_unchanged_product(db20prod, api_faisselle_unchanged, monkeypatch):
     """ test when a products is unchanged on OFF """
-    pass
+    monkeypatch.setattr(
+        'ersatz.management.commands.prodsync.get_json',
+        mock_get_json_from_api_valid_unchanged
+    )
+    changes = db20prod.changes(api_faisselle_unchanged['code'])
+
+    assert changes == {}
+
 
 """ update product in DB """
 
