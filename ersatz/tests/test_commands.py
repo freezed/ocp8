@@ -17,6 +17,7 @@ class FakeRequestsProduct:
     samples = {
         "unchanged": "ersatz/tests/samples/api-faisselle-short-unchanged.json",
         "changed": "ersatz/tests/samples/api-faisselle-short-changed.json",
+        "changes": "ersatz/tests/samples/faisselle-changes.json",
         "populate": "ersatz/tests/samples/processed-fromage-page_1.json",
     }
 
@@ -60,6 +61,12 @@ def api_faisselle_changed():
 def api_faisselle_unchanged():
     """ Mock API response for unchanged product Faisselle (code=3184670001080) """
     return FakeRequestsProduct('unchanged').get_json('url')['products']
+
+
+@fixture
+def faisselle_changes():
+    """ Mock API response for unchanged product Faisselle (code=3184670001080) """
+    return FakeRequestsProduct('changes').get_json('url')['products']
 
 
 
@@ -126,7 +133,24 @@ def test_compare_unchanged_product(db20prod, api_faisselle_unchanged, monkeypatc
     assert changes == {}
 
 
-""" update product in DB """
+@mark.parametrize("field", [
+    ("image_front_thumb_url"),
+    ("image_front_url"),
+    ("image_nutrition_url"),
+    ("ingredients_text"),
+])
+@mark.django_db
+def test_dbupdate_changes_in_db(db20prod, faisselle_changes, field, monkeypatch):
+    """ Test if somes changes on a product have been updated in DB """
+    monkeypatch.setattr(
+        "ersatz.management.commands.prodsync.Command.changes",
+        mock_get_json_from_api_valid_changed
+    )
+    db20prod.dbupdate(faisselle_changes)
+    db_prod = {
+        key: val for key, val in Product.objects.values().filter(
+            code=faisselle_changes['code']
+        )[0].items()
+    }
 
-
-""" print updates summary """
+    assert faisselle_changes[field] == db_prod[field]
