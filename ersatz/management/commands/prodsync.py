@@ -66,7 +66,7 @@ class Command(BaseCommand):
                 updated.append(prod)
 
                 logger.info('CRON Product not found', exc_info=True, extra={
-                    'EAN13': code,
+                    'EAN13': prod['code'],
                 })
 
                 print("updated : {}".format(changed_prod))
