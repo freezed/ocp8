@@ -1,46 +1,81 @@
+-[_Parcours Open Classrooms_][oc]-
+# [PyDev] Projet 10
+
+## _Note_
+
+_La version permanente de ce document restera disponible via [ce lien][readmev04] après la livraison._
+
+_La documentation le l'application web est disponible à cette [addresse][doc]._
+
 ## Contexte
 
-La startup **Pur Beurre**, avec laquelle vous avez [déjà travaillé][p5], souhaite développer une plateforme web à destination de ses clients. Ce site permettra à quiconque de trouver un substitut sain à un aliment considéré comme _trop gras, trop sucré, trop salé_.
+La startup [**Pur Beurre**][purbeurre], avec laquelle vous travaillez [depuis quelques mois][p5] déjà, vous à fait développer une application web proposant de trouver un substitut sain à un aliment considéré comme _trop gras, trop sucré et/ou trop salé_ en utilisant :
 
-## Missions
+- les données du projet : [OpenFoodFacts][off]
+- le _[framework][wikiframe] web Python_ : [Django][wikidjango]
 
-### Le [projet initial][p8] à été [livré][v01]. Le cahier des charge reste [disponible ici][cdc]
+Jusqu’à maintenant, vous avez déployé l'application en utilisant une solution [_PaaS_][wikipaas] (via [Heroku][heroku]), cette solution facilite le développement mais fait perdre la maîtrise d'une grande partie du processus de déploiement et de la configuration de l'hébergement.
 
-Le projet actuel consiste à faire évoluer ce projet, voici l'énoncé :
+## Historique
 
->“[_ô rage ! ô désespoir ! ô vieillesse ennemie ! N’ai-je donc tant vécu que pour cette infamie ?_][cid]” vous exclamez-vous en découvrant dans votre boîte mail un message de votre dernier client, pourtant si content lors de la dernière mise en production.
+* [Livraison][v01] du [projet initial][p8], conformément au [cahier des charges][cdc]
+* [Livraison][v03] d'un [1er lot d'évolutions][p11] (voir le [_verbatim_ des échanges client][verbatim] )
 
->“_Bonjour,_
->_Je vous remercie pour le travail réalisé. Néanmoins nous avons découvert qu’il manquait une fonctionnalité importante que nous aimerions développer. Combien de temps cela vous prendrait-il ?_
->_Nous avons également remarqué des dysfonctionnements (rien n’apparaît lorsque nous lançons Internet Explorer). Nos développeurs ont essayé de résoudre les bugs mais en vain, apparemment. Ils viennent de me dire de vous contacter car les tests sont cassés (je ne sais pas ce que cela signifie mais je transmets) et menacent la production (ça, j'ai bien compris - ils ont travaillé directement sur le site en ligne !)._
->_C’est tout pour aujourd’hui._
->
->_Merci._
->_Cordialement,_
->_Dona Jimena_”
 
->Évidemment, vous allez corriger… Car, comme diraient les Shadoks, **s’il n’y a pas de solution, c’est qu’il n’y a pas de problème**. Allez, c’est parti !
+## Nouvelle mission
 
-### Fonctionnalités
+* Héberger l'[environement de production][wikienv] sur un [VPS][wikivps]
+* Mettre en place une [Intégration Continue][wikici](CI) avec [Travis CI][ci]
+* Suivre l'activité :
+    - du serveur avec le monitoring de l'hébergeur
+    - de l'application avec [Sentry][sentry]
+* Déploiement en production via [CLI][wikicli]
+* Utiliser [`cron`][cron] pour automatiser une [tâche de maintenance][issue64] sur le serveur
 
-Basez-vous sur l’un des projets que vous avez déjà réalisés dans ce parcours de formation ou dans votre carrière. Choisissez une fonctionnalité à ajouter. Elle doit être assez importante pour justifier des tests fonctionnels. Votre mentor jouera le rôle du client. Jouez le jeu et communiquez avec lui de la même manière que vous le feriez avec un client : soignez votre présentation, l’endroit où se déroule votre session de mentorat et l’orthographe dans vos e-mails !
+_Bonus perso :_
 
-Quant aux tests, cassez-en un puis réparez-le en le refactorant. Je suis sûre que vous avez un test caché quelque part qui mérite une nouvelle jeunesse !
+* Déploiement automatisé dans un [environnement de qualification][wikienv] (_staging environment_) via [Heroku][herokuapp] après [réussite des tests][ci]
 
 ### Livrables
 
-* Code source modifié et hébergé sur Github
-* Il inclut [les commits d’ajout et de correction des tests][p11]
-* Les [mails de réponse][mail] au client
 * [Document écrit expliquant votre démarche][approach] de création, les difficultés rencontrées et la manière dont vous les avez résolues. Il doit être en format PDF et ne pas excéder 2 pages A4. Rédigé en anglais ou français.
+* Copie d’écran des configurations de :
+    - [Travis CI][screenshot]
+    - [l'hébergeur][screenshot]
+    - [votre tâche `cron`][doccron]
+* lien vers votre [tableau agile][P10]
+* lien vers votre [projet “déployé”][prod]
 
 
 [approach]: https://github.com/freezed/ocp8/blob/v0.1/doc/approach.md
 [cdc]: https://github.com/freezed/ocp8/blob/v0.1/README.md#cahier-des-charges
-[mail]: https://github.com/freezed/ocp8/blob/v0.3/doc/chat-history.md
 [cid]: http://www.alalettre.com/corneille-oeuvres-le-cid.php
+[ci]: https://travis-ci.com/freezed/ocp8/builds "Liens vers l'historique des builds sur le site Travis CI"
+[cron]: https://fr.wikipedia.org/wiki/Cron "Lien vers la page «cron» sur wikipedia"
+[doccron]: https://github.com/freezed/ocp8/blob/v0.4/doc/
+[doc]: https://github.com/freezed/ocp8/blob/master/doc/documentation.md
+[screenshot]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/
 [herokuapp]: https://ocp8-1664.herokuapp.com/
+[heroku]: https://www.heroku.com/
+[issue64]: https://github.com/freezed/ocp8/issues64
+[oc]: https://openclassrooms.com/fr/projects/deployez-votre-application-sur-un-serveur-comme-un-e-pro "Énoncé du P10 sur le site d'OpenClassrooms"
+[off]: https://world-fr.openfoodfacts.org/decouvrir "Lien vers la page de présentation du projet OpenFoodFacts"
+[p10]: https://github.com/freezed/ocp8/projects/3
 [p11]: https://github.com/freezed/ocp8/projects/2
 [p5]: https://github.com/freezed/ocp5#pydev-projet-5
 [p8]: https://github.com/freezed/ocp8/projects/1
+[prod]: http://68.183.223.134/
+[purbeurre]: http://68.183.223.134/#about
+[readmev04]: https://github.com/freezed/ocp10/blob/v0.4/README.md
+[sentry]: https://sentry.io/ "Lien vers le site Sentry.io"
 [v01]: https://github.com/freezed/ocp8/releases/tag/v0.1
+[v03]: https://github.com/freezed/ocp8/releases/tag/v0.3
+[v04]: https://github.com/freezed/ocp8/releases/tag/v0.4
+[verbatim]: https://github.com/freezed/ocp8/blob/v0.3/doc/chat-history.md#trancriptions-des-%C3%A9changes--avec-le-client
+[wikici]: https://fr.wikipedia.org/wiki/Int%C3%A9gration_continue "Lien vers la page «Intégration continue» sur wikipedia"
+[wikicli]: https://fr.wikipedia.org/wiki/Command-line_interface "Lien vers la page «Command Line Interface» sur wikipedia"
+[wikidjango]: https://fr.wikipedia.org/wiki/Django_(framework)  "Lien vers la page «Django (framework)» sur wikipedia"
+[wikienv]: https://fr.wikipedia.org/wiki/Environnement_(informatique) "Lien vers la page «Environnement (informatique)» sur wikipedia"
+[wikiframe]: https://fr.wikipedia.org/wiki/Framework "Lien vers la page «Framework» sur wikipedia"
+[wikipaas]: https://fr.wikipedia.org/wiki/Plate-forme_en_tant_que_service "Lien vers la page «Plate-forme en tant que service» sur wikipedia"
+[wikivps]: https://fr.wikipedia.org/wiki/Serveur_d%C3%A9di%C3%A9_virtuel "Lien vers la page «Serveur dédié virtuel» sur wikipedia"
