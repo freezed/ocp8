@@ -34,5 +34,20 @@ class Command(BaseCommand):
         """ Updates DB products changes """
         Product.objects.filter(code=changes['code']).update(**changes)
 
-    def handle(self):
-        pass
+
+    def handle(self, *args, **options):
+        updated = []
+        still = []
+
+        for prod in self.products:
+            changed_prod = self.changes(prod['code'])
+
+            if len(changed_prod) > 0:
+                self.dbupdate(changed_prod)
+                print("updated : {}".format(changed_prod))
+                updated.append(prod)
+
+            else:
+                still.append(prod)
+
+        print("still : {} | updated : {}".format(len(still), len(updated)))
