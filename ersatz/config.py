@@ -15,8 +15,8 @@ API = {
     'EMPTY': 'Bizarrement OpenFoodFacts ne donne pas de produits pour une recherche vide…',
 }
 
-# Using ersatz.models.Product attributes to get fields from API.
-# Using ersatz.tests.test_comands.test_get_db_products
+# Using `ersatz.models.Product` attributes to get fields from API.
+# Used in `ersatz.tests.test_commands.test_get_db_products`
 BASE_PRODUCT_FIELD = [
     attrib
     for attrib in vars(Product)
