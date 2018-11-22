@@ -54,20 +54,19 @@ def db20prod():
 @fixture
 def api_faisselle_changed():
     """ Mock API response for changed product Faisselle (code=3184670001080) """
-    return FakeRequestsProduct('changed').get_json('url')['products']
+    return FakeRequestsProduct('changed').get_json('url')['product']
 
 
 @fixture
 def api_faisselle_unchanged():
     """ Mock API response for unchanged product Faisselle (code=3184670001080) """
-    return FakeRequestsProduct('unchanged').get_json('url')['products']
+    return FakeRequestsProduct('unchanged').get_json('url')['product']
 
 
 @fixture
 def faisselle_changes():
     """ Mock API response for unchanged product Faisselle (code=3184670001080) """
     return FakeRequestsProduct('changes').get_json('url')['products']
-
 
 
 # ##############################################################################
@@ -100,6 +99,7 @@ def mock_get_json_from_api_valid_changed(url):
     ("image_front_url"),
     ("image_nutrition_url"),
     ("ingredients_text"),
+    ("code"),
 ])
 @mark.django_db
 def test_compare_changed_product(db20prod, api_faisselle_changed, label, monkeypatch):
