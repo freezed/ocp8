@@ -17,17 +17,26 @@ class Command(BaseCommand):
             API['URL_PRODUCT'].format(code)
         )
 
-        common_fields = {
-            field: api_response['products'][field]
-            # Only common fields between model & API
-            # TODO : work on all models fields
-            for field in BASE_PRODUCT_FIELD
-            if field in api_response['products']
-                # do not keep unchanged fields
-                and api_response['products'][field] != list(self.products.values(field).filter(code=code))[0][field]
-        }
+        # Only common fields between model & API. Do not keep unchanged fields
+        # TODO : work on all models fields
+        if 'product' in api_response:
+            changes = {
+                field: api_response['product'][field][:255]
+                for field in BASE_PRODUCT_FIELD
+                if field in api_response['product']
+                    and api_response['product'][field][:255] != list(
+                        self.products.values(field).filter(code=code)
+                    )[0][field]
+            }
 
-        return common_fields
+            if len(changes) > 0:
+                changes.update({'code': code})
+
+        else:
+            print("KeyError: 'product' for code «{}»".format(code))
+            changes = {}
+
+        return changes
 
 
     def dbupdate(self, changes):
