@@ -1,8 +1,13 @@
+import logging
+
 from django.core.management.base import BaseCommand
 
 from ersatz.config import API, BASE_PRODUCT_FIELD
 from ersatz.models import Product
 from ersatz.views.toolbox import get_json
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 
 class Command(BaseCommand):
@@ -33,8 +38,13 @@ class Command(BaseCommand):
                 changes.update({'code': code})
 
         else:
-            print("KeyError: 'product' for code «{}»".format(code))
+
             changes = {}
+
+            logger.info('CRON Product not found', exc_info=True, extra={
+                'EAN13': code,
+            })
+            print("KeyError: 'product' for code «{}»".format(code))
 
         return changes
 
@@ -46,17 +56,30 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         updated = []
-        still = []
+        checked = []
 
         for prod in self.products:
             changed_prod = self.changes(prod['code'])
 
             if len(changed_prod) > 0:
                 self.dbupdate(changed_prod)
-                print("updated : {}".format(changed_prod))
                 updated.append(prod)
 
-            else:
-                still.append(prod)
+                logger.info('CRON Product not found', exc_info=True, extra={
+                    'EAN13': code,
+                })
 
-        print("still : {} | updated : {}".format(len(still), len(updated)))
+                print("updated : {}".format(changed_prod))
+
+            else:
+                checked.append(prod)
+
+        logger.info('CRON finished', exc_info=True, extra={
+            'prod_checked': len(checked),
+            'prod_updated': len(updated),
+            'prod_checked_list': checked,
+            'prod_updated_list': updated,
+        })
+        print("CRON finished : checked {}, updated {}".format(
+            len(checked), len(updated)
+        ))
