@@ -157,6 +157,6 @@ Table `auth_user` is from built-in django authentification model
 [PUML sources](https://github.com/freezed/ocp8/blob/v0.3/doc/pdm.puml)
 
 
-[doc]: https://github.com/freezed/ocp8/blob/v0.3/doc/documentation.md
+[doc]: https://github.com/freezed/ocp8/blob/master/doc/documentation.md
 [heroku]: https://heroku.com
 [settings]: https://github.com/freezed/ocp8/blob/v0.3/omega/settings.py#L84
