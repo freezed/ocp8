@@ -2,22 +2,22 @@
 
 # [PyDev] Project 10
 
----
++++
 
 -_Introduction_-
 
-This is a web application proposing to find a healthy substitute for a chosen food. So far, I deployed the application using a _PaaS solution_, now I must :
+So far, this application is using a _PaaS solution_, now the job is…
 
-@ol
+@ul
 
-1. host it on a _VPS_
-1. implement _CI_
-1. monitor the server
-1. log application activity
-1. use `cron` to plan a maintenance task
-1. [_Personal bonus_] auto-deploy staging  on _Heroku_ after
+* host it on a _VPS_
+* implement _CI_
+* monitor the server
+* log application activity
+* use `cron` to plan a maintenance task
+* [_Personal bonus_] auto-deploy staging  on _Heroku_ after
 
-@olend
+@ulend
 
 ---
 
@@ -29,7 +29,12 @@ A _Digital Ocean_ VPS running a _Debian/Stretch_.
 
 +++
 
-Configuration is made with environment variables :
+@ul
+
+* Developpement settings are sets  in `__init__.py`
+* … overridden via _env var_ «`DJANGO_SETTINGS_MODULE`»
+
+@ulend
 
 `omega.settings` :
 
@@ -37,18 +42,9 @@ Configuration is made with environment variables :
     ├── production.py
     ├── stage.py
     └── travis.py
-
 +++
 
-Developpement settings are sets  in `__init__.py` other files are activated via the `DJANGO_SETTINGS_MODULE` _env var_.
-
-+++
-
-Application is served through this software chain :
-
-* `supervisor` runs the `django wsgi application` on a supervised process (with corresponding configuration)
-
-+++
+`supervisor` runs the `django wsgi application`
 
 ```shell
 user@ocp10:~$ cat /etc/supervisor/conf.d/ocp10-gunicorn.conf
@@ -62,13 +58,6 @@ environment = DJANGO_SETTINGS_MODULE='omega.settings.production'
 ```
 +++
 
-@ul
-
-1. `gunicorn` connects the `django app` to `nginx` HTTP server
-2. `nginx` serves client requests over network (Internet) & static files :
-
-@ulend
-
 ```shell
 user@ocp10:~$ cat /etc/nginx/sites-available/ocp10
 (…)
@@ -77,31 +66,38 @@ location /static {
 }
 (…)
 ```
+
+@ul
+
+* `gunicorn` connects the `django app` to `nginx` HTTP server
+* `nginx` serves client requests over network (Internet) & static files :
+
+@ulend
+
 ---
 
 ## 2. Continuous Integration
 
 _Travis CI_ manage the integration & optional delivery
 
+![Staging CI/CD flow - image](doc/img/20-travis.png)
+
 +++
 
 ### Build staging flow (bonus)
 
-![Staging CI/CD flow - image][imgstaging]
-
-+++
+![Production integration - image](doc/img/22-build-flow-staging.jpg)
 
 ### Build production flow
 
-![Production integration - image][imgproduction]
+![Staging CI/CD flow - image](doc/img/21-build-flow-production.jpg)
 
 +++
 
-![see `travis CI` build][imgtravis1]
+![see `travis CI` build](doc/img/23-travis-builds.jpg)
 
-![see `travis CI` detail][imgtravis2]
 
-+++
+---
 
 ## 3. Monitoring
 
@@ -119,29 +115,35 @@ _Digital Ocean_ provides built in server monitoring on :
 
 +++
 
-![see server monitoring - dashboard][imgmonit1]
+![31-do-monit.jpg](doc/img/31-do-monit.jpg)
 
 +++
 
-![see server monitoring - mail alert][imgmonit2]
+##### Mail alerts
+
+![32-do-monit.jpg](doc/img/32-do-monit.jpg)
 
 ---
 
 ## 4. Logging
 
-![Server logging - image][imglogging2]
+![Server logging - image](doc/img/40-sentry.png)
 
 +++
 
-![`sentry.io` projects][imglogging1]
+![Server logging - image](doc/img/42-sentry-issues.png)
 
 +++
 
-![`sentry.io` versions][imglogging3]
+![`sentry.io` projects](doc/img/41-sentry-projects.png)
 
 +++
 
-![`sentry.io` mail alert][imglogging4]
+![`sentry.io` versions](doc/img/43-sentry-version.png)
+
++++
+
+![`sentry.io` mail alert](doc/img/44-sentry-mail.jpg)
 
 ---
 
@@ -164,31 +166,18 @@ python3 /home/user/ocp8/manage.py prod
 ```
 +++
 
-![`cronjob` update log][imgcronjob2]
+![`cronjob` update log](doc/img/52-cronjob.jpg)
 
 ---
 
 ## Future…
 
-* setting [automated deployment][68] for production
-* improving [cronjob tests][65]
-* improving [cronjob][44]
+* setting automated deployment for production `[#68]`
+* improving cronjob tests `[#65]`
+* improving cronjob `[#44]`
 
-[44]: https://github.com/freezed/ocp8/issues/44
-[65]: https://github.com/freezed/ocp8/issues/65
-[68]: https://github.com/freezed/ocp8/issues/68
+---
 
-[imgcronjob1]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/51-cronjob.jpg "Click to see screenshot"
-[imgcronjob2]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/52-cronjob.jpg "Click to see screenshot"
-[imglogging1]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/41-sentry-projects.png "Click to see screenshot"
-[imglogging2]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/42-sentry-issues.png "Click to see screenshot"
-[imglogging3]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/43-sentry-version.png "Click to see screenshot"
-[imglogging4]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/44-sentry-mail.jpg "Click to see screenshot"
-[imgmonit1]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/31-do-monit.jpg "Click to see screenshot"
-[imgmonit2]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/32-do-monit.jpg "Click to see screenshot"
-[imgnginx]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/12-nginx.jpg "Click to see screenshot"
-[imgproduction]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/21-build-flow-production.jpg
-[imgstaging]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/22-build-flow-staging.jpg
-[imgsupervisor]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/11-supervisor.jpg "Click to see screenshot"
-[imgtravis1]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/23-travis-builds.jpg "Click to see screenshot"
-[imgtravis2]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/24-travis-details.jpg "Click to see screenshot"
+### Thank you for your attention.
+
+# (-;
