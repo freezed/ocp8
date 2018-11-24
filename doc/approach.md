@@ -148,23 +148,23 @@ python3 /home/user/ocp8/manage.py prod
 [44]: https://github.com/freezed/ocp8/issues/44
 [65]: https://github.com/freezed/ocp8/issues/65
 [68]: https://github.com/freezed/ocp8/issues/68
-[approach]: https://github.com/freezed/ocp8/blob/wip-doc/doc/approach.md
+[approach]: https://github.com/freezed/ocp8/blob/v0.4/doc/approach.md
 [debian]: https://debian.org
 [do]: https://www.digitalocean.com
-[imgcronjob1]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/51-cronjob.jpg "Click to see screenshot"
-[imgcronjob2]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/52-cronjob.jpg "Click to see screenshot"
-[imglogging1]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/41-sentry-projects.png "Click to see screenshot"
-[imglogging2]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/42-sentry-issues.png "Click to see screenshot"
-[imglogging3]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/43-sentry-version.png "Click to see screenshot"
-[imglogging4]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/44-sentry-mail.jpg "Click to see screenshot"
-[imgmonit1]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/31-do-monit.jpg "Click to see screenshot"
-[imgmonit2]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/32-do-monit.jpg "Click to see screenshot"
-[imgnginx]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/12-nginx.jpg "Click to see screenshot"
+[imgcronjob1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/51-cronjob.jpg "Click to see screenshot"
+[imgcronjob2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/52-cronjob.jpg "Click to see screenshot"
+[imglogging1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/41-sentry-projects.png "Click to see screenshot"
+[imglogging2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/42-sentry-issues.png "Click to see screenshot"
+[imglogging3]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/43-sentry-version.png "Click to see screenshot"
+[imglogging4]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/44-sentry-mail.jpg "Click to see screenshot"
+[imgmonit1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/31-do-monit.jpg "Click to see screenshot"
+[imgmonit2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/32-do-monit.jpg "Click to see screenshot"
+[imgnginx]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/12-nginx.jpg "Click to see screenshot"
 [imgproduction]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/21-build-flow-production.jpg
 [imgstaging]: https://raw.githubusercontent.com/freezed/ocp8/wip-doc/doc/img/22-build-flow-staging.jpg
-[imgsupervisor]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/11-supervisor.jpg "Click to see screenshot"
-[imgtravis1]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/23-travis-builds.jpg "Click to see screenshot"
-[imgtravis2]: https://github.com/freezed/ocp8/blob/wip-doc/doc/img/24-travis-details.jpg "Click to see screenshot"
+[imgsupervisor]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/11-supervisor.jpg "Click to see screenshot"
+[imgtravis1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/23-travis-builds.jpg "Click to see screenshot"
+[imgtravis2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/24-travis-details.jpg "Click to see screenshot"
 [issues]: https://github.com/freezed/ocp8/issues
 [kanban]: https://github.com/freezed/ocp8/projects/3
 [oc]: https://openclassrooms.com/fr/projects/ameliorez-un-projet-existant-en-python "Créez une plateforme pour amateur de pâte à tartiner"
