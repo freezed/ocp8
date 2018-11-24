@@ -1,10 +1,10 @@
 -[_Courses Open Classrooms_][oc]-
 
-# [PyDev] Project 11
+# [PyDev] Project 10
 
 _Last version of this document is available on [Github][approach]._
 
-_Kanban table project is available [on GitHub][kanban]_
+_Kanban table project is available [here][kanban]._
 
 ---
 
@@ -12,102 +12,159 @@ _Kanban table project is available [on GitHub][kanban]_
 
 ### Introduction
 
-Improve an old project you have made using tests (unit & functional)
+This is a web application proposing to find a healthy substitute for a chosen food. So far, I deployed the application using a _PaaS solution_, now I must :
 
-- use [github][kanban]
-- fake [conversation with client][mail]
+1. host it on a _VPS_
+1. implement _CI_
+1. monitor the server
+1. log application activity
+1. use `cron` to plan a maintenance task
 
-The whole exercise description is available on [OpenClassrooms site][oc], the project is hosted on [Github][kanban] and it is deployed [here][herokuapp].
+_Personal bonus_:
+
+* Automated deployment in a staging environment via _Heroku_ after successful testing
+
+### 1. Hosting
+
+Using a [Digital Ocean][do] _VPS_ running a [Debian/Stretch][debian] (stable). Django config is made with environment variables :
+
+`omega.settings` :
+
+    ├── __init__.py
+    ├── production.py
+    ├── stage.py
+    └── travis.py
+
+Developpement settings are sets  in `__init__.py` other files are activated via the `DJANGO_SETTINGS_MODULE` _env var_.
+
+Application is served through this software chain :
+
+* `supervisor` runs the `django wsgi application` on a supervised process (with corresponding configuration)
+
+```shell
+user@ocp10:~$ cat /etc/supervisor/conf.d/ocp10-gunicorn.conf
+[program:ocp10-gunicorn]
+command = /home/user/ocp8/.venv/bin/gunicorn omega.wsgi:application
+user = user
+directory = /home/user/ocp8
+autostart = true
+autorestart = true
+environment = DJANGO_SETTINGS_MODULE='omega.settings.production'
+```
+
+[ [see `supervisor` config][imgsupervisor] ]
+
+* `gunicorn` connects the `django app` to `nginx` HTTP server
+* `nginx` serves client requests over network (Internet) & static files :
+
+```shell
+user@ocp10:~$ cat /etc/nginx/sites-available/ocp10
+(…)
+location /static {
+    alias /home/user/ocp8/staticfiles/;
+}
+(…)
+```
+
+[ [see `nginx` config][imgnginx] ]
+
+### 2. Continuous Integration
+
+_Travis CI_ manage the integration & optional delivery
+
+##### Build staging flow (bonus)
+
+![Staging CI/CD flow - image][imgstaging]
+
+##### Build production flow
+
+![Production integration - image][imgproduction]
+
+##### Screenshots
+
+[ [see `travis CI` build][imgtravis1] ]
+
+[ [see `travis CI` details][imgtravis2] ]
+
+### 3. Monitoring
+
+_Digital Ocean_ provides built in server monitoring on :
+
+* CPU charge
+* Memory alocation
+* Disk access/usage
+* Used bandwith
+* … and process hierarchy
+
+[ [see server monitoring - dashboard][imgmonit1] ]
+
+[ [see server monitoring - mail alert][imgmonit2] ]
+
+### 4. Logging
+
+_Sentry_ let you put snippets in your code acting like sensors, then you can log anything you want : a new search, unknown product, etc.
+
+You can creates projects, connect a `git` repo to connect errors & code version (commits). A mail alert is also avaiable.
+
+![Server logging - image][imglogging2] ]
+
+[ [see `sentry.io` projects][imglogging1] ]
+
+[ [see `sentry.io` versions][imglogging3] ]
+
+[ [see `sentry.io` mail alert][imglogging4] ]
+
+### 5. cronjob
+
+Each days @ 0305, `cron` runs the DB syncronisation :
+
+```shell
+user@ocp10:~$ crontab -l
+5  3  *  *  * user /home/user/ocp10-django-dbsync.sh
+
+user@ocp10:~$ cat ocp10-django-dbsync.sh
+#!/bin/bash
+# cp10-django-dbsync.sh :
+# Runs a Django DB synchronization
+
+export DJANGO_SETTINGS_MODULE='omega.settings.production'
+source /home/user/ocp8/.venv/bin/activate
+python3 /home/user/ocp8/manage.py prod
+```
+
+##### Screenshots
+
+[ [see `cronjob` config][imgcronjob1] ]
+
+[ [see `cronjob` update log][imgcronjob2] ]
+
+## [Future][issues]…
+
+* setting [automated deployment][68] for production
+* improving [cronjob tests][65]
+* improving [cronjob][44]
 
 
-### Workflow
-
- - plan : features, scripts, files, functions, tools needed
- - create [features][features], grouped in autonomous packages
- - organize with a [_kanban type_ table][kanban]
- - write tests with [`pytest`][pytest]
- - write code
-
-
-### Code organization
-
-**_Django_ project name :**
-- omega
-
-**_Django_ apps :**
-- account (user account, login, sign-up, etc.)
-- ersatz (all about products, substitutes, favorites, etc.)
-
-
-### Overview
-
-I known the code well, I work on it for a month, but as I am learning _Django_ on the way, I had to deal with odd choices & stranges implementations when I meet old code…
-
-#### the _Django_ tree
-
-At start it took some time to understand the logic of the bricks position/role, and now I have a more accurate view on what must be where. Then the first improvement was to reorganize the file tree, here is the job :
-
-Project `omega` :
-
-* keep errors & base templates, move all others
-* keep all statics
-* exports all tests & views
-* disabling admin interface
-* rename `/my/*` routes
-
-App `account` :
-
-* rename some routes
-* host most of ex-`omegega` templates
-* no `urls.py` : no need to prefix URL with `account`
-
-App `ersatz` :
-
-* host `searchform.html`
-* remove unused `home.html`
-
-
-#### Testing in _Django_ context
-
-_Django_ provides dedicated tools and some specific packages are available. I decided to use `django-pytest`, in a minimal way. Here it is to use some database features with tests. The subject is wide, even if there are still some to discover, I have learned a lot.
-
-
-#### Stay in the scope
-
-As always working on light specifications is delicate. Do the job asked for, add requested feature even if they are sometime implicit. Do not over estimate the client needs.
-
-
-### Possible [developments][issues]
-
-* [Full tests implementation][40]
-* [Local & distant DB conflict][36]
-* [Product matching query does not exist][33]
-* [ConnectionError exception is not properly catched][32]
-* [Catch DB error if migration is not done][30]
-* [Failover to API if no ersatz found in DB][29]
-* [Add `fake_get_json_count_zero()`][24]
-
-[24]: https://github.com/freezed/ocp8/issues/24
-[29]: https://github.com/freezed/ocp8/issues/29
-[30]: https://github.com/freezed/ocp8/issues/30
-[32]: https://github.com/freezed/ocp8/issues/32
-[33]: https://github.com/freezed/ocp8/issues/33
-[36]: https://github.com/freezed/ocp8/issues/36
-[40]: https://github.com/freezed/ocp8/issues/40
-[approach]: https://github.com/freezed/ocp8/blob/master/doc/approach.md
-[bootstrap]: https://github.com/twbs/bootstrap
-[django]: https://www.djangoproject.com/
-[features]: https://github.com/freezed/ocp8/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Afeature+is%3Aclosed+
-[gither]: https://devcenter.heroku.com/articles/github-integration
-[herokuapp]: https://ocp8-1664.herokuapp.com/
-[heroku]: https://devcenter.heroku.com/articles/getting-started-with-python
+[44]: https://github.com/freezed/ocp8/issues/44
+[65]: https://github.com/freezed/ocp8/issues/65
+[68]: https://github.com/freezed/ocp8/issues/68
+[approach]: https://github.com/freezed/ocp8/blob/v0.4/doc/approach.md#approach
+[debian]: https://debian.org
+[do]: https://www.digitalocean.com
+[imgcronjob1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/51-cronjob.jpg "Click to see screenshot"
+[imgcronjob2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/52-cronjob.jpg "Click to see screenshot"
+[imglogging1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/41-sentry-projects.png "Click to see screenshot"
+[imglogging2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/42-sentry-issues.png "Click to see screenshot"
+[imglogging3]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/43-sentry-version.png "Click to see screenshot"
+[imglogging4]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/44-sentry-mail.jpg "Click to see screenshot"
+[imgmonit1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/31-do-monit.jpg "Click to see screenshot"
+[imgmonit2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/32-do-monit.jpg "Click to see screenshot"
+[imgnginx]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/12-nginx.jpg "Click to see screenshot"
+[imgproduction]: https://raw.githubusercontent.com/freezed/ocp8/v0.4/doc/img/21-build-flow-production.jpg
+[imgstaging]: https://raw.githubusercontent.com/freezed/ocp8/v0.4/doc/img/22-build-flow-staging.jpg
+[imgsupervisor]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/11-supervisor.jpg "Click to see screenshot"
+[imgtravis1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/23-travis-builds.jpg "Click to see screenshot"
+[imgtravis2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/24-travis-details.jpg "Click to see screenshot"
 [issues]: https://github.com/freezed/ocp8/issues
-[kanban]: https://github.com/freezed/ocp8/projects/2
-[log]: http://flask.pocoo.org/docs/1.0/logging/#logging
-[mail]: https://github.com/freezed/ocp8/blob/v0.3/doc/chat-history.md
+[kanban]: https://github.com/freezed/ocp8/projects/3
 [oc]: https://openclassrooms.com/fr/projects/ameliorez-un-projet-existant-en-python "Créez une plateforme pour amateur de pâte à tartiner"
-[OFF]: http://fr.openfoodfacts.org/
-[postgres]: https://www.postgresql.org/
-[pytest]: https://pytest.org "Helps you write better programs"
-[ottg]: https://www.obeythetestinggoat.com
-[selenium]: http://www.seleniumhq.org/

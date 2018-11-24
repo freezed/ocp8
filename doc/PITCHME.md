@@ -1,177 +1,183 @@
-# [PyDev] Project 11
+-_Courses Open Classrooms_-
 
----
-
-# Introduction
+# [PyDev] Project 10
 
 +++
 
-###### Improve one of the projects already completed
+### So far, this application is using a _PaaS tool_, it's time to…
 
 @ul
 
-- use tests (unit & functional)
-- use github
-- fake conversation with client
+* host it on a _VPS_
+* implement _CI_
+* monitor the server
+* log application activity
+* use `cron` to plan a maintenance task
+* [_Personal bonus_] auto-deploy staging  on _Heroku_ after
 
 @ulend
 
 ---
 
-# Workflow
+## 1. Hosting
+
+A _Digital Ocean_ VPS running a _Debian/Stretch_.
+
+![Droplet Digital Ocean screenshoot](doc/img/30-do-dropplet.png)
+
++++
 
 @ul
 
- - **think**, **sketch** & **draft** (features, functions, needed tools)
- - **gather** things in autonomous packages
- - **organize** the work (with a _kanban type_ table)
- - write **tests**
- - write **code**
+* Developpement settings are sets  in `__init__.py`
+* … overridden via _env var_ «`DJANGO_SETTINGS_MODULE`»
 
 @ulend
 
----
+`omega.settings` :
 
-# Overview
-
+    ├── __init__.py
+    ├── production.py
+    ├── stage.py
+    └── travis.py
 +++
 
-I known the code well : I work on it for a month, but as I am learning _Django_ on the way, I had to deal with odd choices & stranges implementations when I meet old code…
+`supervisor` runs the `django wsgi application`
 
-+++
-
-#### the _Django_ tree
-
-At start it took some time to understand the logic of the bricks position/role, and now I have a more accurate view on what must be where. Then the first improvement was to reorganize the file tree, here is the job :
-
-+++
-
-`omega` :
-
-@ul
-
-* keep errors & base templates, move all others
-* keep all statics
-* exports all tests & views
-* disabling admin interface
-* harmonize `auth` routes names
-
-@ulend
-
-+++
-
-`account` :
-
-@ul
-
-* harmonize routes names
-* host most of ex-`omega` templates
-* no `urls.py` : no need to prefix URL with `account`
-
-@ulend
-
-+++
-
-`ersatz` :
-
-@ul
-
-* host `searchform.html`
-* remove unused `home.html`
-
-@ulend
-
----
-
+```shell
+user@ocp10:~$ cat /etc/supervisor/conf.d/ocp10-gunicorn.conf
+[program:ocp10-gunicorn]
+command = /home/user/ocp8/.venv/bin/gunicorn omega.wsgi:application
+user = user
+directory = /home/user/ocp8
+autostart = true
+autorestart = true
+environment = DJANGO_SETTINGS_MODULE='omega.settings.production'
 ```
-├── omega
-│   ├── settings.py
-│   ├── static
-│   │   └── …
-│   ├── templates
-│   │   ├── 404.html
-│   │   ├── 500.html
-│   │   └── base.html
-│   ├── urls.py
-│   └── wsgi.py
-├── account
-│   ├── apps.py
-│   ├── forms.py
-│   ├── templates
-│   │   ├── about.html
-│   │   ├── account
-│   │   │   ├── account.html
-│   │   │   └── anonymous.html
-│   │   ├── home.html
-│   │   └── registration
-│   │       ├── login.html
-│   │       ├── …
-│   │       └── signin.html
-│   ├── tests.py
-│   └── views.py
-├── doc
-│   └── …
-├── ersatz
-│   ├── admin.py
-│   ├── apps.py
-│   ├── config.py
-│   ├── models.py
-│   ├── templates
-│   │   └── ersatz
-│   │       ├── candidates.html
-│   │       ├── favorite.html
-│   │       ├── list.html
-│   │       ├── no-candidates.html
-│   │       ├── no-result.html
-│   │       ├── pagination.html
-│   │       ├── product.html
-│   │       ├── result.html
-│   │       └── searchform.html
-│   ├── tests
-│   │   ├── samples
-│   │   │   ├── api-fromage-page_1.json
-│   │   │   └── processed-fromage-page_1.json
-│   │   ├── test_toolbox.py
-│   │   └── test_views.py
-│   ├── urls.py
-│   └── views
-│       ├── toolbox.py
-│       └── views.py
-└── manage.py
++++
+
+`user@ocp10:~$ cat /etc/nginx/sites-available/ocp10`
+
+```shell
+(…)
+location /static {
+    alias /home/user/ocp8/staticfiles/;
+}
+(…)
 ```
 
-+++
+@ul
 
-#### Testing in _Django_ context
+* `gunicorn` connects the `django app` to `nginx` HTTP server
+* `nginx` serves client requests over network (Internet) & static files :
 
-I decided to use `django-pytest`, in a minimal way. Here it is to use some database features with tests.
-
-+++?code=ersatz/tests/samples/processed-fromage-page_1.json&title=Fake data
-
-@[49](Missing URL)
-@[170](Missing nutriscore)
-@[181](Empty URL)
-@[242](Empty URL)
-
-+++?code=ersatz/tests/test_views.py&title=View rendering tests
-
-@[90-100](Setting expected values)
-@[101-107](Mocking data)
-@[80-88](Data from JSON sample)
-@[110-116](Testing)
-
-+++
-
-#### Stay in the scope
-
-As always working on light specifications is delicate. Do the job asked for, add requested feature even if they are sometime implicit. Do not over estimate the client needs.
+@ulend
 
 ---
 
-# Future…
+## 2. Continuous Integration
 
-* Failover to `API` if no found in DB
-* Full tests implementation (DB & Selelnium)
-* Local & distant DB conflict (stay up to date w/ cron)
-* Improve substitution match
-* … and more : have a look to [issues](https://github.com/freezed/ocp8/issues/)
+_Travis CI_ manage the integration & optional delivery
+
+![Staging CI/CD flow - image](doc/img/20-travis.png)
+
++++
+
+### Build staging flow (bonus)
+
+![Production integration - image](doc/img/22-build-flow-staging.jpg)
+
+### Build production flow
+
+![Staging CI/CD flow - image](doc/img/21-build-flow-production.jpg)
+
++++
+
+![see `travis CI` build](doc/img/23-travis-builds.jpg)
+
+
+---
+
+## 3. Monitoring
+
+_Digital Ocean_ provides built in server monitoring on :
+
+@ul
+
+* CPU charge
+* Memory alocation
+* Disk access/usage
+* Used bandwith
+* … and process hierarchy
+
+@ulend
+
++++
+
+![31-do-monit.jpg](doc/img/31-do-monit.jpg)
+
++++
+
+##### Mail alerts
+
+![32-do-monit.jpg](doc/img/32-do-monit.jpg)
+
+---
+
+## 4. Logging
+
+![Server logging - image](doc/img/40-sentry.png)
+
++++
+
+![Server logging - image](doc/img/42-sentry-issues.png)
+
++++
+
+![`sentry.io` projects](doc/img/41-sentry-projects.png)
+
++++
+
+![`sentry.io` versions](doc/img/43-sentry-version.png)
+
++++
+
+![`sentry.io` mail alert](doc/img/44-sentry-mail.jpg)
+
+---
+
+## 5. cronjob
+
+Each days @ 0305, `cron` runs the DB syncronisation :
+
+```shell
+user@ocp10:~$ crontab -l
+5  3  *  *  * user /home/user/ocp10-django-dbsync.sh
+```
+```shell
+user@ocp10:~$ cat ocp10-django-dbsync.sh
+#!/bin/bash
+# cp10-django-dbsync.sh :
+# Runs a Django DB synchronization
+
+export DJANGO_SETTINGS_MODULE='omega.settings.production'
+source /home/user/ocp8/.venv/bin/activate
+python3 /home/user/ocp8/manage.py prod
+```
++++
+
+![`cronjob` update log](doc/img/52-cronjob.jpg)
+
+---
+
+## Future…
+
+* setting auto-deploy for production `[#68]`
+* improving cronjob tests `[#65]`
+* improving cronjob `[#44]`
+
+---
+
+### Thank you for your attention.
+
+# (-;
