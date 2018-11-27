@@ -154,7 +154,7 @@ python3 /home/user/ocp8/manage.py prod
 [imgcronjob1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/51-cronjob.jpg "Click to see screenshot"
 [imgcronjob2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/52-cronjob.jpg "Click to see screenshot"
 [imglogging1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/41-sentry-projects.png "Click to see screenshot"
-[imglogging2]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/42-sentry-issues.png "Click to see screenshot"
+[imglogging2]: https://raw.githubusercontent.com/freezed/ocp8/v0.4/doc/img/42-sentry-issues.png "Click to see screenshot"
 [imglogging3]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/43-sentry-version.png "Click to see screenshot"
 [imglogging4]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/44-sentry-mail.jpg "Click to see screenshot"
 [imgmonit1]: https://github.com/freezed/ocp8/blob/v0.4/doc/img/31-do-monit.jpg "Click to see screenshot"
