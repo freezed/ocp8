@@ -532,6 +532,8 @@ Note:
 
 ---
 
-**Merci ! ! ** [ >> https://pro.zind.fr << ]
+**Merci ! ! **
 
 ![QRcode](doc/img/qrcode.png)
+
+http://pro.zind.fr
